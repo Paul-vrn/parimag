@@ -1,15 +1,5 @@
-import App from './App.svelte';
-import Admin from './Admin.svelte';
+import App from "./App.svelte";
 
 new App({
-	target: document.body,
-	props: {
-		name: 'world'
-	}
+  target: document.getElementById("app"),
 });
-
-
-new Admin({
-	target: document.querySelector('#login'),
-	props:{}
-})

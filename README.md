@@ -28,3 +28,7 @@ L'application sera lancé à cette adresse : http://localhost:5050/
 
 ## En cas de problème
 Vérifier que les modules sont bien installés en allant voir dans server.js par exemple si les import ne sont pas souligné par des petits points.
+
+## Développemet
+
+Pour développer le frontend, on va principalement utiliser une [SvelteStrap](https://sveltestrap.js.org/?path=/story/components--get-started), c'est une sorte de fork de Bootstrap adapté au framework Svelte.

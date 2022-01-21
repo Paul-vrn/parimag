@@ -10,12 +10,16 @@ app.use(cors());
 
 app.use(express.static('public'));
 
-app.get('/login', (req, res) => {
+app.get('/#/login', (req, res) => {
    res.sendFile(path.resolve(__dirname, 'public', 'login.html'))
 })
-app.get('*', (req, res) => {
+app.get('/#/*', (req, res) => {
    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
+app.get('*', (req, res) => {
+   res.redirect('/#/')
+})
+
 app.listen(port, () => {
    console.log(`Server is up at port ${port}`);
 });

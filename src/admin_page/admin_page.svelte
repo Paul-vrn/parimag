@@ -1,4 +1,5 @@
 <script>
+	console.log("chargement de la page admin_page")
 </script>
 
 <main>

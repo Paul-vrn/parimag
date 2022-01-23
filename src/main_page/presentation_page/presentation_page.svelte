@@ -1,9 +1,10 @@
 <script>
-	console.log("chagment presentation_page.svelte")
 </script>
 
 <main>
 	<h1>pres </h1>
+	<!-- TODO : faire la page de présentation -->
+
 </main>
 
 <style>

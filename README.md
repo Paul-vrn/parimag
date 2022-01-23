@@ -51,6 +51,26 @@ Tester le responsive : aller sur localhost:5050 -> clique droit -> inspecter -> 
 
 ---
 
+### Git
+
+Pour travailler sur le site :
+
+1. Commencer par cloner le site 
+
+```{git}
+git clone https://github.com/Paul-vrn/benzimag.git
+```
+
+2. Switch sur la branche development
+
+```{git}
+git checkout development
+```
+
+3. Après ça, les commandes pull, commit et push se feront sur la bonne branche
+
+---
+
 ### Ressources
 
 Des ressources pour en apprendre plus sur les technologies utilisées :

@@ -9,11 +9,13 @@ Projet de site web pour la liste BDS benzimag.\
 
 * Repo manager : [Yarn](https://yarnpkg.com/)
 * Backend :
-    * [Node.js](https://nodejs.org/fr)
-    * [Express.js](https://expressjs.com/fr)
+    * [Node.js](https://nodejs.org/fr) : framework global du backend
+    * [Express.js](https://expressjs.com/fr) 
+    * [Sequelize](https://sequelize.org/) : pour gérer la base de données
 * Frontend :
-    * [Svelte](https://svelte.dev)
-
+    * [Svelte](https://svelte.dev) : framework global frontend
+    * [SvelteStrap](https://sveltestrap.js.org/) : framework CSS
+    * [Axios](https://github.com/axios/axios) : pour créer des requêtes API 
 
 ## Mise en place de l'environnement de travail
 1. Installer [Node.js](https://nodejs.org/fr)
@@ -31,4 +33,6 @@ Vérifier que les modules sont bien installés en allant voir dans server.js par
 
 ## Développemet
 
-Pour développer le frontend, on va principalement utiliser une [SvelteStrap](https://sveltestrap.js.org/?path=/story/components--get-started), c'est une sorte de fork de Bootstrap adapté au framework Svelte.
+### Pages du site
+
+Pour développer le frontend, on va principalement utiliser un frontend CSS qui est [SvelteStrap](https://sveltestrap.js.org/). C'est un front qui met à disposition plein de composant déjà fait et qui aide beaucoup au développement (comme bootstrap). 

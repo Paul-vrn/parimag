@@ -52,13 +52,14 @@ Pour travailler sur le site :
 
 1. Commencer par cloner le site 
 
-```{git}
-git clone https://github.com/Paul-vrn/benzimag.git
+```bash
+git clone --branch development https://github.com/Paul-vrn/benzimag.git
+
 ```
 
-2. Switch sur la branche development
+2. Switch sur la branche development (si pas déjà le cas)
 
-```{git}
+```bash
 git checkout development
 ```
 

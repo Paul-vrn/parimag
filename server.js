@@ -5,8 +5,8 @@ const cors = require('cors');
 const path = require('path');
 app.use(cors());
 
-
-
+const db = require("./src/model/index")
+db.sequelize.sync()
 
 app.use(express.static('public'));
 

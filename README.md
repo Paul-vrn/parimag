@@ -5,11 +5,12 @@ Projet de site web pour la liste BDS benzimag.
 
 ## Technologies utilisées
 
-* Repo manager : [Yarn](https://yarnpkg.com/)
+* Repo manager : [Yarn@1.22.17](https://yarnpkg.com/)
 * Backend :
-  * [Node.js](https://nodejs.org/fr) : framework global du backend
+  * [Node.js@17.3.1](https://nodejs.org/fr) : framework global du backend
   * [Express.js](https://expressjs.com/fr)
-  * [Sequelize](https://sequelize.org/) : pour gérer la base de données
+  * [Sequelize](https://sequelize.org/) : ORM (lien entre backend et base de données)
+  * [SQLite3](https://www.sqlite.org/index.html) : SQL engine (facile à mettre en place)
 * Frontend :
   * [Svelte](https://svelte.dev) : framework global frontend
   * [SvelteStrap](https://sveltestrap.js.org/) : framework CSS
@@ -35,23 +36,17 @@ L'application sera lancé à cette adresse : <http://localhost:5050/>
 
 ---
 
-## En cas de problème
-
-Vérifier que les modules sont bien installés en allant voir dans server.js par exemple si les import ne sont pas souligné par des petits points.
-
----
-
 ## Développemet
 
 ### Pages du site
 
-Pour développer le frontend, on va principalement utiliser un frontend CSS qui est [SvelteStrap](https://sveltestrap.js.org/). C'est un front qui met à disposition plein de composant déjà fait et qui aide beaucoup au développement (comme bootstrap).
+Pour développer le frontend, on va principalement utiliser un framework CSS qui est [SvelteStrap](https://sveltestrap.js.org/). C'est un framework qui met à disposition plein de composant déjà fait et qui aide beaucoup au développement.
 
-Tester le responsive : aller sur localhost:5050 -> clique droit -> inspecter -> en haut du panel cliquer sur le bouton "toggle device toolbar"
+Pour tester le responsive : aller sur localhost:5050 -> clique droit -> inspecter -> en haut du panel cliquer sur le bouton "toggle device toolbar"
 
 ---
 
-### Git
+## Git
 
 Pour travailler sur le site :
 
@@ -71,7 +66,39 @@ git checkout development
 
 ---
 
-### Ressources
+## Arborescence
+
+```js
+.
+├── resource // fichier hors code à partager à tlm
+│   ├── maquette.figma
+│   └── maquette2.figma
+├── public // dossier du code static
+│   ├── build
+│   ├── index.html
+│   ├── globale.css
+│   └── etc...
+├── src // dossier qui contient tout le code du projet
+│   ├── config.js
+│   ├── main.js
+│   ├── stores.js
+│   ├── data
+│   │   ├── db.db // fichier qui contient la base de données
+│   │   └── liste.json //fichier qui contient en dur la liste des membres avec descriptions, etc...
+│   ├── model // liste des models sequelize qui sont liés aux tables de la base de données.
+│   │   ├── index.js
+│   │   ├── user.js
+│   │   ├── commande.js
+│   │   └── etc...
+│   └── components
+│       └── App.svelte
+├── server.js 
+└── README.md
+```
+
+---
+
+## Ressources
 
 Des ressources pour en apprendre plus sur les technologies utilisées :
 

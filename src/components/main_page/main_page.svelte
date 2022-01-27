@@ -4,7 +4,7 @@
 	import Sos from './sos_page/sos_page.svelte'
 	import Liste from './liste_page/liste_page.svelte'
 
-	import { tabSaved } from '../stores'
+	import { tabSaved } from '../../stores'
 </script>
 
 <header>

@@ -91,9 +91,11 @@ git checkout development
 │   │   ├── user.js
 │   │   ├── commande.js
 │   │   └── etc...
+│   ├── api // gère les routes API côté Frontend
+│   │   └── api.js
 │   └── components
 │       └── App.svelte
-├── server.js 
+├── server.js // Gère les pages et routes API côté Backend
 └── README.md
 ```
 
@@ -115,6 +117,7 @@ Des ressources pour en apprendre plus sur les technologies utilisées :
   * Concept avancé utile :
     * [Async func](https://www.youtube.com/watch?v=vn3tm0quoqE)
     * LocalStorage
+    * [Axios](https://github.com/axios/axios)
 * [Svelte](https://www.youtube.com/watch?v=rv3Yq-B8qp4)
   * [Svelte Docs](https://svelte.dev/docs)
   * [SvelteStrap](https://sveltestrap.js.org/)

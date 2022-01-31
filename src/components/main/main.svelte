@@ -1,25 +1,22 @@
 <script>
 import {
 	Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    Dropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
+    Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,
+    Dropdown,DropdownToggle,DropdownMenu,DropdownItem
 	} from 'sveltestrap'
     import Sos from './sos/sos.svelte'
     import Liste from './liste/liste.svelte'
     import Accueil from './accueil/accueil.svelte'
+	import About from './about/about.svelte'
     let isOpen = false;
     function handleUpdate(event) {
         isOpen = event.detail.isOpen;
     }
     import { viewMain } from '../../stores'
+    
+    function changeView(element){
+        $viewMain = element.target.id
+    }
 </script>
 
 
@@ -30,13 +27,10 @@ import {
 		<Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
 		  <Nav class="ms-auto" navbar>
 			<NavItem>
-			  <NavLink on:click={() => {$viewMain = 'accueil'}}>Accueil</NavLink>
+			  <NavLink id="accueil" on:click={changeView}>Accueil</NavLink>
 			</NavItem>
 			<NavItem>
-                <NavLink on:click={() => {$viewMain = 'liste'}}>Liste</NavLink>
-			</NavItem>
-			<NavItem>
-                <NavLink on:click={() => {$viewMain = 'about'}}>À propos du site</NavLink>
+                <NavLink id="liste" on:click={changeView}>Liste</NavLink>
 			</NavItem>
 			<Dropdown nav inNavbar>
 			  <DropdownToggle nav caret>SOS</DropdownToggle>
@@ -47,6 +41,9 @@ import {
 				<DropdownItem>Suivi de commande</DropdownItem>
 			  </DropdownMenu>
 			</Dropdown>
+			<NavItem>
+                <NavLink id="about" on:click={changeView}>À propos</NavLink>
+			</NavItem>
 		  </Nav>
 		</Collapse>
 	  </Navbar>
@@ -57,4 +54,6 @@ import {
 <Liste/>
 {:else if $viewMain == 'sos'}
 <Sos/>
+{:else if $viewMain == 'about'}
+<About/>
 {/if}

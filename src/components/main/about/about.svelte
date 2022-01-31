@@ -3,6 +3,7 @@
 </script>
 <main>
 	<h1>À propos du site</h1>
+
 </main>
 
 <style>

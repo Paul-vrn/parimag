@@ -1,189 +1,227 @@
-{
-    "Présidence":{
+[
+    {
+        "pole":"Présidence",
         "membres":[
             {
-                "Nom":"Adrien",
-                "Surnom":"",
-                "Role":"Président"
+                "nom":"Adrien",
+                "surnom":"",
+                "role":"Président",
+                "description":""
             },
             {
-                "Nom":"Etienne",
-                "Surnom":"",
-                "Role":"Vice-Président"
+                "nom":"Etienne",
+                "surnom":"",
+                "role":"Vice-Prés",
+                "description":""
             },
             {
-                "Nom":"Arthur A",
-                "Surnom":"",
-                "Role":"Vice-Président"
+                "nom":"Arthur A",
+                "surnom":"",
+                "role":"Vice-Prés",
+                "description":""
             }
         ]
     },
-    "Trésorerie":{
+    {
+        "pole":"Gestion interne",
         "membres":[
             {
-                "Nom":"Axel",
-                "Surnom":"",
-                "Role":"Trésorier"
+                "nom":"Cédric",
+                "surnom":"",
+                "role":"Sécretaire Générale",
+                "description":""
             },
             {
-                "Nom":"Quentin",
-                "Surnom":"",
-                "Role":"Vice-Trésorier"
-            }
-            
-        ]
-    },
-    "Gestion interne":{
-        "membres":[
-            {
-                "Nom":"Cédric",
-                "Surnom":"",
-                "Role":"Secrétaire générale"
-            },
-            {
-                "Nom":"Tim",
-                "Surnom":"",
-                "Role":"Respo Com"
+                "nom":"Tim",
+                "surnom":"",
+                "role":"Respo Com",
+                "description":""
             }
         ]
     },
-    "Choré":{
+    {
+        "pole":"Trésorerie",
         "membres":[
             {
-                "Nom":"Maissa",
-                "Surnom":"",
-                "Role":""
+                "nom":"Axel",
+                "surnom":"",
+                "role":"Trésorier",
+                "description":""
             },
             {
-                "Nom":"Marine",
-                "Surnom":"",
-                "Role":""
-            },
-            {
-                "Nom":"Cédric",
-                "Surnom":"",
-                "Role":""
+                "nom":"Quentin",
+                "surnom":"",
+                "role":"Vice-Trés",
+                "description":""
             }
         ]
     },
-    "Goodies":{
+    {
+        "pole":"Choré",
         "membres":[
             {
-                "Nom":"Marc",
-                "Surnom":"",
-                "Role":""
+                "nom":"Maissa",
+                "surnom":"",
+                "role":"",
+                "description":""
             },
             {
-                "Nom":"Arthur A",
-                "Surnom":"",
-                "Role":""
+                "nom":"Marine",
+                "surnom":"",
+                "role":"",
+                "description":""
             },
             {
-                "Nom":"Tee Wei",
-                "Surnom":"",
-                "Role":""
+                "nom":"Cédric",
+                "surnom":"",
+                "role":"",
+                "description":""
             }
         ]
     },
-    "Activité":{
+    {
+        "pole":"Goodies",
         "membres":[
             {
-                "Nom":"Quentin",
-                "Surnom":"",
-                "Role":""
+                "nom":"Arthur A",
+                "surnom":"",
+                "role":"",
+                "description":""
             },
             {
-                "Nom":"Marine",
-                "Surnom":"",
-                "Role":""
+                "nom":"Marc",
+                "surnom":"",
+                "role":"",
+                "description":""
             },
             {
-                "Nom":"Nabil",
-                "Surnom":"",
-                "Role":""
-            },
-            {
-                "Nom":"Akram",
-                "Surnom":"",
-                "Role":""
+                "nom":"Tee Wei",
+                "surnom":"",
+                "role":"",
+                "description":""
             }
         ]
     },
-    "Rap":{
+    {
+        "pole":"SOS/Ptit déj",
         "membres":[
             {
-                "Nom":"Arthur A",
-                "Surnom":"",
-                "Role":""
+                "nom":"Camille",
+                "surnom":"",
+                "role":"",
+                "description":""
             },
             {
-                "Nom":"Marc",
-                "Surnom":"",
-                "Role":""
+                "nom":"Paul",
+                "surnom":"",
+                "role":"",
+                "description":""
             },
             {
-                "Nom":"William",
-                "Surnom":"",
-                "Role":""
+                "nom":"Cédric",
+                "surnom":"",
+                "role":"",
+                "description":""
+            },
+            {
+                "nom":"Tee Wei",
+                "surnom":"",
+                "role":"",
+                "description":""
+            },
+            {
+                "nom":"Arthur R",
+                "surnom":"",
+                "role":"",
+                "description":""
             }
         ]
     },
-    "SOS/Petit déj":{
+    {
+        "pole":"Activité",
         "membres":[
             {
-                "Nom":"Camille",
-                "Surnom":"",
-                "Role":""
+                "nom":"Adam",
+                "surnom":"",
+                "role":"",
+                "description":""
             },
             {
-                "Nom":"Paul",
-                "Surnom":"",
-                "Role":""
+                "nom":"Quentin",
+                "surnom":"",
+                "role":"",
+                "description":""
             },
             {
-                "Nom":"Cédric",
-                "Surnom":"",
-                "Role":""
+                "nom":"Akram",
+                "surnom":"",
+                "role":"",
+                "description":""
             },
             {
-                "Nom":"Tee Wei",
-                "Surnom":"",
-                "Role":""
-            },
-            {
-                "Nom":"Arthur R",
-                "Surnom":"",
-                "Role":""
+                "nom":"Marine",
+                "surnom":"",
+                "role":"",
+                "description":""
             }
         ]
     },
-    "Film":{
+    {
+        "pole":"Rap",
         "membres":[
             {
-                "Nom":"Neil",
-                "Surnom":"",
-                "Role":""
+                "nom":"Marc",
+                "surnom":"",
+                "role":"",
+                "description":""
             },
             {
-                "Nom":"Simo",
-                "Surnom":"",
-                "Role":""
+                "nom":"Arthur A",
+                "surnom":"",
+                "role":"",
+                "description":""
+            },
+            {
+                "nom":"William",
+                "surnom":"",
+                "role":"",
+                "description":""
             }
-        ]
 
+        ]
     },
-    "Financement":{
+    {
+        "pole":"Film",
         "membres":[
             {
-                "Nom":"Antonin",
-                "Surnom":"",
-                "Role":""
+                "nom":"Simo",
+                "surnom":"",
+                "role":"",
+                "description":""
             },
             {
-                "Nom":"Hippolyte",
-                "Surnom":"",
-                "Role":""
+                "nom":"Neil",
+                "surnom":"",
+                "role":"",
+                "description":""
+            }
+        ]
+    },
+    {
+        "pole":"Financement",
+        "membres":[
+            {
+                "nom":"Antonin",
+                "surnom":"",
+                "role":"",
+                "description":""
+            },
+            {
+                "nom":"Hippolyte",
+                "surnom":"",
+                "role":"",
+                "description":""
             }
         ]
     }
-}
+]

@@ -1,10 +1,8 @@
 <script>
+
 </script>
-
 <main>
-	<h1>pres </h1>
-	<!-- TODO : faire la page de présentation -->
-
+	<h1>À propos du site</h1>
 </main>
 
 <style>

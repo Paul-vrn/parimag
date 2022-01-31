@@ -1,15 +1,11 @@
 <script>
-	import Routeur, {location} from 'svelte-spa-router'
-	import Admin from "./admin_page/admin_page.svelte"
-	import Home from "./main_page/main_page.svelte"
-	
+	import { Router, Route } from "svelte-routing"
+	export let url = "";
+	import Admin from "./admin/admin.svelte"
+	import Home from "./main/main.svelte"
 </script>
 
-<Routeur routes={{
-	'/': Home,
-	'/login':Admin
-}}
-/>
-
-<style>
-</style>
+<Router url="{url}">
+	<Route path="/*"><Home/></Route>
+	<Route path="admin" component="{Admin}" />
+  </Router>

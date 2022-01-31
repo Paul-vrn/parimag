@@ -17,7 +17,6 @@ let activeIndex = $carouselIndex
 $: $carouselIndex = activeIndex
 
 </script>
-
 <main>
 	<h1>liste de la Benzimag</h1>
 		<Nav>

@@ -1,8 +1,8 @@
 <script>
-</script>
 
+</script>
 <main>
-	<h1>Sos</h1>
+	<h1>accueil</h1>
 </main>
 
 <style>

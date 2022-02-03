@@ -1,7 +1,7 @@
 <script>
 
 </script>
-<main>
+<main id="about">
 	<h1>À propos du site</h1>
 
 </main>

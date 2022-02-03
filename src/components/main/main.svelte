@@ -4,10 +4,13 @@ import {
     Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,
     Dropdown,DropdownToggle,DropdownMenu,DropdownItem
 	} from 'sveltestrap'
-    import Sos from './sos/sos.svelte'
+    import Sos from './sos/menus.svelte'
     import Liste from './liste/liste.svelte'
     import Accueil from './accueil/accueil.svelte'
 	import About from './about/about.svelte'
+	import Menus from './sos/menus.svelte'
+	import Services from './sos/services.svelte'
+	import Commandes from './sos/commandes.svelte'
     let isOpen = false;
     function handleUpdate(event) {
         isOpen = event.detail.isOpen;
@@ -35,10 +38,10 @@ import {
 			<Dropdown nav inNavbar>
 			  <DropdownToggle nav caret>SOS</DropdownToggle>
 			  <DropdownMenu end>
-				<DropdownItem>Menus</DropdownItem>
-				<DropdownItem>Services</DropdownItem>
+				<DropdownItem id="menus" on:click={changeView}>Menus</DropdownItem>
+				<DropdownItem id="services" on:click={changeView}>Services</DropdownItem>
 				<DropdownItem divider />
-				<DropdownItem>Suivi de commande</DropdownItem>
+				<DropdownItem id="commandes" on:click={changeView}>Suivi de commande</DropdownItem>
 			  </DropdownMenu>
 			</Dropdown>
 			<NavItem>
@@ -48,6 +51,7 @@ import {
 		</Collapse>
 	  </Navbar>
 </header>
+
 {#if $viewMain == 'accueil'}
 <Accueil/>
 {:else if $viewMain == 'liste'}
@@ -56,4 +60,15 @@ import {
 <Sos/>
 {:else if $viewMain == 'about'}
 <About/>
+{:else if $viewMain == 'menus'}
+<Menus/>
+{:else if $viewMain == 'services'}
+<Services/>
+{:else if $viewMain == 'commandes'}
+<Commandes/>
 {/if}
+
+
+<style>
+	
+</style>

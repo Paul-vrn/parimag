@@ -14,13 +14,10 @@ app.use(express.static('public'));
 app.get('/login', (req, res) => {
    res.sendFile(path.resolve(__dirname, 'public', 'login.html'))
 })
-app.get('/api/liste', (req, res) => {
-   res.status(200).json(require('./src/data/liste.json'))
-})
 
-app.get('/api/*', (req, res) => {
-   res.status(404).send("Mauvaise route")
-})
+var apiRoutes = require('./routes/api.js');
+app.use('/api', apiRoutes)
+
 app.get('*', (req, res) => {
    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });

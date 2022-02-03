@@ -1,8 +1,8 @@
 <script>
 </script>
 
-<main>
-	<h1>Sos</h1>
+<main id="menus">
+	<h1>Menus</h1>
 </main>
 
 <style>

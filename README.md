@@ -50,7 +50,7 @@ Pour tester le responsive : aller sur localhost:5050 -> clique droit -> inspecte
 
 Pour travailler sur le site :
 
-1. Commencer par cloner le site 
+1. Commencer par cloner le site
 
 ```bash
 git clone --branch development https://github.com/Paul-vrn/benzimag.git
@@ -78,6 +78,7 @@ git checkout development
 │   ├── build
 │   ├── index.html
 │   ├── globale.css
+│   ├── custom.css
 │   └── etc...
 ├── src // dossier qui contient tout le code du projet
 │   ├── config.js
@@ -121,3 +122,12 @@ Des ressources pour en apprendre plus sur les technologies utilisées :
 * [Svelte](https://www.youtube.com/watch?v=rv3Yq-B8qp4)
   * [Svelte Docs](https://svelte.dev/docs)
   * [SvelteStrap](https://sveltestrap.js.org/)
+
+---
+
+### Quelques extensions utiles pour développer
+
+* HTML CSS Support
+* IntelliSence for CSS puis cliquer sur le petit éclair en bas à gauche
+* Material Icon Theme
+* Svelte for VS Code

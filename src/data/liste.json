@@ -4,21 +4,24 @@
         "membres":[
             {
                 "nom":"Adrien",
-                "surnom":"",
+                "surnom":"surnom",
                 "role":"Président",
-                "description":""
+                "description":"blablablabla",
+                "photo":"adrien"
             },
             {
                 "nom":"Etienne",
                 "surnom":"",
                 "role":"Vice-Prés",
-                "description":""
+                "description":"",
+                "photo":"etienne"
             },
             {
                 "nom":"Arthur A",
                 "surnom":"",
                 "role":"Vice-Prés",
-                "description":""
+                "description":"",
+                "photo":"arthura"
             }
         ]
     },
@@ -29,13 +32,15 @@
                 "nom":"Cédric",
                 "surnom":"",
                 "role":"Sécretaire Générale",
-                "description":""
+                "description":"",
+                "photo":"cedric"
             },
             {
                 "nom":"Tim",
                 "surnom":"",
                 "role":"Respo Com",
-                "description":""
+                "description":"",
+                "photo":"tim"
             }
         ]
     },
@@ -46,13 +51,15 @@
                 "nom":"Axel",
                 "surnom":"",
                 "role":"Trésorier",
-                "description":""
+                "description":"",
+                "photo":"axel"
             },
             {
                 "nom":"Quentin",
                 "surnom":"",
                 "role":"Vice-Trés",
-                "description":""
+                "description":"",
+                "photo":"./"
             }
         ]
     },
@@ -63,19 +70,22 @@
                 "nom":"Maissa",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"maissa"
             },
             {
                 "nom":"Marine",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"marine"
             },
             {
                 "nom":"Cédric",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"cedric"
             }
         ]
     },
@@ -86,19 +96,22 @@
                 "nom":"Arthur A",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"arthura"
             },
             {
                 "nom":"Marc",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"marc"
             },
             {
                 "nom":"Tee Wei",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"tee_wei"
             }
         ]
     },
@@ -109,31 +122,36 @@
                 "nom":"Camille",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"camille"
             },
             {
                 "nom":"Paul",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"paul"
             },
             {
                 "nom":"Cédric",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"cedric"
             },
             {
                 "nom":"Tee Wei",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"tee_wei"
             },
             {
                 "nom":"Arthur R",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"arthurr"
             }
         ]
     },
@@ -144,25 +162,29 @@
                 "nom":"Adam",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"adam"
             },
             {
                 "nom":"Quentin",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"quentin"
             },
             {
                 "nom":"Akram",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"akram"
             },
             {
                 "nom":"Marine",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"marine"
             }
         ]
     },
@@ -173,19 +195,22 @@
                 "nom":"Marc",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"marc"
             },
             {
                 "nom":"Arthur A",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"arthura"
             },
             {
                 "nom":"William",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"william"
             }
 
         ]
@@ -197,13 +222,15 @@
                 "nom":"Simo",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"simo"
             },
             {
                 "nom":"Neil",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"neil"
             }
         ]
     },
@@ -214,13 +241,15 @@
                 "nom":"Antonin",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"antonin"
             },
             {
                 "nom":"Hippolyte",
                 "surnom":"",
                 "role":"",
-                "description":""
+                "description":"",
+                "photo":"hippolyte"
             }
         ]
     }

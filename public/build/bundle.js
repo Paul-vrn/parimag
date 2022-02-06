@@ -13861,6 +13861,10 @@
     	let div1;
     	let svg;
     	let path;
+    	let text0;
+    	let t5;
+    	let text1;
+    	let t6;
 
     	const block = {
     		c: function create() {
@@ -13878,29 +13882,44 @@
     			div1 = element("div");
     			svg = svg_element("svg");
     			path = svg_element("path");
-    			attr_dev(h1, "class", "text-center pt-5 svelte-139lf48");
-    			add_location(h1, file$4, 5, 3, 96);
+    			text0 = svg_element("text");
+    			t5 = text("Notre Blog");
+    			text1 = svg_element("text");
+    			t6 = text("ˬ");
+    			attr_dev(h1, "class", "text-center pt-5 varela svelte-1vmtyxe");
+    			add_location(h1, file$4, 5, 3, 85);
     			attr_dev(hr, "class", "bg-white w-75 mx-auto my-5 ");
-    			add_location(hr, file$4, 6, 3, 152);
-    			attr_dev(p, "class", "text-center w-75 mx-auto svelte-139lf48");
-    			add_location(p, file$4, 7, 3, 197);
-    			attr_dev(div0, "id", "titre");
-    			attr_dev(div0, "class", "svelte-139lf48");
+    			add_location(hr, file$4, 6, 3, 148);
+    			attr_dev(p, "class", "text-center w-75 mx-auto svelte-1vmtyxe");
+    			add_location(p, file$4, 7, 3, 193);
+    			attr_dev(div0, "class", "svelte-1vmtyxe");
     			add_location(div0, file$4, 4, 2, 76);
     			attr_dev(path, "fill", "#D7C378");
     			attr_dev(path, "fill-opacity", "1");
     			attr_dev(path, "d", "M0,256L40,234.7C80,213,160,171,240,144C320,117,400,107,480,128C560,149,640,203,720,192C800,181,880,107,960,74.7C1040,43,1120,53,1200,74.7C1280,96,1360,128,1400,144L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z");
-    			add_location(path, file$4, 10, 66, 611);
+    			add_location(path, file$4, 10, 66, 607);
+    			attr_dev(text0, "class", "varela svelte-1vmtyxe");
+    			attr_dev(text0, "x", "50%");
+    			attr_dev(text0, "y", "75%");
+    			attr_dev(text0, "dominant-baseline", "middle");
+    			attr_dev(text0, "text-anchor", "middle");
+    			add_location(text0, file$4, 12, 4, 1011);
+    			attr_dev(text1, "class", "varela svelte-1vmtyxe");
+    			attr_dev(text1, "x", "50%");
+    			attr_dev(text1, "y", "80%");
+    			attr_dev(text1, "dominant-baseline", "middle");
+    			attr_dev(text1, "text-anchor", "middle");
+    			add_location(text1, file$4, 13, 4, 1122);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "viewBox", "0 0 1440 320");
-    			add_location(svg, file$4, 10, 3, 548);
+    			add_location(svg, file$4, 10, 3, 544);
     			attr_dev(div1, "id", "svg");
-    			attr_dev(div1, "class", "svelte-139lf48");
-    			add_location(div1, file$4, 9, 2, 530);
-    			attr_dev(div2, "class", "svelte-139lf48");
+    			attr_dev(div1, "class", "svelte-1vmtyxe");
+    			add_location(div1, file$4, 9, 2, 526);
+    			attr_dev(div2, "class", "svelte-1vmtyxe");
     			add_location(div2, file$4, 3, 1, 68);
     			attr_dev(main, "id", "accueil");
-    			attr_dev(main, "class", "container-fluid p-0 svelte-139lf48");
+    			attr_dev(main, "class", "container-fluid p-0 svelte-1vmtyxe");
     			add_location(main, file$4, 2, 0, 19);
     		},
     		l: function claim(nodes) {
@@ -13919,6 +13938,10 @@
     			append_dev(div2, div1);
     			append_dev(div1, svg);
     			append_dev(svg, path);
+    			append_dev(svg, text0);
+    			append_dev(text0, t5);
+    			append_dev(svg, text1);
+    			append_dev(text1, t6);
     		},
     		p: noop,
     		i: noop,

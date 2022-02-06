@@ -60,3 +60,10 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
+
+/* -- Add font here -- */
+
+@font-face {
+	font-family: Varela Round;
+	src: url('/fonts/VarelaRound.ttf');;
+}

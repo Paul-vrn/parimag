@@ -5,11 +5,12 @@ Projet de site web pour la liste BDS benzimag.
 
 ## Technologies utilisées
 
-* Repo manager : [Yarn](https://yarnpkg.com/)
+* Repo manager : [Yarn@1.22.17](https://yarnpkg.com/)
 * Backend :
-  * [Node.js](https://nodejs.org/fr) : framework global du backend
+  * [Node.js@17.3.1](https://nodejs.org/fr) : framework global du backend
   * [Express.js](https://expressjs.com/fr)
-  * [Sequelize](https://sequelize.org/) : pour gérer la base de données
+  * [Sequelize](https://sequelize.org/) : ORM (lien entre backend et base de données)
+  * [SQLite3](https://www.sqlite.org/index.html) : SQL engine (facile à mettre en place)
 * Frontend :
   * [Svelte](https://svelte.dev) : framework global frontend
   * [SvelteStrap](https://sveltestrap.js.org/) : framework CSS
@@ -35,23 +36,116 @@ L'application sera lancé à cette adresse : <http://localhost:5050/>
 
 ---
 
-## En cas de problème
-
-Vérifier que les modules sont bien installés en allant voir dans server.js par exemple si les import ne sont pas souligné par des petits points.
-
----
-
 ## Développemet
 
 ### Pages du site
 
-Pour développer le frontend, on va principalement utiliser un frontend CSS qui est [SvelteStrap](https://sveltestrap.js.org/). C'est un front qui met à disposition plein de composant déjà fait et qui aide beaucoup au développement (comme bootstrap).
+Pour développer le frontend, on va principalement utiliser un framework CSS qui est [SvelteStrap](https://sveltestrap.js.org/). C'est un framework qui met à disposition plein de composant déjà fait et qui aide beaucoup au développement.
 
-Tester le responsive : aller sur localhost:5050 -> clique droit -> inspecter -> en haut du panel cliquer sur le bouton "toggle device toolbar"
+Pour tester le responsive : aller sur localhost:5050 -> clique droit -> inspecter -> en haut du panel cliquer sur le bouton "toggle device toolbar"
 
 ---
 
-### Ressources
+## Git
+
+Pour travailler sur le site :
+
+1. Commencer par cloner le site
+
+```bash
+git clone --branch development https://github.com/Paul-vrn/benzimag.git
+
+```
+
+2. Switch sur la branche development (si pas déjà le cas)
+
+```bash
+git checkout development
+```
+
+3. Après ça, les commandes pull, commit et push se feront sur la bonne branche
+
+---
+
+## Arborescence
+
+```js
+.
+├── resource // fichier hors code à partager à tlm
+│   ├── maquette.figma
+│   └── maquette2.figma
+├── public // dossier du code static
+│   ├── build
+│   ├── index.html
+│   ├── globale.css
+│   ├── custom.css
+│   └── etc...
+├── src // dossier qui contient tout le code du projet
+│   ├── config.js
+│   ├── main.js
+│   ├── stores.js
+│   ├── data
+│   │   ├── db.db // fichier qui contient la base de données
+│   │   └── liste.json //fichier qui contient en dur la liste des membres avec descriptions, etc...
+│   ├── model // liste des models sequelize qui sont liés aux tables de la base de données.
+│   │   ├── index.js
+│   │   ├── user.js
+│   │   ├── commande.js
+│   │   └── etc...
+│   ├── api // gère les routes API côté Frontend
+│   │   └── api.js
+│   └── components
+│       └── App.svelte
+├── server.js // Gère les pages et routes API côté Backend
+└── README.md
+```
+
+```javascript
+.
+├── public
+│   ├── custom.css
+│   ├── global.css
+│   ├── fonts
+│   ├── images // ici on met toutes les images "statiques"
+│   ├── index.html
+│   └── login.html
+├── src
+│   ├── backend // Partie backend (express.js)
+│   │   ├── config.js
+│   │   ├── data // données stockées en dur
+│   │   │   ├── db.sqlite
+│   │   │   └── liste.json
+│   │   ├── model // (Sequelize) models liées à la BDD
+│   │   │   ├── QG.js
+│   │   │   ├── commande.js
+│   │   │   ├── detail_commande.js
+│   │   │   ├── index.js
+│   │   │   ├── livreur.js
+│   │   │   ├── produit.js
+│   │   │   └── stock.js
+│   │   └── routes // routes API
+│   │       ├── api.js
+│   │       └── liste.js
+│   └── frontend // Partie frontend (Svelte)
+│       ├── api // (Axios)
+│       │   ├── api.js
+│       │   └── getListe.js
+│       ├── components // composants de Svelte
+│       │   ├── App.svelte
+│       │   ├── admin // partie serveur du front (pour les admins)
+│       │   └── main // partie client du front (pour les clients)
+│       ├── main.js // Application
+│       └── stores.js // stores.js (check doc svelte)
+├── README.md
+├── package.json // liste des packages installés et autres infos
+├── rollup.config.js 
+├── server.js // fichier qui load le serveur
+└── yarn.lock
+```
+
+---
+
+## Ressources
 
 Des ressources pour en apprendre plus sur les technologies utilisées :
 
@@ -67,6 +161,17 @@ Des ressources pour en apprendre plus sur les technologies utilisées :
   * Concept avancé utile :
     * [Async func](https://www.youtube.com/watch?v=vn3tm0quoqE)
     * LocalStorage
+    * [Axios](https://github.com/axios/axios)
 * [Svelte](https://www.youtube.com/watch?v=rv3Yq-B8qp4)
   * [Svelte Docs](https://svelte.dev/docs)
   * [SvelteStrap](https://sveltestrap.js.org/)
+* <https://youtu.be/a00NRSFgHsY>
+
+---
+
+### Quelques extensions utiles pour développer
+
+* HTML CSS Support
+* IntelliSence for CSS puis cliquer sur le petit éclair en bas à gauche
+* Material Icon Theme
+* Svelte for VS Code

@@ -69,37 +69,6 @@ git checkout development
 
 ## Arborescence
 
-```js
-.
-├── resource // fichier hors code à partager à tlm
-│   ├── maquette.figma
-│   └── maquette2.figma
-├── public // dossier du code static
-│   ├── build
-│   ├── index.html
-│   ├── globale.css
-│   ├── custom.css
-│   └── etc...
-├── src // dossier qui contient tout le code du projet
-│   ├── config.js
-│   ├── main.js
-│   ├── stores.js
-│   ├── data
-│   │   ├── db.db // fichier qui contient la base de données
-│   │   └── liste.json //fichier qui contient en dur la liste des membres avec descriptions, etc...
-│   ├── model // liste des models sequelize qui sont liés aux tables de la base de données.
-│   │   ├── index.js
-│   │   ├── user.js
-│   │   ├── commande.js
-│   │   └── etc...
-│   ├── api // gère les routes API côté Frontend
-│   │   └── api.js
-│   └── components
-│       └── App.svelte
-├── server.js // Gère les pages et routes API côté Backend
-└── README.md
-```
-
 ```javascript
 .
 ├── public
@@ -158,6 +127,7 @@ Des ressources pour en apprendre plus sur les technologies utilisées :
 * [JavaScript](https://youtu.be/DHjqpvDnNGE) :
   * [Quick guide JS](https://www.youtube.com/watch?v=9emXNzqCKyg)
   * Concept de [Functional programming](https://fr.wikipedia.org/wiki/Programmation_fonctionnelle)
+  * [5 JavaScript Concepts You HAVE TO KNOW](https://youtu.be/a00NRSFgHsY)
   * Concept avancé utile :
     * [Async func](https://www.youtube.com/watch?v=vn3tm0quoqE)
     * LocalStorage
@@ -165,7 +135,6 @@ Des ressources pour en apprendre plus sur les technologies utilisées :
 * [Svelte](https://www.youtube.com/watch?v=rv3Yq-B8qp4)
   * [Svelte Docs](https://svelte.dev/docs)
   * [SvelteStrap](https://sveltestrap.js.org/)
-* <https://youtu.be/a00NRSFgHsY>
 
 ---
 

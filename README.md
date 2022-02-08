@@ -1,4 +1,3 @@
-
 # Benzimag website
 
 Projet de site web pour la liste BDS benzimag.
@@ -69,35 +68,47 @@ git checkout development
 
 ## Arborescence
 
-```js
+```javascript
 .
-├── resource // fichier hors code à partager à tlm
-│   ├── maquette.figma
-│   └── maquette2.figma
-├── public // dossier du code static
-│   ├── build
-│   ├── index.html
-│   ├── globale.css
+├── public
 │   ├── custom.css
-│   └── etc...
-├── src // dossier qui contient tout le code du projet
-│   ├── config.js
-│   ├── main.js
-│   ├── stores.js
-│   ├── data
-│   │   ├── db.db // fichier qui contient la base de données
-│   │   └── liste.json //fichier qui contient en dur la liste des membres avec descriptions, etc...
-│   ├── model // liste des models sequelize qui sont liés aux tables de la base de données.
-│   │   ├── index.js
-│   │   ├── user.js
-│   │   ├── commande.js
-│   │   └── etc...
-│   ├── api // gère les routes API côté Frontend
-│   │   └── api.js
-│   └── components
-│       └── App.svelte
-├── server.js // Gère les pages et routes API côté Backend
-└── README.md
+│   ├── global.css
+│   ├── fonts
+│   ├── images // ici on met toutes les images "statiques"
+│   ├── index.html
+│   └── login.html
+├── src
+│   ├── backend // Partie backend (express.js)
+│   │   ├── config.js
+│   │   ├── data // données stockées en dur
+│   │   │   ├── db.sqlite
+│   │   │   └── liste.json
+│   │   ├── model // (Sequelize) models liées à la BDD
+│   │   │   ├── QG.js
+│   │   │   ├── commande.js
+│   │   │   ├── detail_commande.js
+│   │   │   ├── index.js
+│   │   │   ├── livreur.js
+│   │   │   ├── produit.js
+│   │   │   └── stock.js
+│   │   └── routes // routes API
+│   │       ├── api.js
+│   │       └── liste.js
+│   └── frontend // Partie frontend (Svelte)
+│       ├── api // (Axios)
+│       │   ├── api.js
+│       │   └── getListe.js
+│       ├── components // composants de Svelte
+│       │   ├── App.svelte
+│       │   ├── admin // partie serveur du front (pour les admins)
+│       │   └── main // partie client du front (pour les clients)
+│       ├── main.js // Application
+│       └── stores.js // stores.js (check doc svelte)
+├── README.md
+├── package.json // liste des packages installés et autres infos
+├── rollup.config.js 
+├── server.js // fichier qui load le serveur
+└── yarn.lock
 ```
 
 ---
@@ -115,6 +126,7 @@ Des ressources pour en apprendre plus sur les technologies utilisées :
 * [JavaScript](https://youtu.be/DHjqpvDnNGE) :
   * [Quick guide JS](https://www.youtube.com/watch?v=9emXNzqCKyg)
   * Concept de [Functional programming](https://fr.wikipedia.org/wiki/Programmation_fonctionnelle)
+  * [5 JavaScript Concepts You HAVE TO KNOW](https://youtu.be/a00NRSFgHsY)
   * Concept avancé utile :
     * [Async func](https://www.youtube.com/watch?v=vn3tm0quoqE)
     * LocalStorage

@@ -6,7 +6,7 @@ const path = require('path');
 
 app.use(cors());
 
-const db = require("./src/model/index")
+const db = require("./src/backend/model/index")
 db.sequelize.sync()
 
 app.use(express.static('public'));
@@ -15,7 +15,7 @@ app.get('/login', (req, res) => {
    res.sendFile(path.resolve(__dirname, 'public', 'login.html'))
 })
 
-var apiRoutes = require('./routes/api.js');
+var apiRoutes = require('./src/backend/routes/api.js');
 app.use('/api', apiRoutes)
 
 app.get('*', (req, res) => {

@@ -5,6 +5,9 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             allowNull: false
         },
+        disponible:{
+            type: DataTypes.INTEGER
+        }
     }, {timestamps: false});
     return Livreur
 }

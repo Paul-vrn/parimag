@@ -1,7 +1,7 @@
 <script>
 </script>
 <main id="accueil" class="container-fluid p-0">
-	<div>
+	<div class="d-flex justify-content-between flex-column">
 		<div>
 			<h1 class="text-center pt-5 varela">LISTE BDS BENZIMAG</h1>
 			<hr class="bg-white w-75 mx-auto my-5 "/>
@@ -28,12 +28,12 @@ main#accueil{
 }
 main#accueil > div {
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	background: rgba(0, 0, 0, 0.4);
 	box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 main#accueil > div > div {
-	padding-top: 10%;
+	padding-top:auto;
 }
 
 main#accueil > div h1 {

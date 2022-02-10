@@ -1,9 +1,9 @@
 <script>
 </script>
 <main id="accueil" class="container-fluid p-0">
-	<div class="d-flex justify-content-between flex-column">
-		<div>
-			<h1 class="text-center pt-5 varela">LISTE BDS BENZIMAG</h1>
+	<div class="d-flex justify-content-center flex-column">
+		<div class="mb-5">
+			<h1 class="text-center varela">LISTE BDS BENZIMAG</h1>
 			<hr class="bg-white w-75 mx-auto my-5 "/>
 			<p class="text-center w-75 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt dui ut ornare. Vel quam elementum pulvinar etiam non quam. Egestas purus viverra accumsan in. Tempus imperdiet nulla malesuada pellentesque.</p>	
 		</div>
@@ -32,8 +32,10 @@ main#accueil > div {
 	background: rgba(0, 0, 0, 0.4);
 	box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
-main#accueil > div > div {
-	padding-top:auto;
+main#accueil > div div#svg {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 main#accueil > div h1 {

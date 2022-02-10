@@ -8,21 +8,18 @@ onMount(async () => {
     const res = await getListe();
     liste = res;
 	console.log(liste)
+	polecurrent= liste[0]
 });
+polecurrent.membres
+	let test = "test1"
 
-console.log("test")
+	pole_selected = 0
+
+
 </script>
+
 <main id="liste">
-	<h1 class="text-center">liste de la Benzimag</h1>
-	<TabContent id="test" >
-		{#each liste as pole, index}
-			<TabPane tabId={index} tab={pole.pole} active={!index}>
-				{#each pole.membres as membre, index}
-					<Membre membre={membre}></Membre>
-				{/each}
-			</TabPane>
-		{/each}
-	</TabContent>
+	<h1 class="text-center">liste de la Benzimag {test}</h1>
 
 </main>
 <style>
@@ -30,4 +27,5 @@ console.log("test")
     display: flex;
     justify-content: center;
 }
+
 </style>

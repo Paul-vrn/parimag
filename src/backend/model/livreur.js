@@ -7,6 +7,10 @@ module.exports = (sequelize, DataTypes) => {
         },
         nom:{
             type: DataTypes.STRING
+        },
+        disponible:{
+            type: DataTypes.BOOLEAN,
+            allowNull:false
         }
     }, {timestamps: false});
     return Livreur

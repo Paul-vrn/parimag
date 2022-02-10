@@ -17,6 +17,12 @@ db.Commande = require('./commande')(sequelize, DataTypes);
 db.DetailCommande = require('./detail_commande')(sequelize, DataTypes);
 db.Stock = require('./stock')(sequelize, DataTypes);
 
+db.Livreur.belongsTo(db.Qg) // QG_id dans Livreur
+db.DetailCommande.belongsTo(db.Commande) 
+db.DetailCommande.belongsTo(db.Produit)
+db.Stock.belongsTo(db.Produit)
+db.Stock.belongsTo(db.Qg)
+db.Commande.belongsTo(db.Qg)
 /*
 db.Produit.hasMany(db.DetailCommande, {foreignKey:'produitId'})
 db.DetailCommande.belongsTo(db.Produit, {targetKey:'produitId'})

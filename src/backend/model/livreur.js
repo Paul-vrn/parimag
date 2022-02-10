@@ -5,6 +5,9 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             allowNull: false
         },
+        nom:{
+            type: DataTypes.STRING
+        }
     }, {timestamps: false});
     return Livreur
 }

@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
                 "en attente de payement",
                 "en cuisine",
                 "en cours de livraison",
-                "livré"
+                "livrée"
                 ),
             allowNull: false
         }

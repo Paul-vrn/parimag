@@ -2,11 +2,13 @@ var express = require('express'),
 router = express.Router();
 
 var listeRoute = require('./liste')
+var produitsRoute = require('./produits')
 router
 .get('/', (req, res) => {
     res.status(200).send("Vide")
 })
 .use('/liste', listeRoute)
+.use('/produits', produitsRoute)
 .get('/benzimag', (req, res) => {
     res.status(200).send("mdp : abcdefghij")
 })

@@ -1,20 +1,17 @@
 <script>
 	import Produits from './menus/produits.svelte'
 	import Panier from './menus/panier.svelte'
-
 	let panier = []
-	function aff(){
-		console.log(panier)
+	function updatePanier(newPanier){
+		panier = [...newPanier]
 	}
-	function updatePanier(){
-		panier = [...panier]
-	}
+
+	
 </script>
 
 <main id="menus">
-	<button on:click={aff}>test</button>
 	<Produits panier={panier} {updatePanier}/>
-	<Panier panier={panier}/>
+	<Panier panier={panier} {updatePanier}/>
 </main>
 
 <style>

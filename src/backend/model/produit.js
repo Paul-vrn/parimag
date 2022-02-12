@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     const Produit = sequelize.define("produits", {
-        id: {
-            type: DataTypes.INTEGER,
+        code: {
+            type: DataTypes.STRING,
             primaryKey: true,
             allowNull: false
         },
@@ -20,6 +20,9 @@ module.exports = (sequelize, DataTypes) => {
         vegan:{
             type:DataTypes.BOOLEAN,
             allowNull:true
+        },
+        halal:{type:DataTypes.BOOLEAN,
+        allowNull:true
         },
         description:{
             type:DataTypes.STRING,

@@ -22,12 +22,17 @@
             panier.push(newProduit)
         }
         existe = false
-        updatePanier()
+        updatePanier(panier)
     }
 </script>
 
-<div class="produits d-flex h-75 flex-column">
-    <div class="d-flex flex-wrap">
+<div class="produits d-flex flex-column">
+    <div class="d-flex flex-wrap justify-content-around">
+        {#each produits as produit}
+            {#if produit.plat_du_jour}
+                <Produit produit={produit} {addInPanier}/>
+            {/if}
+        {/each}
         {#each produits as produit}
             {#if produit.plat_du_jour}
                 <Produit produit={produit} {addInPanier}/>
@@ -35,7 +40,7 @@
         {/each}
     </div>
     <hr class="w-75 mx-auto"/>
-    <div class="d-flex flex-wrap">
+    <div class="d-flex flex-wrap justify-content-around">
         {#each produits as produit}
         {#if !produit.plat_du_jour}
             <Produit produit={produit} {addInPanier}/>
@@ -46,7 +51,7 @@
 
 <style>
     div.produits {
-        width: 70%;
+        width: calc(100% - 550px)
     }
 @media screen and (max-width: 640px) {
     div.produits {

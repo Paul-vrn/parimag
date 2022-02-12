@@ -3,18 +3,24 @@
     export let addInPanier;
     import {Button} from 'sveltestrap'
     produit.quantite = 0;
+    let quantiteSelect = 0;
     function changeQuantite(val){
-        if (0<=produit.quantite+val && produit.quantite+val<=10) //valeur arbitraire (peut être à changer   )
-            produit.quantite+= val
+        if (0<=quantiteSelect+val && quantiteSelect+val<=10) {
+            //valeur arbitraire (peut être à changer   )
+            quantiteSelect+= val
+        }
     }
+
     function clickPanier(){
-        if (produit.quantite >0){
+        if (quantiteSelect >0){
+            produit.quantite = quantiteSelect
             addInPanier(produit)
+            quantiteSelect=0
         }
     }
 </script>
 
-<div class="plat mx-3 p-2">
+<div class="plat mx-3 mb-3 p-2 d-flex flex-column justify-content-between">
     <div class="d-flex justify-content-center align-items-center flex-wrap">
         <h1>{produit.nom}</h1>
         <div class="d-flex justify-content-around align-items-center flex-nowrap w-75">
@@ -31,12 +37,12 @@
             <Button on:click={()=>changeQuantite(-1)}>
                 <img src={'images/icons/minus.png'} alt="validate" width="30" height="30"/>
             </Button>
-            {produit.quantite}
+            {quantiteSelect}
             <Button on:click={()=>changeQuantite(1)}>
                 <img src={'images/icons/plus.png'} alt="validate" width="30" height="30"/>
             </Button>    
         </div>
-        <Button on:click={clickPanier}>
+        <Button on:click={clickPanier} disabled={quantiteSelect==0}>
             <img src={'images/icons/panier_in.png'} alt="validate" width="30" height="30"/>
         </Button>
     </div>
@@ -52,7 +58,6 @@
         border-radius: 1em;
         width: 30%;
         min-width: 300px;
-        height: 300px;
     }
    
 

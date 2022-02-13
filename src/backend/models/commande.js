@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     const Commande = sequelize.define("commandes", {
-        id: {
-            type: DataTypes.INTEGER,
+        code: {
+            type: DataTypes.STRING,
             primaryKey: true,
             allowNull: false
         },

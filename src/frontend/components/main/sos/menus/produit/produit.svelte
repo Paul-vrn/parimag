@@ -34,15 +34,15 @@
     <p class="description_produit">{produit.description}</p>
     <div class="actions d-flex align-items-center justify-content-between">
         <div>
-            <Button on:click={()=>changeQuantite(-1)}>
-                <img src={'images/icons/minus.png'} alt="validate" width="30" height="30"/>
+            <Button on:click={()=>changeQuantite(-1)} size="sm">
+            <img src={'images/icons/minus.svg'} alt="minus" width="30" height="30"/>
             </Button>
             {quantiteSelect}
-            <Button on:click={()=>changeQuantite(1)}>
-                <img src={'images/icons/plus.png'} alt="validate" width="30" height="30"/>
-            </Button>    
+            <Button on:click={()=>changeQuantite(1)} size="sm">
+                <img src={'images/icons/plus.svg'} alt="plus" width="30" height="30"/>
+            </Button>
         </div>
-        <Button on:click={clickPanier} disabled={quantiteSelect==0}>
+        <Button on:click={clickPanier} disabled={quantiteSelect==0} color="success">
             <img src={'images/icons/panier_in.png'} alt="validate" width="30" height="30"/>
         </Button>
     </div>

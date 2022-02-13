@@ -3,10 +3,10 @@ const app = express();
 const port = process.env.PORT || 5050;
 const cors = require('cors');
 const path = require('path');
-
+app.use(express.json())
 app.use(cors());
 
-const db = require("./src/backend/model/index")
+const db = require("./src/backend/models/index")
 db.sequelize.sync()
 
 app.use(express.static('public'));

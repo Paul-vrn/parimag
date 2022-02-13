@@ -1,14 +1,16 @@
 var express = require('express'),
 router = express.Router();
 
-var listeRoute = require('./liste')
+var jsonRoute = require('./json')
 var produitsRoute = require('./produits')
+var commandesRoute = require('./commandes')
 router
 .get('/', (req, res) => {
     res.status(200).send("Vide")
 })
-.use('/liste', listeRoute)
+.use('/json', jsonRoute)
 .use('/produits', produitsRoute)
+.use('/commandes', commandesRoute)
 .get('/benzimag', (req, res) => {
     res.status(200).send("mdp : abcdefghij")
 })

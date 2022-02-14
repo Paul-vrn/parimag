@@ -24,10 +24,9 @@
     /* --  -- */
     import {commande} from '../../../../../services/commande'
     function commander(){
-        
+        commandeEnCours.code = generateUID(5).toUpperCase()
         commande(commandeEnCours, serviceGoogleDistance)
         .then(res => {
-            commandeEnCours.code = generateUID(5).toUpperCase()
             nextModal()
         })
         .catch(err => {

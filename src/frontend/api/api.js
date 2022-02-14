@@ -8,6 +8,7 @@ const axiosAPI = axios.create({
 
 // implement a method to execute all the request from here.
 const apiRequest = (method, url, request) => {
+  console.log(url, request)
     const headers = {
         authorization: ""
     };

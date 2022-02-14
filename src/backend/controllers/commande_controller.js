@@ -9,6 +9,9 @@ module.exports = {
             tel:req.body.tel,
             etat:req.body.etat
         }
+        if (req.body.QGNom !== undefined){
+            commande.QGNom = req.body.QGNom
+        }
         Commande.create(commande)
             .then(data => {
                 res.send(data);

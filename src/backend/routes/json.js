@@ -8,5 +8,8 @@ router
  .get('/produits', (req, res) => {
   res.status(200).json(require('../data/produits.json'))
 })
+  .get('/blogs', (req, res) => {
+    res.status(200).json(require('../data/blog.json'))
+  })
 
 module.exports = router;

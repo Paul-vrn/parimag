@@ -2,16 +2,19 @@
 	import Produits from './menus/produits.svelte'
 	import Panier from './menus/panier.svelte'
 	let panier = []
+	let commandeEnCours = {
+		panier:[]
+	}
 	function updatePanier(newPanier){
-		panier = [...newPanier]
+		commandeEnCours.panier = [...newPanier]
 	}
 
 	
 </script>
 
 <main id="menus">
-	<Produits panier={panier} {updatePanier}/>
-	<Panier panier={panier} {updatePanier}/>
+	<Produits commandeEnCours={commandeEnCours} updatePanier={updatePanier}/>
+	<Panier commandeEnCours={commandeEnCours} updatePanier={updatePanier}/>
 </main>
 
 <style>

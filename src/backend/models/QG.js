@@ -1,15 +1,17 @@
 module.exports = (sequelize, DataTypes) => {
     const Qg = sequelize.define("QG", {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            allowNull: false
-        },
         nom:{
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            primaryKey: true,
+            allowNull:true
         },
         adresse:{
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull:false
+        },
+        place_id:{
+            type: DataTypes.STRING,
+            allowNull:false
         }
     }, {timestamps: false});
     return Qg

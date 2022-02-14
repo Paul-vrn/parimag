@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import { getProduits } from '../../../../api/getProduits'
+    import { getProduits } from '../../../../api/produit'
     import Produit from './produit/produit.svelte'
     let produits = []
     onMount(async () => {
@@ -9,20 +9,20 @@
     });
 
     export let updatePanier;
-    export let panier;
+    export let commandeEnCours;
     function addInPanier(newProduit){
         let existe = false
-        panier.forEach(produit => {
+        commandeEnCours.panier.forEach(produit => {
             if (produit.id == newProduit.id){
                 produit.quantite = newProduit.quantite;
                 existe = true
             }
         });
         if (!existe){
-            panier.push(newProduit)
+            commandeEnCours.panier.push(newProduit)
         }
         existe = false
-        updatePanier(panier)
+        updatePanier(commandeEnCours.panier)
     }
 </script>
 

@@ -1,15 +1,18 @@
 <script>
     import {Modal, ModalBody, ModalFooter, ModalHeader, Button} from 'sveltestrap'
-    function generateUID(length){return window.btoa(Array.from(window.crypto.getRandomValues(new Uint8Array(length * 2))).map((b) => String.fromCharCode(b)).join("")).replace(/[+/]/g, "").substring(0, length);}
     export let open;
+    export let commandeEnCours;
     const toggle = () => {open = !open}
+    function t(){
+        commandeEnCours = commandeEnCours
+    }
 </script>
 
 
 <Modal isOpen={open} backdrop="static" size="xl" centered>
     <ModalHeader>Commande effectué !</ModalHeader>
     <ModalBody>
-        Voici votre code secret : {generateUID(5).toUpperCase()}<br/>
+        Voici votre code secret : {commandeEnCours.code}<br/>
         Veuillez scanner le QRCode suivant avec lydia.<br/>
         QRCODE<br/>
         Renseignez le code secret comme titre du virement.

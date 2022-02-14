@@ -2,6 +2,7 @@ module.exports = (sequelize, DataTypes) => {
     const Livreur = sequelize.define("livreurs", {
         id: {
             type: DataTypes.INTEGER,
+            autoIncrement: true,
             primaryKey: true,
             allowNull: false
         },

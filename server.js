@@ -7,7 +7,8 @@ app.use(express.json())
 app.use(cors());
 
 const db = require("./src/backend/models/index")
-db.sequelize.sync()
+db.sequelize.sync({alter:true})
+
 
 app.use(express.static('public'));
 
@@ -21,7 +22,6 @@ app.use('/api', apiRoutes)
 app.get('*', (req, res) => {
    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
-
 
 app.listen(port, () => {
    console.log(`Server is up at port ${port}`);

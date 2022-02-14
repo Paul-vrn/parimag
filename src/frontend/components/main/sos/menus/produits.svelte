@@ -33,11 +33,6 @@
                 <Produit produit={produit} {addInPanier}/>
             {/if}
         {/each}
-        {#each produits as produit}
-            {#if produit.plat_du_jour}
-                <Produit produit={produit} {addInPanier}/>
-            {/if}
-        {/each}
     </div>
     <hr class="w-75 mx-auto"/>
     <div class="d-flex flex-wrap justify-content-around">

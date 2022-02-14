@@ -1,4 +1,6 @@
 import { getQGs } from "../api/qg"
+import { createCommande } from "../api/commande"
+import { createDetailCommande } from "../api/detailCommande"
 export async function commande(commandeEnCours, serviceGoogleDistance) {
 
     let request = {
@@ -7,6 +9,7 @@ export async function commande(commandeEnCours, serviceGoogleDistance) {
         destinations:[{placeId:""}],
     }
     console.log("service commande")
+    console.log(commandeEnCours)
     const qgs = await getQGs()
     let trajets = []
     for (let qg of qgs) {
@@ -15,9 +18,28 @@ export async function commande(commandeEnCours, serviceGoogleDistance) {
         await serviceGoogleDistance.getDistanceMatrix(request)
             .then(res => {
                 trajets.push(res)
+                qg.time = res.rows[0].elements[0].duration.value
             })
             .catch(err => console.log(err))
     }
-    console.log(trajets)
-    // rows[0].elements[0].duration.value ==> le plus petit ==> qg à prendre
+    qgs.sort((qg1, qg2) => (qg1.time > qg2.time) ? 1 : -1) // trie les qgs dans l'ordre du plus proche au moins proche
+    commandeEnCours.qg = qgs[0]
+    
+    createCommande({
+        code:commandeEnCours.code,
+        adresse:commandeEnCours.adresse.description,
+        tel:commandeEnCours.tel,
+        etat:"en attente de payement",
+        QGNom:commandeEnCours.qg.nom
+    })
+        .then(res => {
+            for (let produit in commandeEnCours.panier){
+                createDetailCommande({
+                    commandeId:commandeEnCours.code,
+                    produitId:produit.id,
+                    quantite:produit.quantite
+                })
+            }        
+        })
+
 }

@@ -51,7 +51,7 @@
         <Svelecte
             resetOnBlur
             fetchResetOnBlur
-            minQuery={10}
+            minQuery={6}
             valueAsObject
             placeholder="Adresse"
             fetchMode="auto"

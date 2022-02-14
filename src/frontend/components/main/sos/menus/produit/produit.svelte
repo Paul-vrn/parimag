@@ -21,14 +21,17 @@
 </script>
 
 <div class="plat mx-3 mb-3 p-2 d-flex flex-column justify-content-between">
-    <div class="d-flex justify-content-center align-items-center flex-wrap">
+    <div class="d-flex justify-content-start align-items-center flex-wrap">
         <h1>{produit.nom}</h1>
-        <div class="d-flex justify-content-around align-items-center flex-nowrap w-75">
-            <h3 class="mx-2 my-auto">{produit.prix}€/unité</h3>
+        <div class="d-flex justify-content-between align-items-center flex-nowrap w-100">
+            <h4 class="m-0">{produit.prix}€/unité</h4>
             {#if produit.vegan}
-                <img class="mx-2" src={'images/icons/vegetalien.png'} alt="vegan" width="50" height="50"/>
+                <img src={'images/icons/vegetalien.png'} alt="vegan" width="40" height="40"/>
             {/if}
-            <img class="mx-2" src={'images/icons/info.png'} alt="info" width="50" height="50"/>        
+            {#if produit.halal}
+            <img src={'images/icons/halal.png'} alt="info" width="40" height="40"/>        
+            {/if}
+            <img src={'images/icons/info.png'} alt="info" width="40" height="40"/>        
         </div>
     </div>
     <p class="description_produit">{produit.description}</p>

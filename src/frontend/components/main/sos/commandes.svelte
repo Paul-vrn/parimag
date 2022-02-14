@@ -1,24 +1,35 @@
 <script>
-import { ListGroup, ListGroupItem } from 'sveltestrap';
+import { Table, Button } from 'sveltestrap';
 let commandes = ["a", "b", "c", "d"]
+import { onMount } from 'svelte';
+
+onMount(async () => {
+        const res = await getCommandes();
+        commandes = res;
+    });
 
 </script>
 
 <main id="commandes">
 	<h1>Commandes</h1>
-	<ListGroup flush class="mx-5">
-		<ListGroupItem>
-			<p>id</p>
-			<p>État</p>
-			<p>Temps d'attente estimé</p>
-			<p>id</p>
-		</ListGroupItem>
-		{#each commandes as commande, index}
-			<ListGroupItem>
-				<p>{commande}</p>
-			</ListGroupItem>
-		{/each}
-	</ListGroup>
+	<Table>
+		<thead>
+			<tr>
+				<th><Button>Reload</Button></th>
+				<th>Code</th>
+				<th>État</th>
+			</tr>
+		</thead>
+		<tbody>
+			{#each commandes as commande, i (commande.code)}
+				<tr>
+					<th>{i+1}</th>
+					<th>{commande.code}</th>
+					<th>{commande.etat}</th>
+				</tr>
+			{/each}
+		</tbody>
+	</Table>
 </main>
 
 <style>

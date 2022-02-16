@@ -27,13 +27,13 @@
 <div id="panier" class="d-flex justify-content-start flex-column me-2">
     <h1 class="text-center">Panier</h1>
     <hr/>
-    <Table striped responsive centered>
+    <Table striped responsive centered size="sm">
         <thead>
             <tr class="">
                 <th>#</th>
                 <th>Nom</th>
                 <th>quantite</th>
-                <th>prix</th>
+                <th class="text-nowrap">prix (€)</th>
                 <th>supprimer</th>
             </tr>
         </thead>
@@ -53,7 +53,8 @@
             {/each}
         </tbody>
     </Table>
-    <Button class=" mt-auto ms-auto me-2 mb-2" on:click={commander} disabled={commandeEnCours.panier.length ==0}>Commander</Button>
+    <hr class="mt-auto"/>
+    <Button class="ms-auto me-2 mb-2" color="primary" on:click={commander} disabled={commandeEnCours.panier.length ==0}>Commander</Button>
 </div>
 
 
@@ -64,7 +65,7 @@ tr th {
 div#panier {
     border-style: solid;
     border-radius: 1em;
-    width: 500px;
+    width: 400px;
     height: 80%;
     margin-left: auto;
     position: fixed;

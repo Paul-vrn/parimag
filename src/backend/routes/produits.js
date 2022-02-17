@@ -1,11 +1,12 @@
 var express = require('express'),
     router = express.Router();
 const Produit = require('../controllers/ produit_controller')
+const checkTokenMiddleware = require('./middleware').checkTokenMiddleware
 router
   .get('/populate', Produit.populate)
-  .post('/', Produit.create)
+  .post('/', checkTokenMiddleware, Produit.create)
   .get('/', Produit.findAll)
   .get('/:id', Produit.findOne)
-  .patch('/:id', Produit.update)
-  .delete('/:id', Produit.delete)
+  .patch('/:id', checkTokenMiddleware, Produit.update)
+  .delete('/:id', checkTokenMiddleware, Produit.delete)
 module.exports = router;

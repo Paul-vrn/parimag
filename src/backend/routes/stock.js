@@ -1,10 +1,11 @@
 var express = require('express'),
     router = express.Router();
 const stock = require('../controllers/stock_controller')
+const checkTokenMiddleware = require('./middleware').checkTokenMiddleware
 router
-  .post('/', stock.create)
+  .post('/', checkTokenMiddleware, stock.create)
   .get('/', stock.findAll)
   .get('/:id', stock.findOne)
-  .patch('/:id', stock.update)
-  .delete('/:id', stock.delete)
+  .patch('/:id', checkTokenMiddleware, stock.update)
+  .delete('/:id', checkTokenMiddleware, stock.delete)
 module.exports = router;

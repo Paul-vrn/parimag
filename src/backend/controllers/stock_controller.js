@@ -1,4 +1,6 @@
 const db = require('../models')
+const QG = require('../models/QG')
+const Produit = require('../models/produit')
 const Stock = db.Stock
 
 module.exports = {
@@ -19,7 +21,19 @@ module.exports = {
             })
     },
     findAll: (req, res) => {
-        Stock.findAll()
+        Stock.findAll({
+            include: [
+                {
+                    model: QG,
+                    attributes:['name'],
+                    required:true
+                },
+                {
+                    model:Produit,
+                    attributes:['id']
+                }
+            ]
+        })
             .then(data => {
                 res.send(data)
             })

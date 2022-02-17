@@ -6,6 +6,10 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             allowNull: false
         },
+        nom:{
+            type: DataTypes.STRING,
+            allowNull:false
+        },
         type:{
             type: DataTypes.ENUM('Repas', 'Service'),
             allowNull: false

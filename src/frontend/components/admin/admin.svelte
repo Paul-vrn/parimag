@@ -1,9 +1,13 @@
 <script>
-	console.log("chargement de la page admin_page")
+	import { onMount } from "svelte";
+	import { jwt, user } from '../../stores'
+	onMount(async () => {
+	})
 </script>
 
 <main>
 	<h1>Module admin</h1>
+
 </main>
 
 <style>

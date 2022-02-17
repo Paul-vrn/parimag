@@ -26,7 +26,8 @@
     function commander(){
         commandeEnCours.code = generateUID(5).toUpperCase()
         commande(commandeEnCours, serviceGoogleDistance)
-        .then(res => {
+        .then(() => {
+
             nextModal()
         })
         .catch(err => {

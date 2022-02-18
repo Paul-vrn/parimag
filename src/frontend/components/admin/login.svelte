@@ -10,11 +10,10 @@
     async function connect() {
         const res = await postQgAuth({username:username, password:password})
 		console.log(res)
-		return
-        if (res.message.includes("Error")){
+		if (!res.access_token){
             console.log("pas réussi à se co")
             //truc à faire pop
-        }
+		}
         else {
             $jwt = res.access_token
             window.location.replace('/admin')

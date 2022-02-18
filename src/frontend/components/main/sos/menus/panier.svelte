@@ -66,13 +66,20 @@ div#panier {
     border-radius: 1em;
     width: 500px;
     height: 80%;
-    margin-left: auto;
     position: fixed;
     right:0;
 }
+@media (min-width: 640px) and (max-width: 1015px){
+    div#panier {
+        width: 350px;
+    }
+}
+
 @media screen and (max-width: 640px) {
     div#panier {
-        width:100%;
+        width: calc(100% - 2rem);
+        margin: 1rem !important;
+        position:relative;
     }
 }
 </style>

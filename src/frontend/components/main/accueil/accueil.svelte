@@ -1,5 +1,5 @@
 <script>
-	import Blog from './blog/blog.svelte'
+	import Blogs from './blog/blogs.svelte'
 </script>
 <main id="accueil" class="container-fluid p-0">
 	<div class="d-flex justify-content-center flex-column">
@@ -18,7 +18,7 @@
 	</div>
 				
 </main>
-<Blog/>
+<Blogs/>
 <style>
 
 main#accueil{
@@ -54,7 +54,6 @@ main#accueil > div text {
 main#accueil > div p {
 	color: #FFFFFF;
 	font-size: 1.2em;
-	font-family: Roboto;
 }
 
 @media (max-width: 640px) {

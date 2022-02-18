@@ -61,9 +61,28 @@ button:focus {
 	border-color: #666;
 }
 
+/* -- Truc global -- */
+h1 {
+	font-family: Paris2024VariableRegular;
+}
+p, text {
+	font-family: Paris2024Regular;
+}
 /* -- Add font here -- */
 
 @font-face {
-	font-family: Varela Round;
+	font-family: VarelaRound;
 	src: url('/fonts/VarelaRound.ttf');;
+}
+@font-face {
+	font-family: Paris2024Regular;
+	src: url('/fonts/Paris2024Regular.ttf');
+}
+@font-face {
+	font-family: Paris2024Semibold;
+	src: url('/fonts/Paris2024Semibold.ttf');
+}
+@font-face {
+	font-family: Paris2024VariableRegular;
+	src: url('/fonts/Paris2024VariableRegular.ttf');
 }

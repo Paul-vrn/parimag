@@ -1,9 +1,11 @@
 <script>
     export let produit;
     export let addInPanier;
+    import ModalInfo from '../modal/modal_more_info.svelte'
     import {Button} from 'sveltestrap'
     produit.quantite = 0;
     let quantiteSelect = 0;
+    let open = false;
     function changeQuantite(val){
         if (0<=quantiteSelect+val && quantiteSelect+val<=10) {
             //valeur arbitraire (peut être à changer   )
@@ -18,8 +20,12 @@
             quantiteSelect=0
         }
     }
+    function showInfo(){
+        open = false;
+        open = true;
+    }
 </script>
-
+<ModalInfo produit={produit} open={open}/>
 <div class="plat mx-3 mb-3 p-2 d-flex flex-column justify-content-between">
     <div class="d-flex justify-content-start align-items-center flex-wrap">
         <h1>{produit.nom}</h1>
@@ -31,7 +37,7 @@
             {#if produit.halal}
             <img src={'images/icons/halal.png'} alt="info" width="40" height="40"/>        
             {/if}
-            <img src={'images/icons/info.png'} alt="info" width="40" height="40"/>        
+            <img src={'images/icons/info.png'} alt="info" width="40" height="40" on:click={showInfo}/>        
         </div>
     </div>
     <p class="description_produit">{produit.description}</p>
@@ -50,6 +56,7 @@
         </Button>
     </div>
 </div>
+
 <style>
     .description_produit {
         overflow: hidden;

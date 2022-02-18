@@ -1,37 +1,12 @@
 [
     {
         "titre":"Blog 1",
-        "photo":"",
+        "photo":"blog_2",
         "description":""
     },
     {
         "titre":"Blog 2",
-        "photo":"",
-        "description":""
-    },
-    {
-        "titre":"Blog 3",
-        "photo":"",
-        "description":""
-    },
-    {
-        "titre":"Blog 3",
-        "photo":"",
-        "description":""
-    },
-    {
-        "titre":"Blog 3",
-        "photo":"",
-        "description":""
-    },
-    {
-        "titre":"Blog 3",
-        "photo":"",
-        "description":""
-    },
-    {
-        "titre":"Blog 3",
-        "photo":"",
+        "photo":"blog_1",
         "description":""
     }
 ]

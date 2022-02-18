@@ -20,6 +20,7 @@ import {
     
     function changeView(event){
         $viewMain = event.target.id
+		handleUpdate(event)
 	}
 	function dropdownOpen(event){
 		if (!$viewMain.includes('drop'))

@@ -13,8 +13,8 @@
 </script>
 
 <main id="menus">
-	<Produits commandeEnCours={commandeEnCours} updatePanier={updatePanier}/>
 	<Panier commandeEnCours={commandeEnCours} updatePanier={updatePanier}/>
+	<Produits commandeEnCours={commandeEnCours} updatePanier={updatePanier}/>
 </main>
 
 <style>

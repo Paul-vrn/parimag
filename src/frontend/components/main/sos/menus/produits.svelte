@@ -43,11 +43,16 @@
     {/each}
     </div>
 </div>
-
 <style>
+div.produits {
+    width: calc(100% - 550px)
+}
+
+@media (min-width: 640px) and (max-width: 1015px){
     div.produits {
-        width: calc(100% - 550px)
+        width: calc(100% - 350px)
     }
+}
 @media screen and (max-width: 640px) {
     div.produits {
         width:100%;

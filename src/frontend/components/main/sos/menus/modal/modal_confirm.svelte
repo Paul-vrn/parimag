@@ -9,7 +9,7 @@
     import Svelecte from 'svelecte'
     //AIzaSyBVuuSdHqLFHATJRR29glB6hZHGENj7O8o
 
-    /* -- input search place --*/
+    /* -- Input search place --*/
     let serviceGoogleSearch, serviceGoogleDistance
     window.placeCallback = function () {
         const sessionToken  = new google.maps.places.AutocompleteSessionToken();

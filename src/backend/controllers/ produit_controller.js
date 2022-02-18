@@ -10,6 +10,7 @@ module.exports = {
     },
     create: (req, res) => {
         const produit = {
+            nom:req.body.nom,
             type:req.body.type,
             prix:req.body.prix,
             ingredients:req.body.ingredients,

@@ -1,5 +1,4 @@
 const db = require('../models')
-const QG = require('../models/QG')
 const Produit = require('../models/produit')
 const Stock = db.Stock
 
@@ -7,30 +6,36 @@ module.exports = {
     create: (req, res) => {
         const stock = {
             quantite:req.body.quantite,
-            QGId:req.body.QGId,
+            QGNom:req.body.QGNom,
             produitId:req.body.produitId
         }
-        Stock.create(stock)
-            .then(data => {
-                res.send(data);
-            })
-            .catch(err => {
-                res.status(500).send({
-                    message: err.message || "Error création Stock"
-                })
+        Stock.findOne({ where: {QGNom:stock.QGNom, produitId:stock.produitId}})
+            .then(dat => {
+                if (dat === null){
+                    Stock.create(stock)
+                    .then(data => {
+                        res.send(data);
+                    })
+                    .catch(err => {
+                        res.status(500).send({
+                            message: err.message || "Error création Stock"
+                        })
+                    })        
+                } else {
+                    res.status(400).send({message:"Il existe déjà un stock"})
+                }
             })
     },
     findAll: (req, res) => {
         Stock.findAll({
             include: [
                 {
-                    model: QG,
-                    attributes:['name'],
-                    required:true
+                    model:db.Qg,
+                    attributes:['nom']
                 },
                 {
-                    model:Produit,
-                    attributes:['id']
+                    model:db.Produit,
+                    attributes:['nom']
                 }
             ]
         })

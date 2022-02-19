@@ -26,11 +26,16 @@ module.exports = (sequelize, DataTypes) => {
             type:DataTypes.BOOLEAN,
             allowNull:true
         },
-        halal:{type:DataTypes.BOOLEAN,
-        allowNull:true
+        halal:{
+            type:DataTypes.BOOLEAN,
+            allowNull:true
         },
         description:{
             type:DataTypes.STRING,
+            allowNull:false
+        },
+        photo:{
+            type: DataTypes.STRING,
             allowNull:false
         }
 

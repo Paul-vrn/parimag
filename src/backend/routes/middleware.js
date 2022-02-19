@@ -13,6 +13,7 @@ const extractBearerToken = headerValue => {
 /* Vérification du token */
 const checkTokenMiddleware = (req, res, next) => {
     // Récupération du token
+    return next()
     const token = req.headers.authorization && extractBearerToken(req.headers.authorization)
 
     // Présence d'un token

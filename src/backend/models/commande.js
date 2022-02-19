@@ -14,12 +14,13 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         etat: {
-            type: DataTypes.ENUM(
-                "en attente de payement",
-                "en cuisine",
-                "en cours de livraison",
-                "livrée"
-                ),
+            /**
+             * EAP : en attente de payement
+             * EC : en cuisine
+             * LV : livrée
+             * ECL : en cours de livraison
+             */
+            type: DataTypes.ENUM("EAP", "EC", "LV", "ECL"),
             allowNull: false
         }
     });

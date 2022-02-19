@@ -29,7 +29,7 @@ export async function commande(commandeEnCours, serviceGoogleDistance) {
         code:commandeEnCours.code,
         adresse:commandeEnCours.adresse.description,
         tel:commandeEnCours.tel,
-        etat:"en attente de payement",
+        etat:"EAP",
         QGNom:commandeEnCours.qg.nom
     })
         .then(res => {

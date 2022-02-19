@@ -1,12 +1,19 @@
 const res = require('express/lib/response')
 const db = require('../models')
 const Produit = db.Produit
-
+const csv = require('csv-parser')
+const fs = require('fs')
+const path = require('path')
 module.exports = {
     populate: (req, res) => {
-        console.log("populate produit")
-        produits = require('../data/produits.json')
-        console.log(produits)    
+        fs.createReadStream(path.resolve(__dirname, '..', 'data', 'produits.csv'))
+        .pipe(csv())
+        .on('data', (data) => {
+            Produit.create(data)
+        })
+        .on('end', () => {
+            res.status(200).send({message:"Table produit remplie"})
+        })    
     },
     create: (req, res) => {
         const produit = {

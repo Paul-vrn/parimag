@@ -1,8 +1,26 @@
 const db = require('../models')
-const Produit = require('../models/produit')
 const Stock = db.Stock
-
+const Qg = db.Qg
+const Produit = db.Produit
 module.exports = {
+    populate: (req, res) => {
+        Qg.findAll()
+        .then(qgs => {
+            Produit.findAll({where:{type:"Repas"}})
+            .then(produits => {
+                produits.forEach(produit => {
+                    qgs.forEach(qg => {
+                        Stock.create({
+                            quantite:0,
+                            QGNom:qg.nom,
+                            produitId:produit.id
+                        })
+                    })
+                });
+            })
+        })
+        res.status(200).send({message:"populate stocks"})
+    },
     create: (req, res) => {
         const stock = {
             quantite:req.body.quantite,
@@ -28,6 +46,10 @@ module.exports = {
     },
     findAll: (req, res) => {
         Stock.findAll({
+            order: [
+                ['produitId', 'ASC'],
+                ['QGNom', 'ASC']
+            ],
             include: [
                 {
                     model:db.Qg,
@@ -95,5 +117,11 @@ module.exports = {
                 }
             })
             .catch(err => res.status(500).send({message:err.message}))
-    }    
+    },
+    deleteAll: (req, res) => {
+        Stock.destroy({ truncate: true, restartIdentity: true })
+        .then(() => {
+            res.status(200).send({message:"delete all stocks"})
+        })
+    }
 }

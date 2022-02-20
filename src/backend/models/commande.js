@@ -16,11 +16,11 @@ module.exports = (sequelize, DataTypes) => {
         etat: {
             /**
              * EAP : en attente de payement
-             * EC : en cuisine
+             * EC : commande prise en charge
              * LV : livrée
-             * ECL : en cours de livraison
              */
-            type: DataTypes.ENUM("EAP", "EC", "LV", "ECL"),
+            type: DataTypes.ENUM,
+            values:["EAP", "CPC", "LV"],
             allowNull: false
         }
     });

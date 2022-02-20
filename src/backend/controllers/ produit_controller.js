@@ -36,7 +36,14 @@ module.exports = {
             })
     },
     findAll: (req, res) => {
-        Produit.findAll()
+        Produit.findAll({
+            include: [
+                {
+                    model:db.Stock,
+                    attributes:['quantite', 'QGNom']
+                }
+            ],
+        })
             .then(data => {
                 res.send(data)
             })

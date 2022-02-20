@@ -8,3 +8,13 @@ export const getLivreurs = async () => {
       console.error(error);
     }
 };
+
+export const updateLivreur = async (id, livreur) => {
+  try {
+    const response = await Api.patch(`livreurs/${id}`, livreur)
+    return response;
+  } catch (error){
+    console.log(error)
+  }
+}
+

@@ -49,12 +49,12 @@
                 </th>
                 <th>{commande.adresse}</th>
                 <th>{commande.tel}</th>
-                <th>
-                <Button on:click={validate(commande)} color="primary" >
+                <th class="d-flex gap-1">
+                <Button on:click={validate(commande)} color="primary" disabled={['','-'].includes(livreursSelected[commande.code])}>
                     <img src={'images/icons/check.svg'} alt="validate" width="20" height="20"/>
                 </Button>
                 {getPrix(commande)}€
-                <Input type="select" bind:value={livreursSelected[i]}>
+                <Input type="select" bind:value={livreursSelected[commande.code]}>
                     <option>-</option>
                     {#each livreurs.filter(liv => liv.disponible) as livreur}
                         <option>{livreur.nom}</option>
@@ -64,9 +64,9 @@
                         <option>{livreur.nom}</option>
                     {/each}
                 </Input>
-            </th>
-                <th class="d-flex gap-1">
-                    <Button on:click={livred(commande)} color="secondary" disabled={['','-'].includes(livreursSelected[i])}>
+                </th>
+                <th>
+                    <Button on:click={livred(commande)} color="secondary">
                         <img src={'images/icons/check.svg'} alt="validate" width="20" height="20"/>
                     </Button>
                 </th>

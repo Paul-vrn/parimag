@@ -13,3 +13,6 @@ jwt.subscribe(val => localStorage.setItem('jwt', val))
 
 export const user = writable(localStorage.getItem('user') || null)
 user.subscribe(val => localStorage.setItem('user', val))
+
+export const viewAdmin = writable(localStorage.getItem('viewAdmin') || 'AA')
+viewAdmin.subscribe((val) => localStorage.setItem("viewAdmin", val))

@@ -24,6 +24,12 @@ module.exports = {
     },
     findAll: (req, res) => {
         Commande.findAll({
+            include: [
+                {
+                    model:db.DetailCommande,
+                    include: [{model:db.Produit,attributes:['nom','prix']}]
+                }
+            ],
             order: [
                 ['QGNom', 'DESC'],
                 ['updatedAt', 'DESC']]

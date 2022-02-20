@@ -23,6 +23,8 @@
 
 main#accueil{
 	background-image: url("/images/fond.png");
+	background-color: #D7C378;
+
 	background-repeat: no-repeat;
 	box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.5);
 	background-size: 100%;

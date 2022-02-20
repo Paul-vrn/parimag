@@ -18,7 +18,6 @@
             rows[j] = [res[i], res[i+1], res[i+2]]
             j++
         }
-        console.log(rows)
     })
     function submit(event){
         if (event.key === "Enter"){
@@ -45,7 +44,7 @@
             <tr>
                 <th>{row[0].produit.nom}</th>
                 {#each row as stock}
-                    <th><Input size="sm" value={stock.quantite} id={stock.id} on:keydown={submit}/></th>
+                    <th><Input value={stock.quantite} id={stock.id} on:keydown={submit}/></th>
                 {/each}
             </tr>
         {/each}

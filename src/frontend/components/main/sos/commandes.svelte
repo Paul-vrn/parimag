@@ -2,12 +2,19 @@
 import { Table, Button } from 'sveltestrap';
 let commandes = []
 import { onMount } from 'svelte';
+import {getCommandes} from '../../../api/commande'
 
 onMount(async () => {
         const res = await getCommandes();
-        commandes = res;
+        commandes = res.filter(co => co.etat !== "LV");
     });
 
+	const etat = {
+		"LV":"Livrée",
+		"EAP":"En attente de payement",
+		"CPC":"Commande prise en charge"
+	}
+	
 </script>
 
 <main id="commandes">
@@ -25,7 +32,7 @@ onMount(async () => {
 				<tr>
 					<th>{i+1}</th>
 					<th>{commande.code}</th>
-					<th>{commande.etat}</th>
+					<th>{etat[commande.etat]}</th>
 				</tr>
 			{/each}
 		</tbody>

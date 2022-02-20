@@ -1881,6 +1881,11 @@ svelecte@^3.5.6:
   dependencies:
     svelte-tiny-virtual-list "^1.1.7"
 
+svelte-copy-to-clipboard@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/svelte-copy-to-clipboard/-/svelte-copy-to-clipboard-0.2.5.tgz#4fd5c89a6415b7f6a4e153a9896b50b2dee12611"
+  integrity sha512-EAULxib4pRa59nyz25dDKITgSAVkrNVojRZVCSO8MIFd5GJljghJaCTIe/7R+O3GxKYIwJ3XHDNoY1hfjJeyEg==
+
 svelte-routing@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/svelte-routing/-/svelte-routing-1.6.0.tgz#cdfed6b665d4a851f3d7e532e16bfbb318ce5294"

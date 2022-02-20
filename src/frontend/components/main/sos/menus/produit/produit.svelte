@@ -5,11 +5,17 @@
     import {Button} from 'sveltestrap'
     produit.quantite = 0;
     let quantiteSelect = 0;
+    produit.quantiteMax = 0;
+    produit.stocks.forEach(stock => produit.quantiteMax+=stock.quantite);
+
     let open = false;
     function changeQuantite(val){
-        if (0<=quantiteSelect+val && quantiteSelect+val<=10) {
+        if (0<=quantiteSelect+val && Math.min(produit.quantiteMax, quantiteSelect+val<=5)) {
             //valeur arbitraire (peut être à changer   )
             quantiteSelect+= val
+        } else {
+            console.log("y a plus de stocks ou inf à 0")
+            //TODO : y a plus de stocks
         }
     }
 
@@ -51,10 +57,14 @@
                 <img src={'images/icons/plus.svg'} alt="plus" width="30" height="30"/>
             </Button>
         </div>
+        {#if produit.quantiteMax<=0}
+            <p>Indisponible</p>
+        {:else}
         <Button on:click={clickPanier} disabled={quantiteSelect==0} color="success">
             <img src={'images/icons/panier_in.png'} alt="validate" width="30" height="30"/>
         </Button>
-    </div>
+        {/if}
+    </div>  
 </div>
 
 <style>

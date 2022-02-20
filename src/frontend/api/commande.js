@@ -17,3 +17,13 @@ export const getCommandes = async() => {
     console.error(error);
   }
 }
+
+export const updateCommande = async (code, commande) => {
+  try {
+    const response = await Api.patch(`commandes/${code}`, commande)
+    return response;
+  } catch (error){
+    console.log(error)
+  }
+}
+

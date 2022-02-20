@@ -1,11 +1,29 @@
 <script>
+    import Youtube from 'svelte-youtube'
     export let blog;
+    let options = {
+        width:'100%',
+        height:'500px',
+        controls:'2'
+    }
 </script>
 
-
+{#if blog.photo !== undefined}
 <div class="blog d-flex justify-content-end flex-column" style="background-image: url(/images/{blog.photo}.jpg">
     <h1 class="text-center">{blog.titre}</h1>
 </div>
+{:else}
+<div class="blog d-flex justify-content-end flex-column" style="overflow: hidden;">
+    <iframe width="100%" height="100%" src={blog.video} title="YouTube video player" 
+    frameborder="0"
+    showinfo="0"
+    controls="0"
+    autohide="1"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h1 class="text-center position-absolute w-100">{blog.titre}</h1>
+</div>
+
+{/if}
 
 <style>
 div.blog {
@@ -23,6 +41,7 @@ div.blog {
 div.blog h1 {
     color: white;
     font-family:Paris2024Regular;
+    margin-bottom: 0.5em;
 }
 
 @media (max-width: 640px) {

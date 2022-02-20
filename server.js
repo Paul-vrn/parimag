@@ -11,8 +11,7 @@ app.use(cookieParser())
 app.use(express.json())
 app.use(cors());
 const db = require("./src/backend/models/index");
-db.sequelize.sync({alter:true});
-
+db.sequelize.sync();
 
 app.use(express.static('public'));
 app.get('/admin', (req, res) => {

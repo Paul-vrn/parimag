@@ -23,7 +23,11 @@ module.exports = {
             })
     },
     findAll: (req, res) => {
-        Commande.findAll()
+        Commande.findAll({
+            order: [
+                ['QGNom', 'DESC'],
+                ['updatedAt', 'DESC']]
+        })
             .then(data => {
                 res.send(data)
             })

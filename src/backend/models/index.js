@@ -17,10 +17,14 @@ db.Commande = require('./commande')(sequelize, DataTypes);
 db.DetailCommande = require('./detail_commande')(sequelize, DataTypes);
 db.Stock = require('./stock')(sequelize, DataTypes);
 
+
 db.Livreur.belongsTo(db.Qg, {foreignKey:{allowNull:false}}) // QG_id dans Livreur
 db.Commande.hasMany(db.DetailCommande)
 db.DetailCommande.belongsTo(db.Commande, {foreignKey:{allowNull:false}, onDelete:'CASCADE'})
 db.DetailCommande.belongsTo(db.Produit, {foreignKey:{allowNull:false}})
+
+db.Livreur.hasMany(db.Commande)
+db.Commande.belongsTo(db.Livreur, {foreignKey:{allowNull:true}})
 
 db.Produit.hasMany(db.Stock)
 db.Stock.belongsTo(db.Produit, {foreignKey:{allowNull:false}})

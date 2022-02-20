@@ -1,36 +1,64 @@
 <script>
     import { onMount } from 'svelte';
-    import {Table, Button} from 'sveltestrap'
-    function reload() {
-
+    import {Table, Button, Input} from 'sveltestrap'
+    import { getStocks, updateStock } from '../../../api/stock'
+    async function reload() {
+        const res = await getStocks();
+        let j = 0
+        for (let i = 0; i < res.length; i += 3) {
+            rows[j] = [res[i], res[i+1], res[i+2]]
+            j++
+        }
     }
-    const stocks = []
+    let rows = []
     onMount(async ()=> {
-        //stocks = await getStocks();
+        const res = await getStocks();
+        let j = 0
+        for (let i = 0; i < res.length; i += 3) {
+            rows[j] = [res[i], res[i+1], res[i+2]]
+            j++
+        }
+        console.log(rows)
     })
+    function submit(event){
+        if (event.key === "Enter"){
+            updateStock(event.target.id, {quantite:event.target.value})
+            .then(res => {
+                console.log(res)
+                //TODO ajouter un toast
+            })
+        }
+    }
 </script>
 
-
-<div>
-    <Table>
-		<thead>
-			<tr>
-				<th><Button on:click={reload}>Reload</Button></th>
-                {#each stocks as stock}
-                    <th>{stock.QGNom}</th>
+<Table bordered>
+    <thead>
+        <tr>
+            <th><Button on:click={reload}>Reload</Button></th>
+            <th>AA</th>
+            <th>PPM</th>
+            <th>SMH</th>
+        </tr>
+    </thead>
+    <tbody>
+        {#each rows as row, i}
+            <tr>
+                <th>{row[0].produit.nom}</th>
+                {#each row as stock}
+                    <th><Input size="sm" value={stock.quantite} id={stock.id} on:keydown={submit}/></th>
                 {/each}
             </tr>
-		</thead>
-		<tbody>
-			{#each stocks as stock, i (stock.id)}
-				<tr>
-                    <th>{stock.produitId}</th>
-                </tr>
-			{/each}
-		</tbody>
-	</Table>
-</div>
+        {/each}
+    </tbody>
+</Table>
 
 <style>
-
+    :global(table){
+        width: 30% !important;
+        height: auto;
+    }
+    :global(table input) {
+        width:50px;
+        text-align: end;
+    }
 </style>

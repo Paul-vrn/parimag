@@ -9,4 +9,11 @@ export const createCommande = async(commande) => {
     }
 };
 
-
+export const getCommandes = async() => {
+  try {
+    const response = await Api.get('commandes');
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+}

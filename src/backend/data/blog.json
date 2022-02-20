@@ -1,5 +1,13 @@
 [
     {
+        "titre":"Teaser",
+        "video":"https://www.youtube.com/embed/6hKAzC5ecsc"
+    },
+    {
+        "titre":"Film",
+        "video":"https://www.youtube.com/embed/6hKAzC5ecsc"
+    },
+    {
         "titre":"Blog 1",
         "photo":"blog_2",
         "description":""

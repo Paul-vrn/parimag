@@ -9,12 +9,12 @@
 <Modal isOpen={open} toggle={toggle} size="xl" centered>
     <ModalHeader>{produit.nom}</ModalHeader>
     <ModalBody>
-        Plus d'info sur votre produit.<br/>
+        <h3>Plus d'info sur votre produit.</h3>
         {produit.description}
         <h3>Ingredients :</h3>
         {produit.ingredients}
     </ModalBody>
     <ModalFooter>
-        Pour plus d'informations contactez le ....
+        Pour plus d'informations contactez nous sur notre compte facebook !
     </ModalFooter>
 </Modal>

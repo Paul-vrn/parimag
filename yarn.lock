@@ -168,6 +168,11 @@ array-flatten@1.1.1:
   resolved "https://registry.npmjs.org/array-flatten/-/array-flatten-1.1.1.tgz"
   integrity sha1-ml9pkFGx5wczKPKgCJaLZOopVdI=
 
+as-toast@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/as-toast/-/as-toast-1.0.0.tgz#fc75fc35b6890b790341b227d60f785706de4d6f"
+  integrity sha512-flCRYx+ZCzTG8uYjI7pVnul1bhyhWQFkvPseamUbH9Mgh830g8LRYY80uYV2/AlZ0IPZNjk/c2GbaRIBKoqysQ==
+
 asn1@~0.2.3:
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/asn1/-/asn1-0.2.6.tgz#0d3a7bb6e64e02a90c0303b31f292868ea09a08d"

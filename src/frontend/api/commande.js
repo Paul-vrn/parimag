@@ -27,3 +27,11 @@ export const updateCommande = async (code, commande) => {
   }
 }
 
+export const deleteCommande = async (code) => {
+  try {
+    const response = await Api.delete(`commandes/${code}`)
+    return response;
+  } catch (error){
+    console.log(error)
+  }  
+}

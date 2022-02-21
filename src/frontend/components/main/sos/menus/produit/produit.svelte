@@ -3,6 +3,8 @@
     export let addInPanier;
     import ModalInfo from '../modal/modal_more_info.svelte'
     import {Button} from 'sveltestrap'
+    import { Toasts, addToast } from 'as-toast';
+
     produit.quantite = 0;
     let quantiteSelect = 0;
     produit.quantiteMax = 0;
@@ -16,6 +18,7 @@
         } else {
             console.log("y a plus de stocks ou inf à 0")
             //TODO : y a plus de stocks
+            addToast("Il n'y a pas assez de stock", "warn", 2000)
         }
     }
 
@@ -31,6 +34,7 @@
         open = true;
     }
 </script>
+<Toasts/>
 <ModalInfo produit={produit} open={open}/>
 <div class="plat mx-3 mb-3 p-2 d-flex flex-column justify-content-between">
     <div class="d-flex justify-content-start align-items-center flex-wrap">

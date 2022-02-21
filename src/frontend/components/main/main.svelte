@@ -29,8 +29,14 @@ import {
 </script>
 
 
+<svelte:head>
+	<script defer async
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVuuSdHqLFHATJRR29glB6hZHGENj7O8o&libraries=places&callback=placeCallback">
+	</script>
+</svelte:head>
+
 <header>
-    <Navbar color="white" light expand="md" class="m-0 p-0 fixed-top shadow-lg">
+    <Navbar color="white" light expand="md" class="m-0 p-0 fixed-top shadow-lg" style=" height:80px;">
 		<NavbarBrand href="javascript:void(0)" id="accueil" on:click={changeView} class="m-3">
 			<Image alt="Logo" src={'images/logo.png'} id="accueil" class="img-fluid" width="150"/>
 		</NavbarBrand>

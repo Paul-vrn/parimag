@@ -22,6 +22,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.ENUM,
             values:["EAP", "CPC", "LV"],
             allowNull: false
+        },
+        commentaire:{
+            type: DataTypes.STRING,
+            allowNull:true
         }
     });
     return Commande

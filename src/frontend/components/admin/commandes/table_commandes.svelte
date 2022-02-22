@@ -138,6 +138,7 @@
 </script>
 
 <Toasts/>
+
 <Table bordered class="w-100" size="sm">
     <thead>
         <tr>
@@ -145,13 +146,14 @@
             <th>etat</th>
             <th>adresse</th>
             <th>tel</th>
+            <th>detail</th>
             <th>Valider le payement</th>
             <th>Assigner un livreur</th>
             <th>Valider la livraison</th>
             <th>Msg Discord</th>
-            <th>
-                <Button id="but-del" color="danger" on:click={deleteCommandes} size="sm">Del</Button>
-                <Tooltip  target={"but-del"} placement="bottom">Attention ! Action irréversible</Tooltip>
+            <th id={`but-del`}>
+                <Button id={`but-del`} color="danger" on:click={deleteCommandes} size="sm">Del</Button>
+                <Tooltip  target={`but-del`} class="position-absolute" placement="top">Attention ! Action irréversible</Tooltip>
             </th>
         </tr>
     </thead>
@@ -164,6 +166,15 @@
                 </th>
                 <th>{commande.adresse}</th>
                 <th>{commande.tel}</th>
+                <th>
+                    <img id={`info-${commande.code}`} src={'images/icons/info.png'} alt="validate" width="20" height="20"/>
+                    <Tooltip  target={`info-${commande.code}`} placement="bottom">
+                        <h4 class="m-0 p-0">Panier :</h4>
+                        {#each commande.detail_commandes as detail}
+                            <p class="m-0 p-0">{detail.produit.nom} : {detail.produit.prix}€ x{detail.quantite}</p>
+                        {/each}
+                    </Tooltip>
+                </th>
                 <th>
                     <div class="d-flex gap-1 align-items-center justify-content-around">
                         <Button on:click={validate(commande)} color="primary" size="sm">

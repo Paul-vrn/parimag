@@ -31,7 +31,6 @@ import { Toasts, addToast } from 'as-toast';
 			<tr>
 				<th><Button color="primary" on:click={reload}>
 					<img src={'images/icons/reload.svg'} alt="reload" width="20" height="20"/>
-
 				</Button></th>
 				<th>Code</th>
 				<th>État</th>

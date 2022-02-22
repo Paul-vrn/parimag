@@ -7,8 +7,6 @@
         const res = await getBlogs();
         blogs = res;
     });
-    console.log(document.cookie)
-
 </script>
 
 
@@ -27,7 +25,7 @@ div#blog {
     background-color: #D7C378;
 }
 div#blog > div {
-    padding-top: 115px;
+    padding-top: 100px;
     width:100%;
     display: flex;
     flex-wrap: wrap;

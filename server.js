@@ -21,7 +21,7 @@ app.get('/admin', (req, res) => {
     }
    jwt.verify(token, SECRET, (err, decodedToken) => {
       if (err) {
-          res.status(401).json({ message: 'Error. Bad token' })
+          res.redirect('/login')
       } else {
          res.sendFile(path.resolve(__dirname, 'public', 'admin.html'))
       }

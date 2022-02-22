@@ -9,7 +9,17 @@ module.exports = {
         fs.createReadStream(path.resolve(__dirname, '..', 'data', 'produits.csv'))
         .pipe(csv())
         .on('data', (data) => {
-            Produit.create(data)
+            Produit.create({
+                nom:data.nom,
+                type:data.type,
+                prix:(data.prix==="")?null:data.prix,
+                ingredients:(data.ingredients==="") ? null : data.ingredients,
+                vegan:(data.vegan=="VRAI") ? true : false,
+                halal:(data.halal==="VRAI") ? true : false,
+                description:data.ingredients,
+                plat_du_jour:(data.plat_du_jour==="") ? null : data.plat_du_jour,
+                photo:data.photo
+            })
         })
         .on('end', () => {
             res.status(200).send({message:"Table produit remplie"})
@@ -19,11 +29,11 @@ module.exports = {
         const produit = {
             nom:req.body.nom,
             type:req.body.type,
-            prix:req.body.prix,
-            ingredients:req.body.ingredients,
-            vegan:req.body.vegan,
-            halal:req.body.halal,
-            description:req.body.description
+            prix:(req.body.prix==="") ? null : req.body.prix,
+            ingredients:(req.body.ingredients==="") ? null : req.body.ingredients,
+            vegan:(req.body.vegan=="VRAI") ? true : false,
+            halal:(req.body.halal==="VRAI") ? true : false,
+            description:(req.body.description==="") ? null : req.body.ingredients
         }
         Produit.create(produit)
             .then(data => {
@@ -40,7 +50,6 @@ module.exports = {
             include: [
                 {
                     model:db.Stock,
-                    attributes:['quantite', 'QGNom']
                 }
             ],
         })

@@ -2,8 +2,8 @@
     export let updatePanier;
     export let commandeEnCours;
     import { Button, Table } from 'sveltestrap';
-    function deleteProduit(id){
-        commandeEnCours.panier = commandeEnCours.panier.filter(produit => produit.id != id)
+    function deleteElOfPanier(id){
+        commandeEnCours.panier = commandeEnCours.panier.filter(elem => elem.id != id)
         updatePanier(commandeEnCours.panier)
     }
 
@@ -28,7 +28,8 @@
 <div id="panier" class="d-flex justify-content-start flex-column me-2">
     <h1 class="text-center">Panier</h1>
     <hr/>
-    <Table striped responsive centered size="sm" class="w-100">
+    <h2>Plats :</h2>
+    <Table responsive centered size="sm" class="w-100">
         <thead>
             <tr class="">
                 <th>#</th>
@@ -39,16 +40,39 @@
             </tr>
         </thead>
         <tbody>
-            {#each commandeEnCours.panier as produit, i (produit.id)}
+            {#each commandeEnCours.panier.filter(prod => prod.type==="Repas") as produit, i (produit.id)}
                 <tr class=" align-items-center">
                     <th>{i+1}</th>
                     <th>{produit.nom}</th>
                     <th>{produit.quantite}</th>
                     <th>{(produit.prix*produit.quantite).toFixed(2)}</th>
                     <th>
-                        <Button on:click={() => deleteProduit(produit.id)} color="danger">
+                        <Button on:click={() => deleteElOfPanier(produit.id)} color="danger">
                         <img src={'images/icons/poubelle.png'} alt="validate" width="20" height="20"/>
                     </Button>
+                    </th>
+                </tr>
+            {/each}
+        </tbody>
+    </Table>
+    <h2>Services :</h2>
+    <Table responsive centered size="sm" class="w-100">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nom</th>
+                <th>Supprimer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {#each commandeEnCours.panier.filter(prod => prod.type==="Service") as service, i (service.id)}
+                <tr class="align-items-center">
+                    <th>{i+1}</th>
+                    <th>{service.nom}</th>
+                    <th>
+                        <Button on:click={() => deleteElOfPanier(service.id)} color="danger">
+                            <img src={'images/icons/poubelle.png'} alt="validate" width="20" height="20"/>
+                        </Button>    
                     </th>
                 </tr>
             {/each}
@@ -62,22 +86,23 @@
 <style>
 tr th {
     text-align: center;
+    vertical-align:middle;
 }
 div#panier {
     border-style: solid;
     border-radius: 1em;
-    width: 400px;
+    width: 500px;
     height: 80%;
     position: fixed;
     right:0;
 }
-@media (min-width: 640px) and (max-width: 1015px){
+@media (min-width: 800px) and (max-width: 1015px){
     div#panier {
-        width: 350px;
+        width: 400px;
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 800px) {
     div#panier {
         width: calc(100% - 2rem);
         margin: 1rem !important;

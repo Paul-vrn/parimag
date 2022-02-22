@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull:false
         },
+        plat_du_jour:{
+            type:DataTypes.DATEONLY,
+            allowNull:true
+        },
         type:{
             type: DataTypes.ENUM('Repas', 'Service'),
             allowNull: false

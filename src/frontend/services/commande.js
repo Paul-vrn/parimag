@@ -1,8 +1,9 @@
 import { getQGs } from "../api/qg"
 import { createCommande } from "../api/commande"
 import { createDetailCommande } from "../api/detailCommande"
+import {updateStock} from '../api/stock'
 export async function commande(commandeEnCours, serviceGoogleDistance) {
-
+    console.log(commandeEnCours)
     let request = {
         travelMode: google.maps.TravelMode.BICYCLING,
         origins:[{placeId:""}],
@@ -33,13 +34,17 @@ export async function commande(commandeEnCours, serviceGoogleDistance) {
         QGNom:commandeEnCours.qg.nom
     })
         .then(res => {
-            for (let produit in commandeEnCours.panier){
+            for (let produit of commandeEnCours.panier){
                 createDetailCommande({
-                    commandeId:commandeEnCours.code,
+                    commandeCode:commandeEnCours.code,
                     produitId:produit.id,
                     quantite:produit.quantite
                 })
+                if (produit.type==="Repas"){
+                    let st = produit.stocks.find(stock => stock.QGNom === commandeEnCours.qg.nom)
+                    console.log(st)
+                    updateStock(st.id, {quantite:st.quantite-produit.quantite})
+                }
             }        
         })
-
 }

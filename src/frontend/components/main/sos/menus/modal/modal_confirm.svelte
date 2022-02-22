@@ -36,7 +36,7 @@
     }
 </script>
 
-<Modal isOpen={open} toggle={toggle} centered>
+<Modal isOpen={open} toggle={toggle} centered size="lg">
     <ModalHeader toggle={toggle}>Récapitulatif de la commande</ModalHeader>
     <ModalBody>
         <Table bordered class="w-100">

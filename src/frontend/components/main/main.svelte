@@ -4,12 +4,10 @@ import {
     Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,
     Dropdown,DropdownToggle,DropdownMenu,DropdownItem, Image
 	} from 'sveltestrap'
-    import Sos from './sos/menus.svelte'
     import Liste from './liste/liste.svelte'
     import Accueil from './accueil/accueil.svelte'
 	import About from './about/about.svelte'
 	import Menus from './sos/menus.svelte'
-	import Services from './sos/services.svelte'
 	import Commandes from './sos/commandes.svelte'
     let isOpen = false;
     function handleUpdate(event) {
@@ -30,10 +28,10 @@ import {
 
 
 <svelte:head>
-	<script defer async
+	<script id="gg" defer async
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVuuSdHqLFHATJRR29glB6hZHGENj7O8o&libraries=places&callback=placeCallback">
 	</script>
-</svelte:head>
+</svelte:head>	
 
 <header>
     <Navbar color="white" light expand="md" class="m-0 p-0 fixed-top shadow-lg" style=" height:80px;">
@@ -49,11 +47,13 @@ import {
 			  <NavItem class="mx-3 rounded-2">
 				  <NavLink id="liste" on:click={changeView} class={($viewMain=='liste'?'onHit':'')}>Liste</NavLink>
 			  </NavItem>
+			  <NavItem class="mx-3 rounded-2">
+				  <NavLink id="sos" on:click={changeView} class={($viewMain=='sos'?'onHit':'')}>Sos</NavLink>
+			  </NavItem>
 			<Dropdown  nav inNavbar data-bs-toggle="dropdown"  class="mx-3 rounded-top">
 			  <DropdownToggle nav caret on:click={dropdownOpen}>SOS</DropdownToggle>
 			  <DropdownMenu right>
 				<DropdownItem id="menus" on:click={changeView}>Menus</DropdownItem>
-				<DropdownItem id="services" on:click={changeView}>Services</DropdownItem>
 				<DropdownItem divider />
 				<DropdownItem id="commandes" on:click={changeView}>Suivi de commande</DropdownItem>
 			  </DropdownMenu>
@@ -73,8 +73,6 @@ import {
 <About/>
 {:else if $viewMain.includes('menus')}
 <Menus/>
-{:else if $viewMain.includes('services')}
-<Services/>
 {:else if $viewMain.includes('commandes')}
 <Commandes/>
 {/if}

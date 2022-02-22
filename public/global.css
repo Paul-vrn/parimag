@@ -62,11 +62,14 @@ button:focus {
 }
 
 /* -- Truc global -- */
-h1 {
+h1,h2,h3,h4 {
 	font-family: Paris2024VariableRegular;
 }
-p, text {
+text {
 	font-family: Paris2024Regular;
+}
+p {
+	font-family: Roboto;
 }
 /* -- Add font here -- */
 
@@ -85,4 +88,8 @@ p, text {
 @font-face {
 	font-family: Paris2024VariableRegular;
 	src: url('/fonts/Paris2024VariableRegular.ttf');
+}
+@font-face {
+	font-family: Roboto;
+	src: url('/fonts/Roboto-Regular.ttf');
 }

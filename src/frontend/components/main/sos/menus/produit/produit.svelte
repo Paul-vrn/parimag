@@ -1,7 +1,7 @@
 <script>
     export let produit;
     export let addInPanier;
-    import ModalInfo from '../modal/modal_more_info.svelte'
+    import ModalInfo from '../modal/modal_produit_info.svelte'
     import {Button} from 'sveltestrap'
     import { Toasts, addToast } from 'as-toast';
 
@@ -38,13 +38,13 @@
 <ModalInfo produit={produit} open={open}/>
 <div class="plat mx-3 mb-3 p-2 d-flex flex-column justify-content-between">
     <div class="d-flex justify-content-start align-items-center flex-wrap">
-        <h1>{produit.nom}</h1>
+        <h2>{produit.nom}</h2>
         <div class="d-flex justify-content-between align-items-center flex-nowrap w-100">
             <h4 class="m-0">{produit.prix}€/unité</h4>
-            {#if produit.vegan}
+            {#if produit.vegan==="TRUE"}
                 <img src={'images/icons/vegetalien.png'} alt="vegan" width="40" height="40"/>
             {/if}
-            {#if produit.halal}
+            {#if produit.halal==="TRUE"}
             <img src={'images/icons/halal.png'} alt="info" width="40" height="40"/>        
             {/if}
             <img src={'images/icons/info.png'} alt="info" width="40" height="40" on:click={showInfo}/>        

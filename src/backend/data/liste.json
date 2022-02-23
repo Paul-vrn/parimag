@@ -4,23 +4,20 @@
         "membres":[
             {
                 "nom":"Adrien",
-                "surnom":"surnom",
+                "surnom":"Turn up",
                 "role":"Président",
-                "description":"blablablabla",
                 "photo":"adrien"
             },
             {
                 "nom":"Etienne",
-                "surnom":"",
+                "surnom":"On time",
                 "role":"Vice-Prés",
-                "description":"",
                 "photo":"etienne"
             },
             {
                 "nom":"Arthur A",
-                "surnom":"",
+                "surnom":"Palpatine",
                 "role":"Vice-Prés",
-                "description":"",
                 "photo":"arthura"
             }
         ]
@@ -30,16 +27,14 @@
         "membres":[
             {
                 "nom":"Cédric",
-                "surnom":"",
+                "surnom":"Tqt le boss",
                 "role":"Sécretaire Générale",
-                "description":"",
                 "photo":"cedric"
             },
             {
                 "nom":"Tim",
-                "surnom":"",
+                "surnom":"DidingTim",
                 "role":"Respo Com",
-                "description":"",
                 "photo":"tim"
             }
         ]
@@ -49,42 +44,37 @@
         "membres":[
             {
                 "nom":"Axel",
-                "surnom":"",
+                "surnom":"Steve Jobs",
                 "role":"Trésorier",
-                "description":"",
                 "photo":"axel"
             },
             {
                 "nom":"Quentin",
-                "surnom":"",
+                "surnom":"Ski engineer",
                 "role":"Vice-Trés",
-                "description":"",
                 "photo":"./"
             }
         ]
     },
     {
-        "pole":"Choré",
+        "pole":"Chorée",
         "membres":[
             {
                 "nom":"Maissa",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"Bro",
+                "role":"Chorée",
                 "photo":"maissa"
             },
             {
                 "nom":"Marine",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"Maz",
+                "role":"Aprèm sport",
                 "photo":"marine"
             },
             {
                 "nom":"Cédric",
-                "surnom":"",
+                "surnom":"Tqt le boss",
                 "role":"",
-                "description":"",
                 "photo":"cedric"
             }
         ]
@@ -93,25 +83,28 @@
         "pole":"Goodies",
         "membres":[
             {
-                "nom":"Arthur A",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "nom":"Arthur LB",
+                "surnom":"ASAP Arthuro",
+                "role":"Goodies",
                 "photo":"arthura"
             },
             {
                 "nom":"Marc",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"Lil Marco",
+                "role":"Goodies",
                 "photo":"marc"
             },
             {
                 "nom":"Tee Wei",
                 "surnom":"",
                 "role":"",
-                "description":"",
                 "photo":"tee_wei"
+            },
+            {
+                "nom":"Mohamed",
+                "surnom":"Satantago",
+                "role":"Goodies",
+                "photo":"mohamed"
             }
         ]
     },
@@ -120,37 +113,32 @@
         "membres":[
             {
                 "nom":"Camille",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"Camille",
+                "role":"SOS",
                 "photo":"camille"
             },
             {
                 "nom":"Paul",
-                "surnom":"",
+                "surnom":"-900",
                 "role":"",
-                "description":"",
                 "photo":"paul"
             },
             {
                 "nom":"Cédric",
-                "surnom":"",
+                "surnom":"Tqt le boss",
                 "role":"",
-                "description":"",
                 "photo":"cedric"
             },
             {
                 "nom":"Tee Wei",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"Le Baby Chef",
+                "role":"Cuisinier",
                 "photo":"tee_wei"
             },
             {
                 "nom":"Arthur R",
                 "surnom":"",
                 "role":"",
-                "description":"",
                 "photo":"arthurr"
             }
         ]
@@ -160,32 +148,35 @@
         "membres":[
             {
                 "nom":"Adam",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"Pulpo",
+                "role":"Activités",
                 "photo":"adam"
             },
             {
                 "nom":"Quentin",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"Ski engineer",
+                "role":"Vice-Prez",
                 "photo":"quentin"
             },
             {
                 "nom":"Akram",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"SCRAPPYZ",
+                "role":"Activités",
                 "photo":"akram"
             },
             {
                 "nom":"Marine",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"Maz",
+                "role":"Aprèm sport",
                 "photo":"marine"
+            },
+            {
+                "nom": "Hajar",
+                "surnom": "Yildez",
+                "role": "Activités",
+                "photo": "hajar"
             }
+
         ]
     },
     {
@@ -193,23 +184,20 @@
         "membres":[
             {
                 "nom":"Marc",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"Lil Marco",
+                "role":"Rap",
                 "photo":"marc"
             },
             {
-                "nom":"Arthur A",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "nom":"Arthur LB",
+                "surnom":"ASAP Arthuro",
+                "role":"Rap",
                 "photo":"arthura"
             },
             {
                 "nom":"William",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"Willy on the mix",
+                "role":"Rap",
                 "photo":"william"
             }
 
@@ -220,16 +208,14 @@
         "membres":[
             {
                 "nom":"Simo",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"Simo",
+                "role":"Film",
                 "photo":"simo"
             },
             {
                 "nom":"Neil",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"Tryhard",
+                "role":"Film",
                 "photo":"neil"
             }
         ]
@@ -239,17 +225,38 @@
         "membres":[
             {
                 "nom":"Antonin",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"Sanglier",
+                "role":"Respo paris",
                 "photo":"antonin"
             },
             {
                 "nom":"Hippolyte",
-                "surnom":"",
-                "role":"",
-                "description":"",
+                "surnom":"La fraude",
+                "role":"Respo paris",
                 "photo":"hippolyte"
+            }
+        ]
+    },
+    {
+        "pole":"Site",
+        "membres":[
+            {
+                "nom":"Paul",
+                "surnom":"-900",
+                "role":"Respo Site",
+                "photo":"paul"
+            },
+            {
+                "nom":"Nabil",
+                "surnom":"",
+                "role":"Respo Design & Dev",
+                "photo":"nabil"
+            },
+            {
+                "nom":"Tim",
+                "surnom":"DidingTim",
+                "role":"Respo Design",
+                "photo":"tim"
             }
         ]
     }

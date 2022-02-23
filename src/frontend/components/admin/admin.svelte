@@ -1,29 +1,35 @@
 <script>
-	console.log("chargement de la page admin_page")
+	import Stock from './stocks/stock.svelte'
+	import PanneauCommandes from './commandes/panneau_commandes.svelte'
+	import BanderoleModule from './banderoleModule/banderole_module.svelte'
 </script>
 
 <main>
 	<h1>Module admin</h1>
+	<div id="admin">
+		<PanneauCommandes/>
+		<div id="gauche">
+			<Stock/>
+			<BanderoleModule/>
+		</div>
+	</div>
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+div#admin {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap:2em;
+	margin:1em;
+	align-items: center;
+}
+div#admin div#gauche {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	align-items: center;
+}
 </style>

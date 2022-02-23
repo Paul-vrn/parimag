@@ -1,4 +1,3 @@
-
 # Benzimag website
 
 Projet de site web pour la liste BDS benzimag.

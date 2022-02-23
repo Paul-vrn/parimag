@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import {Table, Button, Input} from 'sveltestrap'
     import { getStocks, updateStock } from '../../../api/stock'
+    import { getQGs } from '../../../api/qg'
     import { Toasts, addToast } from 'as-toast';
 
     async function reload() {
@@ -12,6 +13,7 @@
             j++
         }
     }
+    let qgs = []
     let rows = []
     onMount(async ()=> {
         const res = await getStocks();
@@ -20,6 +22,7 @@
             rows[j] = [res[i], res[i+1], res[i+2]]
             j++
         }
+        qgs = await getQGs()
     })
     function submit(event){
         if (event.key === "Enter"){
@@ -38,9 +41,9 @@
             <th>
                 <Button on:click={reload} size="sm"><img src={'images/icons/reload.svg'} alt="reload" width="20" height="20"/></Button>
             </th>
-            <th>AA</th>
-            <th>PPM</th>
-            <th>SMH</th>
+            {#each qgs as qg}
+                <th>{qg.nom}</th>
+            {/each}
         </tr>
     </thead>
     <tbody>
@@ -57,7 +60,7 @@
 
 <style>
     :global(table){
-        width: 30% !important;
+        width: 80% !important;
         height: auto;
     }
     :global(table input) {

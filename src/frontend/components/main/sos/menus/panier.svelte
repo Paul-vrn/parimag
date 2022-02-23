@@ -22,6 +22,8 @@
         openFirstModal = false;
         openSecondModal = true;
     }
+
+    // function qui vérifie le panier avant de faire la commande
 </script>
 <ModalConfirm open={openFirstModal} {nextModal} commandeEnCours={commandeEnCours}/>
 <ModalConfirmed open={openSecondModal} commandeEnCours={commandeEnCours}/>

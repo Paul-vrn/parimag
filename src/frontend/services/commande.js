@@ -31,7 +31,8 @@ export async function commande(commandeEnCours, serviceGoogleDistance) {
         adresse:commandeEnCours.adresse.description,
         tel:commandeEnCours.tel,
         etat:"EAP",
-        QGNom:commandeEnCours.qg.nom
+        QGNom:commandeEnCours.qg.nom,
+        commentaire:commandeEnCours.commentaire
     })
         .then(res => {
             for (let produit of commandeEnCours.panier){

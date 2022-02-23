@@ -36,67 +36,41 @@
   }
 </script>
 
+<svelte:head>
+	<script defer async
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVuuSdHqLFHATJRR29glB6hZHGENj7O8o&libraries=places&callback=placeCallback">
+	</script>
+</svelte:head>
+
 <header>
-  <Navbar color="white" light expand="md" class="m-0 p-0 fixed-top shadow-lg">
-    <NavbarBrand
-      href="javascript:void(0)"
-      id="accueil"
-      on:click={changeView}
-      class="m-1"
-    >
-      <Image
-        alt="Logo"
-        src={"images/logo.png"}
-        id="accueil"
-        class="img-fluid"
-        width="150"
-      />
-    </NavbarBrand>
-    <NavbarToggler on:click={() => (isOpen = !isOpen)} />
-    <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
-      <Nav class="d-flex w-100 justify-content-end" navbar>
-        <NavItem class="mx-3 rounded-2">
-          <NavLink
-            id="accueil"
-            on:click={changeView}
-            class={$viewMain == "accueil" ? "onHit" : ""}>Accueil</NavLink
-          >
-        </NavItem>
-        <NavItem class="mx-3 rounded-2">
-          <NavLink
-            id="liste"
-            on:click={changeView}
-            class={$viewMain == "liste" ? "onHit" : ""}>Liste</NavLink
-          >
-        </NavItem>
-        <Dropdown
-          nav
-          inNavbar
-          data-bs-toggle="dropdown"
-          class="mx-3 rounded-top"
-        >
-          <DropdownToggle nav caret on:click={dropdownOpen}>SOS</DropdownToggle>
-          <DropdownMenu right>
-            <DropdownItem id="menus" on:click={changeView}>Menus</DropdownItem>
-            <DropdownItem id="services" on:click={changeView}
-              >Services</DropdownItem
-            >
-            <DropdownItem divider />
-            <DropdownItem id="commandes" on:click={changeView}
-              >Suivi de commande</DropdownItem
-            >
-          </DropdownMenu>
-        </Dropdown>
-        <NavItem class="mx-3 rounded-2">
-          <NavLink
-            id="about"
-            on:click={changeView}
-            class={$viewMain == "about" ? "onHit" : ""}>À propos</NavLink
-          >
-        </NavItem>
-      </Nav>
-    </Collapse>
-  </Navbar>
+    <Navbar color="white" light expand="md" class="m-0 p-0 fixed-top shadow-lg" style=" height:80px;">
+		<NavbarBrand href="javascript:void(0)" id="accueil" on:click={changeView} class="m-1">
+			<Image alt="Logo" src={'images/logo.png'} id="accueil" class="img-fluid" width="150"/>
+		</NavbarBrand>
+		<NavbarToggler on:click={() => (isOpen = !isOpen)} />
+		<Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
+		  <Nav class="d-flex w-100 justify-content-end" navbar>
+			<NavItem  class="mx-3 rounded-2">
+				<NavLink id="accueil" on:click={changeView} class={($viewMain=='accueil'?'onHit':'')}>Accueil</NavLink>
+			  </NavItem>
+			  <NavItem class="mx-3 rounded-2">
+				  <NavLink id="liste" on:click={changeView} class={($viewMain=='liste'?'onHit':'')}>Liste</NavLink>
+			  </NavItem>
+			<Dropdown  nav inNavbar data-bs-toggle="dropdown"  class="mx-3 rounded-top">
+			  <DropdownToggle nav caret on:click={dropdownOpen}>SOS</DropdownToggle>
+			  <DropdownMenu right>
+				<DropdownItem id="menus" on:click={changeView}>Menus</DropdownItem>
+				<DropdownItem id="services" on:click={changeView}>Services</DropdownItem>
+				<DropdownItem divider />
+				<DropdownItem id="commandes" on:click={changeView}>Suivi de commande</DropdownItem>
+			  </DropdownMenu>
+			</Dropdown>			
+			  <NavItem class="mx-3 rounded-2">
+				  <NavLink id="about" on:click={changeView} class={($viewMain=='about'?'onHit':'')}>À propos</NavLink>
+			  </NavItem>
+		  </Nav>
+		</Collapse>
+	  </Navbar>
 </header>
 {#if $viewMain.includes("accueil")}
   <Accueil />

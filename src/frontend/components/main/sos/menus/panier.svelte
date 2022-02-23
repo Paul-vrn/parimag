@@ -11,6 +11,7 @@
     import ModalConfirm from './modal/modal_confirm.svelte'
     import ModalConfirmed from './modal/modal_confirmed.svelte'
     function commander(){
+        console.log(commandeEnCours)
         openFirstModal = false; // si ça reste "true", on refait passer à false puis re true pour que ça update bien le component ModalConfirm
         openFirstModal = true
     }
@@ -27,7 +28,7 @@
 <div id="panier" class="d-flex justify-content-start flex-column me-2">
     <h1 class="text-center">Panier</h1>
     <hr/>
-    <Table striped responsive centered size="sm">
+    <Table striped responsive centered size="sm" class="w-100">
         <thead>
             <tr class="">
                 <th>#</th>

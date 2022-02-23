@@ -1,6 +1,4 @@
 <script>
-	import { onMount } from "svelte";
-	import { jwt, user } from '../../stores'
 	import Stock from './stocks/stock.svelte'
 	import PanneauCommandes from './commandes/panneau_commandes.svelte'
 </script>
@@ -10,7 +8,6 @@
 	<div id="admin">
 		<PanneauCommandes/>
 		<Stock/>
-
 	</div>
 </main>
 

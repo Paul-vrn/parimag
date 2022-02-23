@@ -2,6 +2,8 @@
     import { onMount } from 'svelte';
     import {Table, Button, Input} from 'sveltestrap'
     import { getStocks, updateStock } from '../../../api/stock'
+    import { Toasts, addToast } from 'as-toast';
+
     async function reload() {
         const res = await getStocks();
         let j = 0
@@ -24,12 +26,13 @@
             updateStock(event.target.id, {quantite:event.target.value})
             .then(res => {
                 console.log(res)
-                //TODO ajouter un toast
+                addToast("Stock bien mis à jour", "info", 2000)
             })
         }
     }
 </script>
 
+<Toasts/>
 <Table bordered>
     <thead>
         <tr>

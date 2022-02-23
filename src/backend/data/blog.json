@@ -1,0 +1,20 @@
+[
+    {
+        "titre":"Teaser",
+        "video":"https://www.youtube.com/embed/6hKAzC5ecsc"
+    },
+    {
+        "titre":"Film",
+        "video":"https://www.youtube.com/embed/6hKAzC5ecsc"
+    },
+    {
+        "titre":"Parimag à Turin",
+        "photo":"turin.jpg",
+        "description":""
+    },
+    {
+        "titre":"Randonnée",
+        "photo":"rando.jpg",
+        "description":""
+    }
+]

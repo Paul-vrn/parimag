@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     const Commande = sequelize.define("commandes", {
-        id: {
-            type: DataTypes.INTEGER,
+        code: {
+            type: DataTypes.STRING,
             primaryKey: true,
             allowNull: false
         },
@@ -14,13 +14,18 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         etat: {
-            type: DataTypes.ENUM(
-                "en attente de payement",
-                "en cuisine",
-                "en cours de livraison",
-                "livré"
-                ),
+            /**
+             * EAP : en attente de payement
+             * EC : commande prise en charge
+             * LV : livrée
+             */
+            type: DataTypes.ENUM,
+            values:["EAP", "CPC", "LV"],
             allowNull: false
+        },
+        commentaire:{
+            type: DataTypes.STRING,
+            allowNull:true
         }
     });
     return Commande

@@ -1,5 +1,6 @@
 // Api.js
 import axios from "axios";
+import { getAuth } from "../services/cookie";
 
 // Create a instance of axios to use the same base url.
 const axiosAPI = axios.create({
@@ -8,21 +9,23 @@ const axiosAPI = axios.create({
 
 // implement a method to execute all the request from here.
 const apiRequest = (method, url, request) => {
-    const headers = {
-        authorization: ""
-    };
-    //using the axios instance to perform the request that received from each http method
-    return axiosAPI({
-        method,
-        url,
-        data: request,
-        headers
-      }).then(res => {
-        return Promise.resolve(res.data);
-      })
-      .catch(err => {
-        return Promise.reject(err);
-      });
+
+  let jwt = getAuth()
+  const headers = {
+      authorization: (jwt === undefined) ? '' : `Bearer ${jwt}`
+  };
+  //using the axios instance to perform the request that received from each http method
+  return axiosAPI({
+      method,
+      url,
+      data: request,
+      headers
+    }).then(res => {
+      return Promise.resolve(res.data);
+    })
+    .catch(err => {
+      return Promise.reject(err);
+    });
 };
 
 // function to execute the http get request

@@ -1,0 +1,98 @@
+[
+    {
+        "nom":"Paul",
+        "disponible":true,
+        "QGNom":"PPM"
+    },
+    {
+        "nom":"Marco",
+        "disponible":true,
+        "QGNom":"CAN"
+    },
+    {
+        "nom":"Arthur L",
+        "disponible":true,
+        "QGNom":"LB"
+    },
+    {
+        "nom":"Etienne",
+        "disponible":true,
+        "QGNom":"LB"
+    },
+    {
+        "nom":"Axel",
+        "disponible":true,
+        "QGNom":"PPM"
+    },
+    {
+        "nom":"Arthur A",
+        "disponible":true,
+        "QGNom":"CAN"
+    },
+    {
+        "nom":"Neils",
+        "disponible":true,
+        "QGNom":"CAN"
+    },
+    {
+        "nom":"Camille",
+        "disponible":true,
+        "QGNom":"PPM"
+    },
+    {
+        "nom":"Adrien",
+        "disponible":true,
+        "QGNom":"LB"
+    },
+    {
+        "nom":"Tee Wei",
+        "disponible":true,
+        "QGNom":"PPM"
+    },
+    {
+        "nom":"Mohamed",
+        "disponible":true,
+        "QGNom":"LB"
+    },
+    {
+        "nom":"Adam",
+        "disponible":true,
+        "QGNom":"LB"
+    },
+    {
+        "nom":"William",
+        "disponible":true,
+        "QGNom":"CAN"
+    },
+    {
+        "nom":"Quentin",
+        "disponible":true,
+        "QGNom":"LB"
+    },
+    {
+        "nom": "Simo",
+        "disponible": true,
+        "QGNom": "LB"
+    },
+    {
+        "nom":"William",
+        "disponible":true,
+        "QGNom":"CAN"
+    },
+    {
+        "nom":"Marine",
+        "disponible":true,
+        "QGNom":"LB"
+    },
+    {
+        "nom":"Nabil",
+        "disponible":true,
+        "QGNom":"LB"
+    },
+    {
+        "nom":"Antonin",
+        "disponible":true,
+        "QGNom":"PPM"
+    }
+
+]

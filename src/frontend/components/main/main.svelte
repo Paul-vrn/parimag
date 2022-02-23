@@ -4,22 +4,22 @@ import {
     Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,
     Dropdown,DropdownToggle,DropdownMenu,DropdownItem, Image
 	} from 'sveltestrap'
-    import Sos from './sos/menus.svelte'
     import Liste from './liste/liste.svelte'
     import Accueil from './accueil/accueil.svelte'
 	import About from './about/about.svelte'
-	import Menus from './sos/menus.svelte'
-	import Services from './sos/services.svelte'
-	import Commandes from './sos/commandes.svelte'
-    let isOpen = false;
+	import Commander from './sos/suivi_commande.svelte'
+	import Commandes from './sos/commander.svelte'
+	import { getBanderole } from '../../api/banderole'
+    import { viewMain } from '../../stores'
+	import { Button } from 'sveltestrap'
+	let isOpen = false;
+	let banderoleHide = false;
     function handleUpdate(event) {
         isOpen = event.detail.isOpen;
     }
-
-    import { viewMain } from '../../stores'
-    
     function changeView(event){
         $viewMain = event.target.id
+		handleUpdate(event)
 	}
 	function dropdownOpen(event){
 		if (!$viewMain.includes('drop'))
@@ -28,8 +28,10 @@ import {
 </script>
 
 
-<header>
-    <Navbar color="white" light expand="md" class="m-0 p-0 fixed-top shadow-lg">
+	
+
+<header class=" m-0 p-0 fixed-top shadow-lg">
+    <Navbar color="white" light expand="md">
 		<NavbarBrand href="javascript:void(0)" id="accueil" on:click={changeView} class="m-3">
 			<Image alt="Logo" src={'images/logo.png'} id="accueil" class="img-fluid" width="150"/>
 		</NavbarBrand>
@@ -42,11 +44,10 @@ import {
 			  <NavItem class="mx-3 rounded-2">
 				  <NavLink id="liste" on:click={changeView} class={($viewMain=='liste'?'onHit':'')}>Liste</NavLink>
 			  </NavItem>
-			<Dropdown  nav inNavbar data-bs-toggle="dropdown"  class="mx-3 rounded-top">
+			<Dropdown  nav inNavbar data-bs-toggle="dropdown"  class={"mx-3 rounded-top " + (['commander' ,'commandes'].includes($viewMain)?'onHit':'')} >
 			  <DropdownToggle nav caret on:click={dropdownOpen}>SOS</DropdownToggle>
 			  <DropdownMenu right>
-				<DropdownItem id="menus" on:click={changeView}>Menus</DropdownItem>
-				<DropdownItem id="services" on:click={changeView}>Services</DropdownItem>
+				<DropdownItem id="commander" on:click={changeView}>Commander</DropdownItem>
 				<DropdownItem divider />
 				<DropdownItem id="commandes" on:click={changeView}>Suivi de commande</DropdownItem>
 			  </DropdownMenu>
@@ -57,23 +58,49 @@ import {
 		  </Nav>
 		</Collapse>
 	  </Navbar>
+{#await getBanderole(1)}
+	  <div id="banderole"><p>Chargement</p></div>
+{:then banderole} 
+{#if banderole.message !== "" && !banderoleHide}
+	<div class="w-100 ps-2" id="banderole">
+		<p>{banderole.message}</p>
+		<img src={'images/icons/cross.svg'} alt="validate" on:click={() => banderoleHide=true} width="30" height="30"/>
+	</div>
+{/if}	
+{/await}
+  
 </header>
+
 {#if $viewMain.includes('accueil')}
 <Accueil/>
 {:else if $viewMain.includes('liste')}
 <Liste/>
 {:else if $viewMain.includes('about')}
 <About/>
-{:else if $viewMain.includes('menus')}
-<Menus/>
-{:else if $viewMain.includes('services')}
-<Services/>
+{:else if $viewMain.includes('commander')}
+<Commander/>
 {:else if $viewMain.includes('commandes')}
 <Commandes/>
 {/if}
 
 
 <style>
+div#banderole {
+	background-color: #D7C378;
+	border-style: solid;
+	border-width: 0.1em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+div#banderole p {
+	text-align: center;
+	width: 100%;
+	margin: 0;
+}
+div#banderole img {
+	cursor: pointer;
+}
 :global(.onHit){
 	background-color: #D7C378 !important;
 	border-radius: 3px;

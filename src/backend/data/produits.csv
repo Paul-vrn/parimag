@@ -1,0 +1,9 @@
+nom,type,plat_du_jour,prix,vegan,halal,ingredients,description,photo
+Rougail saucisse,Repas,,3,FALSE,FALSE,"saucisse fumée, oignons, tomates, thym, laurier, ail, curcuma, riz","Plat de la délégation française. Le rougail saucisse est un plat traditionnel réunionnais, à base de saucisses de porc ou de poulet préparées à la créole, souvent fumées, mais parfois fraîches, mijotées avec des tomates.",Rougail-saucisses.jpg
+Curry de légumes,Repas,,0,VRAI,TRUE,"Coulis de tomates, courgette, lait de coco, pois chiches, oignon, riz",Plat de la délégation indienne. Un curry est un plat ayant son origine dans la gastronomie du sous-continent indien. Il se caractérise par une combinaison complexe d’épices et d’herbes comprenant en général des piments frais ou séchés.,recette-curry-pois-chiche.jpg
+"Corvées ménagères (vaisselle, ménage, …)
+",Service,,0,FALSE,FALSE,,"Vous prévoyez une grosse soirée mais vous avez la flemme de faire le ménage et la vaiselle. Aucun soucis, faites appel aux services de Parimag !
+Nous pouvons même vous assister durant votre soirée en faisant appel à notre équipe de serveur.",menage.jpg
+déménagement,Service,,0,FALSE,FALSE,,"Vous déménagez ? Besoin de gros bras pour vous aider à transporter des meubles ? Pas de problème, Parimag est là pour vous aider.
+Commandez l'aide de deux déménageurs dès maintenant.",demenagement.jpg
+Coach sportif,Service,,0,FALSE,FALSE,,,coach.jpg

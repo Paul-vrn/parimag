@@ -12,13 +12,15 @@
 
     let open = false;
     function changeQuantite(val){
-        if (0<=quantiteSelect+val && Math.min(produit.quantiteMax, quantiteSelect+val<=5)) {
-            //valeur arbitraire (peut être à changer   )
-            quantiteSelect+= val
+        if (0<=quantiteSelect+val){
+            addToast("Vous ne pouvez pas séléctionner une valeur négative", "warn", 1500)
+        } else if (quantiteSelect+val>=produit.quantiteMax){
+            addToast("Il n'y a pas assez de stock", "warn", 1500)
+        } else if (quantiteSelect+val>=6){
+
         } else {
-            console.log("y a plus de stocks ou inf à 0")
-            //TODO : y a plus de stocks
-            addToast("Il n'y a pas assez de stock", "warn", 2000)
+            quantiteSelect+= val
+
         }
     }
 

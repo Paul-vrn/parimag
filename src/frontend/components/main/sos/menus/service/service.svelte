@@ -5,21 +5,9 @@
     import {Button} from 'sveltestrap'
     import { Toasts, addToast } from 'as-toast';
 
-    service.quantite = 0;
-    let quantiteSelect = 0;
-    service.quantiteMax = 0;
+    service.quantite = 1;
 
     let open = false;
-    function changeQuantite(val){
-        if (0<=quantiteSelect+val && Math.min(service.quantiteMax, quantiteSelect+val<=5)) {
-            //valeur arbitraire (peut être à changer   )
-            quantiteSelect+= val
-        } else {
-            console.log("y a plus de stocks ou inf à 0")
-            //TODO : y a plus de stocks
-            addToast("Il n'y a pas assez de stock", "warn", 2000)
-        }
-    }
 
     function ajouter(){
         addInPanier(service)

@@ -9,7 +9,7 @@
 </script>
 
 {#if blog.photo !== undefined}
-<div class="blog d-flex justify-content-end flex-column" style="background-image: url(/images/{blog.photo}.jpg">
+<div class="blog d-flex justify-content-end flex-column" style="background-image: url(/images/blog/{blog.photo}">
     <h1 class="text-center">{blog.titre}</h1>
 </div>
 {:else}

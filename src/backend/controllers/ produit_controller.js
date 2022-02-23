@@ -16,7 +16,7 @@ module.exports = {
                 ingredients:(data.ingredients==="") ? null : data.ingredients,
                 vegan:(data.vegan=="VRAI") ? true : false,
                 halal:(data.halal==="VRAI") ? true : false,
-                description:data.ingredients,
+                description:data.description,
                 plat_du_jour:(data.plat_du_jour==="") ? null : data.plat_du_jour,
                 photo:data.photo
             })

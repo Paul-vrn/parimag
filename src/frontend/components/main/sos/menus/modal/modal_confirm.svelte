@@ -36,6 +36,13 @@
     }
 </script>
 
+
+<svelte:head>
+	<script id="gg" defer async
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVuuSdHqLFHATJRR29glB6hZHGENj7O8o&libraries=places&callback=placeCallback">
+	</script>
+</svelte:head>
+
 <Modal isOpen={open} toggle={toggle} centered size="lg">
     <ModalHeader toggle={toggle}>Récapitulatif de la commande</ModalHeader>
     <ModalBody>
@@ -60,18 +67,23 @@
         <h3>Prix total : {prixTotal(commandeEnCours.panier)}€</h3>
         <Input id="phone" type="tel" bind:value={commandeEnCours.tel} placeholder="numéro de téléphone" required/>
         <br/>
-        <Svelecte
-            resetOnBlur
-            fetchResetOnBlur
-            minQuery={6}
-            valueAsObject
-            placeholder="Adresse"
-            fetchMode="auto"
-            labelField="description"
-            bind:value={commandeEnCours.adresse}
-            fetch={searchGoogle}
-        />            
-        <br/>        
+        <div class="d-flex gap-2 align-items-center">
+            <h5 class="m-0">Adresse : </h5>
+            <Svelecte
+                resetOnBlur
+                fetchResetOnBlur
+                minQuery={6}
+                valueAsObject
+                placeholder="Adresse"
+                fetchMode="auto"
+                labelField="description"
+                bind:value={commandeEnCours.adresse}
+                fetch={searchGoogle}
+            />                
+        </div>
+        <br/> 
+        <Input type="textarea" name="text" id="exampleText" bind:value={commandeEnCours.commentaire} placeholder="Ajouter un commentaire à votre commande ici"/>
+        <br/>
         <Input id="checkboxAttested" bind:checked={attested} type="checkbox" label="Je valide pouvoir payer la commande suivante à l'aide de Lydia" />
     </ModalBody>
     <ModalFooter>
@@ -79,3 +91,11 @@
       <Button color="secondary" on:click={toggle}>Annuler</Button>
     </ModalFooter>
 </Modal>
+
+<style>
+@media screen and (max-width: 575px) {
+:global(.modal-dialog) {
+        margin-left: 0 !important;
+    }
+}
+</style>

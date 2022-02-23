@@ -8,13 +8,13 @@
         "video":"https://www.youtube.com/embed/6hKAzC5ecsc"
     },
     {
-        "titre":"Blog 1",
-        "photo":"blog_2",
+        "titre":"Parimag à Turin",
+        "photo":"turin.jpg",
         "description":""
     },
     {
-        "titre":"Blog 2",
-        "photo":"blog_1",
+        "titre":"Randonnée",
+        "photo":"rando.jpg",
         "description":""
     }
 ]

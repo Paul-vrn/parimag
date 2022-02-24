@@ -5,6 +5,6 @@ export const getBlogs = async () => {
       const response = await Api.get("json/blogs");
       return response;
     } catch (error) {
-      console.error(error);
+      return {error:error.response.data}
     }
 };

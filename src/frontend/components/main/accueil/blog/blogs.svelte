@@ -25,7 +25,7 @@ div#blog {
     background-color: #D7C378;
 }
 div#blog > div {
-    padding-top: 100px;
+    padding-top: 120px;
     width:100%;
     display: flex;
     flex-wrap: wrap;

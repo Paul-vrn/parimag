@@ -5,7 +5,7 @@ export const getBanderoles = async () => {
       const response = await Api.get("banderoles");
       return response;
     } catch (error) {
-      console.error(error);
+      return {error:error.response.data}
     }
 };
 
@@ -14,7 +14,7 @@ export const getBanderole = async (id) => {
     const response = await Api.get(`banderoles/${id}`);
     return response;
   } catch (error) {
-    console.error(error);
+    return {error:error.response.data}
   }
 }
 
@@ -23,6 +23,6 @@ export const updateBanderole = async (id, banderole) => {
     const response = await Api.patch(`banderoles/${id}`, banderole)
     return response;
   } catch (error) {
-    console.log(error)
+    return {error:error.response.data}
   }
 }

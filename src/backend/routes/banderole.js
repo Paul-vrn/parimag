@@ -3,7 +3,7 @@ var express = require('express'),
 const Banderole = require('../controllers/banderole_controller')
 const checkTokenMiddleware = require('./middleware').checkTokenMiddleware;
 router
-  .post('/', Banderole.create)
+  .post('/', checkTokenMiddleware, Banderole.create)
   .get('/', Banderole.findAll)
   .get('/:id', Banderole.findOne)
   .patch('/:id', checkTokenMiddleware, Banderole.update)

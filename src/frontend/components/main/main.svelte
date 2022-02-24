@@ -7,11 +7,10 @@ import {
     import Liste from './liste/liste.svelte'
     import Accueil from './accueil/accueil.svelte'
 	import About from './about/about.svelte'
-	import Commander from './sos/suivi_commande.svelte'
-	import Commandes from './sos/commander.svelte'
+	import Commander from './sos/commander.svelte'
+	import Commandes from './sos/suivi_commande.svelte'
 	import { getBanderole } from '../../api/banderole'
     import { viewMain } from '../../stores'
-	import { Button } from 'sveltestrap'
 	let isOpen = false;
 	let banderoleHide = false;
     function handleUpdate(event) {
@@ -25,14 +24,14 @@ import {
 		if (!$viewMain.includes('drop'))
 			$viewMain = $viewMain + ' ' + 'drop'
 	}
+	
 </script>
-
 
 	
 
 <header class=" m-0 p-0 fixed-top shadow-lg">
     <Navbar color="white" light expand="md">
-		<NavbarBrand href="javascript:void(0)" id="accueil" on:click={changeView} class="m-3">
+		<NavbarBrand href="javascript:void(0)" id="accueil" on:click={changeView} class="m-1">
 			<Image alt="Logo" src={'images/logo.png'} id="accueil" class="img-fluid" width="150"/>
 		</NavbarBrand>
 		<NavbarToggler on:click={() => (isOpen = !isOpen)} />
@@ -83,7 +82,6 @@ import {
 <Commandes/>
 {/if}
 
-
 <style>
 div#banderole {
 	background-color: #D7C378;
@@ -101,6 +99,7 @@ div#banderole p {
 div#banderole img {
 	cursor: pointer;
 }
+
 :global(.onHit){
 	background-color: #D7C378 !important;
 	border-radius: 3px;
@@ -112,22 +111,22 @@ div#banderole img {
 	animation: liKeyFrame 1s forwards;
 }
 
-@keyframes liKeyFrame {
-	from {
-		background-color: white;
-	}
-	to {
-		background-color: #D7C378;
-	}
-}
+  @keyframes liKeyFrame {
+    from {
+      background-color: white;
+    }
+    to {
+      background-color: #d7c378;
+    }
+  }
 
-:global(div.dropdown-menu.show){
-	animation: liKeyFrame 0.1s forwards;
-}
+  :global(div.dropdown-menu.show) {
+    animation: liKeyFrame 0.1s forwards;
+  }
 
-@media (max-width: 640px) {
-	:global(header li){
-		text-align: center;
-	}
-}
+  @media (max-width: 640px) {
+    :global(header li) {
+      text-align: center;
+    }
+  }
 </style>

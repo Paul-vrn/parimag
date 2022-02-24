@@ -5,7 +5,7 @@ export const getQGs = async () => {
       const response = await Api.get("qgs");
       return response;
     } catch (error) {
-      console.error(error);
+      return {error:error.response.data}
     }
 };
 
@@ -14,6 +14,6 @@ export const postQgAuth = async (user) => {
     const response = await Api.post("qgs/login", user)
     return response;
   } catch (error) {
-    console.log(error)
+    return {error:error.response.data}
   }
 }

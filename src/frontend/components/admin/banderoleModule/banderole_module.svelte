@@ -13,7 +13,11 @@
         if (event.key === "Enter"){
             updateBanderole(1, {message:event.target.value})
             .then(res => {
-                addToast("Banderole bien mis à jour", "info", 2000)
+                if (res.error !== undefined){
+                    addToast(res.error.message, "warn", 2000)
+                } else {
+                    addToast("Banderole bien mis à jour", "info", 2000)
+                }
             })
         }
     }

@@ -5,7 +5,7 @@ export const getStocks = async () => {
       const response = await Api.get("stocks");
       return response;
     } catch (error) {
-      console.error(error);
+      return {error:error.response.data}
     }
 };
 
@@ -14,7 +14,7 @@ export const postQgAuth = async (user) => {
     const response = await Api.post("qgs/login", user)
     return response;
   } catch (error) {
-    console.log(error)
+    return {error:error.response.data}
   }
 }
 
@@ -23,6 +23,6 @@ export const updateStock = async (id, stock) => {
     const response = await Api.patch(`stocks/${id}`, stock)
     return response
   } catch (error) {
-    console.log(error)
+    return {error:error.response.data}
   }
 }

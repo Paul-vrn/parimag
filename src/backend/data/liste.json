@@ -1,6 +1,6 @@
 [
     {
-        "pole":"Présidence",
+        "nom":"Prez",
         "membres":[
             {
                 "nom":"Adrien",
@@ -23,7 +23,7 @@
         ]
     },
     {
-        "pole":"Gestion interne",
+        "nom":"G-I",
         "membres":[
             {
                 "nom":"Cédric",
@@ -40,7 +40,7 @@
         ]
     },
     {
-        "pole":"Trésorerie",
+        "nom":"Tréz",
         "membres":[
             {
                 "nom":"Axel",
@@ -57,7 +57,7 @@
         ]
     },
     {
-        "pole":"Chorée",
+        "nom":"Chorée",
         "membres":[
             {
                 "nom":"Maissa",
@@ -80,7 +80,7 @@
         ]
     },
     {
-        "pole":"Goodies",
+        "nom":"Goodies",
         "membres":[
             {
                 "nom":"Arthur LB",
@@ -109,7 +109,7 @@
         ]
     },
     {
-        "pole":"SOS/Ptit déj",
+        "nom":"SOS/Ptit déj",
         "membres":[
             {
                 "nom":"Camille",
@@ -144,7 +144,7 @@
         ]
     },
     {
-        "pole":"Activité",
+        "nom":"Activité",
         "membres":[
             {
                 "nom":"Adam",
@@ -180,7 +180,7 @@
         ]
     },
     {
-        "pole":"Rap",
+        "nom":"Rap",
         "membres":[
             {
                 "nom":"Marc",
@@ -204,7 +204,7 @@
         ]
     },
     {
-        "pole":"Film",
+        "nom":"Film",
         "membres":[
             {
                 "nom":"Simo",
@@ -221,7 +221,7 @@
         ]
     },
     {
-        "pole":"Financement",
+        "nom":"Financement",
         "membres":[
             {
                 "nom":"Antonin",
@@ -238,7 +238,7 @@
         ]
     },
     {
-        "pole":"Site",
+        "nom":"Site",
         "membres":[
             {
                 "nom":"Paul",

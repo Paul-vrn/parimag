@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         nom:{
             type: DataTypes.STRING,
+            unique:true,
             allowNull:false
         },
         plat_du_jour:{
@@ -15,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull:true
         },
         type:{
-            type: DataTypes.ENUM('Repas', 'Service'),
+            type: DataTypes.ENUM('Service', 'Plat', 'Entree', 'Dessert', 'Boisson'),
             allowNull: false
         },
         prix: {

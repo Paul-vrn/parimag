@@ -18,6 +18,15 @@ module.exports = {
                     })
                 });
             })
+            .catch(err => {
+                res.status(500).send({
+                    message: err.message || "Error populate2"
+                })
+            })
+        }).catch(err => {
+            res.status(500).send({
+                message: err.message || "Error populate1"
+            })
         })
         res.status(200).send({message:"populate stocks"})
     },
@@ -42,6 +51,11 @@ module.exports = {
                 } else {
                     res.status(400).send({message:"Il existe déjà un stock"})
                 }
+            })
+            .catch(err => {
+                res.status(500).send({
+                    message: err.message || "Error fondOne"
+                })
             })
     },
     findAll: (req, res) => {
@@ -122,6 +136,11 @@ module.exports = {
         Stock.destroy({ truncate: true, restartIdentity: true })
         .then(() => {
             res.status(200).send({message:"delete all stocks"})
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: err.message || "Error deleteAll"
+            })
         })
     }
 }

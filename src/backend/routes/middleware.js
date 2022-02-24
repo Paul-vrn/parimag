@@ -13,7 +13,9 @@ const extractBearerToken = headerValue => {
 /* Vérification du token */
 const checkTokenMiddleware = (req, res, next) => {
     // Récupération du token
-    return next()
+    if (req.headers.SECRET !== undefined){
+        return (req.headers.SECRET===SECRET) ? next() : res.status(401).json({message:"SECRET failed"})
+    }
     const token = req.headers.authorization && extractBearerToken(req.headers.authorization)
 
     // Présence d'un token

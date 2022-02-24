@@ -31,8 +31,11 @@
 <div class="produits">
     <TabContent pills>
         <TabPane tabId="Plats" tab="Plats" active>
+            <p class="Roboto mx-1">Précision : Vous pouvez commander au maximum 3 plats par commande. Si vous souhaitez en commander plus, diviser votre commande en plusieurs petites commandes<br>
+                ça ne change rien pour vous, vous recevrez vos commandes en même temps. C'est juste plus pratique de notre côté.
+            </p>
             <div class="d-flex flex-wrap justify-content-around">
-                {#each produits.filter(prod => prod.type === "Repas") as produit}
+                {#each produits.filter(prod => prod.type!=="Service") as produit}
                     <Produit produit={produit} {addInPanier}/>
                 {/each}
                 
@@ -40,7 +43,7 @@
         </TabPane>
         <TabPane tabId="Service" tab="Services">
             <div class="d-flex flex-wrap justify-content-around">
-                {#each produits.filter(prod => prod.type !== "Repas") as service}
+                {#each produits.filter(prod => prod.type==="Service") as service}
                     <Service service={service} {addInPanier}/>
                 {/each}
             </div>

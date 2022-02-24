@@ -3,7 +3,7 @@ var express = require('express'),
 const Produit = require('../controllers/ produit_controller')
 const checkTokenMiddleware = require('./middleware').checkTokenMiddleware
 router
-  .get('/populate', Produit.populate)
+  .get('/populate', checkTokenMiddleware, Produit.populate)
   .post('/', checkTokenMiddleware, Produit.create)
   .get('/', Produit.findAll)
   .get('/:id', Produit.findOne)

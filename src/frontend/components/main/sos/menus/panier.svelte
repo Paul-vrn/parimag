@@ -1,5 +1,6 @@
 <script>
     export let updatePanier;
+    export let resetCommande;
     export let commandeEnCours;
     import { Button, Table } from 'sveltestrap';
     function deleteElOfPanier(id){
@@ -20,17 +21,19 @@
             openFirstModal = false; // si ça reste "true", on refait passer à false puis re true pour que ça update bien le component ModalConfirm
             openFirstModal = true
         }
+        checked = false;
     }
     let openFirstModal = false;
     let openSecondModal = false;
-    
+    let checked = false;
+
     function nextModal(){
         openFirstModal = false;
         openSecondModal = true;
     }
 </script>
 <ModalConfirm open={openFirstModal} {nextModal} commandeEnCours={commandeEnCours}/>
-<ModalConfirmed open={openSecondModal} commandeEnCours={commandeEnCours}/>
+<ModalConfirmed open={openSecondModal} commandeEnCours={commandeEnCours} {resetCommande}/>
 <div id="panier" class="d-flex justify-content-start flex-column me-2">
     <h1 class="text-center">Panier</h1>
     <hr/>

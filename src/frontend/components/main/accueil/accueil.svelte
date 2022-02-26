@@ -7,11 +7,8 @@
     <div class="mb-5">
       <h1 class="text-center varela">LISTE BDS PAR'IMAG 2024</h1>
       <hr class="bg-white w-75 mx-auto my-5 " />
-      <p class="text-center w-75 mx-auto">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt dui
-        ut ornare. Vel quam elementum pulvinar etiam non quam. Egestas purus
-        viverra accumsan in. Tempus imperdiet nulla malesuada pellentesque.
+      <p class="text-center w-50 mx-auto">
+        La relève est assurée pour vous faire découvrir une autre facette du sport. Équipe motivée et soudée, les JO débarquent à l’Ensimag pour casser des records. 
       </p>
     </div>
     <div id="svg">
@@ -45,6 +42,7 @@
   main#accueil {
     background-image: url("/images/fond.png");
     background-color: #d7c378;
+    background-position: center;
 
     background-repeat: no-repeat;
     box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.5);
@@ -71,7 +69,7 @@
   main#accueil > div text {
     font-style: normal;
     font-weight: normal;
-    font-size: 2.5em;
+    font-size: 3rem;
     fill: #ffffff;
   }
   main#accueil > div p {
@@ -79,14 +77,17 @@
     font-size: 1.2em;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 1000px) {
     main#accueil {
-      background-size: auto;
+      background-size: cover;
     }
     main#accueil h1 {
       width: 80%;
       margin-right: auto;
       margin-left: auto;
+    }
+    main#accueil > div text {
+      font-size: 5rem;
     }
   }
 </style>

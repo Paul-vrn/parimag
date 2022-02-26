@@ -3,10 +3,13 @@
     import { prixTotal } from '../../../../../services/prix_total'
     export let open;
     export let commandeEnCours;
-    const toggle = () => {open = !open}
-    function t(){
-        commandeEnCours = commandeEnCours
+    export let resetCommande;
+
+    const endCommande = () => {
+        open = !open
+        resetCommande()
     }
+
 </script>
 
 
@@ -14,7 +17,7 @@
     <ModalHeader>Commande effectué !</ModalHeader>
     <ModalBody>
         <p>Votre commande est passé à l'état <i>en attente de payement</i>.<br/>
-        Le code identifiant de votre commande est</p>
+        Le code identifiant de votre commande est : </p>
         <h5><b>{commandeEnCours.code}</b></h5> 
         <p>(ne le perdez pas !).<br/>
         Vous pouvez suivre l'évolution de l'état de votre commande dans ... en utilisant ce code comme référance.<br/>
@@ -31,6 +34,6 @@
     {/if}
     </ModalBody>
     <ModalFooter>
-      <Button color="primary" on:click={toggle}>Terminé</Button>
+      <Button color="primary" on:click={endCommande}>Terminé</Button>
     </ModalFooter>
 </Modal>

@@ -4,7 +4,7 @@
     import CopyToClipboard from "svelte-copy-to-clipboard";
     import {updateLivreur, getLivreurs} from '../../../api/livreur'
     import {updateCommande, deleteCommande} from '../../../api/commande'
-    import { Toasts, addToast } from 'as-toast';
+    import {addToast } from 'as-toast';
 
     export let commandes;
     export let livreurs;
@@ -23,6 +23,7 @@
         if (commande.livreurId===null){
             updateLivreur(livreur.id, {disponible:false})
             .then(res => {
+                if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
                 livreurs.forEach(liv => {
                     if (liv.id===livreur.id)
                         liv.disponible = false;
@@ -38,6 +39,7 @@
             if (!pris_ailleurs){
                 updateLivreur(commande.livreurId, {disponible:true}) // rend le mec dispo si il est sur aucune autre commande après avoir été enlevé de celle-ci
                 .then(res => {
+                    if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
                 livreurs.forEach(liv => {
                     if (liv.id===commande.livreurId)
                         liv.disponible = true;
@@ -47,6 +49,7 @@
             }
             await updateLivreur(livreur.id, {disponible:false})
             .then(res => {
+                if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
                 livreurs.forEach(liv => {
                     if (liv.id===livreur.id)
                         liv.disponible = false;
@@ -57,6 +60,7 @@
         }
         updateCommande(commande.code, {livreurId:livreur.id})
             .then(res => {
+                if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
                 commande = res.commande
                 commandes.forEach(co => {
                 if (co.code===commande.code)
@@ -68,6 +72,7 @@
     async function validate(commande){
         updateCommande(commande.code, {etat:'CPC'})
         .then(res => {
+            if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
             commande = res.commande
             commandes.forEach(co => {
                 if (co.code===commande.code){
@@ -92,15 +97,17 @@
         if (!pris_ailleurs){
             updateLivreur(commande.livreurId, {disponible:true}) // rend le mec dispo si il est sur aucune autre commande après avoir été enlevé de celle-ci
             .then(res => {
-            livreurs.forEach(liv => {
-                if (liv.id===commande.livreurId)
-                    liv.disponible = true;
-            })
-            livreurs = [...livreurs]
+                if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
+                livreurs.forEach(liv => {
+                    if (liv.id===commande.livreurId)
+                        liv.disponible = true;
+                })
+                livreurs = [...livreurs]
             })
         }
         updateCommande(commande.code, {etat:'LV'})
         .then(res => {
+            if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
             commande = res.commande
             commandes.forEach(co => {
                 if (co.code===commande.code){
@@ -129,15 +136,14 @@
     async function deleteCommandes(){
         commandes.forEach(async commande => {
             if (commande.supp){
-                await deleteCommande(commande.code)
+                res = await deleteCommande(commande.code)
+                if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
             }
         })
         addToast('Suppression des commandes effectuées', 'info', 2000)
         commandes = commandes.filter(co => !co.supp)
     }
 </script>
-
-<Toasts/>
 
 <Table bordered class="w-100" size="sm">
     <thead>

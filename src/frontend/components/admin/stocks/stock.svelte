@@ -28,13 +28,17 @@
         if (event.key === "Enter"){
             updateStock(event.target.id, {quantite:event.target.value})
             .then(res => {
-                addToast("Stock bien mis à jour", "info", 2000)
+                console.log(res)
+                if (res.error !== undefined){
+                    addToast(res.error.message, "warn", 2000)
+                } else {
+                    addToast("Stock bien mis à jour", "info", 2000)
+                }
             })
         }
     }
 </script>
 
-<Toasts/>
 <Table bordered>
     <thead>
         <tr>

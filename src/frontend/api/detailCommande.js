@@ -5,7 +5,7 @@ export const createDetailCommande = async(detailcommande) => {
       const response = await Api.post("detailCommandes", detailcommande);
       return response;
     } catch (error) {
-      console.error(error);
+      return {error:error.response.data}
     }
 };
 

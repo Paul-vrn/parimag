@@ -1,9 +1,9 @@
 <script>
     export let service;
     export let addInPanier;
-    import ModalInfo from '../modal/modal_service_info.svelte'
+    import ModalInfo from './modal_service_info.svelte'
     import {Button} from 'sveltestrap'
-    import { Toasts, addToast } from 'as-toast';
+    import { addToast } from 'as-toast';
 
     service.quantite = 1;
 
@@ -11,24 +11,22 @@
 
     function ajouter(){
         addInPanier(service)
+        addToast(`${service.nom} a été ajouté au panier`, "info", 1500)
+
     }
     function showInfo(){
         open = false;
         open = true;
     }
 </script>
-<Toasts/>
 <ModalInfo produit={service} open={open}/>
 <div class="plat mx-3 mb-3 p-2 d-flex flex-column justify-content-between">
-    <div class="d-flex justify-content-start align-items-center flex-wrap">
-        <h2>{service.nom}</h2>
-        <div class="d-flex justify-content-between align-items-center flex-nowrap w-100">
-            <img src={'images/icons/info.png'} alt="info" width="40" height="40" on:click={showInfo}/>        
-        </div>
-    </div>
+    <h2>{service.nom}</h2>
     <p class="description_produit">{service.description}</p>
+    <img src={`images/menu/${service.photo}`} alt={service.photo}/>
+    <hr class="w-100 p-0 mx-0 mb-2 mt-auto"/>
     <div class="actions d-flex align-items-center justify-content-between">
-        <Button on:click={ajouter} color="success">
+        <Button on:click={ajouter} color="success" class="ms-auto">
             <img src={'images/icons/panier_in.png'} alt="validate" width="30" height="30"/>
         </Button>
     </div>  

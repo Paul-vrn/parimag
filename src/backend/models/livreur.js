@@ -7,7 +7,8 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         nom:{
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            unique:true
         },
         disponible:{
             type: DataTypes.BOOLEAN,

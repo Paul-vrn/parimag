@@ -1,55 +1,38 @@
 <script>
-import { Table, Button } from 'sveltestrap';
-let commandes = []
-import { onMount } from 'svelte';
-import {getCommandes} from '../../../api/commande'
-import { Toasts, addToast } from 'as-toast';
-
-	onMount(async () => {
-        const res = await getCommandes();
-        commandes = res.filter(co => co.etat !== "LV");
-    });
-	async function reload() {
-		const res = await getCommandes()
-		commandes = res.filter(co => co.etat !== "LV")
-		addToast("reload effectué", "info", 1000)
+	import Panier from './menus/panier.svelte'
+	import TabCommande from './menus/tab_commande.svelte'
+	let panier = []
+	let commandeEnCours = {
+		panier:[]
 	}
-
-	const etat = {
-		"LV":"Livrée",
-		"EAP":"En attente de payement",
-		"CPC":"Commande prise en charge"
+	function updatePanier(newPanier){
+		commandeEnCours.panier = [...newPanier]
 	}
-	
+	function resetCommande(){
+		commandeEnCours = {panier:[]}
+	}
+	let scripts = document.head.querySelectorAll('script')
 </script>
 
-<Toasts/>
-<main id="commandes">
-	<h1>Commandes</h1>
-	<Table>
-		<thead>
-			<tr>
-				<th><Button color="primary" on:click={reload}>
-					<img src={'images/icons/reload.svg'} alt="reload" width="20" height="20"/>
-				</Button></th>
-				<th>Code</th>
-				<th>État</th>
-			</tr>
-		</thead>
-		<tbody>
-			{#each commandes as commande, i (commande.code)}
-				<tr>
-					<th>{i+1}</th>
-					<th>{commande.code}</th>
-					<th>{etat[commande.etat]}</th>
-				</tr>
-			{/each}
-		</tbody>
-	</Table>
+<main id="menus">
+	<Panier commandeEnCours={commandeEnCours} updatePanier={updatePanier} {resetCommande}/>
+	<TabCommande commandeEnCours={commandeEnCours} updatePanier={updatePanier}/>
 </main>
 
 <style>
-	main#commandes {
-		margin-top: 115px;
+	main#menus {
+		width: 100%;
+		min-height: 80%;
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		margin-top: 120px;
+		
 	}
+@media screen and (max-width: 800px) {
+  main#menus {
+	  flex-direction: column;
+	  height: auto;
+  }
+}
 </style>

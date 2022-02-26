@@ -5,6 +5,6 @@ export const getListe = async () => {
       const response = await Api.get("json/liste");
       return response;
     } catch (error) {
-      console.error(error);
+      return {error:error.response.data}
     }
 };

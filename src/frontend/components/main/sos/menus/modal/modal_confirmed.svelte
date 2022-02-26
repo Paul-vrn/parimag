@@ -3,10 +3,13 @@
     import { prixTotal } from '../../../../../services/prix_total'
     export let open;
     export let commandeEnCours;
-    const toggle = () => {open = !open}
-    function t(){
-        commandeEnCours = commandeEnCours
+    export let resetCommande;
+
+    const endCommande = () => {
+        open = !open
+        resetCommande()
     }
+
 </script>
 
 
@@ -31,6 +34,6 @@
     {/if}
     </ModalBody>
     <ModalFooter>
-      <Button color="primary" on:click={toggle}>Terminé</Button>
+      <Button color="primary" on:click={endCommande}>Terminé</Button>
     </ModalFooter>
 </Modal>

@@ -55,8 +55,8 @@
             <Tooltip  target={`info${produit.id}`} placement="bottom">Plus d'infos sur le produit en cliquant ici</Tooltip>
         </div>
     </div>
-    <p class="description_produit">{produit.description}</p>
-    <hr class="w-100 p-0 m-0"/>
+    <img src={`images/menu/${produit.photo}`} alt={produit.photo}/>
+    <hr class="w-100 p-0 mx-0 mb-2 mt-auto"/>
     <div class="actions d-flex align-items-center justify-content-between">
         <div>
             <Button on:click={()=>changeQuantite(-1)} size="sm">
@@ -78,19 +78,13 @@
 </div>
 
 <style>
-    .description_produit {
-        overflow: hidden;
-        max-height: 35%;
-        text-overflow: ellipsis
-    }
+
     div.plat {
         border-style: solid;
         border-radius: 1em;
         width: 30%;
         min-width: 300px;
     }
-   
-
 @media screen and (max-width: 640px) {
   div.plat {
       width: 100%;

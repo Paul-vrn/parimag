@@ -15,7 +15,7 @@
         } else if (quantiteSelect+val>=produit.quantiteStockMax){
             addToast("Il n'y a pas assez de stock", "warn", 1500)
         } else if (quantiteSelect>=produit.quantiteMax){
-            addToast(`Vous pouvez commander maximum ${produit.quantiteMax} plats`, "warn", 1500)
+            addToast(`Vous pouvez commander maximum ${produit.quantiteMax} ${produit.nom}`, "warn", 1500)
         } else {
             quantiteSelect+= val
         }

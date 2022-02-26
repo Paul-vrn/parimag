@@ -5,11 +5,11 @@
 </script>
 
 {#if sens}
-<div class="membre d-flex w-100 m-3">
-    <div>
+<div class="membre d-flex w-100">
+    <div class=" w-50">
         <Image alt="Photo de {membre.nom}" src={'images/user.png'} class=""/>
     </div>
-    <div class=" d-flex flex-column justify-content-center">
+    <div class="w-50 d-flex flex-column justify-content-center">
         <h1>{membre.nom}</h1>
         <h1>{membre.surnom}</h1>
         <h1>{membre.role}</h1>    
@@ -19,12 +19,12 @@
 {:else}
 <div class="membre d-flex w-100">
     <!-- TODO : Faire la mise en en place image, texte, description, etc... pour afficher UN membre -->
-    <div class=" d-flex flex-column justify-content-center">
+    <div class="w-50 d-flex flex-column justify-content-center">
         <h1>{membre.nom}</h1>
         <h1>{membre.surnom}</h1>
         <h1>{membre.role}</h1>    
     </div>
-    <div>
+    <div class="w-50">
         <Image alt="Photo de {membre.nom}" src={'images/user.png'} class=""/>
     </div>
 </div>
@@ -35,6 +35,7 @@
 
 div.membre{
     width: 100%;
+
 }
 :global(.membre img) {
     width: 250px;

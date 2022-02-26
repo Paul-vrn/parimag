@@ -4,7 +4,7 @@
     import CopyToClipboard from "svelte-copy-to-clipboard";
     import {updateLivreur, getLivreurs} from '../../../api/livreur'
     import {updateCommande, deleteCommande} from '../../../api/commande'
-    import { Toasts, addToast } from 'as-toast';
+    import {addToast } from 'as-toast';
 
     export let commandes;
     export let livreurs;
@@ -144,8 +144,6 @@
         commandes = commandes.filter(co => !co.supp)
     }
 </script>
-
-<Toasts/>
 
 <Table bordered class="w-100" size="sm">
     <thead>

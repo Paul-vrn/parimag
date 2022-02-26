@@ -15,6 +15,8 @@
   function changePole(val){
     poleSelected = val
     membres = liste.find(pl => pl.nom===poleSelected).membres
+    window.scrollTo(0,0); 
+
 }
 </script>
 
@@ -27,7 +29,7 @@
       </div>
     {/each}
   </div>
-  <div class="content">
+  <div class="content pt-2">
     {#each membres as membre,i}
       <Membre membre={membre} sens={i%2==0}/>
     {/each}
@@ -61,7 +63,7 @@ div.sidebar div.poleSelect {
 
 div.content {
   background-color: #d7c378;
-  width: 85%;
+  width: 83%;
   margin-left: auto;
   min-height: 100vh;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -78,6 +80,23 @@ div.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  :global(.pole:hover){
+    background-color: #d7c378;
+    border-style: solid;
+    animation: PoleKeyFrame 0.4s forwards;
+    border-color: white;
+  }
+  @keyframes PoleKeyFrame {
+    from {
+      box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.25);;
+      border-width: 0.4em;
+
+    }
+    to {
+      border-width: 0.5em;
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
   }
 
 </style>

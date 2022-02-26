@@ -39,7 +39,6 @@
     }
 </script>
 
-<Toasts/>
 <Table bordered>
     <thead>
         <tr>

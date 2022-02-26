@@ -1,9 +1,9 @@
 <script>
     export let service;
     export let addInPanier;
-    import ModalInfo from '../modal/modal_service_info.svelte'
+    import ModalInfo from './modal_service_info.svelte'
     import {Button} from 'sveltestrap'
-    import { Toasts, addToast } from 'as-toast';
+    import { addToast } from 'as-toast';
 
     service.quantite = 1;
 
@@ -11,13 +11,14 @@
 
     function ajouter(){
         addInPanier(service)
+        addToast(`${service.nom} a été ajouté au panier`, "info", 1500)
+
     }
     function showInfo(){
         open = false;
         open = true;
     }
 </script>
-<Toasts/>
 <ModalInfo produit={service} open={open}/>
 <div class="plat mx-3 mb-3 p-2 d-flex flex-column justify-content-between">
     <div class="d-flex justify-content-start align-items-center flex-wrap">

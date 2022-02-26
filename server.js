@@ -43,22 +43,18 @@ app.get('*', (req, res) => {
 
 // populate
 async function populate(){
-   console.log("populate")
-   await app.runMiddleware('/api/qgs/populate')
-   console.log("populate qg")
-   
-   await app.runMiddleware('/api/produits/populate')
-   console.log("populate prod")
-   await app.runMiddleware('/api/livreurs/populate')
-   console.log("populate livrur")
-   await app.runMiddleware('/api/stocks/populate')   
-   console.log("populate stok")
-   await app.runMiddleware('/api/banderoles', {
-      method:'get',
-      body:{
-         message:""
-      }
-   })
+   const qgs = await db.Qg.findAll();
+   if (!(qgs.length > 0)){
+      await app.runMiddleware('/api/qgs/populate', {method:'get',headers:{SECRET:SECRET}})  
+      await app.runMiddleware('/api/produits/populate', {method:'get',headers:{SECRET:SECRET}})
+      await app.runMiddleware('/api/livreurs/populate', {method:'get',headers:{SECRET:SECRET}})
+      await app.runMiddleware('/api/stocks/populate', {method:'get',headers:{SECRET:SECRET}})
+      await app.runMiddleware('/api/banderoles', {
+         method:'post',
+         headers:{SECRET:SECRET},
+         body:{message:""}
+      })   
+   }
 }
 
 app.listen(port, () => {

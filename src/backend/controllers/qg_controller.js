@@ -43,5 +43,10 @@ module.exports = {
                  }, SECRET, { expiresIn: '3 hours' })
                  return res.cookie("access_token", token).json({ access_token: token })        
             })
+            .catch(err => {
+                res.status(500).send({
+                    message: err.message || "Error findOne d'Auth"
+                })
+            })
      }
 }

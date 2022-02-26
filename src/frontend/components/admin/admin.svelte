@@ -2,8 +2,10 @@
 	import Stock from './stocks/stock.svelte'
 	import PanneauCommandes from './commandes/panneau_commandes.svelte'
 	import BanderoleModule from './banderoleModule/banderole_module.svelte'
+	import {Toasts} from "as-toast"
 </script>
 
+<Toasts/>
 <main>
 	<h1>Module admin</h1>
 	<div id="admin">
@@ -24,7 +26,6 @@ div#admin {
 	align-items: flex-start;
 	gap:2em;
 	margin:1em;
-	align-items: center;
 }
 div#admin div#gauche {
 	display: flex;

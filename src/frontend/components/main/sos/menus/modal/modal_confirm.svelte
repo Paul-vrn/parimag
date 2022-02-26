@@ -1,7 +1,9 @@
 <script>
     function generateUID(length){return window.btoa(Array.from(window.crypto.getRandomValues(new Uint8Array(length * 2))).map((b) => String.fromCharCode(b)).join("")).replace(/[+/]/g, "").substring(0, length);}
-    import {Table,Modal, ModalHeader, ModalBody, ModalFooter, Button, Input} from 'sveltestrap';
+    import {Table,Modal, ModalHeader, ModalBody, ModalFooter, Button, Input, Alert} from 'sveltestrap';
     import { prixTotal } from '../../../../../services/prix_total';
+    import {commande} from '../../../../../services/commande'
+    import { addToast } from 'as-toast';
     import Svelecte from 'svelecte';
     let attested = false
     export let open;
@@ -17,20 +19,18 @@
     }
     async function searchGoogle(value){
         let res = await serviceGoogleSearch.getPlacePredictions({input:value})
-        console.log(res)
         return res.predictions
     }
     /* --  -- */
-    import {commande} from '../../../../../services/commande'
     function commander(){
         commandeEnCours.code = generateUID(5).toUpperCase()
         commande(commandeEnCours, serviceGoogleDistance)
         .then(() => {
-
             nextModal()
         })
         .catch(err => {
             console.log(err)
+            addToast(err, "warn", 1500)
             toggle()
         })
     }
@@ -56,11 +56,19 @@
             </thead>
             <tbody>
                 {#each commandeEnCours.panier as prod}
+                    {#if prod.type!=="Service"}
                     <tr>
                         <th>{prod.nom}</th>
                         <th>{prod.quantite}</th>
                         <th>{prod.prix}€</th>
                     </tr>
+                    {:else}
+                    <tr>
+                        <th>{prod.nom}</th>
+                        <th></th>
+                        <th>gratuit</th>
+                    </tr>                        
+                    {/if}    
                 {/each}
             </tbody>
         </Table>
@@ -79,12 +87,19 @@
                 labelField="description"
                 bind:value={commandeEnCours.adresse}
                 fetch={searchGoogle}
-            />                
+            />  
         </div>
+        <Alert color="danger" class="mt-2 mb-0">
+            <h4>Attention !</h4>
+            Si aucune proposition ne s'affiche, c'est que l'API de googlemaps est bloqué par une extension.<br/>
+            Pensez à désactiver Adblock, Ublock, Brave Shields up avant de passer commande.
+        </Alert>              
         <br/> 
-        <Input type="textarea" name="text" id="exampleText" bind:value={commandeEnCours.commentaire} placeholder="Ajouter un commentaire à votre commande ici"/>
+        <Input type="textarea" name="text" id="exampleText" bind:value={commandeEnCours.commentaire} rows="4"
+        placeholder={`Ajouter un commentaire à votre commande ici.
+Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au sucre).`}/>
         <br/>
-        <Input id="checkboxAttested" bind:checked={attested} type="checkbox" label="Je valide pouvoir payer la commande suivante à l'aide de Lydia" />
+        <Input class=" justify-content-start" id="checkboxAttested" bind:checked={attested} type="checkbox" label="Je valide pouvoir payer la commande suivante à l'aide de Lydia" />
     </ModalBody>
     <ModalFooter>
       <Button color="primary" on:click={commander} disabled={!attested}>Je commande</Button>
@@ -93,9 +108,12 @@
 </Modal>
 
 <style>
+:global(.form-check-input){
+    margin-right: 1em;
+}
 @media screen and (max-width: 575px) {
 :global(.modal-dialog) {
-        margin-left: 0 !important;
+        margin: 0 !important;
     }
 }
 </style>

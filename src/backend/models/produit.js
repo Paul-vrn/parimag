@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         nom:{
             type: DataTypes.STRING,
+            unique:true,
             allowNull:false
         },
         plat_du_jour:{
@@ -15,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull:true
         },
         type:{
-            type: DataTypes.ENUM('Repas', 'Service'),
+            type: DataTypes.ENUM('Service', 'Plat', 'Entree', 'Dessert', 'Boisson'),
             allowNull: false
         },
         prix: {
@@ -26,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
             type:DataTypes.STRING,
             allowNull:true
         },
-        vegan:{
+        vege:{
             type:DataTypes.BOOLEAN,
             allowNull:true
         },
@@ -41,6 +42,10 @@ module.exports = (sequelize, DataTypes) => {
         photo:{
             type: DataTypes.STRING,
             allowNull:false
+        },
+        quantiteMax:{
+            type: DataTypes.INTEGER,
+            allowNull:true
         }
 
     }, {timestamps:false});

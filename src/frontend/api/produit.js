@@ -5,6 +5,6 @@ export const getProduits = async () => {
       const response = await Api.get("produits");
       return response;
     } catch (error) {
-      console.error(error);
+      return {error:error.response.data}
     }
 };

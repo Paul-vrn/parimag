@@ -5,6 +5,7 @@ module.exports = {
     create:(req, res) => {
         const commande = {
             code:req.body.code,
+            personne:req.body.personne,
             adresse:req.body.adresse,
             tel:req.body.tel,
             etat:req.body.etat

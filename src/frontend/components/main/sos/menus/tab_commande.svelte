@@ -7,7 +7,7 @@
     import {TabContent, TabPane} from 'sveltestrap'
     let produits = []
     let today = new Date().toISOString().slice(0, 10)
-    let plat_du_jour = {}
+    let plat_du_jour;
     onMount(async () => {
         const res = await getProduits();
         produits = res;
@@ -37,14 +37,19 @@
 <div class="produits">
     <TabContent pills>
         <TabPane tabId="Plats" tab="Plats" active>
-            <p class="Roboto mx-1">Précision : Vous pouvez commander au maximum 3 plats par commande. <br>Si vous souhaitez en commander plus, diviser votre commande en plusieurs petites commandes<br>
-                ça ne change rien pour vous, vous recevrez vos commandes en même temps. C'est juste plus pratique de notre côté.
+            <p class="Roboto mx-1">
+                Précision : Une commande est géré par <b>1</b> livreur. Si vous souhaitez faire une grosse commande, vous serez limité en quantité.<br>
+                Donc diviser votre grosse commande en plusieurs petites commandes. (On s'organisera de notre côté pour vous livrer tout ça ensemble).
             </p>
             <hr/>
             <div class="d-flex flex-wrap justify-content-around">
-                {#each produits.filter(prod => prod.type==="Plat") as produit}
+                {#if plat_du_jour!==undefined}
+                <Produit produit={plat_du_jour} {addInPanier}/>                    
+                {/if}
+                {#each produits.filter(prod => prod.type==="Accompagnement") as produit}
                     <Produit produit={produit} {addInPanier}/>
                 {/each}
+
                 <hr class="w-100"/>
                 {#each produits.filter(prod => prod.type==="Dessert") as produit}
                     <Produit produit={produit} {addInPanier}/>
@@ -102,7 +107,8 @@ div.produits {
 
 @media (min-width: 800px) and (max-width: 1300px){
     div.produits {
-        width: calc(100% - 450px)
+        width: calc(100% - 450px);
+        margin-left: 0;
     }
 }
 @media screen and (max-width: 800px) {
@@ -113,6 +119,8 @@ div.produits {
     }
     div.produits {
         width:100%;
+        margin-left: 0 !important;
+
     }
 }
 

@@ -8,11 +8,14 @@
 	function updatePanier(newPanier){
 		commandeEnCours.panier = [...newPanier]
 	}
+	function resetCommande(){
+		commandeEnCours = {panier:[]}
+	}
 	let scripts = document.head.querySelectorAll('script')
 </script>
 
 <main id="menus">
-	<Panier commandeEnCours={commandeEnCours} updatePanier={updatePanier}/>
+	<Panier commandeEnCours={commandeEnCours} updatePanier={updatePanier} {resetCommande}/>
 	<TabCommande commandeEnCours={commandeEnCours} updatePanier={updatePanier}/>
 </main>
 

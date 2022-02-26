@@ -6,12 +6,14 @@ module.exports = {
     populate: (req, res) => {
         Qg.findAll()
         .then(qgs => {
-            Produit.findAll({where:{type:"Repas"}})
+            Produit.findAll()
             .then(produits => {
-                produits.forEach(produit => {
+                produits.filter(prod => prod.type!=='Service')
+                .forEach(produit => {
+                    
                     qgs.forEach(qg => {
                         Stock.create({
-                            quantite:0,
+                            quantite:50,
                             QGNom:qg.nom,
                             produitId:produit.id
                         })

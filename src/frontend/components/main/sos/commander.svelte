@@ -8,9 +8,7 @@
 	function updatePanier(newPanier){
 		commandeEnCours.panier = [...newPanier]
 	}
-	console.log(document.head.querySelectorAll('script'))
 	let scripts = document.head.querySelectorAll('script')
-	console.log(scripts.length)
 </script>
 
 <main id="menus">

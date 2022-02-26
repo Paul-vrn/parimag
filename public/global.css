@@ -93,3 +93,7 @@ p {
 	font-family: Roboto;
 	src: url('/fonts/Roboto-Regular.ttf');
 }
+
+ul.svelte-19uzrsi {
+	z-index: 5;
+}

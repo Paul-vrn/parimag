@@ -1,7 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import {Table, Button, Input} from 'sveltestrap'
-    import { Toasts, addToast } from 'as-toast';
+    import {addToast } from 'as-toast';
     import {getBanderole, updateBanderole} from '../../../api/banderole'
 
 
@@ -22,8 +22,6 @@
         }
     }
 </script>
-
-<Toasts/>
 <div id="banderole" class="border p-2">
     Banderole:    <Input value={banderole.message} on:keydown={submit}/>
 </div>

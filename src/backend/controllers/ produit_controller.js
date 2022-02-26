@@ -14,10 +14,11 @@ module.exports = {
                 type:data.type,
                 prix:(data.prix==="")?null:data.prix,
                 ingredients:(data.ingredients==="") ? null : data.ingredients,
-                vegan:(data.vegan=="VRAI") ? true : false,
-                halal:(data.halal==="VRAI") ? true : false,
+                vege:(data.vege==="TRUE") ? true : false,
+                halal:(data.halal==="TRUE") ? true : false,
+                quantiteMax:(data.quantiteMax==="") ? null : data.quantiteMax,
                 description:data.description,
-                plat_du_jour:(data.plat_du_jour==="") ? null : data.plat_du_jour,
+                plat_du_jour:(data.plat_du_jour==="") ? null : new Date(data.plat_du_jour),
                 photo:data.photo
             })
         })
@@ -31,8 +32,9 @@ module.exports = {
             type:req.body.type,
             prix:(req.body.prix==="") ? null : req.body.prix,
             ingredients:(req.body.ingredients==="") ? null : req.body.ingredients,
-            vegan:(req.body.vegan=="VRAI") ? true : false,
+            vege:(req.body.vege=="VRAI") ? true : false,
             halal:(req.body.halal==="VRAI") ? true : false,
+            quantiteMax:(data.quantiteMax==="") ? null : data.quantiteMax,
             description:(req.body.description==="") ? null : req.body.ingredients
         }
         Produit.create(produit)

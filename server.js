@@ -13,7 +13,7 @@ app.use(cookieParser())
 app.use(express.json())
 app.use(cors());
 const db = require("./src/backend/models/index");
-db.sequelize.sync({alter:true})
+db.sequelize.sync()
    .then(() => {
       populate()
    })

@@ -14,7 +14,7 @@
     <ModalHeader>Commande effectué !</ModalHeader>
     <ModalBody>
         <p>Votre commande est passé à l'état <i>en attente de payement</i>.<br/>
-        Le code identifiant de votre commande est</p>
+        Le code identifiant de votre commande est : </p>
         <h5><b>{commandeEnCours.code}</b></h5> 
         <p>(ne le perdez pas !).<br/>
         Vous pouvez suivre l'évolution de l'état de votre commande dans ... en utilisant ce code comme référance.<br/>

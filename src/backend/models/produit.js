@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
             type:DataTypes.STRING,
             allowNull:true
         },
-        vegan:{
+        vege:{
             type:DataTypes.BOOLEAN,
             allowNull:true
         },
@@ -42,6 +42,10 @@ module.exports = (sequelize, DataTypes) => {
         photo:{
             type: DataTypes.STRING,
             allowNull:false
+        },
+        quantiteMax:{
+            type: DataTypes.INTEGER,
+            allowNull:true
         }
 
     }, {timestamps:false});

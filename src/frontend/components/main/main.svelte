@@ -5,30 +5,39 @@ import {
     Dropdown,DropdownToggle,DropdownMenu,DropdownItem, Image
 	} from 'sveltestrap'
     import Liste from './liste/liste.svelte'
+	import ListeMobile from './liste/liste_mobile.svelte'
     import Accueil from './accueil/accueil.svelte'
 	import About from './about/about.svelte'
 	import Commander from './sos/commander.svelte'
 	import Commandes from './sos/suivi_commande.svelte'
 	import { getBanderole } from '../../api/banderole'
     import { viewMain } from '../../stores'
+	import {Toasts} from "as-toast"
 	let isOpen = false;
 	let banderoleHide = false;
-    function handleUpdate(event) {
+	let mobileView = window.innerWidth<800;
+	function handleUpdate(event) {
         isOpen = event.detail.isOpen;
     }
     function changeView(event){
         $viewMain = event.target.id
 		handleUpdate(event)
+		window.scrollTo(0,0); 
+
 	}
 	function dropdownOpen(event){
 		if (!$viewMain.includes('drop'))
 			$viewMain = $viewMain + ' ' + 'drop'
 	}
-	
+	const mql = window.matchMedia('(max-width: 800px)');
+	mql.addEventListener('change', (e) => {
+		mobileView = e.matches;
+	});
+		
 </script>
 
 	
-
+<Toasts/>
 <header class=" m-0 p-0 fixed-top shadow-lg">
     <Navbar color="white" light expand="md">
 		<NavbarBrand href="javascript:void(0)" id="accueil" on:click={changeView} class="m-1">
@@ -66,14 +75,17 @@ import {
 		<img src={'images/icons/cross.svg'} alt="validate" on:click={() => banderoleHide=true} width="30" height="30"/>
 	</div>
 {/if}	
-{/await}
-  
+{/await} 
 </header>
 
 {#if $viewMain.includes('accueil')}
 <Accueil/>
 {:else if $viewMain.includes('liste')}
-<Liste/>
+	{#if !mobileView}
+	 	<Liste/>
+	{:else}
+		<ListeMobile/>
+	{/if}
 {:else if $viewMain.includes('about')}
 <About/>
 {:else if $viewMain.includes('commander')}
@@ -104,8 +116,11 @@ div#banderole img {
 	background-color: #D7C378 !important;
 	border-radius: 3px;
 }
-:global(header li a){
+:global(header li a, header li div button){
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	font-family: Paris2024VariableRegular;
+	font-size: 1.4em;
+	text-align: center !important;
 }
 :global(header li:hover){
 	animation: liKeyFrame 1s forwards;

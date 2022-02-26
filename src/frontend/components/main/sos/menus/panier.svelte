@@ -10,11 +10,13 @@
     /*  -- JS des Modals -- */
     import ModalConfirm from './modal/modal_confirm.svelte'
     import ModalConfirmed from './modal/modal_confirmed.svelte'
-    function checkPanier() {
-        console.log(commandeEnCours.panier)
-    }
+    import {checkPanier} from '../../../../services/checkPanier'
+    import { addToast } from 'as-toast';
     function commander(){
-        if (checkPanier()){
+        checked = checkPanier(commandeEnCours.panier)
+        if (typeof checked !== "boolean"){
+            addToast(checked, "warn", 4000)
+        } else {
             openFirstModal = false; // si ça reste "true", on refait passer à false puis re true pour que ça update bien le component ModalConfirm
             openFirstModal = true
         }
@@ -26,8 +28,6 @@
         openFirstModal = false;
         openSecondModal = true;
     }
-
-    // function qui vérifie le panier avant de faire la commande
 </script>
 <ModalConfirm open={openFirstModal} {nextModal} commandeEnCours={commandeEnCours}/>
 <ModalConfirmed open={openSecondModal} commandeEnCours={commandeEnCours}/>
@@ -48,7 +48,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {#each commandeEnCours.panier.filter(prod => prod.type==="Repas") as produit, i (produit.id)}
+                    {#each commandeEnCours.panier.filter(prod => prod.type!=="Service") as produit, i (produit.id)}
                         <tr class=" align-items-center">
                             <th>{i+1}</th>
                             <th>{produit.nom}</th>
@@ -111,7 +111,7 @@ div#panier {
 div#panier h2 {
     margin-left: 0.25em;
 }
-@media (min-width: 800px) and (max-width: 1015px){
+@media (min-width: 800px) and (max-width: 1300px){
     div#panier {
         width: 400px;
     }

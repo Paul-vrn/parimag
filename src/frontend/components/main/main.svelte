@@ -1,4 +1,5 @@
 <script>
+	console.log("0 erreurs ici ou quoient (bon j'avoue y a des erreurs à cause de l'api google et l'embed youtube)")
 import {
 	Collapse,
     Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,
@@ -7,9 +8,10 @@ import {
     import Liste from './liste/liste.svelte'
 	import ListeMobile from './liste/liste_mobile.svelte'
     import Accueil from './accueil/accueil.svelte'
-	import About from './about/about.svelte'
+	import Contact from './contact/contact.svelte'
 	import Commander from './sos/commander.svelte'
 	import Commandes from './sos/suivi_commande.svelte'
+	import Partenariat from './partenariat/partenariat.svelte'
 	import { getBanderole } from '../../api/banderole'
     import { viewMain } from '../../stores'
 	import {Toasts} from "as-toast"
@@ -61,11 +63,15 @@ import {
 			  </DropdownMenu>
 			</Dropdown>			
 			  <NavItem class="mx-3 rounded-2">
-				  <NavLink id="about" on:click={changeView} class={($viewMain=='about'?'onHit':'')}>À propos</NavLink>
+				  <NavLink id="partenariat" on:click={changeView} class={($viewMain=='partenariat'?'onHit':'')}>Partenariat</NavLink>
 			  </NavItem>
-		  </Nav>
+			  <NavItem class="mx-3 rounded-2">
+				<NavLink id="contact" on:click={changeView} class={($viewMain=='contact'?'onHit':'')}>Contact</NavLink>
+			</NavItem>
+			</Nav>
 		</Collapse>
 	  </Navbar>
+
 {#await getBanderole(1)}
 	  <div id="banderole"><p>Chargement</p></div>
 {:then banderole} 
@@ -86,12 +92,14 @@ import {
 	{:else}
 		<ListeMobile/>
 	{/if}
-{:else if $viewMain.includes('about')}
-<About/>
 {:else if $viewMain.includes('commander')}
 <Commander/>
 {:else if $viewMain.includes('commandes')}
 <Commandes/>
+{:else if $viewMain.includes('partenariat')}
+<Partenariat/>
+{:else if $viewMain.includes('contact')}
+<Contact/>
 {/if}
 
 <style>
@@ -111,7 +119,10 @@ div#banderole p {
 div#banderole img {
 	cursor: pointer;
 }
-
+:global(.navbar-toggler:active, .navbar-toggler:focus) {
+	background-color: #D7C378 !important;
+	color: #D7C378 !important;
+}
 :global(.onHit){
 	background-color: #D7C378 !important;
 	border-radius: 3px;
@@ -131,7 +142,7 @@ div#banderole img {
       background-color: white;
     }
     to {
-      background-color: #d7c378;
+      background-color: #D7C378;
     }
   }
 

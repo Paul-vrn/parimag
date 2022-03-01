@@ -1,3 +1,4 @@
+
 html, body {
 	position: relative;
 	width: 100%;
@@ -96,4 +97,10 @@ p {
 
 ul.svelte-19uzrsi {
 	z-index: 5;
+}
+
+
+button.btn.colored {
+	background-color: #D7C378 !important;
+	border-color: #D7C378 !important;
 }

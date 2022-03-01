@@ -39,7 +39,7 @@
     }
 </script>
 
-<Table bordered>
+<Table bordered id="tableStock">
     <thead>
         <tr>
             <th>
@@ -63,11 +63,11 @@
 </Table>
 
 <style>
-    :global(table){
+    :global(table#tableStock){
         width: 80% !important;
         height: auto;
     }
-    :global(table input) {
+    :global(table#tableStock input) {
         width:50px;
         text-align: end;
     }

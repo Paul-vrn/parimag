@@ -47,7 +47,7 @@
                         <th>Nom</th>
                         <th>quantite</th>
                         <th class="text-nowrap">prix (€)</th>
-                        <th>supprimer</th>
+                        <th  class="w-25">supprimer</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -74,7 +74,7 @@
                     <tr>
                         <th>#</th>
                         <th>Nom</th>
-                        <th>Supprimer</th>
+                        <th class="w-25">Supprimer</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -94,7 +94,7 @@
         </div>
     </div>
     <hr class="mt-auto"/>
-    <Button class="ms-auto me-2 mb-2" color="primary" on:click={commander} disabled={commandeEnCours.panier.length ==0}>Commander</Button>
+    <Button class="ms-auto me-2 mb-2 colored" on:click={commander} disabled={commandeEnCours.panier.length ==0}>Commander</Button>
 </div>
 
 
@@ -107,7 +107,7 @@ div#panier {
     border-style: solid;
     border-radius: 1em;
     width: 500px;
-    height: 80%;
+    height: 85%;
     position: fixed;
     right:0;
 }

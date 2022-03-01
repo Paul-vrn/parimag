@@ -34,6 +34,6 @@
     {/if}
     </ModalBody>
     <ModalFooter>
-      <Button color="primary" on:click={endCommande}>Terminé</Button>
+      <Button color="primary" on:click={endCommande}>Terminer</Button>
     </ModalFooter>
 </Modal>

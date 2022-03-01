@@ -7,12 +7,20 @@
 
 
 <Modal isOpen={open} toggle={toggle} size="xl" centered>
-    <ModalHeader>{produit.nom}</ModalHeader>
+    <ModalHeader toggle={toggle}>{produit.nom}</ModalHeader>
     <ModalBody>
-        <h3>Plus d'info sur votre produit.</h3>
-        {produit.description}
-        <h3>Ingredients :</h3>
-        {produit.ingredients}
+        {#if produit.description !== null}
+            <h3>Plus d'info sur votre produit.</h3>
+            {produit.description}
+        {/if}
+        {#if produit.ingredients !== null}
+            <h3>Ingredients :</h3>
+            <ul>
+            {#each produit.ingredients.split(',') as ingredient}
+                <li>{ingredient}</li>
+            {/each}            
+            </ul>
+        {/if}
     </ModalBody>
     <ModalFooter>
         Pour plus d'informations contactez nous sur notre compte facebook !

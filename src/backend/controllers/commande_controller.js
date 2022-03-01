@@ -8,7 +8,9 @@ module.exports = {
             personne:req.body.personne,
             adresse:req.body.adresse,
             tel:req.body.tel,
-            etat:req.body.etat
+            etat:req.body.etat,
+            trajets:req.body.trajets,
+            commentaire:req.body.commentaire
         }
         if (req.body.QGNom !== undefined){
             commande.QGNom = req.body.QGNom

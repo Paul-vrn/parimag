@@ -70,7 +70,7 @@
         {#if produit.quantiteStockMax<=0}
             <p>Indisponible</p>
         {:else}
-        <Button on:click={clickPanier} disabled={quantiteSelect==0} color="success">
+        <Button on:click={clickPanier} disabled={quantiteSelect==0} class="colored">
             <img src={'images/icons/panier_in.png'} alt="validate" width="30" height="30"/>
         </Button>
         {/if}

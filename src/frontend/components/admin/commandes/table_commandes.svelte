@@ -4,10 +4,13 @@
     import CopyToClipboard from "svelte-copy-to-clipboard";
     import {updateLivreur, getLivreurs} from '../../../api/livreur'
     import {updateCommande, deleteCommande} from '../../../api/commande'
+    import {timeParse} from '../../../services/timeParse'
     import {addToast } from 'as-toast';
-
     export let commandes;
     export let livreurs;
+    export let qgs;
+    export let updateCommandes;
+    let qgDelegued = "";
     let livreursSelected = []
     const etat = {
 		"LV":"Livrée",
@@ -136,12 +139,21 @@
     async function deleteCommandes(){
         commandes.forEach(async commande => {
             if (commande.supp){
-                res = await deleteCommande(commande.code)
+                let res = await deleteCommande(commande.code)
                 if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
             }
         })
         addToast('Suppression des commandes effectuées', 'info', 2000)
         commandes = commandes.filter(co => !co.supp)
+    }
+    function changeQg(commande){
+        updateCommande(commande.code, {QGNom:qgDelegued})
+            .then(res => {
+                if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
+                addToast("Modification effectué", "info", 2000)
+                updateCommandes()
+            })
+
     }
 </script>
 
@@ -156,6 +168,7 @@
             <th>Valider le payement</th>
             <th>Assigner un livreur</th>
             <th>Valider la livraison</th>
+            <th>Déléguer</th>
             <th>Msg Discord</th>
             <th id={`but-del`}>
                 <Button id={`but-del`} color="danger" on:click={deleteCommandes} size="sm">Del</Button>
@@ -170,7 +183,7 @@
                 <th>
                     {etat[commande.etat]}
                 </th>
-                <th>{commande.adresse}</th>
+                <th>{commande.adresse.split(',')[0]}</th>
                 <th>{commande.tel}</th>
                 <th>
                     <img id={`info-${commande.code}`} src={'images/icons/info.png'} alt="validate" width="20" height="20"/>
@@ -179,6 +192,8 @@
                         {#each commande.detail_commandes as detail}
                             <p class="m-0 p-0">{detail.produit.nom} : {detail.produit.prix}€ x{detail.quantite}</p>
                         {/each}
+                        <h4>Commentaire :</h4>
+                        <p>{commande.commentaire}</p>
                     </Tooltip>
                 </th>
                 <th>
@@ -210,6 +225,18 @@
                     <Button on:click={livred(commande)} color="secondary" size="sm">
                         <img src={'images/icons/check.svg'} alt="validate" width="20" height="20"/>
                     </Button>
+                </th>
+                <th>
+                    <div class="d-flex gap-1 align-items-center">
+                        <Input type="select" name="select" id="QGs select" bind:value={qgDelegued}>
+                            {#each qgs as qg}
+                                <option>{qg.nom} : {timeParse(commande.trajets[qg.nom])}</option>
+                            {/each}
+                        </Input>
+                        <Button on:click={changeQg(commande)} color="secondary" size="sm" disabled={qgDelegued===""}>
+                            <img src={'images/icons/check.svg'} alt="validate" width="20" height="20"/>
+                        </Button>
+                    </div>
                 </th>
                 <th>
                     <CopyToClipboard text={getText(commande)} let:copy>

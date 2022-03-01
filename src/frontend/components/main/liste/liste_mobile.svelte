@@ -9,7 +9,6 @@
     onMount(async () => {
       const res = await getListe();
       liste = res;
-      console.log(liste);
       poleSelected = liste[0].nom
       membres = liste[0].membres
     });
@@ -44,7 +43,10 @@
 :global(.accordion-header button.collapsed){
     background-color: white !important;
 }
-
+:global(.accordion-button:not(.collapsed)){
+    background-color: white !important;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 :global(.accordion-header .accordion-button:focus){
     border-color: #D7C378 !important;
     box-shadow: 0 0 0 0.25rem rgb(215 195 120 / 25%) !important;

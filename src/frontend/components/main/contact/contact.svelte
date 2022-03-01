@@ -1,13 +1,15 @@
 <script>
 
 </script>
-<main id="about">
-	<h1 class="text-center">À propos du site</h1>
+<main id="contact">
+	<h1 class="text-center">Contact</h1>
 
 </main>
 
 <style>
-	
+	main#contact {
+		margin-top: 120px;
+	}
 	@media (min-width: 640px) {
 		main {
 			max-width: none;

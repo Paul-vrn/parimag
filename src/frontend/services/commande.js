@@ -9,28 +9,28 @@ export async function commande(commandeEnCours, serviceGoogleDistance) {
         origins:[{placeId:""}],
         destinations:[{placeId:""}],
     }
-    console.log("service commande")
-    console.log(commandeEnCours)
     const qgs = await getQGs()
-    let trajets = []
+    let trajets = {}
     for (let qg of qgs) {
         request.origins[0].placeId = qg.place_id
         request.destinations[0].placeId = commandeEnCours.adresse.place_id
         await serviceGoogleDistance.getDistanceMatrix(request)
             .then(res => {
-                trajets.push(res)
                 qg.time = res.rows[0].elements[0].duration.value
+                trajets[qg.nom] = qg.time
             })
             .catch(err => console.log(err))
     }
     qgs.sort((qg1, qg2) => (qg1.time > qg2.time) ? 1 : -1) // trie les qgs dans l'ordre du plus proche au moins proche
     commandeEnCours.qg = qgs[0]
-    
+    commandeEnCours.trajets = JSON.stringify(trajets)    
     createCommande({
         code:commandeEnCours.code,
         adresse:commandeEnCours.adresse.description,
         tel:commandeEnCours.tel,
+        personne:commandeEnCours.personne,
         etat:"EAP",
+        trajets:commandeEnCours.trajets,
         QGNom:commandeEnCours.qg.nom,
         commentaire:commandeEnCours.commentaire
     })
@@ -43,7 +43,6 @@ export async function commande(commandeEnCours, serviceGoogleDistance) {
                 })
                 if (produit.type==="Repas"){
                     let st = produit.stocks.find(stock => stock.QGNom === commandeEnCours.qg.nom)
-                    console.log(st)
                     updateStock(st.id, {quantite:st.quantite-produit.quantite})
                 }
             }        

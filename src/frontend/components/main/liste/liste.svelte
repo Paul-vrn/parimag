@@ -8,7 +8,6 @@
   onMount(async () => {
     const res = await getListe();
     liste = res;
-    console.log(liste);
     poleSelected = liste[0].nom
     membres = liste[0].membres
   });

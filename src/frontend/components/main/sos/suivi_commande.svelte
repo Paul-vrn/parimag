@@ -1,13 +1,16 @@
 <script>
-import { Table, Button } from 'sveltestrap';
+import { Table, Button, Tooltip } from 'sveltestrap';
 let commandes = []
 import { onMount } from 'svelte';
 import {getCommandes} from '../../../api/commande'
 import { Toasts, addToast } from 'as-toast';
-
+import {timeParse} from '../../../services/timeParse'
 	onMount(async () => {
         const res = await getCommandes();
         commandes = res.filter(co => co.etat !== "LV");
+		commandes.forEach(co => {
+			co.trajets = JSON.parse(co.trajets)
+		});
     });
 	async function reload() {
 		const res = await getCommandes()
@@ -25,15 +28,20 @@ import { Toasts, addToast } from 'as-toast';
 
 <Toasts/>
 <main id="commandes">
-	<h1>Commandes</h1>
 	<Table>
 		<thead>
 			<tr>
-				<th><Button color="primary" on:click={reload}>
+				<th><Button class="colored" on:click={reload}>
 					<img src={'images/icons/reload.svg'} alt="reload" width="20" height="20"/>
 				</Button></th>
 				<th>Code</th>
 				<th>État</th>
+				<th><p id="TempsTrajet">Temps de trajets estimé</p></th>
+				<Tooltip target={`TempsTrajet`}>
+					<p>Le temps de trajet est calculé entre le lieu que vous avez donné et le QG le plus proche. (en utilisant l'API de Google Maps)<br>
+					Ce temps ne comptabilise pas le temps de cuisine qui dépend du nombre de commandes en cours.	
+					</p>
+				</Tooltip>
 			</tr>
 		</thead>
 		<tbody>
@@ -42,6 +50,7 @@ import { Toasts, addToast } from 'as-toast';
 					<th>{i+1}</th>
 					<th>{commande.code}</th>
 					<th>{etat[commande.etat]}</th>
+					<th>{timeParse(commande.trajets[commande.QGNom])}</th>
 				</tr>
 			{/each}
 		</tbody>

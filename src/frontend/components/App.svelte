@@ -9,5 +9,5 @@
 <Router url="{url}">
 	<Route path="/*"><Home/></Route>
 	<Route path="/login"><Login/></Route>
-	<Route path="admin" component="{Admin}" />
+	<Route path="/admin"><Admin/></Route>
   </Router>

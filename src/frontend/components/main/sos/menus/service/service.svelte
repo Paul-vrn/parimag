@@ -26,7 +26,7 @@
     <img src={`images/menu/${service.photo}`} alt={service.photo}/>
     <hr class="w-100 p-0 mx-0 mb-2 mt-auto"/>
     <div class="actions d-flex align-items-center justify-content-between">
-        <Button on:click={ajouter} color="success" class="ms-auto">
+        <Button on:click={ajouter}  class="ms-auto colored">
             <img src={'images/icons/panier_in.png'} alt="validate" width="30" height="30"/>
         </Button>
     </div>  

@@ -27,6 +27,10 @@ module.exports = (sequelize, DataTypes) => {
             values:["EAP", "CPC", "LV"],
             allowNull: false
         },
+        trajets: {
+            type: DataTypes.STRING,
+            allowNull:true
+        },
         commentaire:{
             type: DataTypes.STRING,
             allowNull:true

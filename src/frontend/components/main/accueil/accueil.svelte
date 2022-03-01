@@ -49,6 +49,7 @@
     background-size: 100%;
   }
   main#accueil > div {
+    position: relative;
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.4);

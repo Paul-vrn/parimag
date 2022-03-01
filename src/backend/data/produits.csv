@@ -6,7 +6,7 @@ Poulet aigre doux,Plat,03/14/2022,2.00,FALSE,FAUX,3,"poulet, sauce soja, maizena
 Croque Monsieur Pesto fromage,Accompagnement,,0.5,TRUE,TRUE,6,"pain de mie, pesto, fromage râpé",Pourquoi faire compliqué ? Un croque-monsieur tout simple avec du pesto vert et du fromage râpé.,croque.jpg
 Riz,Accompagnement,,0.50,TRUE,VRAI,6,,"Du riz blanc, tout simplement !",riz.jpg
 Crêpes,Dessert,,0,FALSE,TRUE,10,"farine, sucre, oeufs, lait, sel","Que serait des SOS sans crêpes ? Faites avec de la farine de blé, du sucre, du lait 
-et beaucoup d'amour.\n\nPrécisez en commentaire de la commande ce que vous souhaitez mettre dans votre crêpe
+et beaucoup d'amour. Précisez en commentaire de la commande ce que vous souhaitez mettre dans votre crêpe
 ",crepe.jpeg
 Mousse au chocolat,Dessert,,0.50,FALSE,TRUE,3,"chocolat noir, oeuf, sucre, beurre, sel","La fameuse mousse au chocolat onctueuse et délicate, à base de chocolat, sucre, jaunes d'oeufs et blancs battus en neige.",mousse-au-chocolat.jpg
 Tiramisu,Dessert,,0.50,FALSE,TRUE,3,"sucre roux, mascarpone, boudoirs, cacao en poudre, oeuf, café","Plat de la délégation italienne. Le dessert emblématique, fait à base de mascarpone, sucre, oeufs, et de biscuits imbibés de café.",tiramisu.jpg
@@ -20,3 +20,5 @@ Nous pouvons même vous assister durant votre soirée en faisant appel à notre 
 déménagement,Service,,0,FALSE,FALSE,,,"Vous déménagez ? Besoin de gros bras pour vous aider à transporter des meubles ? Pas de problème, Par'Imag est là pour vous aider.
 Commandez l'aide de deux déménageurs dès maintenant.",demenagement.jpg
 Coach sportif,Service,,0,FALSE,FALSE,,,,coach.png
+SOS Choré,Service,,0,FALSE,FALSE,,,On vient vous apprendre notre superbe choré !,chore.png
+SOS Calin,Service,,0,FALSE,FALSE,,,Ne pas abuser !,calin.png

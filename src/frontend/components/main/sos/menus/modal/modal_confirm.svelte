@@ -29,7 +29,6 @@
             nextModal()
         })
         .catch(err => {
-            console.log(err)
             addToast(err, "warn", 1500)
             toggle()
         })
@@ -73,22 +72,35 @@
             </tbody>
         </Table>
         <h3>Prix total : {prixTotal(commandeEnCours.panier)}€</h3>
-        <Input id="phone" type="tel" bind:value={commandeEnCours.tel} placeholder="numéro de téléphone" required/>
-        <br/>
-        <div class="d-flex gap-2 align-items-center">
-            <h5 class="m-0">Adresse : </h5>
-            <Svelecte
-                resetOnBlur
-                fetchResetOnBlur
-                minQuery={6}
-                valueAsObject
-                placeholder="Adresse"
-                fetchMode="auto"
-                labelField="description"
-                bind:value={commandeEnCours.adresse}
-                fetch={searchGoogle}
-            />  
-        </div>
+        <Table borderless class="w-100">
+            <tbody>
+                <tr>
+                    <th><h5>Identité :</h5></th>
+                    <th>            <Input id="phone" type="tel" bind:value={commandeEnCours.personne} placeholder="Prénom NOM" required/>
+                    </th>
+                </tr>
+                <tr>
+                    <th><h5>Téléphone :</h5></th>
+                    <th><Input id="phone" type="tel" bind:value={commandeEnCours.tel} placeholder="numéro de téléphone" required/></th>
+                </tr>
+                <tr>
+                    <th><h5>Adresse :</h5></th>
+                    <th>
+                        <Svelecte
+                        resetOnBlur
+                        fetchResetOnBlur
+                        minQuery={6}
+                        valueAsObject
+                        placeholder="Adresse"
+                        fetchMode="auto"
+                        labelField="description"
+                        bind:value={commandeEnCours.adresse}
+                        fetch={searchGoogle}
+                    />          
+                    </th>
+                </tr>
+            </tbody>
+        </Table>
         <Alert color="danger" class="mt-2 mb-0">
             <h4>Attention !</h4>
             Si aucune proposition ne s'affiche, c'est que l'API de googlemaps est bloqué par une extension.<br/>

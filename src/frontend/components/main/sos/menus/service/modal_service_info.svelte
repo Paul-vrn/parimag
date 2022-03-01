@@ -7,7 +7,7 @@
 
 
 <Modal isOpen={open} toggle={toggle} size="xl" centered>
-    <ModalHeader>{produit.nom}</ModalHeader>
+    <ModalHeader toggle={toggle}>{produit.nom}</ModalHeader>
     <ModalBody>
         <h3>Plus d'info sur votre produit.</h3>
         {produit.description}

@@ -47,7 +47,7 @@
                         <th>Nom</th>
                         <th>quantite</th>
                         <th class="text-nowrap">prix (€)</th>
-                        <th  class="w-25">supprimer</th>
+                        <th class="w-25">supprimer</th>
                     </tr>
                 </thead>
                 <tbody>

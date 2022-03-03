@@ -1,6 +1,7 @@
 [
     {
         "nom":"Prez",
+        "photo":"pole_prez",
         "membres":[
             {
                 "nom":"Adrien",
@@ -23,7 +24,8 @@
         ]
     },
     {
-        "nom":"G-I",
+        "nom":"Bureau",
+        "photo":"pole_bureau",
         "membres":[
             {
                 "nom":"Cédric",
@@ -36,12 +38,7 @@
                 "surnom":"DidingTim",
                 "role":"Respo Com",
                 "photo":"tim"
-            }
-        ]
-    },
-    {
-        "nom":"Tréz",
-        "membres":[
+            },
             {
                 "nom":"Axel",
                 "surnom":"Steve Jobs",
@@ -52,17 +49,18 @@
                 "nom":"Quentin",
                 "surnom":"Ski engineer",
                 "role":"Vice-Trés",
-                "photo":"./"
+                "photo":"quentin"
             }
         ]
     },
     {
-        "nom":"Chorée",
+        "nom":"Choré",
+        "photo":"pole_chore",
         "membres":[
             {
                 "nom":"Maissa",
                 "surnom":"Bro",
-                "role":"Chorée",
+                "role":"Choré",
                 "photo":"maissa"
             },
             {
@@ -74,19 +72,20 @@
             {
                 "nom":"Cédric",
                 "surnom":"Tqt le boss",
-                "role":"",
+                "role":"SecGén",
                 "photo":"cedric"
             }
         ]
     },
     {
         "nom":"Goodies",
+        "photo":"pole_goodies",
         "membres":[
             {
                 "nom":"Arthur LB",
                 "surnom":"ASAP Arthuro",
                 "role":"Goodies",
-                "photo":"arthura"
+                "photo":"arthurl"
             },
             {
                 "nom":"Marc",
@@ -110,6 +109,7 @@
     },
     {
         "nom":"SOS/Ptit déj",
+        "photo":"pole_sos",
         "membres":[
             {
                 "nom":"Camille",
@@ -120,13 +120,13 @@
             {
                 "nom":"Paul",
                 "surnom":"-900",
-                "role":"",
+                "role":"Orga",
                 "photo":"paul"
             },
             {
                 "nom":"Cédric",
                 "surnom":"Tqt le boss",
-                "role":"",
+                "role":"Logistique",
                 "photo":"cedric"
             },
             {
@@ -145,6 +145,7 @@
     },
     {
         "nom":"Activité",
+        "photo":"pole_activite",
         "membres":[
             {
                 "nom":"Adam",
@@ -181,6 +182,7 @@
     },
     {
         "nom":"Rap",
+        "photo":"pole_rap",
         "membres":[
             {
                 "nom":"Marc",
@@ -192,7 +194,7 @@
                 "nom":"Arthur LB",
                 "surnom":"ASAP Arthuro",
                 "role":"Rap",
-                "photo":"arthura"
+                "photo":"arthurl"
             },
             {
                 "nom":"William",
@@ -205,6 +207,7 @@
     },
     {
         "nom":"Film",
+        "photo":"pole_film",
         "membres":[
             {
                 "nom":"Simo",
@@ -222,6 +225,7 @@
     },
     {
         "nom":"Financement",
+        "photo":"pole_finance",
         "membres":[
             {
                 "nom":"Antonin",
@@ -239,6 +243,7 @@
     },
     {
         "nom":"Site",
+        "photo":"pole_site",
         "membres":[
             {
                 "nom":"Paul",
@@ -257,6 +262,12 @@
                 "surnom":"DidingTim",
                 "role":"Respo Design",
                 "photo":"tim"
+            },
+            {
+                "nom":"Théo",
+                "surnom":"",
+                "role":"CyberSécu",
+                "photo":"theo"
             }
         ]
     }

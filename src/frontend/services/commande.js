@@ -41,7 +41,7 @@ export async function commande(commandeEnCours, serviceGoogleDistance) {
                     produitId:produit.id,
                     quantite:produit.quantite
                 })
-                if (produit.type==="Repas"){
+                if (produit.type!=="Service"){
                     let st = produit.stocks.find(stock => stock.QGNom === commandeEnCours.qg.nom)
                     updateStock(st.id, {quantite:st.quantite-produit.quantite})
                 }

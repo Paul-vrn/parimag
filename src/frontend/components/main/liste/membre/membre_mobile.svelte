@@ -5,7 +5,7 @@
 
 <div class="membre flex-column d-flex w-100">
     <div>
-        <Image alt="Photo de {membre.nom}" src={'images/user.png'} class=""/>
+        <Image alt="Photo de {membre.nom}" src={`images/liste/${membre.photo}.jpg`} class=""/>
     </div>
     <div class=" d-flex flex-column justify-content-center">
         <h1>{membre.nom} - {membre.surnom}</h1>

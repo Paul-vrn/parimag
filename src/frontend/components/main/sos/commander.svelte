@@ -11,7 +11,6 @@
 	function resetCommande(){
 		commandeEnCours = {panier:[]}
 	}
-	let scripts = document.head.querySelectorAll('script')
 </script>
 
 <main id="menus">

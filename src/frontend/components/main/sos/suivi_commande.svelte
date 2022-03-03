@@ -27,8 +27,8 @@ import {timeParse} from '../../../services/timeParse'
 </script>
 
 <Toasts/>
-<main id="commandes">
-	<Table>
+<main id="suivi">
+	<Table responsive>
 		<thead>
 			<tr>
 				<th><Button class="colored" on:click={reload}>
@@ -36,7 +36,7 @@ import {timeParse} from '../../../services/timeParse'
 				</Button></th>
 				<th>Code</th>
 				<th>État</th>
-				<th><p id="TempsTrajet">Temps de trajets estimé</p></th>
+				<th id="TempsTrajet">Temps de trajets estimé</th>
 				<Tooltip target={`TempsTrajet`}>
 					<p>Le temps de trajet est calculé entre le lieu que vous avez donné et le QG le plus proche. (en utilisant l'API de Google Maps)<br>
 					Ce temps ne comptabilise pas le temps de cuisine qui dépend du nombre de commandes en cours.	
@@ -58,7 +58,16 @@ import {timeParse} from '../../../services/timeParse'
 </main>
 
 <style>
-	main#commandes {
+	tbody th, thead th {
+    vertical-align: middle;
+    text-align: center;
+}
+	main#suivi {
 		margin-top: 120px;
 	}
+	@media screen and (max-width: 800px) {
+		:global(main#suivi table) {
+			width: 100%;
+		}
+}
 </style>

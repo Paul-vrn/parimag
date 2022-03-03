@@ -3,19 +3,17 @@
   import { getListe } from "../../../api/getListe";
   import Membre from "./membre/membre.svelte";
   let liste = []; // table qui contient le liste.json
-  let poleSelected;
-  let membres=[];
+  let poleSelected = {
+    membres:[]
+  };
   onMount(async () => {
     const res = await getListe();
     liste = res;
-    poleSelected = liste[0].nom
-    membres = liste[0].membres
+    poleSelected = liste[0]
   });
   function changePole(val){
     poleSelected = val
-    membres = liste.find(pl => pl.nom===poleSelected).membres
     window.scrollTo(0,0); 
-
 }
 </script>
 
@@ -23,14 +21,19 @@
   <!-- TODO : page de la liste -->
   <div class="sidebar">
     {#each liste as pole}
-      <div class={"pole " + ((poleSelected===pole.nom)?'poleSelect':'')} on:click={changePole(pole.nom)}>
-        <h4 class="m-0 p-0" on:click={changePole(pole.nom)}>{pole.nom}</h4>
+      <div class={"pole " + ((poleSelected.nom===pole.nom)?'poleSelect':'')} on:click={changePole(pole)}>
+        <h4 class="m-0 p-0" on:click={changePole(pole)}>{pole.nom}</h4>
       </div>
     {/each}
   </div>
-  <div class="content pt-2">
-    {#each membres as membre,i}
+  <div class="content">
+    <div class="container_photo">
+      <img alt="Photo de {poleSelected.photo}" src={`images/liste/${poleSelected.photo}.jpg`} class="photo_pole"/>
+    </div>
+    <hr class="w-75 mx-auto"/>
+    {#each poleSelected.membres as membre,i}
       <Membre membre={membre} sens={i%2==0}/>
+      <hr class="w-50 mx-auto"/>
     {/each}
   </div>
 </main>
@@ -59,7 +62,14 @@ div.sidebar div.poleSelect {
   background-color: #d7c378;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
+.container_photo {
+  width: 100%;
+  height: calc(100vh - 85px);
+  overflow: hidden;
+}
+.photo_pole {
+  width: 100%
+}
 div.content {
   background-color: #d7c378;
   width: 83%;

@@ -21,6 +21,9 @@
 })
     async function updateCommandes(){
       commandes = await getCommandes()
+      commandes.forEach(co => {
+          co.trajets = JSON.parse(co.trajets)
+        });
     }
 </script>
 

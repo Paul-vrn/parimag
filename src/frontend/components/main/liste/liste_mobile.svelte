@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { getListe } from "../../../api/getListe";
-    import { Accordion, AccordionItem } from 'sveltestrap';
+    import { Accordion, AccordionItem, Image } from 'sveltestrap';
     import MembreMobile from "./membre/membre_mobile.svelte"
     let liste = []; // table qui contient le liste.json
     let poleSelected;
@@ -22,6 +22,7 @@
     <Accordion on:toggle={console.log} id="accordion">
         {#each liste as pole}
             <AccordionItem header={pole.nom}>
+                <Image alt="Photo de {pole.photo}" src={`images/liste/${pole.photo}.jpg`} class="w-100"/>
                 {#each pole.membres as membre}
                     <MembreMobile membre={membre}/>
                 {/each}

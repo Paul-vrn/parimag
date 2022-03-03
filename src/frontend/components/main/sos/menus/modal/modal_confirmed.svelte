@@ -16,11 +16,14 @@
 <Modal isOpen={open} backdrop="static" size="lg" centered>
     <ModalHeader>Commande effectué !</ModalHeader>
     <ModalBody>
-        <p>Votre commande est passé à l'état <i>en attente de payement</i>.<br/>
-        Le code identifiant de votre commande est : </p>
-        <h5><b>{commandeEnCours.code}</b></h5> 
-        <p>(ne le perdez pas !).<br/>
-        Vous pouvez suivre l'évolution de l'état de votre commande dans ... en utilisant ce code comme référance.<br/>
+        <div class="d-flex">
+            <p>Votre commande est passé à l'état <i>en attente de payement</i>.<br/>
+                Le code identifiant de votre commande est : </p>
+                <h5><b>{commandeEnCours.code}</b></h5> 
+                <p>(ne le perdez pas !).<br/>        
+        </div>
+        <p>
+        Vous pouvez suivre l'évolution de l'état de votre commande dans "suivi des commandes".<br/>
         </p>
     {#if prixTotal(commandeEnCours.panier) === "0.00"}
     <p>
@@ -28,7 +31,9 @@
     </p>
     {:else}
     <p>
-        Pour valider le payement de votre commande, envoyez au 0606060 le prix de votre commande ({prixTotal(commandeEnCours.panier)}€) en mettant comme titre du payement le code ci-dessus.<br/>
+        Pour valider le payement de votre commande, c'est <a target="_blank" href="https://lydia-app.com/form/payment/phoneform?vendor_token=6212183a37389062855264">ici</a> 
+        que ça se passe ! Mettez en description le code donné ci-dessus et comme montant le prix de la commande ({prixTotal(commandeEnCours.panier)}€) 
+        <br>
         Si vous ne pouvez pas faire de payement en ligne, contactez par téléphone le 0606060 pour valider que vous payerez en liquide sur place.
     </p>
     {/if}

@@ -58,11 +58,11 @@
     <img src={`images/menu/${produit.photo}`} alt={produit.photo}/>
     <hr class="w-100 p-0 mx-0 mb-2 mt-auto"/>
     <div class="actions d-flex align-items-center justify-content-between">
-        <div>
+        <div class="d-flex align-items-center gap-1">
             <Button on:click={()=>changeQuantite(-1)} size="sm">
             <img src={'images/icons/minus.svg'} alt="minus" width="30" height="30"/>
             </Button>
-            {quantiteSelect}
+            <h4 class="p-0 m-0">{quantiteSelect}</h4>
             <Button on:click={()=>changeQuantite(1)} size="sm">
                 <img src={'images/icons/plus.svg'} alt="plus" width="30" height="30"/>
             </Button>

@@ -146,8 +146,10 @@
         addToast('Suppression des commandes effectuées', 'info', 2000)
         commandes = commandes.filter(co => !co.supp)
     }
+
     function changeQg(commande){
-        updateCommande(commande.code, {QGNom:qgDelegued})
+        console.log(qgDelegued)
+        updateCommande(commande.code, {QGNom:qgDelegued.split(':')[0].trim()})
             .then(res => {
                 if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
                 addToast("Modification effectué", "info", 2000)

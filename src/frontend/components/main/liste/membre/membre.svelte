@@ -7,7 +7,7 @@
 {#if sens}
 <div class="membre d-flex w-100">
     <div class=" w-50">
-        <Image alt="Photo de {membre.nom}" src={'images/user.png'} class=""/>
+        <Image alt="Photo de {membre.nom}" src={`images/liste/${membre.photo}.jpg`} class=""/>
     </div>
     <div class="w-50 d-flex flex-column justify-content-center">
         <h1>{membre.nom}</h1>
@@ -25,7 +25,7 @@
         <h1>{membre.role}</h1>    
     </div>
     <div class="w-50">
-        <Image alt="Photo de {membre.nom}" src={'images/user.png'} class=""/>
+        <Image alt="Photo de {membre.nom}" src={`images/liste/${membre.photo}.jpg`} class=""/>
     </div>
 </div>
 

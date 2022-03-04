@@ -60,20 +60,26 @@
             {
                 "nom":"Maissa",
                 "surnom":"Bro",
-                "role":"Choré",
+                "role":"Respo Choré",
                 "photo":"maissa"
             },
             {
                 "nom":"Marine",
                 "surnom":"Maz",
-                "role":"Aprèm sport",
+                "role":"Choré",
                 "photo":"marine"
             },
             {
                 "nom":"Cédric",
                 "surnom":"Tqt le boss",
-                "role":"SecGén",
+                "role":"Choré",
                 "photo":"cedric"
+            },
+            {
+                "nom":"Hajar",
+                "surnom":"",
+                "role":"Choré",
+                "photo":"hajar"
             }
         ]
     },
@@ -84,7 +90,7 @@
             {
                 "nom":"Arthur LB",
                 "surnom":"ASAP Arthuro",
-                "role":"Goodies",
+                "role":"Respo Goodies",
                 "photo":"arthurl"
             },
             {
@@ -96,14 +102,8 @@
             {
                 "nom":"Tee Wei",
                 "surnom":"",
-                "role":"",
-                "photo":"tee_wei"
-            },
-            {
-                "nom":"Mohamed",
-                "surnom":"Satantago",
                 "role":"Goodies",
-                "photo":"mohamed"
+                "photo":"tee_wei"
             }
         ]
     },
@@ -124,12 +124,6 @@
                 "photo":"paul"
             },
             {
-                "nom":"Cédric",
-                "surnom":"Tqt le boss",
-                "role":"Logistique",
-                "photo":"cedric"
-            },
-            {
                 "nom":"Tee Wei",
                 "surnom":"Le Baby Chef",
                 "role":"Cuisinier",
@@ -138,9 +132,16 @@
             {
                 "nom":"Arthur R",
                 "surnom":"",
-                "role":"",
+                "role":"SOS",
                 "photo":"arthurr"
+            },
+            {
+                "nom":"Hajar",
+                "surnom":"",
+                "role":"Choré",
+                "photo":"hajar"
             }
+
         ]
     },
     {
@@ -148,22 +149,10 @@
         "photo":"pole_activite",
         "membres":[
             {
-                "nom":"Adam",
-                "surnom":"Pulpo",
-                "role":"Activités",
-                "photo":"adam"
-            },
-            {
                 "nom":"Quentin",
                 "surnom":"Ski engineer",
-                "role":"Vice-Prez",
+                "role":"Respo Aprèm sport",
                 "photo":"quentin"
-            },
-            {
-                "nom":"Akram",
-                "surnom":"SCRAPPYZ",
-                "role":"Activités",
-                "photo":"akram"
             },
             {
                 "nom":"Marine",
@@ -172,12 +161,17 @@
                 "photo":"marine"
             },
             {
-                "nom": "Hajar",
-                "surnom": "Yildez",
-                "role": "Activités",
-                "photo": "hajar"
+                "nom":"Akram",
+                "surnom":"SCRAPPYZ",
+                "role":"Aprèm sport",
+                "photo":"akram"
+            },
+            {
+                "nom":"Nabil",
+                "surnom":"",
+                "role":"Aprèm sport",
+                "photo":"nabil"
             }
-
         ]
     },
     {
@@ -187,7 +181,7 @@
             {
                 "nom":"Marc",
                 "surnom":"Lil Marco",
-                "role":"Rap",
+                "role":"Respo Rap",
                 "photo":"marc"
             },
             {
@@ -200,7 +194,7 @@
                 "nom":"William",
                 "surnom":"Willy on the mix",
                 "role":"Rap",
-                "photo":"william"
+                "photo":"willy"
             }
 
         ]
@@ -212,13 +206,13 @@
             {
                 "nom":"Simo",
                 "surnom":"Simo",
-                "role":"Film",
+                "role":"Respo Film",
                 "photo":"simo"
             },
             {
                 "nom":"Neil",
                 "surnom":"Tryhard",
-                "role":"Film",
+                "role":"Respo Film",
                 "photo":"neil"
             }
         ]
@@ -230,13 +224,13 @@
             {
                 "nom":"Antonin",
                 "surnom":"Sanglier",
-                "role":"Respo paris",
+                "role":"Respo Paris",
                 "photo":"antonin"
             },
             {
                 "nom":"Hippolyte",
                 "surnom":"La fraude",
-                "role":"Respo paris",
+                "role":"Respo Paris",
                 "photo":"hippolyte"
             }
         ]
@@ -254,13 +248,13 @@
             {
                 "nom":"Nabil",
                 "surnom":"",
-                "role":"Respo Design & Dev",
+                "role":"Design & Dev",
                 "photo":"nabil"
             },
             {
                 "nom":"Tim",
                 "surnom":"DidingTim",
-                "role":"Respo Design",
+                "role":"Design",
                 "photo":"tim"
             },
             {

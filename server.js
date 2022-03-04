@@ -49,6 +49,7 @@ async function populate(){
       await app.runMiddleware('/api/produits/populate', {method:'get',headers:{SECRET:SECRET}})
       await app.runMiddleware('/api/livreurs/populate', {method:'get',headers:{SECRET:SECRET}})
       await app.runMiddleware('/api/stocks/populate', {method:'get',headers:{SECRET:SECRET}})
+      await app.runMiddleware('/api/periodes/populate', {method:'get', headers:{SECRET:SECRET}})
       await app.runMiddleware('/api/banderoles', {
          method:'post',
          headers:{SECRET:SECRET},

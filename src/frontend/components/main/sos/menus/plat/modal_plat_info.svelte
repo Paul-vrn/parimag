@@ -23,6 +23,6 @@
         {/if}
     </ModalBody>
     <ModalFooter>
-        Pour plus d'informations contactez nous sur notre compte facebook !
+        Pour plus d'informations contactez nous sur notre compte <a href="https://www.facebook.com/profile.php?id=100078652846582" target="_blank">facebook</a> !
     </ModalFooter>
 </Modal>

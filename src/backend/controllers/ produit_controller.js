@@ -1,4 +1,3 @@
-const res = require('express/lib/response')
 const db = require('../models')
 const Produit = db.Produit
 const csv = require('csv-parser')

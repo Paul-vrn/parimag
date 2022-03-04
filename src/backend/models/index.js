@@ -5,7 +5,6 @@ const sequelize = new Sequelize({
     dialect: 'sqlite',
     storage: require('../config').dbPath,
     logging: false,
-
 });
 
 const db = {};
@@ -17,6 +16,7 @@ db.Commande = require('./commande')(sequelize, DataTypes);
 db.DetailCommande = require('./detail_commande')(sequelize, DataTypes);
 db.Stock = require('./stock')(sequelize, DataTypes);
 db.Banderole = require('./banderole')(sequelize, DataTypes);
+db.Periode = require('./periode')(sequelize, DataTypes);
 
 db.Livreur.belongsTo(db.Qg, {foreignKey:{allowNull:false}}) // QG_id dans Livreur
 db.Commande.hasMany(db.DetailCommande)

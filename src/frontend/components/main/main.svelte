@@ -8,7 +8,6 @@ import {
     import Liste from './liste/liste.svelte'
 	import ListeMobile from './liste/liste_mobile.svelte'
     import Accueil from './accueil/accueil.svelte'
-	import Contact from './contact/contact.svelte'
 	import Commander from './sos/commander.svelte'
 	import Commandes from './sos/suivi_commande.svelte'
 	import Partenariat from './partenariat/partenariat.svelte'
@@ -35,7 +34,10 @@ import {
 	mql.addEventListener('change', (e) => {
 		mobileView = e.matches;
 	});
-		
+	
+	function checkTimess(){
+		checkTime()
+	}
 </script>
 
 	
@@ -65,9 +67,6 @@ import {
 			  <NavItem class="mx-3 rounded-2">
 				  <NavLink id="partenariat" on:click={changeView} class={($viewMain=='partenariat'?'onHit':'')}>Partenariat</NavLink>
 			  </NavItem>
-			  <NavItem class="mx-3 rounded-2">
-				<NavLink id="contact" on:click={changeView} class={($viewMain=='contact'?'onHit':'')}>Contact</NavLink>
-			</NavItem>
 			</Nav>
 		</Collapse>
 	  </Navbar>
@@ -78,12 +77,11 @@ import {
 {#if banderole.message !== "" && !banderoleHide}
 	<div class="w-100 ps-2" id="banderole">
 		<p>{banderole.message}</p>
-		<img src={'images/icons/cross.svg'} alt="validate" on:click={() => banderoleHide=true} width="30" height="30"/>
+		<img src={'images/icons/cross.png'} alt="validate" on:click={() => banderoleHide=true} width="30" height="30"/>
 	</div>
 {/if}	
 {/await} 
 </header>
-
 {#if $viewMain.includes('accueil')}
 <Accueil/>
 {:else if $viewMain.includes('liste')}
@@ -98,11 +96,36 @@ import {
 <Commandes/>
 {:else if $viewMain.includes('partenariat')}
 <Partenariat/>
-{:else if $viewMain.includes('contact')}
-<Contact/>
 {/if}
 
+<footer class="py-3">
+	<div class="mb-2">
+		<a target="_blank" href="https://www.facebook.com/profile.php?id=100078652846582">
+			<img src={'images/icons/facebook_white.png'} width="50px" height="50px" alt="facebook"/>
+		</a>
+		<a target="_blank" href="https://www.instagram.com/parimag_2024/">
+			<img src={'images/icons/instagram_white.png'} width="50px" height="50px" alt="instagram"/>
+		</a>
+		<a target="_blank" href="https://www.youtube.com/channel/UCXfbbgSwqXX-as6WQIj01yw">
+			<img src={'images/icons/youtube_white.png'} width="50px" height="50px" alt="youtube"/>
+		</a>
+		<a target="_blank" href="https://github.com/Paul-vrn/benzimag">
+			<img src={'images/icons/github_white.png'} width="50px" height="50px" alt="github"/>
+		</a>	
+	</div>
+	<h3 class="p-0 m-0">PAR'IMAG 2024</h3>
+</footer>
 <style>
+footer {
+	background-color: rgba(38,38,38,1);
+	color: white;
+	text-align: center;
+}
+footer div {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
 div#banderole {
 	background-color: #D7C378;
 	border-style: solid;

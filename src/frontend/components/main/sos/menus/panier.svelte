@@ -12,20 +12,26 @@
     import ModalConfirm from './modal/modal_confirm.svelte'
     import ModalConfirmed from './modal/modal_confirmed.svelte'
     import {checkPanier} from '../../../../services/checkPanier'
+    import {checkTime} from '../../../../services/checkTime'
     import { addToast } from 'as-toast';
-    function commander(){
-        checked = checkPanier(commandeEnCours.panier)
-        if (typeof checked !== "boolean"){
-            addToast(checked, "warn", 4000)
-        } else {
+    async function commander(){
+        panierCheck = checkPanier(commandeEnCours.panier)
+        timeCheck = await checkTime()
+        if (typeof panierCheck !== "boolean"){
+            addToast(panierCheck, "warn", 4000)
+        } else if (typeof timeCheck !== "boolean"){
+            addToast(timeCheck, "warn", 4000)
+        } else if (panierCheck && timeCheck){
             openFirstModal = false; // si ça reste "true", on refait passer à false puis re true pour que ça update bien le component ModalConfirm
             openFirstModal = true
         }
-        checked = false;
+        panierCheck = false;
+        timeCheck = false;
     }
     let openFirstModal = false;
     let openSecondModal = false;
-    let checked = false;
+    let panierCheck = false;
+    let timeCheck = false
 
     function nextModal(){
         openFirstModal = false;
@@ -107,9 +113,10 @@ div#panier {
     border-style: solid;
     border-radius: 1em;
     width: 500px;
-    height: 85%;
+    height: calc(100% - 120px - 1em);
     position: fixed;
     right:0;
+    margin-bottom: 1em;
 }
 div#panier h2 {
     margin-left: 0.25em;

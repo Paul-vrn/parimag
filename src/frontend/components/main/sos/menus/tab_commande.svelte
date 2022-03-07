@@ -101,6 +101,7 @@
 div.produits {
     width: calc(100% - 550px);
     margin-left: 0.5rem!important;
+    margin-bottom: 1em;
 }
 
 @media (min-width: 800px) and (max-width: 1300px){

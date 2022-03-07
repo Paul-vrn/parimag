@@ -31642,6 +31642,26 @@
     	let t6;
     	let t7;
     	let blogs;
+    	let t8;
+    	let footer;
+    	let div3;
+    	let a0;
+    	let img0;
+    	let img0_src_value;
+    	let t9;
+    	let a1;
+    	let img1;
+    	let img1_src_value;
+    	let t10;
+    	let a2;
+    	let img2;
+    	let img2_src_value;
+    	let t11;
+    	let a3;
+    	let img3;
+    	let img3_src_value;
+    	let t12;
+    	let h3;
     	let current;
     	blogs = new Blogs({ $$inline: true });
 
@@ -31667,11 +31687,28 @@
     			t6 = text("ˬ");
     			t7 = space();
     			create_component(blogs.$$.fragment);
-    			attr_dev(h1, "class", "text-center varela svelte-yq6pz8");
+    			t8 = space();
+    			footer = element("footer");
+    			div3 = element("div");
+    			a0 = element("a");
+    			img0 = element("img");
+    			t9 = space();
+    			a1 = element("a");
+    			img1 = element("img");
+    			t10 = space();
+    			a2 = element("a");
+    			img2 = element("img");
+    			t11 = space();
+    			a3 = element("a");
+    			img3 = element("img");
+    			t12 = space();
+    			h3 = element("h3");
+    			h3.textContent = "PAR'IMAG 2024";
+    			attr_dev(h1, "class", "text-center varela svelte-vhzry0");
     			add_location(h1, file$l, 7, 6, 205);
     			attr_dev(hr, "class", "bg-white w-75 mx-auto my-5 ");
     			add_location(hr, file$l, 8, 6, 272);
-    			attr_dev(p, "class", "text-center w-50 mx-auto svelte-yq6pz8");
+    			attr_dev(p, "class", "text-center w-50 mx-auto svelte-vhzry0");
     			add_location(p, file$l, 9, 6, 322);
     			attr_dev(div0, "class", "mb-5");
     			add_location(div0, file$l, 6, 4, 179);
@@ -31679,13 +31716,13 @@
     			attr_dev(path, "fill-opacity", "1");
     			attr_dev(path, "d", "M0,32L80,53.3C160,75,320,117,480,133.3C640,149,800,139,960,112C1120,85,1280,43,1360,21.3L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z");
     			add_location(path, file$l, 15, 9, 650);
-    			attr_dev(text0, "class", "varela svelte-yq6pz8");
+    			attr_dev(text0, "class", "varela svelte-vhzry0");
     			attr_dev(text0, "x", "50%");
     			attr_dev(text0, "y", "75%");
     			attr_dev(text0, "dominant-baseline", "middle");
     			attr_dev(text0, "text-anchor", "middle");
     			add_location(text0, file$l, 20, 8, 940);
-    			attr_dev(text1, "class", "varela svelte-yq6pz8");
+    			attr_dev(text1, "class", "varela svelte-vhzry0");
     			attr_dev(text1, "x", "50%");
     			attr_dev(text1, "y", "80%");
     			attr_dev(text1, "dominant-baseline", "middle");
@@ -31695,13 +31732,51 @@
     			attr_dev(svg, "viewBox", "0 0 1440 320");
     			add_location(svg, file$l, 14, 6, 577);
     			attr_dev(div1, "id", "svg");
-    			attr_dev(div1, "class", "svelte-yq6pz8");
+    			attr_dev(div1, "class", "svelte-vhzry0");
     			add_location(div1, file$l, 13, 4, 555);
-    			attr_dev(div2, "class", "d-flex justify-content-center flex-column svelte-yq6pz8");
+    			attr_dev(div2, "class", "d-flex justify-content-center flex-column svelte-vhzry0");
     			add_location(div2, file$l, 5, 2, 118);
     			attr_dev(main, "id", "accueil");
-    			attr_dev(main, "class", "container-fluid p-0 svelte-yq6pz8");
+    			attr_dev(main, "class", "container-fluid p-0 svelte-vhzry0");
     			add_location(main, file$l, 4, 0, 67);
+    			if (!src_url_equal(img0.src, img0_src_value = 'images/icons/facebook_white.png')) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "width", "30px");
+    			attr_dev(img0, "height", "30px");
+    			attr_dev(img0, "alt", "facebook");
+    			add_location(img0, file$l, 44, 3, 1478);
+    			attr_dev(a0, "target", "_blank");
+    			attr_dev(a0, "href", "https://www.facebook.com/profile.php?id=100078652846582");
+    			add_location(a0, file$l, 43, 2, 1391);
+    			if (!src_url_equal(img1.src, img1_src_value = 'images/icons/instagram_white.png')) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "width", "30px");
+    			attr_dev(img1, "height", "30px");
+    			attr_dev(img1, "alt", "instagram");
+    			add_location(img1, file$l, 47, 3, 1649);
+    			attr_dev(a1, "target", "_blank");
+    			attr_dev(a1, "href", "https://www.instagram.com/parimag_2024/");
+    			add_location(a1, file$l, 46, 2, 1578);
+    			if (!src_url_equal(img2.src, img2_src_value = 'images/icons/youtube_white.png')) attr_dev(img2, "src", img2_src_value);
+    			attr_dev(img2, "width", "30px");
+    			attr_dev(img2, "height", "30px");
+    			attr_dev(img2, "alt", "youtube");
+    			add_location(img2, file$l, 50, 3, 1839);
+    			attr_dev(a2, "target", "_blank");
+    			attr_dev(a2, "href", "https://www.youtube.com/channel/UCXfbbgSwqXX-as6WQIj01yw");
+    			add_location(a2, file$l, 49, 2, 1751);
+    			if (!src_url_equal(img3.src, img3_src_value = 'images/icons/github_white.png')) attr_dev(img3, "src", img3_src_value);
+    			attr_dev(img3, "width", "30px");
+    			attr_dev(img3, "height", "30px");
+    			attr_dev(img3, "alt", "github");
+    			add_location(img3, file$l, 53, 3, 2005);
+    			attr_dev(a3, "target", "_blank");
+    			attr_dev(a3, "href", "https://github.com/Paul-vrn/benzimag");
+    			add_location(a3, file$l, 52, 2, 1937);
+    			attr_dev(div3, "class", "mb-2 svelte-vhzry0");
+    			add_location(div3, file$l, 42, 1, 1369);
+    			attr_dev(h3, "class", "p-0 m-0");
+    			add_location(h3, file$l, 56, 1, 2110);
+    			attr_dev(footer, "class", "py-3 mt-auto svelte-vhzry0");
+    			add_location(footer, file$l, 41, 0, 1337);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -31725,6 +31800,22 @@
     			append_dev(text1, t6);
     			insert_dev(target, t7, anchor);
     			mount_component(blogs, target, anchor);
+    			insert_dev(target, t8, anchor);
+    			insert_dev(target, footer, anchor);
+    			append_dev(footer, div3);
+    			append_dev(div3, a0);
+    			append_dev(a0, img0);
+    			append_dev(div3, t9);
+    			append_dev(div3, a1);
+    			append_dev(a1, img1);
+    			append_dev(div3, t10);
+    			append_dev(div3, a2);
+    			append_dev(a2, img2);
+    			append_dev(div3, t11);
+    			append_dev(div3, a3);
+    			append_dev(a3, img3);
+    			append_dev(footer, t12);
+    			append_dev(footer, h3);
     			current = true;
     		},
     		p: noop,
@@ -31741,6 +31832,8 @@
     			if (detaching) detach_dev(main);
     			if (detaching) detach_dev(t7);
     			destroy_component(blogs, detaching);
+    			if (detaching) detach_dev(t8);
+    			if (detaching) detach_dev(footer);
     		}
     	};
 
@@ -41901,24 +41994,56 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
         return true  
     };
 
+    const getPeriodes = async () => {
+        try {
+          const response = await API.get("periodes");
+          return response;
+        } catch (error) {
+          return {error:error.response.data}
+        }
+    };
+
+    async function checkTime$1() {
+        const today = new Date();
+        const periodes = await getPeriodes();
+        let nextPeriode = null;
+        periodes.forEach(periode => {
+            periode.start = new Date(periode.start);
+            periode.end = new Date(periode.end);   
+            if (periode.start < today && today < periode.end){
+                return true            
+            }
+            if (nextPeriode === null && periode.start > today){
+                nextPeriode = periode;
+            }
+        });
+        if (nextPeriode === null){
+            return "Désolé, les SOS sont terminés pour nous !"
+        } else {
+            let d = nextPeriode.start;
+
+            return `Vous ne pouvez pas commander maintenant, nous réouvrons à ${d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()} le ${d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()}`
+        }
+    }
+
     /* src/frontend/components/main/sos/menus/panier.svelte generated by Svelte v3.46.1 */
     const file$b = "src/frontend/components/main/sos/menus/panier.svelte";
 
     function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[11] = list[i];
-    	child_ctx[13] = i;
+    	child_ctx[12] = list[i];
+    	child_ctx[14] = i;
     	return child_ctx;
     }
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[14] = list[i];
-    	child_ctx[13] = i;
+    	child_ctx[15] = list[i];
+    	child_ctx[14] = i;
     	return child_ctx;
     }
 
-    // (61:32) <Button on:click={() => deleteElOfPanier(produit.id)} color="danger">
+    // (67:32) <Button on:click={() => deleteElOfPanier(produit.id)} color="danger">
     function create_default_slot_4$2(ctx) {
     	let img;
     	let img_src_value;
@@ -41930,7 +42055,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			attr_dev(img, "alt", "validate");
     			attr_dev(img, "width", "20");
     			attr_dev(img, "height", "20");
-    			add_location(img, file$b, 61, 32, 2576);
+    			add_location(img, file$b, 67, 32, 2881);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -41944,30 +42069,30 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(61:32) <Button on:click={() => deleteElOfPanier(produit.id)} color=\\\"danger\\\">",
+    		source: "(67:32) <Button on:click={() => deleteElOfPanier(produit.id)} color=\\\"danger\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (54:20) {#each commandeEnCours.panier.filter(prod => prod.type!=="Service") as produit, i (produit.id)}
+    // (60:20) {#each commandeEnCours.panier.filter(prod => prod.type!=="Service") as produit, i (produit.id)}
     function create_each_block_1$1(key_1, ctx) {
     	let tr;
     	let th0;
-    	let t0_value = /*i*/ ctx[13] + 1 + "";
+    	let t0_value = /*i*/ ctx[14] + 1 + "";
     	let t0;
     	let t1;
     	let th1;
-    	let t2_value = /*produit*/ ctx[14].nom + "";
+    	let t2_value = /*produit*/ ctx[15].nom + "";
     	let t2;
     	let t3;
     	let th2;
-    	let t4_value = /*produit*/ ctx[14].quantite + "";
+    	let t4_value = /*produit*/ ctx[15].quantite + "";
     	let t4;
     	let t5;
     	let th3;
-    	let t6_value = (/*produit*/ ctx[14].prix * /*produit*/ ctx[14].quantite).toFixed(2) + "";
+    	let t6_value = (/*produit*/ ctx[15].prix * /*produit*/ ctx[15].quantite).toFixed(2) + "";
     	let t6;
     	let t7;
     	let th4;
@@ -41976,7 +42101,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	let current;
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[8](/*produit*/ ctx[14]);
+    		return /*click_handler*/ ctx[8](/*produit*/ ctx[15]);
     	}
 
     	button = new Button({
@@ -42010,18 +42135,18 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			th4 = element("th");
     			create_component(button.$$.fragment);
     			t8 = space();
-    			attr_dev(th0, "class", "svelte-nvgdki");
-    			add_location(th0, file$b, 55, 28, 2205);
-    			attr_dev(th1, "class", "svelte-nvgdki");
-    			add_location(th1, file$b, 56, 28, 2248);
-    			attr_dev(th2, "class", "svelte-nvgdki");
-    			add_location(th2, file$b, 57, 28, 2299);
-    			attr_dev(th3, "class", "svelte-nvgdki");
-    			add_location(th3, file$b, 58, 28, 2355);
-    			attr_dev(th4, "class", "svelte-nvgdki");
-    			add_location(th4, file$b, 59, 28, 2437);
-    			attr_dev(tr, "class", "align-items-center svelte-nvgdki");
-    			add_location(tr, file$b, 54, 24, 2144);
+    			attr_dev(th0, "class", "svelte-e5o6by");
+    			add_location(th0, file$b, 61, 28, 2510);
+    			attr_dev(th1, "class", "svelte-e5o6by");
+    			add_location(th1, file$b, 62, 28, 2553);
+    			attr_dev(th2, "class", "svelte-e5o6by");
+    			add_location(th2, file$b, 63, 28, 2604);
+    			attr_dev(th3, "class", "svelte-e5o6by");
+    			add_location(th3, file$b, 64, 28, 2660);
+    			attr_dev(th4, "class", "svelte-e5o6by");
+    			add_location(th4, file$b, 65, 28, 2742);
+    			attr_dev(tr, "class", "align-items-center svelte-e5o6by");
+    			add_location(tr, file$b, 60, 24, 2449);
     			this.first = tr;
     		},
     		m: function mount(target, anchor) {
@@ -42045,13 +42170,13 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty & /*commandeEnCours*/ 1) && t0_value !== (t0_value = /*i*/ ctx[13] + 1 + "")) set_data_dev(t0, t0_value);
-    			if ((!current || dirty & /*commandeEnCours*/ 1) && t2_value !== (t2_value = /*produit*/ ctx[14].nom + "")) set_data_dev(t2, t2_value);
-    			if ((!current || dirty & /*commandeEnCours*/ 1) && t4_value !== (t4_value = /*produit*/ ctx[14].quantite + "")) set_data_dev(t4, t4_value);
-    			if ((!current || dirty & /*commandeEnCours*/ 1) && t6_value !== (t6_value = (/*produit*/ ctx[14].prix * /*produit*/ ctx[14].quantite).toFixed(2) + "")) set_data_dev(t6, t6_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t0_value !== (t0_value = /*i*/ ctx[14] + 1 + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t2_value !== (t2_value = /*produit*/ ctx[15].nom + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t4_value !== (t4_value = /*produit*/ ctx[15].quantite + "")) set_data_dev(t4, t4_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t6_value !== (t6_value = (/*produit*/ ctx[15].prix * /*produit*/ ctx[15].quantite).toFixed(2) + "")) set_data_dev(t6, t6_value);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 65536) {
+    			if (dirty & /*$$scope*/ 131072) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -42076,14 +42201,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(54:20) {#each commandeEnCours.panier.filter(prod => prod.type!==\\\"Service\\\") as produit, i (produit.id)}",
+    		source: "(60:20) {#each commandeEnCours.panier.filter(prod => prod.type!==\\\"Service\\\") as produit, i (produit.id)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (43:12) <Table responsive centered size="sm" class="w-100">
+    // (49:12) <Table responsive centered size="sm" class="w-100">
     function create_default_slot_3$5(ctx) {
     	let thead;
     	let tr;
@@ -42103,7 +42228,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	let current;
     	let each_value_1 = /*commandeEnCours*/ ctx[0].panier.filter(func$1);
     	validate_each_argument(each_value_1);
-    	const get_key = ctx => /*produit*/ ctx[14].id;
+    	const get_key = ctx => /*produit*/ ctx[15].id;
     	validate_each_keys(ctx, each_value_1, get_each_context_1$1, get_key);
 
     	for (let i = 0; i < each_value_1.length; i += 1) {
@@ -42137,20 +42262,20 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     				each_blocks[i].c();
     			}
 
-    			attr_dev(th0, "class", "svelte-nvgdki");
-    			add_location(th0, file$b, 45, 24, 1721);
-    			attr_dev(th1, "class", "svelte-nvgdki");
-    			add_location(th1, file$b, 46, 24, 1756);
-    			attr_dev(th2, "class", "svelte-nvgdki");
-    			add_location(th2, file$b, 47, 24, 1793);
-    			attr_dev(th3, "class", "text-nowrap svelte-nvgdki");
-    			add_location(th3, file$b, 48, 24, 1835);
-    			attr_dev(th4, "class", "w-25 svelte-nvgdki");
-    			add_location(th4, file$b, 49, 24, 1897);
-    			attr_dev(tr, "class", " svelte-nvgdki");
-    			add_location(tr, file$b, 44, 20, 1683);
-    			add_location(thead, file$b, 43, 16, 1655);
-    			add_location(tbody, file$b, 52, 16, 1996);
+    			attr_dev(th0, "class", "svelte-e5o6by");
+    			add_location(th0, file$b, 51, 24, 2026);
+    			attr_dev(th1, "class", "svelte-e5o6by");
+    			add_location(th1, file$b, 52, 24, 2061);
+    			attr_dev(th2, "class", "svelte-e5o6by");
+    			add_location(th2, file$b, 53, 24, 2098);
+    			attr_dev(th3, "class", "text-nowrap svelte-e5o6by");
+    			add_location(th3, file$b, 54, 24, 2140);
+    			attr_dev(th4, "class", "w-25 svelte-e5o6by");
+    			add_location(th4, file$b, 55, 24, 2202);
+    			attr_dev(tr, "class", " svelte-e5o6by");
+    			add_location(tr, file$b, 50, 20, 1988);
+    			add_location(thead, file$b, 49, 16, 1960);
+    			add_location(tbody, file$b, 58, 16, 2301);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -42214,14 +42339,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_3$5.name,
     		type: "slot",
-    		source: "(43:12) <Table responsive centered size=\\\"sm\\\" class=\\\"w-100\\\">",
+    		source: "(49:12) <Table responsive centered size=\\\"sm\\\" class=\\\"w-100\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (86:32) <Button on:click={() => deleteElOfPanier(service.id)} color="danger">
+    // (92:32) <Button on:click={() => deleteElOfPanier(service.id)} color="danger">
     function create_default_slot_2$8(ctx) {
     	let img;
     	let img_src_value;
@@ -42233,7 +42358,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			attr_dev(img, "alt", "validate");
     			attr_dev(img, "width", "20");
     			attr_dev(img, "height", "20");
-    			add_location(img, file$b, 86, 36, 3649);
+    			add_location(img, file$b, 92, 36, 3954);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -42247,22 +42372,22 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_2$8.name,
     		type: "slot",
-    		source: "(86:32) <Button on:click={() => deleteElOfPanier(service.id)} color=\\\"danger\\\">",
+    		source: "(92:32) <Button on:click={() => deleteElOfPanier(service.id)} color=\\\"danger\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (81:20) {#each commandeEnCours.panier.filter(prod => prod.type==="Service") as service, i (service.id)}
+    // (87:20) {#each commandeEnCours.panier.filter(prod => prod.type==="Service") as service, i (service.id)}
     function create_each_block$3(key_1, ctx) {
     	let tr;
     	let th0;
-    	let t0_value = /*i*/ ctx[13] + 1 + "";
+    	let t0_value = /*i*/ ctx[14] + 1 + "";
     	let t0;
     	let t1;
     	let th1;
-    	let t2_value = /*service*/ ctx[11].nom + "";
+    	let t2_value = /*service*/ ctx[12].nom + "";
     	let t2;
     	let t3;
     	let th2;
@@ -42271,7 +42396,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	let current;
 
     	function click_handler_1() {
-    		return /*click_handler_1*/ ctx[9](/*service*/ ctx[11]);
+    		return /*click_handler_1*/ ctx[9](/*service*/ ctx[12]);
     	}
 
     	button = new Button({
@@ -42299,14 +42424,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			th2 = element("th");
     			create_component(button.$$.fragment);
     			t4 = space();
-    			attr_dev(th0, "class", "svelte-nvgdki");
-    			add_location(th0, file$b, 82, 28, 3412);
-    			attr_dev(th1, "class", "svelte-nvgdki");
-    			add_location(th1, file$b, 83, 28, 3455);
-    			attr_dev(th2, "class", "svelte-nvgdki");
-    			add_location(th2, file$b, 84, 28, 3506);
-    			attr_dev(tr, "class", "align-items-center svelte-nvgdki");
-    			add_location(tr, file$b, 81, 24, 3352);
+    			attr_dev(th0, "class", "svelte-e5o6by");
+    			add_location(th0, file$b, 88, 28, 3717);
+    			attr_dev(th1, "class", "svelte-e5o6by");
+    			add_location(th1, file$b, 89, 28, 3760);
+    			attr_dev(th2, "class", "svelte-e5o6by");
+    			add_location(th2, file$b, 90, 28, 3811);
+    			attr_dev(tr, "class", "align-items-center svelte-e5o6by");
+    			add_location(tr, file$b, 87, 24, 3657);
     			this.first = tr;
     		},
     		m: function mount(target, anchor) {
@@ -42324,11 +42449,11 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty & /*commandeEnCours*/ 1) && t0_value !== (t0_value = /*i*/ ctx[13] + 1 + "")) set_data_dev(t0, t0_value);
-    			if ((!current || dirty & /*commandeEnCours*/ 1) && t2_value !== (t2_value = /*service*/ ctx[11].nom + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t0_value !== (t0_value = /*i*/ ctx[14] + 1 + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t2_value !== (t2_value = /*service*/ ctx[12].nom + "")) set_data_dev(t2, t2_value);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 65536) {
+    			if (dirty & /*$$scope*/ 131072) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -42353,14 +42478,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(81:20) {#each commandeEnCours.panier.filter(prod => prod.type===\\\"Service\\\") as service, i (service.id)}",
+    		source: "(87:20) {#each commandeEnCours.panier.filter(prod => prod.type===\\\"Service\\\") as service, i (service.id)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (72:12) <Table responsive centered size="sm" class="w-100">
+    // (78:12) <Table responsive centered size="sm" class="w-100">
     function create_default_slot_1$8(ctx) {
     	let thead;
     	let tr;
@@ -42376,7 +42501,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	let current;
     	let each_value = /*commandeEnCours*/ ctx[0].panier.filter(func_1$1);
     	validate_each_argument(each_value);
-    	const get_key = ctx => /*service*/ ctx[11].id;
+    	const get_key = ctx => /*service*/ ctx[12].id;
     	validate_each_keys(ctx, each_value, get_each_context$3, get_key);
 
     	for (let i = 0; i < each_value.length; i += 1) {
@@ -42404,16 +42529,16 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     				each_blocks[i].c();
     			}
 
-    			attr_dev(th0, "class", "svelte-nvgdki");
-    			add_location(th0, file$b, 74, 24, 3033);
-    			attr_dev(th1, "class", "svelte-nvgdki");
-    			add_location(th1, file$b, 75, 24, 3068);
-    			attr_dev(th2, "class", "w-25 svelte-nvgdki");
-    			add_location(th2, file$b, 76, 24, 3105);
-    			attr_dev(tr, "class", "svelte-nvgdki");
-    			add_location(tr, file$b, 73, 20, 3004);
-    			add_location(thead, file$b, 72, 16, 2976);
-    			add_location(tbody, file$b, 79, 16, 3204);
+    			attr_dev(th0, "class", "svelte-e5o6by");
+    			add_location(th0, file$b, 80, 24, 3338);
+    			attr_dev(th1, "class", "svelte-e5o6by");
+    			add_location(th1, file$b, 81, 24, 3373);
+    			attr_dev(th2, "class", "w-25 svelte-e5o6by");
+    			add_location(th2, file$b, 82, 24, 3410);
+    			attr_dev(tr, "class", "svelte-e5o6by");
+    			add_location(tr, file$b, 79, 20, 3309);
+    			add_location(thead, file$b, 78, 16, 3281);
+    			add_location(tbody, file$b, 85, 16, 3509);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -42473,14 +42598,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_1$8.name,
     		type: "slot",
-    		source: "(72:12) <Table responsive centered size=\\\"sm\\\" class=\\\"w-100\\\">",
+    		source: "(78:12) <Table responsive centered size=\\\"sm\\\" class=\\\"w-100\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (97:4) <Button class="ms-auto me-2 mb-2 colored" on:click={commander} disabled={commandeEnCours.panier.length ==0}>
+    // (103:4) <Button class="ms-auto me-2 mb-2 colored" on:click={commander} disabled={commandeEnCours.panier.length ==0}>
     function create_default_slot$a(ctx) {
     	let t;
 
@@ -42500,7 +42625,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot$a.name,
     		type: "slot",
-    		source: "(97:4) <Button class=\\\"ms-auto me-2 mb-2 colored\\\" on:click={commander} disabled={commandeEnCours.panier.length ==0}>",
+    		source: "(103:4) <Button class=\\\"ms-auto me-2 mb-2 colored\\\" on:click={commander} disabled={commandeEnCours.panier.length ==0}>",
     		ctx
     	});
 
@@ -42616,21 +42741,21 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			t11 = space();
     			create_component(button.$$.fragment);
     			attr_dev(h1, "class", "text-center");
-    			add_location(h1, file$b, 37, 4, 1437);
-    			add_location(hr0, file$b, 38, 4, 1477);
-    			attr_dev(h20, "class", "svelte-nvgdki");
-    			add_location(h20, file$b, 41, 12, 1558);
-    			add_location(div0, file$b, 40, 8, 1540);
-    			attr_dev(h21, "class", "svelte-nvgdki");
-    			add_location(h21, file$b, 70, 12, 2876);
-    			add_location(div1, file$b, 69, 8, 2858);
+    			add_location(h1, file$b, 43, 4, 1742);
+    			add_location(hr0, file$b, 44, 4, 1782);
+    			attr_dev(h20, "class", "svelte-e5o6by");
+    			add_location(h20, file$b, 47, 12, 1863);
+    			add_location(div0, file$b, 46, 8, 1845);
+    			attr_dev(h21, "class", "svelte-e5o6by");
+    			add_location(h21, file$b, 76, 12, 3181);
+    			add_location(div1, file$b, 75, 8, 3163);
     			attr_dev(div2, "class", "d-flex flex-column h-100 gap-5");
-    			add_location(div2, file$b, 39, 4, 1487);
+    			add_location(div2, file$b, 45, 4, 1792);
     			attr_dev(hr1, "class", "mt-auto");
-    			add_location(hr1, file$b, 95, 4, 3950);
+    			add_location(hr1, file$b, 101, 4, 4255);
     			attr_dev(div3, "id", "panier");
-    			attr_dev(div3, "class", "d-flex justify-content-start flex-column me-2 svelte-nvgdki");
-    			add_location(div3, file$b, 36, 0, 1361);
+    			attr_dev(div3, "class", "d-flex justify-content-start flex-column me-2 svelte-e5o6by");
+    			add_location(div3, file$b, 42, 0, 1666);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -42673,14 +42798,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			modalconfirmed.$set(modalconfirmed_changes);
     			const table0_changes = {};
 
-    			if (dirty & /*$$scope, commandeEnCours*/ 65537) {
+    			if (dirty & /*$$scope, commandeEnCours*/ 131073) {
     				table0_changes.$$scope = { dirty, ctx };
     			}
 
     			table0.$set(table0_changes);
     			const table1_changes = {};
 
-    			if (dirty & /*$$scope, commandeEnCours*/ 65537) {
+    			if (dirty & /*$$scope, commandeEnCours*/ 131073) {
     				table1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -42688,7 +42813,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			const button_changes = {};
     			if (dirty & /*commandeEnCours*/ 1) button_changes.disabled = /*commandeEnCours*/ ctx[0].panier.length == 0;
 
-    			if (dirty & /*$$scope*/ 65536) {
+    			if (dirty & /*$$scope*/ 131072) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -42749,22 +42874,27 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		updatePanier(commandeEnCours.panier);
     	}
 
-    	function commander() {
-    		checked = checkPanier_1(commandeEnCours.panier);
+    	async function commander() {
+    		panierCheck = checkPanier_1(commandeEnCours.panier);
+    		timeCheck = await checkTime$1();
 
-    		if (typeof checked !== "boolean") {
-    			addToast(checked, "warn", 4000);
-    		} else {
+    		if (typeof panierCheck !== "boolean") {
+    			addToast(panierCheck, "warn", 4000);
+    		} else if (typeof timeCheck !== "boolean") {
+    			addToast(timeCheck, "warn", 4000);
+    		} else if (panierCheck && timeCheck) {
     			$$invalidate(2, openFirstModal = false); // si ça reste "true", on refait passer à false puis re true pour que ça update bien le component ModalConfirm
     			$$invalidate(2, openFirstModal = true);
     		}
 
-    		checked = false;
+    		panierCheck = false;
+    		timeCheck = false;
     	}
 
     	let openFirstModal = false;
     	let openSecondModal = false;
-    	let checked = false;
+    	let panierCheck = false;
+    	let timeCheck = false;
 
     	function nextModal() {
     		$$invalidate(2, openFirstModal = false);
@@ -42796,11 +42926,13 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		ModalConfirm: Modal_confirm,
     		ModalConfirmed: Modal_confirmed,
     		checkPanier: checkPanier_1,
+    		checkTime: checkTime$1,
     		addToast,
     		commander,
     		openFirstModal,
     		openSecondModal,
-    		checked,
+    		panierCheck,
+    		timeCheck,
     		nextModal
     	});
 
@@ -42810,7 +42942,8 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		if ('commandeEnCours' in $$props) $$invalidate(0, commandeEnCours = $$props.commandeEnCours);
     		if ('openFirstModal' in $$props) $$invalidate(2, openFirstModal = $$props.openFirstModal);
     		if ('openSecondModal' in $$props) $$invalidate(3, openSecondModal = $$props.openSecondModal);
-    		if ('checked' in $$props) checked = $$props.checked;
+    		if ('panierCheck' in $$props) panierCheck = $$props.panierCheck;
+    		if ('timeCheck' in $$props) timeCheck = $$props.timeCheck;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -46389,7 +46522,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		c: function create() {
     			div = element("div");
     			create_component(tabcontent.$$.fragment);
-    			attr_dev(div, "class", "produits svelte-jxvblb");
+    			attr_dev(div, "class", "produits svelte-1dchpt7");
     			add_location(div, file$5, 34, 0, 1121);
     		},
     		l: function claim(nodes) {
@@ -48212,15 +48345,15 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			t0 = text(t0_value);
     			t1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "svelte-1cwre4j");
+    			attr_dev(p, "class", "svelte-2pxenl");
     			add_location(p, file$1, 78, 2, 3057);
     			if (!src_url_equal(img.src, img_src_value = 'images/icons/cross.png')) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "validate");
     			attr_dev(img, "width", "30");
     			attr_dev(img, "height", "30");
-    			attr_dev(img, "class", "svelte-1cwre4j");
+    			attr_dev(img, "class", "svelte-2pxenl");
     			add_location(img, file$1, 79, 2, 3087);
-    			attr_dev(div, "class", "w-100 ps-2 svelte-1cwre4j");
+    			attr_dev(div, "class", "w-100 ps-2 svelte-2pxenl");
     			attr_dev(div, "id", "banderole");
     			add_location(div, file$1, 77, 1, 3014);
     		},
@@ -48265,10 +48398,10 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			div = element("div");
     			p = element("p");
     			p.textContent = "Chargement";
-    			attr_dev(p, "class", "svelte-1cwre4j");
+    			attr_dev(p, "class", "svelte-2pxenl");
     			add_location(p, file$1, 74, 23, 2918);
     			attr_dev(div, "id", "banderole");
-    			attr_dev(div, "class", "svelte-1cwre4j");
+    			attr_dev(div, "class", "svelte-2pxenl");
     			add_location(div, file$1, 74, 3, 2898);
     		},
     		m: function mount(target, anchor) {
@@ -48620,26 +48753,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	let show_if_4;
     	let current_block_type_index;
     	let if_block;
-    	let t3;
-    	let footer;
-    	let div;
-    	let a0;
-    	let img0;
-    	let img0_src_value;
-    	let t4;
-    	let a1;
-    	let img1;
-    	let img1_src_value;
-    	let t5;
-    	let a2;
-    	let img2;
-    	let img2_src_value;
-    	let t6;
-    	let a3;
-    	let img3;
-    	let img3_src_value;
-    	let t7;
-    	let h3;
+    	let if_block_anchor;
     	let current;
     	toasts = new Toasts({ $$inline: true });
 
@@ -48710,63 +48824,9 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			info.block.c();
     			t2 = space();
     			if (if_block) if_block.c();
-    			t3 = space();
-    			footer = element("footer");
-    			div = element("div");
-    			a0 = element("a");
-    			img0 = element("img");
-    			t4 = space();
-    			a1 = element("a");
-    			img1 = element("img");
-    			t5 = space();
-    			a2 = element("a");
-    			img2 = element("img");
-    			t6 = space();
-    			a3 = element("a");
-    			img3 = element("img");
-    			t7 = space();
-    			h3 = element("h3");
-    			h3.textContent = "PAR'IMAG 2024";
+    			if_block_anchor = empty();
     			attr_dev(header, "class", "m-0 p-0 fixed-top shadow-lg");
     			add_location(header, file$1, 44, 0, 1356);
-    			if (!src_url_equal(img0.src, img0_src_value = 'images/icons/facebook_white.png')) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "width", "50px");
-    			attr_dev(img0, "height", "50px");
-    			attr_dev(img0, "alt", "facebook");
-    			add_location(img0, file$1, 103, 3, 3717);
-    			attr_dev(a0, "target", "_blank");
-    			attr_dev(a0, "href", "https://www.facebook.com/profile.php?id=100078652846582");
-    			add_location(a0, file$1, 102, 2, 3630);
-    			if (!src_url_equal(img1.src, img1_src_value = 'images/icons/instagram_white.png')) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "width", "50px");
-    			attr_dev(img1, "height", "50px");
-    			attr_dev(img1, "alt", "instagram");
-    			add_location(img1, file$1, 106, 3, 3888);
-    			attr_dev(a1, "target", "_blank");
-    			attr_dev(a1, "href", "https://www.instagram.com/parimag_2024/");
-    			add_location(a1, file$1, 105, 2, 3817);
-    			if (!src_url_equal(img2.src, img2_src_value = 'images/icons/youtube_white.png')) attr_dev(img2, "src", img2_src_value);
-    			attr_dev(img2, "width", "50px");
-    			attr_dev(img2, "height", "50px");
-    			attr_dev(img2, "alt", "youtube");
-    			add_location(img2, file$1, 109, 3, 4078);
-    			attr_dev(a2, "target", "_blank");
-    			attr_dev(a2, "href", "https://www.youtube.com/channel/UCXfbbgSwqXX-as6WQIj01yw");
-    			add_location(a2, file$1, 108, 2, 3990);
-    			if (!src_url_equal(img3.src, img3_src_value = 'images/icons/github_white.png')) attr_dev(img3, "src", img3_src_value);
-    			attr_dev(img3, "width", "50px");
-    			attr_dev(img3, "height", "50px");
-    			attr_dev(img3, "alt", "github");
-    			add_location(img3, file$1, 112, 3, 4244);
-    			attr_dev(a3, "target", "_blank");
-    			attr_dev(a3, "href", "https://github.com/Paul-vrn/benzimag");
-    			add_location(a3, file$1, 111, 2, 4176);
-    			attr_dev(div, "class", "mb-2 svelte-1cwre4j");
-    			add_location(div, file$1, 101, 1, 3608);
-    			attr_dev(h3, "class", "p-0 m-0");
-    			add_location(h3, file$1, 115, 1, 4349);
-    			attr_dev(footer, "class", "py-3 svelte-1cwre4j");
-    			add_location(footer, file$1, 100, 0, 3584);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -48786,22 +48846,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     				if_blocks[current_block_type_index].m(target, anchor);
     			}
 
-    			insert_dev(target, t3, anchor);
-    			insert_dev(target, footer, anchor);
-    			append_dev(footer, div);
-    			append_dev(div, a0);
-    			append_dev(a0, img0);
-    			append_dev(div, t4);
-    			append_dev(div, a1);
-    			append_dev(a1, img1);
-    			append_dev(div, t5);
-    			append_dev(div, a2);
-    			append_dev(a2, img2);
-    			append_dev(div, t6);
-    			append_dev(div, a3);
-    			append_dev(a3, img3);
-    			append_dev(footer, t7);
-    			append_dev(footer, h3);
+    			insert_dev(target, if_block_anchor, anchor);
     			current = true;
     		},
     		p: function update(new_ctx, [dirty]) {
@@ -48843,7 +48888,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     					}
 
     					transition_in(if_block, 1);
-    					if_block.m(t3.parentNode, t3);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
     				} else {
     					if_block = null;
     				}
@@ -48876,8 +48921,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     				if_blocks[current_block_type_index].d(detaching);
     			}
 
-    			if (detaching) detach_dev(t3);
-    			if (detaching) detach_dev(footer);
+    			if (detaching) detach_dev(if_block_anchor);
     		}
     	};
 

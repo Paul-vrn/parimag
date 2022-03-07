@@ -98,34 +98,7 @@ import {
 <Partenariat/>
 {/if}
 
-<footer class="py-3">
-	<div class="mb-2">
-		<a target="_blank" href="https://www.facebook.com/profile.php?id=100078652846582">
-			<img src={'images/icons/facebook_white.png'} width="50px" height="50px" alt="facebook"/>
-		</a>
-		<a target="_blank" href="https://www.instagram.com/parimag_2024/">
-			<img src={'images/icons/instagram_white.png'} width="50px" height="50px" alt="instagram"/>
-		</a>
-		<a target="_blank" href="https://www.youtube.com/channel/UCXfbbgSwqXX-as6WQIj01yw">
-			<img src={'images/icons/youtube_white.png'} width="50px" height="50px" alt="youtube"/>
-		</a>
-		<a target="_blank" href="https://github.com/Paul-vrn/benzimag">
-			<img src={'images/icons/github_white.png'} width="50px" height="50px" alt="github"/>
-		</a>	
-	</div>
-	<h3 class="p-0 m-0">PAR'IMAG 2024</h3>
-</footer>
 <style>
-footer {
-	background-color: rgba(38,38,38,1);
-	color: white;
-	text-align: center;
-}
-footer div {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
 div#banderole {
 	background-color: #D7C378;
 	border-style: solid;

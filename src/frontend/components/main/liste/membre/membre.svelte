@@ -11,7 +11,6 @@
     </div>
     <div class="w-50 d-flex flex-column justify-content-center">
         <h1>{membre.nom}</h1>
-        <h1>{membre.surnom}</h1>
         <h1>{membre.role}</h1>    
     </div>
 </div>
@@ -21,7 +20,6 @@
     <!-- TODO : Faire la mise en en place image, texte, description, etc... pour afficher UN membre -->
     <div class="w-50 d-flex flex-column justify-content-center">
         <h1>{membre.nom}</h1>
-        <h1>{membre.surnom}</h1>
         <h1>{membre.role}</h1>    
     </div>
     <div class="w-50">
@@ -39,6 +37,10 @@ div.membre{
 }
 :global(.membre img) {
     width: 250px;
+    border-style: solid;
+    box-shadow: inset 0px 0px 150px 75px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.5));
+    border-radius: 1em;
 }
 div.membre div {
     flex-shrink: 0;

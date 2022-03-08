@@ -23,9 +23,11 @@
     }
     /* --  -- */
     function commander(){
-        commandeEnCours.code = generateUID(5).toUpperCase()
+        commandeEnCours.couverts = (commandeEnCours.couverts === undefined) ? false : commandeEnCours.couverts;
         commande(commandeEnCours, serviceGoogleDistance)
-        .then(() => {
+        .then((id) => {
+            commandeEnCours.id = id
+            attested = false;
             nextModal()
         })
         .catch(err => {
@@ -76,7 +78,7 @@
             <tbody>
                 <tr>
                     <th><h5>Identité :</h5></th>
-                    <th>            <Input id="phone" type="tel" bind:value={commandeEnCours.personne} placeholder="Prénom NOM" required/>
+                    <th>            <Input id="phone" type="text" bind:value={commandeEnCours.personne} placeholder="Prénom NOM" required/>
                     </th>
                 </tr>
                 <tr>
@@ -111,6 +113,7 @@
         placeholder={`Ajouter un commentaire à votre commande ici.
 Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au sucre).`}/>
         <br/>
+        <Input class=" justify-content-start" id="checkboxCouverts" bind:checked={commandeEnCours.couverts} type="checkbox" label="Je souhaite recevoir des couverts avec mon/mes plats" />
         <Input class=" justify-content-start" id="checkboxAttested" bind:checked={attested} type="checkbox" label="Je valide pouvoir payer la commande suivante à l'aide de Lydia" />
     </ModalBody>
     <ModalFooter>

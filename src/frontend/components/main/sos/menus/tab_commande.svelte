@@ -35,11 +35,6 @@
 <div class="produits">
     <TabContent pills>
         <TabPane tabId="Plats" tab="Plats" active>
-            <p class="Paris2024Regular mx-1">
-                Précision : Une commande est gérée par <b>1</b> livreur. Si vous souhaitez faire une grosse commande, vous serez limité en quantité.<br>
-                Donc divisez votre grosse commande en plusieurs petites commandes. (On s'organisera de notre côté pour vous livrer tout ça ensemble).
-            </p>
-            <hr/>
             <div class="d-flex flex-wrap justify-content-around">
                 {#if plat_du_jour!==undefined}
                 <Produit produit={plat_du_jour} {addInPanier}/>                    

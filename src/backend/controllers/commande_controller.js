@@ -4,13 +4,13 @@ const Commande = db.Commande
 module.exports = {
     create:(req, res) => {
         const commande = {
-            code:req.body.code,
             personne:req.body.personne,
             adresse:req.body.adresse,
             tel:req.body.tel,
             etat:req.body.etat,
             trajets:req.body.trajets,
-            commentaire:req.body.commentaire
+            commentaire:req.body.commentaire,
+            couverts:req.body.couverts
         }
         if (req.body.QGNom !== undefined){
             commande.QGNom = req.body.QGNom
@@ -47,50 +47,50 @@ module.exports = {
             })
     },
     findOne: (req, res) => {
-        const code = req.params.code;
-        Commande.findByPk(code)
+        const id = req.params.id;
+        Commande.findByPk(id)
             .then(data => {
                 if (data){
                     res.send(data)
                 } else {
-                    res.status(404).send({message:`Commande ${code} introuvable`})
+                    res.status(404).send({message:`Commande ${id} introuvable`})
                 }
             })
             .catch(err => res.status(500).send({message: err.message || 'error findOne Commande'}))
     },
     update: (req, res) => {
-        const code = req.params.code;
+        const id = req.params.id;
     
-        Commande.update(req.body, {where:{code:code}})
+        Commande.update(req.body, {where:{id:id}})
             .then(num => {
                 if (num==1){
-                    Commande.findByPk(code)
+                    Commande.findByPk(id)
                         .then(data => {
                             res.status(200).send({
-                                message:`Commande ${code} updated`,
+                                message:`Commande ${id} updated`,
                                 commande:data
                             })        
                         })
                 }
                 else {
-                    res.status(404).send({message:`Commande ${code} introuvable`})
+                    res.status(404).send({message:`Commande ${id} introuvable`})
                 }
             })
             .catch(err => res.status(500).send({message:err.message || 'error update Commande'}))
     },
     delete: async (req, res) => {
-        const code = req.params.code;
-        const data = await Commande.findByPk(code)
-        Commande.destroy({where:{code:code}})
+        const id = req.params.id;
+        const data = await Commande.findByPk(id)
+        Commande.destroy({where:{id:id}})
             .then(num => {
                 if (num==1){
                     res.status(200).send({
-                        message:`Commande ${code} deleted`,
+                        message:`Commande ${id} deleted`,
                         commande:data
                     })                
                 }
                 else {
-                    res.status(404).send({message:`Commande ${code} introuvable`})
+                    res.status(404).send({message:`Commande ${id} introuvable`})
                 }
             })
             .catch(err => res.status(500).send({message:err.message}))

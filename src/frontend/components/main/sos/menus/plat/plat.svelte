@@ -12,12 +12,12 @@
 
     let open = false;
     function changeQuantite(val){
-        if (0>=quantiteSelect+val){
+        if (-1>=quantiteSelect+val){
             addToast("Vous ne pouvez pas séléctionner une valeur négative", "warn", 1500)
-        } else if (quantiteSelect+val>=produit.quantiteStockMax){
+        } else if (quantiteSelect+val>=produit.quantiteStockMax+1){
             addToast("Il n'y a pas assez de stock", "warn", 1500)
-        } else if (quantiteSelect>=produit.quantiteMax){
-            addToast(`Vous pouvez commander maximum ${produit.quantiteMax} plats`, "warn", 1500)
+        } else if (quantiteSelect+val>=produit.quantiteMax+1){
+            addToast(`Vous pouvez commander maximum ${produit.quantiteMax} ${produit.nom}`, "warn", 1500)
         } else {
             quantiteSelect+= val
         }
@@ -45,7 +45,11 @@
             <h4 class="m-0">{produit.prix}€/unité</h4>
             {#if produit.vege}
                 <img id={`vege${produit.id}`} src={'images/icons/vegetarien.png'} alt="vege" width="40" height="40"/>
-                <Tooltip  target={`vege${produit.id}`} placement="bottom">Plat 100% végétarien !</Tooltip>
+                <Tooltip  target={`vege${produit.id}`} placement="bottom">
+                    Plat végétarien
+                    <br>
+                    (et/ou peut être servi sans viande)
+                </Tooltip>
             {/if}
             {#if produit.halal}
             <img id={`halal${produit.id}`} src={'images/icons/halal.png'} alt="info" width="40" height="40"/>        
@@ -55,6 +59,9 @@
             <Tooltip  target={`info${produit.id}`} placement="bottom">Plus d'infos sur le produit en cliquant ici</Tooltip>
         </div>
     </div>
+     {#if produit.sous_titre !== ""}
+     <p class="m-0 parimag_font">{produit.sous_titre}</p>         
+     {/if}
     <img src={`images/menu/${produit.photo}`} alt={produit.photo}/>
     <hr class="w-100 p-0 mx-0 mb-2 mt-auto"/>
     <div class="actions d-flex align-items-center justify-content-between">
@@ -62,7 +69,9 @@
             <Button on:click={()=>changeQuantite(-1)} size="sm">
             <img src={'images/icons/minus.svg'} alt="minus" width="30" height="30"/>
             </Button>
-            <h4 class="p-0 m-0">{quantiteSelect}</h4>
+            <div class="">
+                <h4 class="p-0 m-0">{quantiteSelect}</h4>
+            </div>
             <Button on:click={()=>changeQuantite(1)} size="sm">
                 <img src={'images/icons/plus.svg'} alt="plus" width="30" height="30"/>
             </Button>
@@ -78,7 +87,10 @@
 </div>
 
 <style>
-
+    div.actions > div > div {
+        width: 1.5rem;
+        text-align: center;
+    }
     div.plat {
         border-style: solid;
         border-radius: 1em;

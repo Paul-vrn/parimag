@@ -10,11 +10,11 @@
 
     let open = false;
     function changeQuantite(val){
-        if (0>=quantiteSelect+val){
+        if (-1>=quantiteSelect+val){
             addToast("Vous ne pouvez pas séléctionner une valeur négative", "warn", 1500)
         } else if (quantiteSelect+val>=produit.quantiteStockMax){
             addToast("Il n'y a pas assez de stock", "warn", 1500)
-        } else if (quantiteSelect>=produit.quantiteMax){
+        } else if (quantiteSelect+val>=produit.quantiteMax+1){
             addToast(`Vous pouvez commander maximum ${produit.quantiteMax} ${produit.nom}`, "warn", 1500)
         } else {
             quantiteSelect+= val

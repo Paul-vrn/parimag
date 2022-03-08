@@ -14,13 +14,12 @@
 </div>
 {:else}
 <div class="blog d-flex justify-content-end flex-column" style="overflow: hidden;">
-    <iframe width="100%" height="100%" src={blog.video} title="YouTube video player" 
+    <iframe width="100%" height="100%" src={blog.video} title="YouTube video player" on:click={() => console.log("click video")}
     frameborder="0"
     showinfo="0"
     controls="0"
     autohide="1"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <h1 class="text-center position-absolute w-100">{blog.titre}</h1>
 </div>
 
 {/if}
@@ -29,10 +28,10 @@
 div.blog {
     width: 500px;
     height: 500px;
-    border-style: solid;
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-style: solid;
     box-shadow: inset 0px 0px 150px 75px rgba(0, 0, 0, 0.5);
     filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.5));
     border-radius: 1em;

@@ -27,9 +27,7 @@
     {/each}
   </div>
   <div class="content">
-    <div class="container_photo">
       <img alt="Photo de {poleSelected.photo}" src={`images/liste/${poleSelected.photo}.jpg`} class="photo_pole"/>
-    </div>
     <hr class="w-75 mx-auto"/>
     {#each poleSelected.membres as membre,i}
       <Membre membre={membre} sens={i%2==0}/>
@@ -62,13 +60,11 @@ div.sidebar div.poleSelect {
   background-color: #d7c378;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.container_photo {
-  width: 100%;
-  height: calc(100vh - 85px);
-  overflow: hidden;
-}
 .photo_pole {
-  width: 100%
+  max-width: 80%;
+  text-align: center;
+  box-shadow: inset 0px 0px 150px 75px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.5));
 }
 div.content {
   background-color: #d7c378;
@@ -79,6 +75,8 @@ div.content {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  align-items: center;
+  padding-top: 2em;
 }
   :global(.pole) {
     text-align: center;

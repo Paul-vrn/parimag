@@ -7,14 +7,19 @@ import { Toasts, addToast } from 'as-toast';
 import {timeParse} from '../../../services/timeParse'
 	onMount(async () => {
         const res = await getCommandes();
-        commandes = res.filter(co => co.etat !== "LV");
+		console.log(res)
+        commandes = res.filter(co => co.etat !== "LV" && co.trajets !== '{}')
 		commandes.forEach(co => {
-			co.trajets = JSON.parse(co.trajets)
-		});
+				co.trajets = JSON.parse(co.trajets)
+			});
+		console.log(commandes)
     });
 	async function reload() {
 		const res = await getCommandes()
-		commandes = res.filter(co => co.etat !== "LV")
+		commandes = res.filter(co => co.etat !== "LV"  && co.trajets !== '{}')
+		commandes.forEach(co => {
+				co.trajets = JSON.parse(co.trajets)
+			});
 		addToast("reload effectué", "info", 1000)
 	}
 
@@ -34,7 +39,6 @@ import {timeParse} from '../../../services/timeParse'
 				<th><Button class="colored" on:click={reload}>
 					<img src={'images/icons/reload.svg'} alt="reload" width="20" height="20"/>
 				</Button></th>
-				<th>Code</th>
 				<th>État</th>
 				<th id="TempsTrajet">Temps de trajets estimé</th>
 				<Tooltip target={`TempsTrajet`}>
@@ -45,10 +49,9 @@ import {timeParse} from '../../../services/timeParse'
 			</tr>
 		</thead>
 		<tbody>
-			{#each commandes as commande, i (commande.code)}
+			{#each commandes as commande}
 				<tr>
-					<th>{i+1}</th>
-					<th>{commande.code}</th>
+					<th>{commande.id}</th>
 					<th>{etat[commande.etat]}</th>
 					<th>{timeParse(commande.trajets[commande.QGNom])}</th>
 				</tr>

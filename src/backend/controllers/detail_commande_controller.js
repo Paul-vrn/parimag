@@ -6,7 +6,7 @@ module.exports = {
     create: (req, res) => {
         const detailcommande = {
             quantite:req.body.quantite,
-            commandeCode:req.body.commandeCode,
+            commandeId:req.body.commandeId,
             produitId:req.body.produitId
         }
         DetailCommande.create(detailcommande)

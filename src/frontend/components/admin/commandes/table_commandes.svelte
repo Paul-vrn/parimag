@@ -215,7 +215,9 @@
                     </div>
                 </th>
                 <th>
-                    {livreurs.find(liv => liv.id===commande.livreurId).nom}
+                    {#if commande.livreurId !== null}
+                        {livreurs.find(liv => liv.id===commande.livreurId).nom}                        
+                    {/if}
                     <div class="d-flex gap-1 align-items-center">
                         <Button on:click={assigneLivreur(commande)} color="primary" disabled={['','-'].includes(livreursSelected[commande.id])} size="sm">
                             <img src={'images/icons/check.svg'} alt="validate" width="20" height="20"/>

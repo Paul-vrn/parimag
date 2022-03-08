@@ -95,6 +95,10 @@ p {
 	src: url('/fonts/Roboto-Regular.ttf');
 }
 
+.parimag_font {
+	font-family: Paris2024Regular;
+}
+
 ul.svelte-19uzrsi {
 	z-index: 5;
 }

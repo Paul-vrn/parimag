@@ -12,6 +12,7 @@
     export let updateCommandes;
     let qgDelegued = "";
     let livreursSelected = []
+    let qgsDeleged = []
     const etat = {
 		"LV":"Livrée",
 		"EAP":"En attente de payement",
@@ -22,7 +23,7 @@
      * @param commande
      */
     async function assigneLivreur(commande){
-        let livreur = livreursSelected[commande.code]
+        let livreur = livreursSelected[commande.id]
         if (commande.livreurId===null){
             updateLivreur(livreur.id, {disponible:false})
             .then(res => {
@@ -36,7 +37,7 @@
         } else {
             let pris_ailleurs = false;
             commandes.forEach(co => {
-                if (co.livreurId===commande.livreurId && co.code!==commande.code)
+                if (co.livreurId===commande.livreurId && co.id!==commande.id)
                     pris_ailleurs=true;
             })
             if (!pris_ailleurs){
@@ -61,24 +62,24 @@
                 addToast("Livreur mis à jour", "info", 2000)
             })
         }
-        updateCommande(commande.code, {livreurId:livreur.id})
+        updateCommande(commande.id, {livreurId:livreur.id})
             .then(res => {
                 if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
                 commande = res.commande
                 commandes.forEach(co => {
-                if (co.code===commande.code)
+                if (co.id===commande.id)
                     co.livreurId=livreur.id;
                 })
                 commandes = [...commandes]
             })
     }
     async function validate(commande){
-        updateCommande(commande.code, {etat:'CPC'})
+        updateCommande(commande.id, {etat:'CPC'})
         .then(res => {
             if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
             commande = res.commande
             commandes.forEach(co => {
-                if (co.code===commande.code){
+                if (co.id===commande.id){
                     co.etat = 'CPC';
                 }
             })
@@ -91,10 +92,10 @@
             addToast(`La commande doit passer par l'état "en cours de livraison"`, "warn", 4000)
             return
         }
-        let livreur = livreursSelected[commande.code]
+        let livreur = livreursSelected[commande.id]
         let pris_ailleurs = false;
         commandes.forEach(co => {
-                if (co.livreurId===livreur.id && co.code!==commande.code)
+                if (co.livreurId===livreur.id && co.id!==commande.id)
                     pris_ailleurs=true;
             })
         if (!pris_ailleurs){
@@ -108,12 +109,12 @@
                 livreurs = [...livreurs]
             })
         }
-        updateCommande(commande.code, {etat:'LV'})
+        updateCommande(commande.id, {etat:'LV'})
         .then(res => {
             if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
             commande = res.commande
             commandes.forEach(co => {
-                if (co.code===commande.code){
+                if (co.id===commande.id){
                     co.etat = 'LV';
                 }
             })
@@ -122,11 +123,10 @@
         })
     }
     function getText(commande){
-        let texte = `\`\`\`Commande "${commande.code}"\nAdresse : ${commande.adresse}\nTél : ${commande.tel}\nContenu de la commande :\n`
+        let texte = `Commande ${commande.id}\nPersonne : ${commande.personne}\nAdresse : ${commande.adresse}\nTél : ${commande.tel}\nContenu de la commande :\n`
         commande.detail_commandes.forEach(detail => {
-            texte += ` - ${detail.produit.nom} x${detail.quantite}\n`
+            texte += `- ${detail.produit.nom} x${detail.quantite}\n`
         })
-        texte += "\`\`\`"
         return texte
     }
     function getPrix(commande){
@@ -139,7 +139,7 @@
     async function deleteCommandes(){
         commandes.forEach(async commande => {
             if (commande.supp){
-                let res = await deleteCommande(commande.code)
+                let res = await deleteCommande(commande.id)
                 if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
             }
         })
@@ -149,7 +149,7 @@
 
     function changeQg(commande){
         console.log(qgDelegued)
-        updateCommande(commande.code, {QGNom:qgDelegued.split(':')[0].trim()})
+        updateCommande(commande.id, {QGNom:qgDelegued.split(':')[0].trim()})
             .then(res => {
                 if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
                 addToast("Modification effectué", "info", 2000)
@@ -157,6 +157,7 @@
             })
 
     }
+    console.log(commandes)
 </script>
 
 <Table bordered class="w-100" size="sm">
@@ -164,6 +165,7 @@
         <tr>
             <th>#</th>
             <th>etat</th>
+            <th>personne</th>
             <th>adresse</th>
             <th>tel</th>
             <th>detail</th>
@@ -179,23 +181,29 @@
         </tr>
     </thead>
     <tbody>
-        {#each commandes as commande,i (commande.code)}
+        {#each commandes as commande,i (commande.id)}
             <tr>
-                <th>{commande.code}</th>
+                <th>{commande.id}</th>
                 <th>
                     {etat[commande.etat]}
                 </th>
+                <th>{commande.personne}</th>
                 <th>{commande.adresse.split(',')[0]}</th>
                 <th>{commande.tel}</th>
                 <th>
-                    <img id={`info-${commande.code}`} src={'images/icons/info.png'} alt="validate" width="20" height="20"/>
-                    <Tooltip  target={`info-${commande.code}`} placement="bottom">
-                        <h4 class="m-0 p-0">Panier :</h4>
+                    <img id={`info-${commande.id}`} src={'images/icons/info.png'} alt="validate" width="20" height="20"/>
+                    <Tooltip  target={`info-${commande.id}`} placement="bottom">
+                        <h5 class="m-0 p-0">Panier :</h5>
                         {#each commande.detail_commandes as detail}
                             <p class="m-0 p-0">{detail.produit.nom} : {detail.produit.prix}€ x{detail.quantite}</p>
                         {/each}
-                        <h4>Commentaire :</h4>
+                        <hr/>
+                        <h5>Commentaire :</h5>
                         <p>{commande.commentaire}</p>
+                        <hr/>
+                        {#if commande.couverts}
+                            à délivrer avec des couverts.
+                        {/if}
                     </Tooltip>
                 </th>
                 <th>
@@ -207,18 +215,18 @@
                     </div>
                 </th>
                 <th>
+                    {livreurs.find(liv => liv.id===commande.livreurId).nom}
                     <div class="d-flex gap-1 align-items-center">
-                        <Button on:click={assigneLivreur(commande)} color="primary" disabled={['','-'].includes(livreursSelected[commande.code])} size="sm">
+                        <Button on:click={assigneLivreur(commande)} color="primary" disabled={['','-'].includes(livreursSelected[commande.id])} size="sm">
                             <img src={'images/icons/check.svg'} alt="validate" width="20" height="20"/>
                         </Button>                        
-                        <Input id="livreurSelect" type="select" bind:value={livreursSelected[commande.code]}>
-                            <option>-</option>
+                        <Input id="livreurSelect" type="select" bind:value={livreursSelected[commande.id]}>
                         {#each livreurs.filter(liv => liv.disponible) as livreur}
-                            <option value={livreur} selected={livreur.id===commande.livreurId}>{livreur.nom}</option>
+                            <option value={livreur} disabled={livreur.id===commande.livreurId}>{livreur.nom}</option>
                         {/each}
                         <hr/>
                         {#each livreurs.filter(liv => !liv.disponible) as livreur}
-                            <option value={livreur} selected={livreur.id===commande.livreurId}>{livreur.nom}</option>
+                            <option value={livreur} disabled={livreur.id===commande.livreurId}>{livreur.nom}</option>
                         {/each}
                         </Input>
                     </div>
@@ -229,13 +237,14 @@
                     </Button>
                 </th>
                 <th>
+                    {qgs.find(qg => qg.nom===commande.QGNom).nom}
                     <div class="d-flex gap-1 align-items-center">
                         <Input type="select" name="select" id="QGs select" bind:value={qgDelegued}>
                             {#each qgs as qg}
-                                <option>{qg.nom} : {timeParse(commande.trajets[qg.nom])}</option>
+                                <option disabled={commande.QGNom===qg.nom}>{qg.nom} : {timeParse(commande.trajets[qg.nom])}</option>
                             {/each}
                         </Input>
-                        <Button on:click={changeQg(commande)} color="secondary" size="sm" disabled={qgDelegued===""}>
+                        <Button on:click={changeQg(commande)} color="secondary" size="sm" >
                             <img src={'images/icons/check.svg'} alt="validate" width="20" height="20"/>
                         </Button>
                     </div>

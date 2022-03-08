@@ -7,7 +7,7 @@ router
   .post('/', checkTokenMiddleware, stock.create)
   .get('/', stock.findAll)
   .get('/:id', stock.findOne)
-  .patch('/:id', checkTokenMiddleware, stock.update)
+  .patch('/:id', stock.update)
   .delete('/all', checkTokenMiddleware, stock.deleteAll)
   .delete('/:id', checkTokenMiddleware, stock.delete)
 module.exports = router;

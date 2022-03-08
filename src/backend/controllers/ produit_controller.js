@@ -18,7 +18,8 @@ module.exports = {
                 quantiteMax:(data.quantiteMax==="") ? null : data.quantiteMax,
                 description:data.description,
                 plat_du_jour:(data.plat_du_jour==="") ? null : new Date(data.plat_du_jour),
-                photo:data.photo
+                photo:data.photo,
+                sous_titre:data.sous_titre
             })
         })
         .on('end', () => {

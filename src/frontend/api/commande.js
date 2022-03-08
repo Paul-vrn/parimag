@@ -18,18 +18,18 @@ export const getCommandes = async() => {
   }
 }
 
-export const updateCommande = async (code, commande) => {
+export const updateCommande = async (id, commande) => {
   try {
-    const response = await Api.patch(`commandes/${code}`, commande)
+    const response = await Api.patch(`commandes/${id}`, commande)
     return response;
   } catch (error){
     return {error:error.response.data}
   }
 }
 
-export const deleteCommande = async (code) => {
+export const deleteCommande = async (id) => {
   try {
-    const response = await Api.delete(`commandes/${code}`)
+    const response = await Api.delete(`commandes/${id}`)
     return response;
   } catch (error){
     return {error:error.response.data}

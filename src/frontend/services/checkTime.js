@@ -4,16 +4,20 @@ export async function checkTime() {
     const today = new Date()
     const periodes = await getPeriodes();
     let nextPeriode = null
+    let inPeriode = false;
     periodes.forEach(periode => {
         periode.start = new Date(periode.start)
         periode.end = new Date(periode.end)   
         if (periode.start < today && today < periode.end){
-            return true            
+            inPeriode = true;        
         }
         if (nextPeriode === null && periode.start > today){
             nextPeriode = periode
         }
     });
+    if (inPeriode){
+        return inPeriode
+    }
     if (nextPeriode === null){
         return "Désolé, les SOS sont terminés pour nous !"
     } else {

@@ -3,7 +3,7 @@ import { createCommande } from "../api/commande"
 import { createDetailCommande } from "../api/detailCommande"
 import {updateStock} from '../api/stock'
 export async function commande(commandeEnCours, serviceGoogleDistance) {
-    console.log(commandeEnCours)
+    let id;
     let request = {
         travelMode: google.maps.TravelMode.BICYCLING,
         origins:[{placeId:""}],
@@ -19,25 +19,28 @@ export async function commande(commandeEnCours, serviceGoogleDistance) {
                 qg.time = res.rows[0].elements[0].duration.value
                 trajets[qg.nom] = qg.time
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                    return err
+                })
     }
     qgs.sort((qg1, qg2) => (qg1.time > qg2.time) ? 1 : -1) // trie les qgs dans l'ordre du plus proche au moins proche
     commandeEnCours.qg = qgs[0]
     commandeEnCours.trajets = JSON.stringify(trajets)    
-    createCommande({
-        code:commandeEnCours.code,
+    
+    return createCommande({
         adresse:commandeEnCours.adresse.description,
         tel:commandeEnCours.tel,
         personne:commandeEnCours.personne,
         etat:"EAP",
         trajets:commandeEnCours.trajets,
         QGNom:commandeEnCours.qg.nom,
-        commentaire:commandeEnCours.commentaire
+        commentaire:commandeEnCours.commentaire,
+        couverts:commandeEnCours.couverts
     })
         .then(res => {
             for (let produit of commandeEnCours.panier){
                 createDetailCommande({
-                    commandeCode:commandeEnCours.code,
+                    commandeId:res.id,
                     produitId:produit.id,
                     quantite:produit.quantite
                 })
@@ -45,6 +48,8 @@ export async function commande(commandeEnCours, serviceGoogleDistance) {
                     let st = produit.stocks.find(stock => stock.QGNom === commandeEnCours.qg.nom)
                     updateStock(st.id, {quantite:st.quantite-produit.quantite})
                 }
-            }        
+            }   
+            return res.id;
         })
+
 }

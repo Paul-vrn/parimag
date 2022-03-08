@@ -1,7 +1,8 @@
 module.exports = (sequelize, DataTypes) => {
     const Commande = sequelize.define("commandes", {
-        code: {
-            type: DataTypes.STRING,
+        id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
             primaryKey: true,
             allowNull: false
         },
@@ -34,6 +35,10 @@ module.exports = (sequelize, DataTypes) => {
         commentaire:{
             type: DataTypes.STRING,
             allowNull:true
+        },
+        couverts:{
+            type: DataTypes.BOOLEAN,
+            allowNull:false
         }
     });
     return Commande

@@ -46,6 +46,10 @@ module.exports = (sequelize, DataTypes) => {
         quantiteMax:{
             type: DataTypes.INTEGER,
             allowNull:true
+        },
+        sous_titre:{
+            type: DataTypes.STRING,
+            allowNull:true
         }
 
     }, {timestamps:false});

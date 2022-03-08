@@ -37,9 +37,13 @@
         openFirstModal = false;
         openSecondModal = true;
     }
+    function endCommande(){
+        resetCommande()
+        openSecondModal = false;
+    }
 </script>
 <ModalConfirm open={openFirstModal} {nextModal} commandeEnCours={commandeEnCours}/>
-<ModalConfirmed open={openSecondModal} commandeEnCours={commandeEnCours} {resetCommande}/>
+<ModalConfirmed open={openSecondModal} commandeEnCours={commandeEnCours} {endCommande}/>
 <div id="panier" class="d-flex justify-content-start flex-column me-2">
     <h1 class="text-center">Panier</h1>
     <hr/>

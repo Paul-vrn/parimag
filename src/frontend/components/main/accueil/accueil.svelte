@@ -8,7 +8,7 @@
       <h1 class="text-center varela">LISTE BDS PAR'IMAG 2024</h1>
       <hr class="bg-white w-75 mx-auto my-5 " />
       <p class="text-center w-50 mx-auto">
-        La relève est assurée pour vous faire découvrir une autre facette du sport. Équipe motivée et soudée, les JO débarquent à l’Ensimag pour casser des records. 
+        La relève est assurée pour vous faire découvrir une autre facette du sport. Équipe motivée et soudée, les Golds débarquent à l’Ensimag pour casser des records. 
       </p>
     </div>
     <div id="svg">
@@ -42,16 +42,16 @@
 <footer class="py-3 mt-auto">
 	<div class="mb-2">
 		<a target="_blank" href="https://www.facebook.com/profile.php?id=100078652846582">
-			<img src={'images/icons/facebook_white.png'} width="30px" height="30px" alt="facebook"/>
+			<img src={'images/icons/facebook_white.png'} width="50px" height="50px" alt="facebook"/>
 		</a>
 		<a target="_blank" href="https://www.instagram.com/parimag_2024/">
-			<img src={'images/icons/instagram_white.png'} width="30px" height="30px" alt="instagram"/>
+			<img src={'images/icons/instagram_white.png'} width="50px" height="50px" alt="instagram"/>
 		</a>
 		<a target="_blank" href="https://www.youtube.com/channel/UCXfbbgSwqXX-as6WQIj01yw">
-			<img src={'images/icons/youtube_white.png'} width="30px" height="30px" alt="youtube"/>
+			<img src={'images/icons/youtube_white.png'} width="50px" height="50px" alt="youtube"/>
 		</a>
 		<a target="_blank" href="https://github.com/Paul-vrn/benzimag">
-			<img src={'images/icons/github_white.png'} width="30px" height="30px" alt="github"/>
+			<img src={'images/icons/github_white.png'} width="50px" height="50px" alt="github"/>
 		</a>	
 	</div>
 	<h3 class="p-0 m-0">PAR'IMAG 2024</h3>
@@ -71,7 +71,7 @@ footer div {
 	align-items: center;
 }
   main#accueil {
-    background-image: url("/images/fond.png");
+    background-image: url("/images/fond.jpg");
     background-color: #d7c378;
     background-position: center;
 

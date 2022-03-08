@@ -3,42 +3,41 @@
     import { prixTotal } from '../../../../../services/prix_total'
     export let open;
     export let commandeEnCours;
-    export let resetCommande;
-
-    const endCommande = () => {
-        open = !open
-        resetCommande()
-    }
-
+    export let endCommande;
+    console.log(commandeEnCours)
 </script>
 
 
 <Modal isOpen={open} backdrop="static" size="lg" centered>
-    <ModalHeader>Commande effectué !</ModalHeader>
+    <ModalHeader>Votre numéro de commande : {commandeEnCours.id} (à ne pas perdre !)</ModalHeader>
     <ModalBody>
-        <div class="d-flex">
-            <p>Votre commande est passé à l'état <i>en attente de payement</i>.<br/>
-                Le code identifiant de votre commande est : </p>
-                <h5><b>{commandeEnCours.code}</b></h5> 
-                <p>(ne le perdez pas !).<br/>        
-        </div>
-        <p>
-        Vous pouvez suivre l'évolution de l'état de votre commande dans "suivi des commandes".<br/>
-        </p>
+    <p>
+        Vous pouvez suivre l'évolution de votre commande dans : SOS > suivi de commandes.
+    </p>
     {#if prixTotal(commandeEnCours.panier) === "0.00"}
     <p>
         Pas de payement pour votre commande, il ne vous reste plus qu'à attendre !
     </p>
     {:else}
     <p>
-        Pour valider le payement de votre commande, c'est <a target="_blank" href="https://lydia-app.com/form/payment/phoneform?vendor_token=6212183a37389062855264">ici</a> 
-        que ça se passe ! Mettez en description le code donné ci-dessus et comme montant le prix de la commande ({prixTotal(commandeEnCours.panier)}€) 
-        <br>
-        Si vous ne pouvez pas faire de payement en ligne, contactez par téléphone le 0606060 pour valider que vous payerez en liquide sur place.
+        Montant : {prixTotal(commandeEnCours.panier)}€<br>
+        Description : {commandeEnCours.id} (votre numéro de commande).
     </p>
+    <div class="w-100 d-flex justify-content-center">
+        <Button class="w-75 mx-auto" id="but_lydia" target="_blank" href="https://lydia-app.com/form/payment/phoneform?vendor_token=6212183a37389062855264">
+            Payer avec Lydia
+        </Button>
+    </div>
     {/if}
     </ModalBody>
     <ModalFooter>
-      <Button color="primary" on:click={endCommande}>Terminer</Button>
+      <Button class="colored" on:click={endCommande}>Terminer</Button>
     </ModalFooter>
 </Modal>
+
+<style>
+:global(#but_lydia) {
+    background-color: #217CC2 !important;
+    color: white !important;
+}
+</style>

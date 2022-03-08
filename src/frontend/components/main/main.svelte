@@ -10,7 +10,6 @@ import {
     import Accueil from './accueil/accueil.svelte'
 	import Commander from './sos/commander.svelte'
 	import Commandes from './sos/suivi_commande.svelte'
-	import Partenariat from './partenariat/partenariat.svelte'
 	import { getBanderole } from '../../api/banderole'
     import { viewMain } from '../../stores'
 	import {Toasts} from "as-toast"
@@ -56,17 +55,21 @@ import {
 			  <NavItem class="mx-3 rounded-2">
 				  <NavLink id="liste" on:click={changeView} class={($viewMain=='liste'?'onHit':'')}>Liste</NavLink>
 			  </NavItem>
-			<Dropdown  nav inNavbar data-bs-toggle="dropdown"  class={"mx-3 rounded-top " + (['commander' ,'commandes'].includes($viewMain)?'onHit':'')} >
+			  <NavItem class="mx-3 rounded-2">
+				<NavLink id="commander" on:click={changeView} class={($viewMain=='commander'?'onHit':'')}>Commander</NavLink>
+			  </NavItem>
+			  <NavItem class="mx-3 rounded-2">
+				<NavLink id="commandes" on:click={changeView} class={($viewMain=='commandes'?'onHit':'')}>Suivi de commande</NavLink>
+			  </NavItem>
+			  <!--
+			  <Dropdown  nav inNavbar data-bs-toggle="dropdown"  class={"mx-3 rounded-top " + (['commander' ,'commandes'].includes($viewMain)?'onHit':'')} >
 			  <DropdownToggle nav caret on:click={dropdownOpen}>SOS</DropdownToggle>
 			  <DropdownMenu right>
 				<DropdownItem id="commander" on:click={changeView}>Commander</DropdownItem>
 				<DropdownItem divider />
 				<DropdownItem id="commandes" on:click={changeView}>Suivi de commande</DropdownItem>
 			  </DropdownMenu>
-			</Dropdown>			
-			  <NavItem class="mx-3 rounded-2">
-				  <NavLink id="partenariat" on:click={changeView} class={($viewMain=='partenariat'?'onHit':'')}>Partenariat</NavLink>
-			  </NavItem>
+			</Dropdown>	-->		
 			</Nav>
 		</Collapse>
 	  </Navbar>
@@ -76,8 +79,8 @@ import {
 {:then banderole} 
 {#if banderole.message !== "" && !banderoleHide}
 	<div class="w-100 ps-2" id="banderole">
-		<p>{banderole.message}</p>
-		<img src={'images/icons/cross.png'} alt="validate" on:click={() => banderoleHide=true} width="30" height="30"/>
+		<p class="parimag_font">{banderole.message}</p>
+		<img src={'images/icons/cross.svg'} alt="validate" on:click={() => banderoleHide=true} width="30" height="30"/>
 	</div>
 {/if}	
 {/await} 

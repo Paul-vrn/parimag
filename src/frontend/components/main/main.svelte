@@ -97,8 +97,6 @@ import {
 <Commander/>
 {:else if $viewMain.includes('commandes')}
 <Commandes/>
-{:else if $viewMain.includes('partenariat')}
-<Partenariat/>
 {/if}
 
 <style>

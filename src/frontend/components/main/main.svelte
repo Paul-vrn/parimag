@@ -101,7 +101,6 @@ import {
 <style>
 div#banderole {
 	background-color: #D7C378;
-	border-style: solid;
 	border-width: 0.1em;
 	display: flex;
 	justify-content: space-between;
@@ -109,11 +108,13 @@ div#banderole {
 }
 div#banderole p {
 	text-align: center;
-	width: 100%;
+	width: 90%;
 	margin: 0;
+	overflow-wrap: break-word;
 }
 div#banderole img {
 	cursor: pointer;
+	margin-right: 5px;
 }
 :global(.navbar-toggler:active, .navbar-toggler:focus) {
 	background-color: #D7C378 !important;

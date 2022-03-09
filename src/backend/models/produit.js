@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull:false
         },
         plat_du_jour:{
-            type:DataTypes.DATEONLY,
+            type:DataTypes.BOOLEAN,
             allowNull:true
         },
         type:{

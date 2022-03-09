@@ -12,16 +12,16 @@
       poleSelected = liste[0].nom
       membres = liste[0].membres
     });
-    function changePole(val){
-      poleSelected = val
-      membres = liste.find(pl => pl.nom===poleSelected).membres
-  }
+    function changePole(e, pole){
+        console.log(e.detail)
+        window.scrollTo(0,0)
+    }
   </script>
   
 <main id="liste" class="d-flex">
-    <Accordion on:toggle={console.log} id="accordion">
+    <Accordion on:toggle={changePole} id="accordion">
         {#each liste as pole}
-            <AccordionItem header={pole.nom}>
+            <AccordionItem header={pole.nom} id={pole.nom} on:toggle={(e) => changePole(e, pole)}>
                 <Image alt="Photo de {pole.photo}" src={`images/liste/${pole.photo}.jpg`} class="w-100"/>
                 {#each pole.membres as membre}
                     <MembreMobile membre={membre}/>

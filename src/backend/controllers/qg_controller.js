@@ -19,7 +19,9 @@ module.exports = {
         res.status(200).send(result)
     },
     findAll: (req, res) => {
-        Qg.findAll()
+        Qg.findAll({
+            attributes:['nom','place_id', 'adresse']
+        })
             .then(data => {
                 res.send(data)
             })
@@ -33,7 +35,9 @@ module.exports = {
         if (!req.body.username || !req.body.password) {
             return res.status(400).json({ message: 'Error. Please enter the correct username and password' })
         }
-        Qg.findOne({where:{nom:req.body.username, password:req.body.password}})
+        Qg.findOne({
+            where:{nom:req.body.username, password:req.body.password},
+        })
             .then(result => {
                 if (result === null){
                     return res.status(400).json({ message: 'Error. Wrong login or password' })

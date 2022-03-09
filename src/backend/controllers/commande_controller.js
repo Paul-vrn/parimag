@@ -35,7 +35,7 @@ module.exports = {
             ],
             order: [
                 ['QGNom', 'DESC'],
-                ['updatedAt', 'DESC']]
+                ['createdAt', 'ASC']]
         })
             .then(data => {
                 res.send(data)

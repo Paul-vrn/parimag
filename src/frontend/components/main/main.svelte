@@ -1,5 +1,4 @@
 <script>
-	console.log("0 erreurs ici ou quoient (bon j'avoue y a des erreurs à cause de l'api google et l'embed youtube)")
 import {
 	Collapse,
     Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,

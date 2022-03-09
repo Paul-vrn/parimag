@@ -12,6 +12,11 @@
     export let updateCommandes;
     let qgDelegued = "";
     let livreursSelected = []
+    commandes.forEach(commande => {
+        if (commande.livreurId!==undefined){
+            livreursSelected[commande.id] = livreurs.find(liv => liv.id===commande.livreurId)
+        }
+    })
     let qgsDeleged = []
     const etat = {
 		"LV":"Livrée",
@@ -59,6 +64,7 @@
                         liv.disponible = false;
                 })
                 livreurs = [...livreurs]
+                console.log(livreurs)
                 addToast("Livreur mis à jour", "info", 2000)
             })
         }
@@ -72,6 +78,7 @@
                 })
                 commandes = [...commandes]
             })
+        console.log(livreursSelected)
     }
     async function validate(commande){
         updateCommande(commande.id, {etat:'CPC'})
@@ -157,7 +164,6 @@
             })
 
     }
-    console.log(commandes)
 </script>
 
 <Table bordered class="w-100" size="sm">
@@ -215,9 +221,6 @@
                     </div>
                 </th>
                 <th>
-                    {#if commande.livreurId !== null}
-                        {livreurs.find(liv => liv.id===commande.livreurId).nom}                        
-                    {/if}
                     <div class="d-flex gap-1 align-items-center">
                         <Button on:click={assigneLivreur(commande)} color="primary" disabled={['','-'].includes(livreursSelected[commande.id])} size="sm">
                             <img src={'images/icons/check.svg'} alt="validate" width="20" height="20"/>

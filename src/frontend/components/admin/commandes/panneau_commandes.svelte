@@ -15,6 +15,7 @@ import { addToast } from "as-toast";
         commandes.forEach(co => {
           co.trajets = JSON.parse(co.trajets)
         });
+        console.log("onmount")
         console.log(commandes)
         livreurs = await getLivreurs()
         qgs = await getQGs()
@@ -25,7 +26,8 @@ import { addToast } from "as-toast";
       commandes.forEach(co => {
           co.trajets = JSON.parse(co.trajets)
         });
-      addToast("Reloaded", "info", 1500)
+        console.log("updateCommandes")
+        console.log(commandes)
     }
 </script>
 <div class=" w-100">

@@ -17,7 +17,7 @@ module.exports = {
                 halal:(data.halal==="TRUE") ? true : false,
                 quantiteMax:(data.quantiteMax==="") ? null : data.quantiteMax,
                 description:data.description,
-                plat_du_jour:(data.plat_du_jour==="") ? null : new Date(data.plat_du_jour),
+                plat_du_jour:(data.plat_du_jour==="TRUE") ? true : false,
                 photo:data.photo,
                 sous_titre:data.sous_titre
             })

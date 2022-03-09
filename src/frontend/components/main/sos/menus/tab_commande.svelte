@@ -6,12 +6,9 @@
     import Boisson from './boisson/boisson.svelte'
     import {TabContent, TabPane} from 'sveltestrap'
     let produits = []
-    let today = new Date().toISOString().slice(0, 10)
-    let plat_du_jour;
     onMount(async () => {
         const res = await getProduits();
         produits = res;
-        plat_du_jour = produits.filter(prod => prod.plat_du_jour!== null).find(prod => prod.plat_du_jour===today)
     });
 
     export let updatePanier;
@@ -36,10 +33,7 @@
     <TabContent pills>
         <TabPane tabId="Plats" tab="Plats" active>
             <div class="d-flex flex-wrap justify-content-around">
-                {#if plat_du_jour!==undefined}
-                <Produit produit={plat_du_jour} {addInPanier}/>                    
-                {/if}
-                {#each produits.filter(prod => prod.type==="Accompagnement") as produit}
+                {#each produits.filter(prod => (prod.type==="Plat" && prod.plat_du_jour) || prod.type==="Accompagnement") as produit}
                     <Produit produit={produit} {addInPanier}/>
                 {/each}
 
@@ -60,6 +54,14 @@
                 {/each}
             </div>
         </TabPane>
+        <TabPane tabId="Goodies" tab="Goodies">
+            <div class="d-flex flex-wrap justify-content-around">
+                ça arrive très vite !!
+                {#each produits.filter(prod => prod.type==="Goodies") as goodies}
+                    <Produit goodies={goodies} {addInPanier}/>
+                {/each}
+            </div>
+        </TabPane>
       </TabContent>
 </div>
 <style>
@@ -72,9 +74,11 @@
 :global(div.produits > div.tab-content ul.nav){
     align-items: center;
     border-bottom-style: solid;
+    display: flex;
 }
 :global(div.produits > div.tab-content ul.nav li) {
-    width: 50%;
+    flex: 1 1 0px;
+    width: 100%;
 }
 :global(div.produits > div.tab-content ul.nav li a.nav-link){
     border-top-left-radius: 1em;

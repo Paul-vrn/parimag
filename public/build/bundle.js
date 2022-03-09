@@ -2133,7 +2133,7 @@
     });
 
     // (40:0) {#if $activeRoute !== null && $activeRoute.route === route}
-    function create_if_block$v(ctx) {
+    function create_if_block$u(ctx) {
     	let current_block_type_index;
     	let if_block;
     	let if_block_anchor;
@@ -2203,7 +2203,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$v.name,
+    		id: create_if_block$u.name,
     		type: "if",
     		source: "(40:0) {#if $activeRoute !== null && $activeRoute.route === route}",
     		ctx
@@ -2376,7 +2376,7 @@
     function create_fragment$1b(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*$activeRoute*/ ctx[1] !== null && /*$activeRoute*/ ctx[1].route === /*route*/ ctx[7] && create_if_block$v(ctx);
+    	let if_block = /*$activeRoute*/ ctx[1] !== null && /*$activeRoute*/ ctx[1].route === /*route*/ ctx[7] && create_if_block$u(ctx);
 
     	const block = {
     		c: function create() {
@@ -2400,7 +2400,7 @@
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$v(ctx);
+    					if_block = create_if_block$u(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -3170,7 +3170,7 @@
     const file$15 = "node_modules/sveltestrap/src/Collapse.svelte";
 
     // (57:0) {#if isOpen}
-    function create_if_block$u(ctx) {
+    function create_if_block$t(ctx) {
     	let div;
     	let div_style_value;
     	let div_intro;
@@ -3319,7 +3319,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$u.name,
+    		id: create_if_block$t.name,
     		type: "if",
     		source: "(57:0) {#if isOpen}",
     		ctx
@@ -3334,7 +3334,7 @@
     	let mounted;
     	let dispose;
     	add_render_callback(/*onwindowresize*/ ctx[20]);
-    	let if_block = /*isOpen*/ ctx[0] && create_if_block$u(ctx);
+    	let if_block = /*isOpen*/ ctx[0] && create_if_block$t(ctx);
 
     	const block = {
     		c: function create() {
@@ -3363,7 +3363,7 @@
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$u(ctx);
+    					if_block = create_if_block$t(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -4112,7 +4112,7 @@
     const get_heading_slot_context = ctx => ({});
 
     // (26:0) {#if isOpen}
-    function create_if_block$t(ctx) {
+    function create_if_block$s(ctx) {
     	let div;
     	let t0;
     	let t1;
@@ -4260,7 +4260,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$t.name,
+    		id: create_if_block$s.name,
     		type: "if",
     		source: "(26:0) {#if isOpen}",
     		ctx
@@ -4493,7 +4493,7 @@
     function create_fragment$16(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*isOpen*/ ctx[0] && create_if_block$t(ctx);
+    	let if_block = /*isOpen*/ ctx[0] && create_if_block$s(ctx);
 
     	const block = {
     		c: function create() {
@@ -4517,7 +4517,7 @@
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$t(ctx);
+    					if_block = create_if_block$s(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -4912,7 +4912,7 @@
     }
 
     // (37:0) {#if href}
-    function create_if_block$s(ctx) {
+    function create_if_block$r(ctx) {
     	let a;
     	let current_block_type_index;
     	let if_block;
@@ -5022,7 +5022,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block: block_1,
-    		id: create_if_block$s.name,
+    		id: create_if_block$r.name,
     		type: "if",
     		source: "(37:0) {#if href}",
     		ctx
@@ -5296,7 +5296,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$s, create_else_block_1$1];
+    	const if_block_creators = [create_if_block$r, create_else_block_1$1];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -7598,7 +7598,7 @@
     }
 
     // (118:0) {#if nav}
-    function create_if_block$r(ctx) {
+    function create_if_block$q(ctx) {
     	let li;
     	let current;
     	const default_slot_template = /*#slots*/ ctx[18].default;
@@ -7666,7 +7666,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$r.name,
+    		id: create_if_block$q.name,
     		type: "if",
     		source: "(118:0) {#if nav}",
     		ctx
@@ -7680,7 +7680,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$r, create_else_block$l];
+    	const if_block_creators = [create_if_block$q, create_else_block$l];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -8596,7 +8596,7 @@
     }
 
     // (37:0) {#if header}
-    function create_if_block$q(ctx) {
+    function create_if_block$p(ctx) {
     	let h6;
     	let current;
     	let mounted;
@@ -8675,7 +8675,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$q.name,
+    		id: create_if_block$p.name,
     		type: "if",
     		source: "(37:0) {#if header}",
     		ctx
@@ -8689,7 +8689,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$q, create_if_block_1$d, create_if_block_2$8, create_else_block$k];
+    	const if_block_creators = [create_if_block$p, create_if_block_1$d, create_if_block_2$8, create_else_block$k];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -9533,7 +9533,7 @@
     }
 
     // (51:0) {#if nav}
-    function create_if_block$p(ctx) {
+    function create_if_block$o(ctx) {
     	let a;
     	let a_aria_expanded_value;
     	let current;
@@ -9632,7 +9632,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block: block_1,
-    		id: create_if_block$p.name,
+    		id: create_if_block$o.name,
     		type: "if",
     		source: "(51:0) {#if nav}",
     		ctx
@@ -9786,7 +9786,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$p, create_if_block_1$c, create_if_block_2$7, create_else_block$j];
+    	const if_block_creators = [create_if_block$o, create_if_block_1$c, create_if_block_2$7, create_else_block$j];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -10443,7 +10443,7 @@
     }
 
     // (83:2) {#if label}
-    function create_if_block$o(ctx) {
+    function create_if_block$n(ctx) {
     	let label_1;
     	let current;
     	const label_slot_template = /*#slots*/ ctx[19].label;
@@ -10508,7 +10508,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$o.name,
+    		id: create_if_block$n.name,
     		type: "if",
     		source: "(83:2) {#if label}",
     		ctx
@@ -10560,7 +10560,7 @@
 
     	let current_block_type = select_block_type(ctx);
     	let if_block0 = current_block_type(ctx);
-    	let if_block1 = /*label*/ ctx[4] && create_if_block$o(ctx);
+    	let if_block1 = /*label*/ ctx[4] && create_if_block$n(ctx);
 
     	const block = {
     		c: function create() {
@@ -10602,7 +10602,7 @@
     						transition_in(if_block1, 1);
     					}
     				} else {
-    					if_block1 = create_if_block$o(ctx);
+    					if_block1 = create_if_block$n(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
     					if_block1.m(div, null);
@@ -13508,7 +13508,7 @@
     }
 
     // (523:0) {#if feedback}
-    function create_if_block$n(ctx) {
+    function create_if_block$m(ctx) {
     	let show_if;
     	let current_block_type_index;
     	let if_block;
@@ -13581,7 +13581,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$n.name,
+    		id: create_if_block$m.name,
     		type: "if",
     		source: "(523:0) {#if feedback}",
     		ctx
@@ -13881,7 +13881,7 @@
     		if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
     	}
 
-    	let if_block1 = /*feedback*/ ctx[9] && create_if_block$n(ctx);
+    	let if_block1 = /*feedback*/ ctx[9] && create_if_block$m(ctx);
 
     	const block = {
     		c: function create() {
@@ -13947,7 +13947,7 @@
     						transition_in(if_block1, 1);
     					}
     				} else {
-    					if_block1 = create_if_block$n(ctx);
+    					if_block1 = create_if_block$m(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
     					if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
@@ -15413,7 +15413,7 @@
     const file$T = "node_modules/sveltestrap/src/ModalBackdrop.svelte";
 
     // (20:0) {#if isOpen && loaded}
-    function create_if_block$m(ctx) {
+    function create_if_block$l(ctx) {
     	let div;
     	let div_intro;
     	let div_outro;
@@ -15477,7 +15477,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$m.name,
+    		id: create_if_block$l.name,
     		type: "if",
     		source: "(20:0) {#if isOpen && loaded}",
     		ctx
@@ -15489,7 +15489,7 @@
     function create_fragment$W(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*isOpen*/ ctx[0] && /*loaded*/ ctx[2] && create_if_block$m(ctx);
+    	let if_block = /*isOpen*/ ctx[0] && /*loaded*/ ctx[2] && create_if_block$l(ctx);
 
     	const block = {
     		c: function create() {
@@ -15513,7 +15513,7 @@
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$m(ctx);
+    					if_block = create_if_block$l(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -15886,7 +15886,7 @@
     }
 
     // (23:4) {#if typeof toggle === 'function'}
-    function create_if_block$l(ctx) {
+    function create_if_block$k(ctx) {
     	let button;
     	let mounted;
     	let dispose;
@@ -15933,7 +15933,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$l.name,
+    		id: create_if_block$k.name,
     		type: "if",
     		source: "(23:4) {#if typeof toggle === 'function'}",
     		ctx
@@ -15945,7 +15945,7 @@
     // (22:21)      
     function fallback_block$1(ctx) {
     	let if_block_anchor;
-    	let if_block = typeof /*toggle*/ ctx[0] === 'function' && create_if_block$l(ctx);
+    	let if_block = typeof /*toggle*/ ctx[0] === 'function' && create_if_block$k(ctx);
 
     	const block = {
     		c: function create() {
@@ -15961,7 +15961,7 @@
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
-    					if_block = create_if_block$l(ctx);
+    					if_block = create_if_block$k(ctx);
     					if_block.c();
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
     				}
@@ -16712,7 +16712,7 @@
     			props: {
     				toggle: /*toggle*/ ctx[4],
     				id: /*labelledBy*/ ctx[5],
-    				$$slots: { default: [create_default_slot_3$a] },
+    				$$slots: { default: [create_default_slot_3$b] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -16763,7 +16763,7 @@
     }
 
     // (247:16) <ModalHeader {toggle} id={labelledBy}>
-    function create_default_slot_3$a(ctx) {
+    function create_default_slot_3$b(ctx) {
     	let t;
 
     	const block = {
@@ -16783,7 +16783,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3$a.name,
+    		id: create_default_slot_3$b.name,
     		type: "slot",
     		source: "(247:16) <ModalHeader {toggle} id={labelledBy}>",
     		ctx
@@ -16857,7 +16857,7 @@
 
     	modalbody = new ModalBody({
     			props: {
-    				$$slots: { default: [create_default_slot_2$e] },
+    				$$slots: { default: [create_default_slot_2$f] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -16906,7 +16906,7 @@
     }
 
     // (252:16) <ModalBody>
-    function create_default_slot_2$e(ctx) {
+    function create_default_slot_2$f(ctx) {
     	let current;
     	const default_slot_template = /*#slots*/ ctx[31].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[34], null);
@@ -16954,7 +16954,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2$e.name,
+    		id: create_default_slot_2$f.name,
     		type: "slot",
     		source: "(252:16) <ModalBody>",
     		ctx
@@ -17050,7 +17050,7 @@
     }
 
     // (265:0) {#if backdrop && !staticModal}
-    function create_if_block$k(ctx) {
+    function create_if_block$j(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -17131,7 +17131,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$k.name,
+    		id: create_if_block$j.name,
     		type: "if",
     		source: "(265:0) {#if backdrop && !staticModal}",
     		ctx
@@ -17197,7 +17197,7 @@
     	let if_block1_anchor;
     	let current;
     	let if_block0 = /*_isMounted*/ ctx[11] && create_if_block_1$8(ctx);
-    	let if_block1 = /*backdrop*/ ctx[6] && !/*staticModal*/ ctx[0] && create_if_block$k(ctx);
+    	let if_block1 = /*backdrop*/ ctx[6] && !/*staticModal*/ ctx[0] && create_if_block$j(ctx);
 
     	const block = {
     		c: function create() {
@@ -17248,7 +17248,7 @@
     						transition_in(if_block1, 1);
     					}
     				} else {
-    					if_block1 = create_if_block$k(ctx);
+    					if_block1 = create_if_block$j(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
     					if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
@@ -18363,7 +18363,7 @@
     }
 
     // (35:2) {#if container}
-    function create_if_block$j(ctx) {
+    function create_if_block$i(ctx) {
     	let container_1;
     	let current;
 
@@ -18410,7 +18410,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$j.name,
+    		id: create_if_block$i.name,
     		type: "if",
     		source: "(35:2) {#if container}",
     		ctx
@@ -18482,7 +18482,7 @@
     	let current_block_type_index;
     	let if_block;
     	let current;
-    	const if_block_creators = [create_if_block$j, create_else_block$e];
+    	const if_block_creators = [create_if_block$i, create_else_block$e];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -19690,7 +19690,7 @@
     }
 
     // (13:0) {#if responsive}
-    function create_if_block$i(ctx) {
+    function create_if_block$h(ctx) {
     	let div;
     	let current;
     	const default_slot_template = /*#slots*/ ctx[3].default;
@@ -19749,7 +19749,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$i.name,
+    		id: create_if_block$h.name,
     		type: "if",
     		source: "(13:0) {#if responsive}",
     		ctx
@@ -19763,7 +19763,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$i, create_else_block$d];
+    	const if_block_creators = [create_if_block$h, create_else_block$d];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -20207,7 +20207,7 @@
     }
 
     // (33:4) {#if rows}
-    function create_if_block$h(ctx) {
+    function create_if_block$g(ctx) {
     	let colgroup;
     	let t0;
     	let tableheader;
@@ -20219,7 +20219,7 @@
 
     	colgroup = new Colgroup({
     			props: {
-    				$$slots: { default: [create_default_slot_3$9] },
+    				$$slots: { default: [create_default_slot_3$a] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -20227,7 +20227,7 @@
 
     	tableheader = new TableHeader({
     			props: {
-    				$$slots: { default: [create_default_slot_2$d] },
+    				$$slots: { default: [create_default_slot_2$e] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -20374,7 +20374,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$h.name,
+    		id: create_if_block$g.name,
     		type: "if",
     		source: "(33:4) {#if rows}",
     		ctx
@@ -20384,7 +20384,7 @@
     }
 
     // (34:6) <Colgroup>
-    function create_default_slot_3$9(ctx) {
+    function create_default_slot_3$a(ctx) {
     	let current;
     	const default_slot_template = /*#slots*/ ctx[11].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[12], null);
@@ -20432,7 +20432,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3$9.name,
+    		id: create_default_slot_3$a.name,
     		type: "slot",
     		source: "(34:6) <Colgroup>",
     		ctx
@@ -20442,7 +20442,7 @@
     }
 
     // (37:6) <TableHeader>
-    function create_default_slot_2$d(ctx) {
+    function create_default_slot_2$e(ctx) {
     	let current;
     	const default_slot_template = /*#slots*/ ctx[11].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[12], get_default_slot_context$1);
@@ -20490,7 +20490,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2$d.name,
+    		id: create_default_slot_2$e.name,
     		type: "slot",
     		source: "(37:6) <TableHeader>",
     		ctx
@@ -20630,7 +20630,7 @@
     	let current_block_type_index;
     	let if_block;
     	let current;
-    	const if_block_creators = [create_if_block$h, create_else_block$c];
+    	const if_block_creators = [create_if_block$g, create_else_block$c];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -21476,7 +21476,7 @@
     }
 
     // (28:0) {#if tabs}
-    function create_if_block$g(ctx) {
+    function create_if_block$f(ctx) {
     	let navitem;
     	let current;
 
@@ -21521,7 +21521,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$g.name,
+    		id: create_if_block$f.name,
     		type: "if",
     		source: "(28:0) {#if tabs}",
     		ctx
@@ -21706,7 +21706,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$g, create_else_block$b];
+    	const if_block_creators = [create_if_block$f, create_else_block$b];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -21921,7 +21921,7 @@
     const file$A = "node_modules/sveltestrap/src/Tooltip.svelte";
 
     // (107:0) {#if isOpen}
-    function create_if_block$f(ctx) {
+    function create_if_block$e(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -22002,7 +22002,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$f.name,
+    		id: create_if_block$e.name,
     		type: "if",
     		source: "(107:0) {#if isOpen}",
     		ctx
@@ -22228,7 +22228,7 @@
     function create_fragment$C(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*isOpen*/ ctx[0] && create_if_block$f(ctx);
+    	let if_block = /*isOpen*/ ctx[0] && create_if_block$e(ctx);
 
     	const block = {
     		c: function create() {
@@ -22252,7 +22252,7 @@
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$f(ctx);
+    					if_block = create_if_block$e(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -24537,7 +24537,7 @@
     }
 
     // (9:0) {#if $toasts.length}
-    function create_if_block$e(ctx) {
+    function create_if_block$d(ctx) {
     	let ul;
     	let each_blocks = [];
     	let each_1_lookup = new Map();
@@ -24612,7 +24612,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$e.name,
+    		id: create_if_block$d.name,
     		type: "if",
     		source: "(9:0) {#if $toasts.length}",
     		ctx
@@ -24735,7 +24735,7 @@
     function create_fragment$z(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*$toasts*/ ctx[2].length && create_if_block$e(ctx);
+    	let if_block = /*$toasts*/ ctx[2].length && create_if_block$d(ctx);
 
     	const block = {
     		c: function create() {
@@ -24759,7 +24759,7 @@
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$e(ctx);
+    					if_block = create_if_block$d(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -24871,32 +24871,48 @@
     	}
     }
 
-    /* src/frontend/components/admin/stocks/stock.svelte generated by Svelte v3.46.1 */
+    const getProduits = async () => {
+        try {
+          const response = await API.get("produits");
+          return response;
+        } catch (error) {
+          return {error:error.response.data}
+        }
+    };
 
-    const { console: console_1$8 } = globals;
+    const updateProduit = async (id, body) => {
+      try {
+        const response = await API.patch(`produits/${id}`, body);
+        return response;
+      } catch (error) {
+        return {error:error.response.data}
+      }
+    };
+
+    /* src/frontend/components/admin/stocks/stock.svelte generated by Svelte v3.46.1 */
     const file$w = "src/frontend/components/admin/stocks/stock.svelte";
 
     function get_each_context$e(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[4] = list[i];
-    	child_ctx[6] = i;
+    	child_ctx[6] = list[i];
+    	child_ctx[8] = i;
     	return child_ctx;
     }
 
     function get_each_context_1$5(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
-    function get_each_context_2$3(ctx, list, i) {
+    function get_each_context_2$4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[10] = list[i];
+    	child_ctx[12] = list[i];
     	return child_ctx;
     }
 
-    // (46:16) <Button on:click={reload} size="sm">
-    function create_default_slot_1$e(ctx) {
+    // (56:16) <Button on:click={reload} size="sm">
+    function create_default_slot_2$d(ctx) {
     	let img;
     	let img_src_value;
 
@@ -24907,7 +24923,7 @@
     			attr_dev(img, "alt", "reload");
     			attr_dev(img, "width", "20");
     			attr_dev(img, "height", "20");
-    			add_location(img, file$w, 45, 52, 1343);
+    			add_location(img, file$w, 55, 52, 1825);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -24919,33 +24935,33 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1$e.name,
+    		id: create_default_slot_2$d.name,
     		type: "slot",
-    		source: "(46:16) <Button on:click={reload} size=\\\"sm\\\">",
+    		source: "(56:16) <Button on:click={reload} size=\\\"sm\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (48:12) {#each qgs as qg}
-    function create_each_block_2$3(ctx) {
+    // (58:12) {#each qgs as qg}
+    function create_each_block_2$4(ctx) {
     	let th;
-    	let t_value = /*qg*/ ctx[10].nom + "";
+    	let t_value = /*qg*/ ctx[12].nom + "";
     	let t;
 
     	const block = {
     		c: function create() {
     			th = element("th");
     			t = text(t_value);
-    			add_location(th, file$w, 48, 16, 1491);
+    			add_location(th, file$w, 58, 16, 1973);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, th, anchor);
     			append_dev(th, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*qgs*/ 1 && t_value !== (t_value = /*qg*/ ctx[10].nom + "")) set_data_dev(t, t_value);
+    			if (dirty & /*qgs*/ 1 && t_value !== (t_value = /*qg*/ ctx[12].nom + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(th);
@@ -24954,16 +24970,16 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block_2$3.name,
+    		id: create_each_block_2$4.name,
     		type: "each",
-    		source: "(48:12) {#each qgs as qg}",
+    		source: "(58:12) {#each qgs as qg}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (57:16) {#each row as stock}
+    // (68:16) {#each produit.stocks as stock}
     function create_each_block_1$5(ctx) {
     	let th;
     	let input;
@@ -24971,8 +24987,8 @@
 
     	input = new Input$1({
     			props: {
-    				value: /*stock*/ ctx[7].quantite,
-    				id: /*stock*/ ctx[7].id
+    				value: /*stock*/ ctx[9].quantite,
+    				id: /*stock*/ ctx[9].id
     			},
     			$$inline: true
     		});
@@ -24983,7 +24999,7 @@
     		c: function create() {
     			th = element("th");
     			create_component(input.$$.fragment);
-    			add_location(th, file$w, 57, 20, 1719);
+    			add_location(th, file$w, 68, 20, 2247);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, th, anchor);
@@ -24992,8 +25008,8 @@
     		},
     		p: function update(ctx, dirty) {
     			const input_changes = {};
-    			if (dirty & /*rows*/ 2) input_changes.value = /*stock*/ ctx[7].quantite;
-    			if (dirty & /*rows*/ 2) input_changes.id = /*stock*/ ctx[7].id;
+    			if (dirty & /*produits*/ 2) input_changes.value = /*stock*/ ctx[9].quantite;
+    			if (dirty & /*produits*/ 2) input_changes.id = /*stock*/ ctx[9].id;
     			input.$set(input_changes);
     		},
     		i: function intro(local) {
@@ -25015,23 +25031,53 @@
     		block,
     		id: create_each_block_1$5.name,
     		type: "each",
-    		source: "(57:16) {#each row as stock}",
+    		source: "(68:16) {#each produit.stocks as stock}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (54:8) {#each rows as row, i}
+    // (72:20) <Button on:click={updatePlatDuJour(produit)}>
+    function create_default_slot_1$e(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("update");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_1$e.name,
+    		type: "slot",
+    		source: "(72:20) <Button on:click={updatePlatDuJour(produit)}>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (65:8) {#each produits as produit, i}
     function create_each_block$e(ctx) {
     	let tr;
-    	let th;
-    	let t0_value = /*row*/ ctx[4][0].produit.nom + "";
+    	let th0;
+    	let t0_value = /*produit*/ ctx[6].nom + "";
     	let t0;
     	let t1;
     	let t2;
+    	let th1;
+    	let button;
+    	let t3;
     	let current;
-    	let each_value_1 = /*row*/ ctx[4];
+    	let each_value_1 = /*produit*/ ctx[6].stocks;
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -25043,10 +25089,22 @@
     		each_blocks[i] = null;
     	});
 
+    	button = new Button({
+    			props: {
+    				$$slots: { default: [create_default_slot_1$e] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", function () {
+    		if (is_function(/*updatePlatDuJour*/ ctx[4](/*produit*/ ctx[6]))) /*updatePlatDuJour*/ ctx[4](/*produit*/ ctx[6]).apply(this, arguments);
+    	});
+
     	const block = {
     		c: function create() {
     			tr = element("tr");
-    			th = element("th");
+    			th0 = element("th");
     			t0 = text(t0_value);
     			t1 = space();
 
@@ -25055,13 +25113,17 @@
     			}
 
     			t2 = space();
-    			add_location(th, file$w, 55, 16, 1632);
-    			add_location(tr, file$w, 54, 12, 1611);
+    			th1 = element("th");
+    			create_component(button.$$.fragment);
+    			t3 = space();
+    			add_location(th0, file$w, 66, 16, 2156);
+    			add_location(th1, file$w, 70, 16, 2362);
+    			add_location(tr, file$w, 65, 12, 2135);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
-    			append_dev(tr, th);
-    			append_dev(th, t0);
+    			append_dev(tr, th0);
+    			append_dev(th0, t0);
     			append_dev(tr, t1);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -25069,13 +25131,17 @@
     			}
 
     			append_dev(tr, t2);
+    			append_dev(tr, th1);
+    			mount_component(button, th1, null);
+    			append_dev(tr, t3);
     			current = true;
     		},
-    		p: function update(ctx, dirty) {
-    			if ((!current || dirty & /*rows*/ 2) && t0_value !== (t0_value = /*row*/ ctx[4][0].produit.nom + "")) set_data_dev(t0, t0_value);
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if ((!current || dirty & /*produits*/ 2) && t0_value !== (t0_value = /*produit*/ ctx[6].nom + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty & /*rows, submit*/ 10) {
-    				each_value_1 = /*row*/ ctx[4];
+    			if (dirty & /*produits, submit*/ 10) {
+    				each_value_1 = /*produit*/ ctx[6].stocks;
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -25101,6 +25167,14 @@
 
     				check_outros();
     			}
+
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 32768) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -25109,6 +25183,7 @@
     				transition_in(each_blocks[i]);
     			}
 
+    			transition_in(button.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -25118,11 +25193,13 @@
     				transition_out(each_blocks[i]);
     			}
 
+    			transition_out(button.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
     			destroy_each(each_blocks, detaching);
+    			destroy_component(button);
     		}
     	};
 
@@ -25130,28 +25207,30 @@
     		block,
     		id: create_each_block$e.name,
     		type: "each",
-    		source: "(54:8) {#each rows as row, i}",
+    		source: "(65:8) {#each produits as produit, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (42:0) <Table bordered id="tableStock">
+    // (52:0) <Table bordered id="tableStock">
     function create_default_slot$g(ctx) {
     	let thead;
     	let tr;
-    	let th;
+    	let th0;
     	let button;
     	let t0;
     	let t1;
+    	let th1;
+    	let t3;
     	let tbody;
     	let current;
 
     	button = new Button({
     			props: {
     				size: "sm",
-    				$$slots: { default: [create_default_slot_1$e] },
+    				$$slots: { default: [create_default_slot_2$d] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -25163,10 +25242,10 @@
     	let each_blocks_1 = [];
 
     	for (let i = 0; i < each_value_2.length; i += 1) {
-    		each_blocks_1[i] = create_each_block_2$3(get_each_context_2$3(ctx, each_value_2, i));
+    		each_blocks_1[i] = create_each_block_2$4(get_each_context_2$4(ctx, each_value_2, i));
     	}
 
-    	let each_value = /*rows*/ ctx[1];
+    	let each_value = /*produits*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -25182,7 +25261,7 @@
     		c: function create() {
     			thead = element("thead");
     			tr = element("tr");
-    			th = element("th");
+    			th0 = element("th");
     			create_component(button.$$.fragment);
     			t0 = space();
 
@@ -25191,29 +25270,35 @@
     			}
 
     			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Plat du jour";
+    			t3 = space();
     			tbody = element("tbody");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			add_location(th, file$w, 44, 12, 1286);
-    			add_location(tr, file$w, 43, 8, 1269);
-    			add_location(thead, file$w, 42, 4, 1253);
-    			add_location(tbody, file$w, 52, 4, 1560);
+    			add_location(th0, file$w, 54, 12, 1768);
+    			add_location(th1, file$w, 60, 12, 2023);
+    			add_location(tr, file$w, 53, 8, 1751);
+    			add_location(thead, file$w, 52, 4, 1735);
+    			add_location(tbody, file$w, 63, 4, 2076);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
     			append_dev(thead, tr);
-    			append_dev(tr, th);
-    			mount_component(button, th, null);
+    			append_dev(tr, th0);
+    			mount_component(button, th0, null);
     			append_dev(tr, t0);
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].m(tr, null);
     			}
 
-    			insert_dev(target, t1, anchor);
+    			append_dev(tr, t1);
+    			append_dev(tr, th1);
+    			insert_dev(target, t3, anchor);
     			insert_dev(target, tbody, anchor);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -25225,7 +25310,7 @@
     		p: function update(ctx, dirty) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 8192) {
+    			if (dirty & /*$$scope*/ 32768) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -25237,14 +25322,14 @@
     				let i;
 
     				for (i = 0; i < each_value_2.length; i += 1) {
-    					const child_ctx = get_each_context_2$3(ctx, each_value_2, i);
+    					const child_ctx = get_each_context_2$4(ctx, each_value_2, i);
 
     					if (each_blocks_1[i]) {
     						each_blocks_1[i].p(child_ctx, dirty);
     					} else {
-    						each_blocks_1[i] = create_each_block_2$3(child_ctx);
+    						each_blocks_1[i] = create_each_block_2$4(child_ctx);
     						each_blocks_1[i].c();
-    						each_blocks_1[i].m(tr, null);
+    						each_blocks_1[i].m(tr, t1);
     					}
     				}
 
@@ -25255,8 +25340,8 @@
     				each_blocks_1.length = each_value_2.length;
     			}
 
-    			if (dirty & /*rows, submit*/ 10) {
-    				each_value = /*rows*/ ctx[1];
+    			if (dirty & /*updatePlatDuJour, produits, submit*/ 26) {
+    				each_value = /*produits*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
 
@@ -25307,7 +25392,7 @@
     			if (detaching) detach_dev(thead);
     			destroy_component(button);
     			destroy_each(each_blocks_1, detaching);
-    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(t3);
     			if (detaching) detach_dev(tbody);
     			destroy_each(each_blocks, detaching);
     		}
@@ -25317,7 +25402,7 @@
     		block,
     		id: create_default_slot$g.name,
     		type: "slot",
-    		source: "(42:0) <Table bordered id=\\\"tableStock\\\">",
+    		source: "(52:0) <Table bordered id=\\\"tableStock\\\">",
     		ctx
     	});
 
@@ -25352,7 +25437,7 @@
     		p: function update(ctx, [dirty]) {
     			const table_changes = {};
 
-    			if (dirty & /*$$scope, rows, qgs*/ 8195) {
+    			if (dirty & /*$$scope, produits, qgs*/ 32771) {
     				table_changes.$$scope = { dirty, ctx };
     			}
 
@@ -25392,31 +25477,23 @@
     		let j = 0;
 
     		for (let i = 0; i < res.length; i += 3) {
-    			$$invalidate(1, rows[j] = [res[i], res[i + 1], res[i + 2]], rows);
+    			rows[j] = [res[i], res[i + 1], res[i + 2]];
     			j++;
     		}
     	}
 
     	let qgs = [];
     	let rows = [];
+    	let produits = [];
 
     	onMount(async () => {
-    		const res = await getStocks();
-    		let j = 0;
-
-    		for (let i = 0; i < res.length; i += 3) {
-    			$$invalidate(1, rows[j] = [res[i], res[i + 1], res[i + 2]], rows);
-    			j++;
-    		}
-
+    		$$invalidate(1, produits = await getProduits());
     		$$invalidate(0, qgs = await getQGs());
     	});
 
     	function submit(event) {
     		if (event.key === "Enter") {
     			updateStock(event.target.id, { quantite: event.target.value }).then(res => {
-    				console.log(res);
-
     				if (res.error !== undefined) {
     					addToast(res.error.message, "warn", 2000);
     				} else {
@@ -25426,10 +25503,24 @@
     		}
     	}
 
+    	function updatePlatDuJour(produit) {
+    		updateProduit(produit.id, { plat_du_jour: !produit.plat_du_jour }).then(res => {
+    			produits.find(prod => prod.id === res.produit.id).plat_du_jour = res.produit.plat_du_jour;
+
+    			if (res.produit.plat_du_jour) {
+    				addToast("ce plat est maintenant un plat du jour", "info", 2000);
+    			} else {
+    				addToast("ce plat n'est plus un plat du jour", "info", 2000);
+    			}
+    		}).catch(err => {
+    			addToast(err, "warn", 2000);
+    		});
+    	}
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$8.warn(`<Stock> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Stock> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$capture_state = () => ({
@@ -25442,22 +25533,27 @@
     		getQGs,
     		Toasts,
     		addToast,
+    		getProduits,
+    		updateProduit,
     		reload,
     		qgs,
     		rows,
-    		submit
+    		produits,
+    		submit,
+    		updatePlatDuJour
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('qgs' in $$props) $$invalidate(0, qgs = $$props.qgs);
-    		if ('rows' in $$props) $$invalidate(1, rows = $$props.rows);
+    		if ('rows' in $$props) rows = $$props.rows;
+    		if ('produits' in $$props) $$invalidate(1, produits = $$props.produits);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [qgs, rows, reload, submit];
+    	return [qgs, produits, reload, submit, updatePlatDuJour];
     }
 
     class Stock extends SvelteComponentDev {
@@ -25675,7 +25771,7 @@
 
     /* src/frontend/components/admin/commandes/table_commandes.svelte generated by Svelte v3.46.1 */
 
-    const { console: console_1$7 } = globals;
+    const { console: console_1$8 } = globals;
     const file$v = "src/frontend/components/admin/commandes/table_commandes.svelte";
 
     function get_each_context$d(ctx, list, i) {
@@ -25692,7 +25788,7 @@
     	return child_ctx;
     }
 
-    function get_each_context_2$2(ctx, list, i) {
+    function get_each_context_2$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
     	child_ctx[24] = list[i];
     	return child_ctx;
@@ -25704,7 +25800,7 @@
     	return child_ctx;
     }
 
-    function get_each_context_4(ctx, list, i) {
+    function get_each_context_4$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
     	child_ctx[29] = list[i];
     	return child_ctx;
@@ -25765,7 +25861,7 @@
     }
 
     // (203:24) {#each commande.detail_commandes as detail}
-    function create_each_block_4(ctx) {
+    function create_each_block_4$1(ctx) {
     	let p;
     	let t0_value = /*detail*/ ctx[29].produit.nom + "";
     	let t0;
@@ -25807,7 +25903,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block_4.name,
+    		id: create_each_block_4$1.name,
     		type: "each",
     		source: "(203:24) {#each commande.detail_commandes as detail}",
     		ctx
@@ -25817,7 +25913,7 @@
     }
 
     // (210:24) {#if commande.couverts}
-    function create_if_block$d(ctx) {
+    function create_if_block$c(ctx) {
     	let t;
 
     	const block = {
@@ -25834,7 +25930,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$d.name,
+    		id: create_if_block$c.name,
     		type: "if",
     		source: "(210:24) {#if commande.couverts}",
     		ctx
@@ -25864,10 +25960,10 @@
     	let each_blocks = [];
 
     	for (let i = 0; i < each_value_4.length; i += 1) {
-    		each_blocks[i] = create_each_block_4(get_each_context_4(ctx, each_value_4, i));
+    		each_blocks[i] = create_each_block_4$1(get_each_context_4$1(ctx, each_value_4, i));
     	}
 
-    	let if_block = /*commande*/ ctx[17].couverts && create_if_block$d(ctx);
+    	let if_block = /*commande*/ ctx[17].couverts && create_if_block$c(ctx);
 
     	const block = {
     		c: function create() {
@@ -25927,12 +26023,12 @@
     				let i;
 
     				for (i = 0; i < each_value_4.length; i += 1) {
-    					const child_ctx = get_each_context_4(ctx, each_value_4, i);
+    					const child_ctx = get_each_context_4$1(ctx, each_value_4, i);
 
     					if (each_blocks[i]) {
     						each_blocks[i].p(child_ctx, dirty);
     					} else {
-    						each_blocks[i] = create_each_block_4(child_ctx);
+    						each_blocks[i] = create_each_block_4$1(child_ctx);
     						each_blocks[i].c();
     						each_blocks[i].m(t2.parentNode, t2);
     					}
@@ -25949,7 +26045,7 @@
 
     			if (/*commande*/ ctx[17].couverts) {
     				if (if_block) ; else {
-    					if_block = create_if_block$d(ctx);
+    					if_block = create_if_block$c(ctx);
     					if_block.c();
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
     				}
@@ -26103,7 +26199,7 @@
     }
 
     // (233:24) {#each livreurs.filter(liv => !liv.disponible) as livreur}
-    function create_each_block_2$2(ctx) {
+    function create_each_block_2$3(ctx) {
     	let option;
     	let t_value = /*livreur*/ ctx[24].nom + "";
     	let t;
@@ -26142,7 +26238,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block_2$2.name,
+    		id: create_each_block_2$3.name,
     		type: "each",
     		source: "(233:24) {#each livreurs.filter(liv => !liv.disponible) as livreur}",
     		ctx
@@ -26152,7 +26248,7 @@
     }
 
     // (228:24) <Input id="livreurSelect" type="select" bind:value={livreursSelected[commande.id]}>
-    function create_default_slot_6$2(ctx) {
+    function create_default_slot_6$3(ctx) {
     	let t0;
     	let hr;
     	let t1;
@@ -26170,7 +26266,7 @@
     	let each_blocks = [];
 
     	for (let i = 0; i < each_value_2.length; i += 1) {
-    		each_blocks[i] = create_each_block_2$2(get_each_context_2$2(ctx, each_value_2, i));
+    		each_blocks[i] = create_each_block_2$3(get_each_context_2$3(ctx, each_value_2, i));
     	}
 
     	const block = {
@@ -26236,12 +26332,12 @@
     				let i;
 
     				for (i = 0; i < each_value_2.length; i += 1) {
-    					const child_ctx = get_each_context_2$2(ctx, each_value_2, i);
+    					const child_ctx = get_each_context_2$3(ctx, each_value_2, i);
 
     					if (each_blocks[i]) {
     						each_blocks[i].p(child_ctx, dirty);
     					} else {
-    						each_blocks[i] = create_each_block_2$2(child_ctx);
+    						each_blocks[i] = create_each_block_2$3(child_ctx);
     						each_blocks[i].c();
     						each_blocks[i].m(each1_anchor.parentNode, each1_anchor);
     					}
@@ -26266,7 +26362,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_6$2.name,
+    		id: create_default_slot_6$3.name,
     		type: "slot",
     		source: "(228:24) <Input id=\\\"livreurSelect\\\" type=\\\"select\\\" bind:value={livreursSelected[commande.id]}>",
     		ctx
@@ -26276,7 +26372,7 @@
     }
 
     // (240:20) <Button on:click={livred(commande)} color="secondary" size="sm">
-    function create_default_slot_5$4(ctx) {
+    function create_default_slot_5$5(ctx) {
     	let img;
     	let img_src_value;
 
@@ -26299,7 +26395,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_5$4.name,
+    		id: create_default_slot_5$5.name,
     		type: "slot",
     		source: "(240:20) <Button on:click={livred(commande)} color=\\\"secondary\\\" size=\\\"sm\\\">",
     		ctx
@@ -26434,7 +26530,7 @@
     }
 
     // (252:24) <Button on:click={changeQg(commande)} color="secondary" size="sm" >
-    function create_default_slot_3$8(ctx) {
+    function create_default_slot_3$9(ctx) {
     	let img;
     	let img_src_value;
 
@@ -26457,7 +26553,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3$8.name,
+    		id: create_default_slot_3$9.name,
     		type: "slot",
     		source: "(252:24) <Button on:click={changeQg(commande)} color=\\\"secondary\\\" size=\\\"sm\\\" >",
     		ctx
@@ -26668,7 +26764,7 @@
     	let input0_props = {
     		id: "livreurSelect",
     		type: "select",
-    		$$slots: { default: [create_default_slot_6$2] },
+    		$$slots: { default: [create_default_slot_6$3] },
     		$$scope: { ctx }
     	};
 
@@ -26683,7 +26779,7 @@
     			props: {
     				color: "secondary",
     				size: "sm",
-    				$$slots: { default: [create_default_slot_5$4] },
+    				$$slots: { default: [create_default_slot_5$5] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -26720,7 +26816,7 @@
     			props: {
     				color: "secondary",
     				size: "sm",
-    				$$slots: { default: [create_default_slot_3$8] },
+    				$$slots: { default: [create_default_slot_3$9] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -27592,7 +27688,7 @@
     	const writable_props = ['commandes', 'livreurs', 'qgs', 'updateCommandes'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$7.warn(`<Table_commandes> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$8.warn(`<Table_commandes> was created with unknown prop '${key}'`);
     	});
 
     	function input0_value_binding(value, commande) {
@@ -27719,19 +27815,19 @@
     		const props = options.props || {};
 
     		if (/*commandes*/ ctx[0] === undefined && !('commandes' in props)) {
-    			console_1$7.warn("<Table_commandes> was created without expected prop 'commandes'");
+    			console_1$8.warn("<Table_commandes> was created without expected prop 'commandes'");
     		}
 
     		if (/*livreurs*/ ctx[1] === undefined && !('livreurs' in props)) {
-    			console_1$7.warn("<Table_commandes> was created without expected prop 'livreurs'");
+    			console_1$8.warn("<Table_commandes> was created without expected prop 'livreurs'");
     		}
 
     		if (/*qgs*/ ctx[2] === undefined && !('qgs' in props)) {
-    			console_1$7.warn("<Table_commandes> was created without expected prop 'qgs'");
+    			console_1$8.warn("<Table_commandes> was created without expected prop 'qgs'");
     		}
 
     		if (/*updateCommandes*/ ctx[11] === undefined && !('updateCommandes' in props)) {
-    			console_1$7.warn("<Table_commandes> was created without expected prop 'updateCommandes'");
+    			console_1$8.warn("<Table_commandes> was created without expected prop 'updateCommandes'");
     		}
     	}
 
@@ -27786,7 +27882,7 @@
 
     /* src/frontend/components/admin/commandes/panneau_commandes.svelte generated by Svelte v3.46.1 */
 
-    const { console: console_1$6 } = globals;
+    const { console: console_1$7 } = globals;
     const file$u = "src/frontend/components/admin/commandes/panneau_commandes.svelte";
 
     function get_each_context$c(ctx, list, i) {
@@ -28183,7 +28279,7 @@
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$6.warn(`<Panneau_commandes> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$7.warn(`<Panneau_commandes> was created with unknown prop '${key}'`);
     	});
 
     	const func = (qg, co) => co.QGNom === qg.nom;
@@ -28631,7 +28727,7 @@
     }
 
     // (7:0) {#if sens}
-    function create_if_block$c(ctx) {
+    function create_if_block$b(ctx) {
     	let div2;
     	let div0;
     	let image;
@@ -28714,7 +28810,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$c.name,
+    		id: create_if_block$b.name,
     		type: "if",
     		source: "(7:0) {#if sens}",
     		ctx
@@ -28728,7 +28824,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$c, create_else_block$9];
+    	const if_block_creators = [create_if_block$b, create_else_block$9];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -28892,14 +28988,14 @@
     	return child_ctx;
     }
 
-    function get_each_context_2$1(ctx, list, i) {
+    function get_each_context_2$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
     	child_ctx[3] = list[i];
     	return child_ctx;
     }
 
     // (23:4) {#each liste as pole}
-    function create_each_block_2$1(ctx) {
+    function create_each_block_2$2(ctx) {
     	let div;
     	let h4;
     	let t0_value = /*pole*/ ctx[3].nom + "";
@@ -28976,7 +29072,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block_2$1.name,
+    		id: create_each_block_2$2.name,
     		type: "each",
     		source: "(23:4) {#each liste as pole}",
     		ctx
@@ -29198,7 +29294,7 @@
     	let each_blocks_1 = [];
 
     	for (let i = 0; i < each_value_2.length; i += 1) {
-    		each_blocks_1[i] = create_each_block_2$1(get_each_context_2$1(ctx, each_value_2, i));
+    		each_blocks_1[i] = create_each_block_2$2(get_each_context_2$2(ctx, each_value_2, i));
     	}
 
     	let each_value = /*liste*/ ctx[0];
@@ -29260,12 +29356,12 @@
     				let i;
 
     				for (i = 0; i < each_value_2.length; i += 1) {
-    					const child_ctx = get_each_context_2$1(ctx, each_value_2, i);
+    					const child_ctx = get_each_context_2$2(ctx, each_value_2, i);
 
     					if (each_blocks_1[i]) {
     						each_blocks_1[i].p(child_ctx, dirty);
     					} else {
-    						each_blocks_1[i] = create_each_block_2$1(child_ctx);
+    						each_blocks_1[i] = create_each_block_2$2(child_ctx);
     						each_blocks_1[i].c();
     						each_blocks_1[i].m(div, null);
     					}
@@ -29564,7 +29660,7 @@
 
     /* src/frontend/components/main/liste/liste_mobile.svelte generated by Svelte v3.46.1 */
 
-    const { console: console_1$5 } = globals;
+    const { console: console_1$6 } = globals;
     const file$o = "src/frontend/components/main/liste/liste_mobile.svelte";
 
     function get_each_context$a(ctx, list, i) {
@@ -29627,7 +29723,7 @@
     	return block;
     }
 
-    // (24:12) <AccordionItem header={pole.nom}>
+    // (24:12) <AccordionItem header={pole.nom} id={pole.nom} on:toggle={(e) => changePole(e, pole)}>
     function create_default_slot_1$b(ctx) {
     	let image;
     	let t0;
@@ -29743,7 +29839,7 @@
     		block,
     		id: create_default_slot_1$b.name,
     		type: "slot",
-    		source: "(24:12) <AccordionItem header={pole.nom}>",
+    		source: "(24:12) <AccordionItem header={pole.nom} id={pole.nom} on:toggle={(e) => changePole(e, pole)}>",
     		ctx
     	});
 
@@ -29755,14 +29851,21 @@
     	let accordionitem;
     	let current;
 
+    	function toggle_handler(...args) {
+    		return /*toggle_handler*/ ctx[1](/*pole*/ ctx[4], ...args);
+    	}
+
     	accordionitem = new AccordionItem({
     			props: {
     				header: /*pole*/ ctx[4].nom,
+    				id: /*pole*/ ctx[4].nom,
     				$$slots: { default: [create_default_slot_1$b] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
+
+    	accordionitem.$on("toggle", toggle_handler);
 
     	const block = {
     		c: function create() {
@@ -29772,9 +29875,11 @@
     			mount_component(accordionitem, target, anchor);
     			current = true;
     		},
-    		p: function update(ctx, dirty) {
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
     			const accordionitem_changes = {};
     			if (dirty & /*liste*/ 1) accordionitem_changes.header = /*pole*/ ctx[4].nom;
+    			if (dirty & /*liste*/ 1) accordionitem_changes.id = /*pole*/ ctx[4].nom;
 
     			if (dirty & /*$$scope, liste*/ 1025) {
     				accordionitem_changes.$$scope = { dirty, ctx };
@@ -29807,7 +29912,7 @@
     	return block;
     }
 
-    // (22:4) <Accordion on:toggle={console.log} id="accordion">
+    // (22:4) <Accordion on:toggle={changePole} id="accordion">
     function create_default_slot$d(ctx) {
     	let each_1_anchor;
     	let current;
@@ -29840,7 +29945,7 @@
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*liste*/ 1) {
+    			if (dirty & /*liste, changePole*/ 1) {
     				each_value = /*liste*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
@@ -29896,7 +30001,7 @@
     		block,
     		id: create_default_slot$d.name,
     		type: "slot",
-    		source: "(22:4) <Accordion on:toggle={console.log} id=\\\"accordion\\\">",
+    		source: "(22:4) <Accordion on:toggle={changePole} id=\\\"accordion\\\">",
     		ctx
     	});
 
@@ -29917,7 +30022,7 @@
     			$$inline: true
     		});
 
-    	accordion.$on("toggle", console.log);
+    	accordion.$on("toggle", changePole);
 
     	const block = {
     		c: function create() {
@@ -29925,7 +30030,7 @@
     			create_component(accordion.$$.fragment);
     			attr_dev(main, "id", "liste");
     			attr_dev(main, "class", "d-flex");
-    			add_location(main, file$o, 20, 0, 621);
+    			add_location(main, file$o, 20, 0, 597);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -29970,6 +30075,11 @@
     	return block;
     }
 
+    function changePole(e, pole) {
+    	console.log(e.detail);
+    	window.scrollTo(0, 0);
+    }
+
     function instance$p($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Liste_mobile', slots, []);
@@ -29984,16 +30094,13 @@
     		membres = liste[0].membres;
     	});
 
-    	function changePole(val) {
-    		poleSelected = val;
-    		membres = liste.find(pl => pl.nom === poleSelected).membres;
-    	}
-
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$5.warn(`<Liste_mobile> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$6.warn(`<Liste_mobile> was created with unknown prop '${key}'`);
     	});
+
+    	const toggle_handler = (pole, e) => changePole(e);
 
     	$$self.$capture_state = () => ({
     		onMount,
@@ -30018,7 +30125,7 @@
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [liste];
+    	return [liste, toggle_handler];
     }
 
     class Liste_mobile extends SvelteComponentDev {
@@ -31448,7 +31555,7 @@
 
     /* src/frontend/components/main/accueil/blog/blog.svelte generated by Svelte v3.46.1 */
 
-    const { console: console_1$4 } = globals;
+    const { console: console_1$5 } = globals;
     const file$m = "src/frontend/components/main/accueil/blog/blog.svelte";
 
     // (15:0) {:else}
@@ -31474,7 +31581,7 @@
     			attr_dev(iframe, "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
     			iframe.allowFullscreen = true;
     			add_location(iframe, file$m, 16, 4, 469);
-    			attr_dev(div, "class", "blog d-flex justify-content-end flex-column svelte-dtfqfr");
+    			attr_dev(div, "class", "blog d-flex justify-content-end flex-column svelte-271bdd");
     			set_style(div, "overflow", "hidden");
     			add_location(div, file$m, 15, 0, 381);
     		},
@@ -31511,7 +31618,7 @@
     }
 
     // (11:0) {#if blog.photo !== undefined}
-    function create_if_block$b(ctx) {
+    function create_if_block$a(ctx) {
     	let div;
     	let h1;
     	let t_value = /*blog*/ ctx[0].titre + "";
@@ -31522,9 +31629,9 @@
     			div = element("div");
     			h1 = element("h1");
     			t = text(t_value);
-    			attr_dev(h1, "class", "text-center svelte-dtfqfr");
+    			attr_dev(h1, "class", "text-center svelte-271bdd");
     			add_location(h1, file$m, 12, 4, 324);
-    			attr_dev(div, "class", "blog d-flex justify-content-end flex-column svelte-dtfqfr");
+    			attr_dev(div, "class", "blog d-flex justify-content-end flex-column svelte-271bdd");
     			set_style(div, "background-image", "url(/images/blog/" + /*blog*/ ctx[0].photo);
     			add_location(div, file$m, 11, 0, 206);
     		},
@@ -31547,7 +31654,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$b.name,
+    		id: create_if_block$a.name,
     		type: "if",
     		source: "(11:0) {#if blog.photo !== undefined}",
     		ctx
@@ -31560,7 +31667,7 @@
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*blog*/ ctx[0].photo !== undefined) return create_if_block$b;
+    		if (/*blog*/ ctx[0].photo !== undefined) return create_if_block$a;
     		return create_else_block$8;
     	}
 
@@ -31625,7 +31732,7 @@
     	const writable_props = ['blog'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$4.warn(`<Blog> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$5.warn(`<Blog> was created with unknown prop '${key}'`);
     	});
 
     	const click_handler = () => console.log("click video");
@@ -31664,7 +31771,7 @@
     		const props = options.props || {};
 
     		if (/*blog*/ ctx[0] === undefined && !('blog' in props)) {
-    			console_1$4.warn("<Blog> was created without expected prop 'blog'");
+    			console_1$5.warn("<Blog> was created without expected prop 'blog'");
     		}
     	}
 
@@ -31678,6 +31785,8 @@
     }
 
     /* src/frontend/components/main/accueil/blog/blogs.svelte generated by Svelte v3.46.1 */
+
+    const { console: console_1$4 } = globals;
     const file$l = "src/frontend/components/main/accueil/blog/blogs.svelte";
 
     function get_each_context$9(ctx, list, i) {
@@ -31686,7 +31795,7 @@
     	return child_ctx;
     }
 
-    // (15:8) {#each blogs as blog}
+    // (16:8) {#each blogs as blog}
     function create_each_block$9(ctx) {
     	let blog;
     	let current;
@@ -31727,7 +31836,7 @@
     		block,
     		id: create_each_block$9.name,
     		type: "each",
-    		source: "(15:8) {#each blogs as blog}",
+    		source: "(16:8) {#each blogs as blog}",
     		ctx
     	});
 
@@ -31760,10 +31869,10 @@
     			}
 
     			attr_dev(div0, "class", "svelte-1bvjj3p");
-    			add_location(div0, file$l, 13, 4, 285);
+    			add_location(div0, file$l, 14, 4, 312);
     			attr_dev(div1, "id", "blog");
     			attr_dev(div1, "class", "svelte-1bvjj3p");
-    			add_location(div1, file$l, 12, 0, 265);
+    			add_location(div1, file$l, 13, 0, 292);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -31850,12 +31959,13 @@
     	onMount(async () => {
     		const res = await getBlogs();
     		$$invalidate(0, blogs = res);
+    		console.log(blogs);
     	});
 
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Blogs> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$4.warn(`<Blogs> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$capture_state = () => ({ onMount, getBlogs, Blog, blogs });
@@ -31969,11 +32079,11 @@
     			t12 = space();
     			h3 = element("h3");
     			h3.textContent = "PAR'IMAG 2024";
-    			attr_dev(h1, "class", "text-center varela svelte-dpl0ck");
+    			attr_dev(h1, "class", "text-center varela svelte-9bbjjj");
     			add_location(h1, file$k, 7, 6, 205);
     			attr_dev(hr, "class", "bg-white w-75 mx-auto my-5 ");
     			add_location(hr, file$k, 8, 6, 272);
-    			attr_dev(p, "class", "text-center w-50 mx-auto svelte-dpl0ck");
+    			attr_dev(p, "class", "text-center w-50 mx-auto svelte-9bbjjj");
     			add_location(p, file$k, 9, 6, 322);
     			attr_dev(div0, "class", "mb-5");
     			add_location(div0, file$k, 6, 4, 179);
@@ -31981,13 +32091,13 @@
     			attr_dev(path, "fill-opacity", "1");
     			attr_dev(path, "d", "M0,32L80,53.3C160,75,320,117,480,133.3C640,149,800,139,960,112C1120,85,1280,43,1360,21.3L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z");
     			add_location(path, file$k, 15, 9, 653);
-    			attr_dev(text0, "class", "varela svelte-dpl0ck");
+    			attr_dev(text0, "class", "varela svelte-9bbjjj");
     			attr_dev(text0, "x", "50%");
     			attr_dev(text0, "y", "75%");
     			attr_dev(text0, "dominant-baseline", "middle");
     			attr_dev(text0, "text-anchor", "middle");
     			add_location(text0, file$k, 20, 8, 943);
-    			attr_dev(text1, "class", "varela svelte-dpl0ck");
+    			attr_dev(text1, "class", "varela svelte-9bbjjj");
     			attr_dev(text1, "x", "50%");
     			attr_dev(text1, "y", "80%");
     			attr_dev(text1, "dominant-baseline", "middle");
@@ -31997,12 +32107,12 @@
     			attr_dev(svg, "viewBox", "0 0 1440 320");
     			add_location(svg, file$k, 14, 6, 580);
     			attr_dev(div1, "id", "svg");
-    			attr_dev(div1, "class", "svelte-dpl0ck");
+    			attr_dev(div1, "class", "svelte-9bbjjj");
     			add_location(div1, file$k, 13, 4, 558);
-    			attr_dev(div2, "class", "d-flex justify-content-center flex-column svelte-dpl0ck");
+    			attr_dev(div2, "class", "d-flex justify-content-center flex-column svelte-9bbjjj");
     			add_location(div2, file$k, 5, 2, 118);
     			attr_dev(main, "id", "accueil");
-    			attr_dev(main, "class", "container-fluid p-0 svelte-dpl0ck");
+    			attr_dev(main, "class", "container-fluid p-0 svelte-9bbjjj");
     			add_location(main, file$k, 4, 0, 67);
     			if (!src_url_equal(img0.src, img0_src_value = 'images/icons/facebook_white.png')) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "width", "50px");
@@ -32036,11 +32146,11 @@
     			attr_dev(a3, "target", "_blank");
     			attr_dev(a3, "href", "https://github.com/Paul-vrn/benzimag");
     			add_location(a3, file$k, 52, 2, 1940);
-    			attr_dev(div3, "class", "mb-2 svelte-dpl0ck");
+    			attr_dev(div3, "class", "mb-2 svelte-9bbjjj");
     			add_location(div3, file$k, 42, 1, 1372);
     			attr_dev(h3, "class", "p-0 m-0");
     			add_location(h3, file$k, 56, 1, 2113);
-    			attr_dev(footer, "class", "py-3 mt-auto svelte-dpl0ck");
+    			attr_dev(footer, "class", "py-3 mt-auto svelte-9bbjjj");
     			add_location(footer, file$k, 41, 0, 1340);
     		},
     		l: function claim(nodes) {
@@ -33901,7 +34011,7 @@
     }
 
     // (106:4) {#if clearable}
-    function create_if_block$a(ctx) {
+    function create_if_block$9(ctx) {
     	let span;
 
     	const block = {
@@ -33920,7 +34030,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$a.name,
+    		id: create_if_block$9.name,
     		type: "if",
     		source: "(106:4) {#if clearable}",
     		ctx
@@ -33968,7 +34078,7 @@
     	input.$on("keydown", /*keydown_handler*/ ctx[34]);
     	input.$on("paste", /*paste_handler*/ ctx[35]);
     	let if_block1 = /*clearable*/ ctx[0] && /*selectedOptions*/ ctx[11].length && !/*disabled*/ ctx[3] && create_if_block_1$5(ctx);
-    	let if_block2 = /*clearable*/ ctx[0] && create_if_block$a(ctx);
+    	let if_block2 = /*clearable*/ ctx[0] && create_if_block$9(ctx);
 
     	const block = {
     		c: function create() {
@@ -34129,7 +34239,7 @@
 
     			if (/*clearable*/ ctx[0]) {
     				if (if_block2) ; else {
-    					if_block2 = create_if_block$a(ctx);
+    					if_block2 = create_if_block$9(ctx);
     					if_block2.c();
     					if_block2.m(div2, t4);
     				}
@@ -35992,7 +36102,7 @@
     }
 
     // (167:0) {#if isMounted && renderDropdown}
-    function create_if_block$9(ctx) {
+    function create_if_block$8(ctx) {
     	let div2;
     	let div1;
     	let div0;
@@ -36134,7 +36244,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$9.name,
+    		id: create_if_block$8.name,
     		type: "if",
     		source: "(167:0) {#if isMounted && renderDropdown}",
     		ctx
@@ -36841,7 +36951,7 @@
     function create_fragment$h(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*isMounted*/ ctx[16] && /*renderDropdown*/ ctx[18] && create_if_block$9(ctx);
+    	let if_block = /*isMounted*/ ctx[16] && /*renderDropdown*/ ctx[18] && create_if_block$8(ctx);
 
     	const block = {
     		c: function create() {
@@ -36865,7 +36975,7 @@
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$9(ctx);
+    					if_block = create_if_block$8(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -37840,7 +37950,7 @@
     }
 
     // (18:0) {#if item.$isGroupHeader}
-    function create_if_block$8(ctx) {
+    function create_if_block$7(ctx) {
     	let div;
     	let b;
     	let t_value = /*item*/ ctx[2].label + "";
@@ -37881,7 +37991,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$8.name,
+    		id: create_if_block$7.name,
     		type: "if",
     		source: "(18:0) {#if item.$isGroupHeader}",
     		ctx
@@ -37934,7 +38044,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$8, create_else_block$5];
+    	const if_block_creators = [create_if_block$7, create_else_block$5];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -38286,7 +38396,7 @@
     }
 
     // (644:2) {#if name && !hasAnchor}
-    function create_if_block$7(ctx) {
+    function create_if_block$6(ctx) {
     	let select;
     	let mounted;
     	let dispose;
@@ -38378,7 +38488,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$7.name,
+    		id: create_if_block$6.name,
     		type: "if",
     		source: "(644:2) {#if name && !hasAnchor}",
     		ctx
@@ -38500,7 +38610,7 @@
     	dropdown.$on("select", /*onSelect*/ ctx[46]);
     	dropdown.$on("hover", /*onHover*/ ctx[48]);
     	dropdown.$on("createoption", /*createoption_handler*/ ctx[89]);
-    	let if_block = /*name*/ ctx[3] && !/*hasAnchor*/ ctx[6] && create_if_block$7(ctx);
+    	let if_block = /*name*/ ctx[3] && !/*hasAnchor*/ ctx[6] && create_if_block$6(ctx);
 
     	const block = {
     		c: function create() {
@@ -38578,7 +38688,7 @@
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
-    					if_block = create_if_block$7(ctx);
+    					if_block = create_if_block$6(ctx);
     					if_block.c();
     					if_block.m(div, null);
     				}
@@ -40405,7 +40515,7 @@
     }
 
     // (60:20) {#if prod.type!=="Service"}
-    function create_if_block$6(ctx) {
+    function create_if_block$5(ctx) {
     	let tr;
     	let th0;
     	let t0_value = /*prod*/ ctx[15].nom + "";
@@ -40464,7 +40574,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$6.name,
+    		id: create_if_block$5.name,
     		type: "if",
     		source: "(60:20) {#if prod.type!==\\\"Service\\\"}",
     		ctx
@@ -40478,7 +40588,7 @@
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*prod*/ ctx[15].type !== "Service") return create_if_block$6;
+    		if (/*prod*/ ctx[15].type !== "Service") return create_if_block$5;
     		return create_else_block$4;
     	}
 
@@ -40629,7 +40739,7 @@
     }
 
     // (77:8) <Table borderless class="w-100">
-    function create_default_slot_6$1(ctx) {
+    function create_default_slot_6$2(ctx) {
     	let tbody;
     	let tr0;
     	let th0;
@@ -40830,7 +40940,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_6$1.name,
+    		id: create_default_slot_6$2.name,
     		type: "slot",
     		source: "(77:8) <Table borderless class=\\\"w-100\\\">",
     		ctx
@@ -40840,7 +40950,7 @@
     }
 
     // (106:8) <Alert color="danger" class="mt-2 mb-0">
-    function create_default_slot_5$3(ctx) {
+    function create_default_slot_5$4(ctx) {
     	let h4;
     	let t1;
     	let br;
@@ -40872,7 +40982,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_5$3.name,
+    		id: create_default_slot_5$4.name,
     		type: "slot",
     		source: "(106:8) <Alert color=\\\"danger\\\" class=\\\"mt-2 mb-0\\\">",
     		ctx
@@ -40923,7 +41033,7 @@
     			props: {
     				borderless: true,
     				class: "w-100",
-    				$$slots: { default: [create_default_slot_6$1] },
+    				$$slots: { default: [create_default_slot_6$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -40933,7 +41043,7 @@
     			props: {
     				color: "danger",
     				class: "mt-2 mb-0",
-    				$$slots: { default: [create_default_slot_5$3] },
+    				$$slots: { default: [create_default_slot_5$4] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -41147,7 +41257,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     }
 
     // (120:6) <Button color="primary" on:click={commander} disabled={!attested}>
-    function create_default_slot_3$7(ctx) {
+    function create_default_slot_3$8(ctx) {
     	let t;
 
     	const block = {
@@ -41164,7 +41274,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3$7.name,
+    		id: create_default_slot_3$8.name,
     		type: "slot",
     		source: "(120:6) <Button color=\\\"primary\\\" on:click={commander} disabled={!attested}>",
     		ctx
@@ -41211,7 +41321,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			props: {
     				color: "primary",
     				disabled: !/*attested*/ ctx[2],
-    				$$slots: { default: [create_default_slot_3$7] },
+    				$$slots: { default: [create_default_slot_3$8] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -41687,7 +41797,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     const file$b = "src/frontend/components/main/sos/menus/modal/modal_confirmed.svelte";
 
     // (12:4) <ModalHeader>
-    function create_default_slot_5$2(ctx) {
+    function create_default_slot_5$3(ctx) {
     	let t0;
     	let t1_value = /*commandeEnCours*/ ctx[1].id + "";
     	let t1;
@@ -41716,7 +41826,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_5$2.name,
+    		id: create_default_slot_5$3.name,
     		type: "slot",
     		source: "(12:4) <ModalHeader>",
     		ctx
@@ -41826,7 +41936,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     }
 
     // (17:4) {#if prixTotal(commandeEnCours.panier) === "0.00"}
-    function create_if_block$5(ctx) {
+    function create_if_block$4(ctx) {
     	let p;
 
     	const block = {
@@ -41848,7 +41958,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$5.name,
+    		id: create_if_block$4.name,
     		type: "if",
     		source: "(17:4) {#if prixTotal(commandeEnCours.panier) === \\\"0.00\\\"}",
     		ctx
@@ -41885,7 +41995,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     }
 
     // (13:4) <ModalBody>
-    function create_default_slot_3$6(ctx) {
+    function create_default_slot_3$7(ctx) {
     	let p;
     	let t1;
     	let show_if;
@@ -41893,7 +42003,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$5, create_else_block$3];
+    	const if_block_creators = [create_if_block$4, create_else_block$3];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -41968,7 +42078,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3$6.name,
+    		id: create_default_slot_3$7.name,
     		type: "slot",
     		source: "(13:4) <ModalBody>",
     		ctx
@@ -42076,7 +42186,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	modalheader = new ModalHeader({
     			props: {
-    				$$slots: { default: [create_default_slot_5$2] },
+    				$$slots: { default: [create_default_slot_5$3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -42084,7 +42194,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	modalbody = new ModalBody({
     			props: {
-    				$$slots: { default: [create_default_slot_3$6] },
+    				$$slots: { default: [create_default_slot_3$7] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -42344,6 +42454,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
         let poidsPlat = 0;
         let poidsDessert = 0;
         let poidsBoisson = 0;
+        let poidsGoodies = 0;
         panier.filter(prod => prod.type === "Plat").forEach(prod => {poidsPlat+=prod.quantite;});
         if (poidsPlat>3) {
             return "Votre panier est trop lourd"
@@ -42356,6 +42467,10 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
         if (poidsBoisson>10){
             return "Vous ne pouvez pas prendre plus de 10 boissons au total"
         }          
+        panierfilter(prod => prod.type==="Goodies").forEach(prod => {poidsGoodies+=prod.quantite;});
+        if (poidsGoodies>5){
+            return "Désolé vous avez commandé trop de Goodies"
+        }
         return true  
     };
 
@@ -42405,20 +42520,27 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[13] = list[i];
-    	child_ctx[15] = i;
+    	child_ctx[14] = list[i];
+    	child_ctx[16] = i;
     	return child_ctx;
     }
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[16] = list[i];
-    	child_ctx[15] = i;
+    	child_ctx[17] = list[i];
+    	child_ctx[16] = i;
     	return child_ctx;
     }
 
-    // (71:32) <Button on:click={() => deleteElOfPanier(produit.id)} color="danger">
-    function create_default_slot_4$2(ctx) {
+    function get_each_context_2$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[14] = list[i];
+    	child_ctx[16] = i;
+    	return child_ctx;
+    }
+
+    // (82:32) <Button on:click={() => deleteElOfPanier(produit.id)} color="danger">
+    function create_default_slot_6$1(ctx) {
     	let img;
     	let img_src_value;
 
@@ -42429,7 +42551,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			attr_dev(img, "alt", "validate");
     			attr_dev(img, "width", "20");
     			attr_dev(img, "height", "20");
-    			add_location(img, file$a, 71, 32, 2970);
+    			add_location(img, file$a, 82, 32, 3321);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -42441,32 +42563,32 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_4$2.name,
+    		id: create_default_slot_6$1.name,
     		type: "slot",
-    		source: "(71:32) <Button on:click={() => deleteElOfPanier(produit.id)} color=\\\"danger\\\">",
+    		source: "(82:32) <Button on:click={() => deleteElOfPanier(produit.id)} color=\\\"danger\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (64:20) {#each commandeEnCours.panier.filter(prod => prod.type!=="Service") as produit, i (produit.id)}
-    function create_each_block_1$1(key_1, ctx) {
+    // (75:20) {#each commandeEnCours.panier.filter(prod => prod.type!=="Service") as produit, i (produit.id)}
+    function create_each_block_2$1(key_1, ctx) {
     	let tr;
     	let th0;
-    	let t0_value = /*i*/ ctx[15] + 1 + "";
+    	let t0_value = /*i*/ ctx[16] + 1 + "";
     	let t0;
     	let t1;
     	let th1;
-    	let t2_value = /*produit*/ ctx[16].nom + "";
+    	let t2_value = /*produit*/ ctx[14].nom + "";
     	let t2;
     	let t3;
     	let th2;
-    	let t4_value = /*produit*/ ctx[16].quantite + "";
+    	let t4_value = /*produit*/ ctx[14].quantite + "";
     	let t4;
     	let t5;
     	let th3;
-    	let t6_value = (/*produit*/ ctx[16].prix * /*produit*/ ctx[16].quantite).toFixed(2) + "";
+    	let t6_value = (/*produit*/ ctx[14].prix * /*produit*/ ctx[14].quantite).toFixed(2) + "";
     	let t6;
     	let t7;
     	let th4;
@@ -42475,13 +42597,13 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	let current;
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[9](/*produit*/ ctx[16]);
+    		return /*click_handler*/ ctx[9](/*produit*/ ctx[14]);
     	}
 
     	button = new Button({
     			props: {
     				color: "danger",
-    				$$slots: { default: [create_default_slot_4$2] },
+    				$$slots: { default: [create_default_slot_6$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -42510,17 +42632,17 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			create_component(button.$$.fragment);
     			t8 = space();
     			attr_dev(th0, "class", "svelte-e5o6by");
-    			add_location(th0, file$a, 65, 28, 2599);
+    			add_location(th0, file$a, 76, 28, 2950);
     			attr_dev(th1, "class", "svelte-e5o6by");
-    			add_location(th1, file$a, 66, 28, 2642);
+    			add_location(th1, file$a, 77, 28, 2993);
     			attr_dev(th2, "class", "svelte-e5o6by");
-    			add_location(th2, file$a, 67, 28, 2693);
+    			add_location(th2, file$a, 78, 28, 3044);
     			attr_dev(th3, "class", "svelte-e5o6by");
-    			add_location(th3, file$a, 68, 28, 2749);
+    			add_location(th3, file$a, 79, 28, 3100);
     			attr_dev(th4, "class", "svelte-e5o6by");
-    			add_location(th4, file$a, 69, 28, 2831);
+    			add_location(th4, file$a, 80, 28, 3182);
     			attr_dev(tr, "class", "align-items-center svelte-e5o6by");
-    			add_location(tr, file$a, 64, 24, 2538);
+    			add_location(tr, file$a, 75, 24, 2889);
     			this.first = tr;
     		},
     		m: function mount(target, anchor) {
@@ -42544,13 +42666,13 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty & /*commandeEnCours*/ 1) && t0_value !== (t0_value = /*i*/ ctx[15] + 1 + "")) set_data_dev(t0, t0_value);
-    			if ((!current || dirty & /*commandeEnCours*/ 1) && t2_value !== (t2_value = /*produit*/ ctx[16].nom + "")) set_data_dev(t2, t2_value);
-    			if ((!current || dirty & /*commandeEnCours*/ 1) && t4_value !== (t4_value = /*produit*/ ctx[16].quantite + "")) set_data_dev(t4, t4_value);
-    			if ((!current || dirty & /*commandeEnCours*/ 1) && t6_value !== (t6_value = (/*produit*/ ctx[16].prix * /*produit*/ ctx[16].quantite).toFixed(2) + "")) set_data_dev(t6, t6_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t0_value !== (t0_value = /*i*/ ctx[16] + 1 + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t2_value !== (t2_value = /*produit*/ ctx[14].nom + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t4_value !== (t4_value = /*produit*/ ctx[14].quantite + "")) set_data_dev(t4, t4_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t6_value !== (t6_value = (/*produit*/ ctx[14].prix * /*produit*/ ctx[14].quantite).toFixed(2) + "")) set_data_dev(t6, t6_value);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 262144) {
+    			if (dirty & /*$$scope*/ 1048576) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -42573,17 +42695,17 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block_1$1.name,
+    		id: create_each_block_2$1.name,
     		type: "each",
-    		source: "(64:20) {#each commandeEnCours.panier.filter(prod => prod.type!==\\\"Service\\\") as produit, i (produit.id)}",
+    		source: "(75:20) {#each commandeEnCours.panier.filter(prod => prod.type!==\\\"Service\\\") as produit, i (produit.id)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (53:12) <Table responsive centered size="sm" class="w-100">
-    function create_default_slot_3$5(ctx) {
+    // (64:12) <Table responsive centered size="sm" class="w-100">
+    function create_default_slot_5$2(ctx) {
     	let thead;
     	let tr;
     	let th0;
@@ -42600,15 +42722,15 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	let each_blocks = [];
     	let each_1_lookup = new Map();
     	let current;
-    	let each_value_1 = /*commandeEnCours*/ ctx[0].panier.filter(func$1);
-    	validate_each_argument(each_value_1);
-    	const get_key = ctx => /*produit*/ ctx[16].id;
-    	validate_each_keys(ctx, each_value_1, get_each_context_1$1, get_key);
+    	let each_value_2 = /*commandeEnCours*/ ctx[0].panier.filter(func$1);
+    	validate_each_argument(each_value_2);
+    	const get_key = ctx => /*produit*/ ctx[14].id;
+    	validate_each_keys(ctx, each_value_2, get_each_context_2$1, get_key);
 
-    	for (let i = 0; i < each_value_1.length; i += 1) {
-    		let child_ctx = get_each_context_1$1(ctx, each_value_1, i);
+    	for (let i = 0; i < each_value_2.length; i += 1) {
+    		let child_ctx = get_each_context_2$1(ctx, each_value_2, i);
     		let key = get_key(child_ctx);
-    		each_1_lookup.set(key, each_blocks[i] = create_each_block_1$1(key, child_ctx));
+    		each_1_lookup.set(key, each_blocks[i] = create_each_block_2$1(key, child_ctx));
     	}
 
     	const block = {
@@ -42637,19 +42759,19 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			}
 
     			attr_dev(th0, "class", "svelte-e5o6by");
-    			add_location(th0, file$a, 55, 24, 2115);
+    			add_location(th0, file$a, 66, 24, 2466);
     			attr_dev(th1, "class", "svelte-e5o6by");
-    			add_location(th1, file$a, 56, 24, 2150);
+    			add_location(th1, file$a, 67, 24, 2501);
     			attr_dev(th2, "class", "svelte-e5o6by");
-    			add_location(th2, file$a, 57, 24, 2187);
+    			add_location(th2, file$a, 68, 24, 2538);
     			attr_dev(th3, "class", "text-nowrap svelte-e5o6by");
-    			add_location(th3, file$a, 58, 24, 2229);
+    			add_location(th3, file$a, 69, 24, 2580);
     			attr_dev(th4, "class", "w-25 svelte-e5o6by");
-    			add_location(th4, file$a, 59, 24, 2291);
+    			add_location(th4, file$a, 70, 24, 2642);
     			attr_dev(tr, "class", " svelte-e5o6by");
-    			add_location(tr, file$a, 54, 20, 2077);
-    			add_location(thead, file$a, 53, 16, 2049);
-    			add_location(tbody, file$a, 62, 16, 2390);
+    			add_location(tr, file$a, 65, 20, 2428);
+    			add_location(thead, file$a, 64, 16, 2400);
+    			add_location(tbody, file$a, 73, 16, 2741);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -42674,18 +42796,18 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*deleteElOfPanier, commandeEnCours*/ 9) {
-    				each_value_1 = /*commandeEnCours*/ ctx[0].panier.filter(func$1);
-    				validate_each_argument(each_value_1);
+    				each_value_2 = /*commandeEnCours*/ ctx[0].panier.filter(func$1);
+    				validate_each_argument(each_value_2);
     				group_outros();
-    				validate_each_keys(ctx, each_value_1, get_each_context_1$1, get_key);
-    				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value_1, each_1_lookup, tbody, outro_and_destroy_block, create_each_block_1$1, null, get_each_context_1$1);
+    				validate_each_keys(ctx, each_value_2, get_each_context_2$1, get_key);
+    				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value_2, each_1_lookup, tbody, outro_and_destroy_block, create_each_block_2$1, null, get_each_context_2$1);
     				check_outros();
     			}
     		},
     		i: function intro(local) {
     			if (current) return;
 
-    			for (let i = 0; i < each_value_1.length; i += 1) {
+    			for (let i = 0; i < each_value_2.length; i += 1) {
     				transition_in(each_blocks[i]);
     			}
 
@@ -42711,17 +42833,17 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3$5.name,
+    		id: create_default_slot_5$2.name,
     		type: "slot",
-    		source: "(53:12) <Table responsive centered size=\\\"sm\\\" class=\\\"w-100\\\">",
+    		source: "(64:12) <Table responsive centered size=\\\"sm\\\" class=\\\"w-100\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (96:32) <Button on:click={() => deleteElOfPanier(service.id)} color="danger">
-    function create_default_slot_2$8(ctx) {
+    // (107:32) <Button on:click={() => deleteElOfPanier(service.id)} color="danger">
+    function create_default_slot_4$2(ctx) {
     	let img;
     	let img_src_value;
 
@@ -42732,7 +42854,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			attr_dev(img, "alt", "validate");
     			attr_dev(img, "width", "20");
     			attr_dev(img, "height", "20");
-    			add_location(img, file$a, 96, 36, 4043);
+    			add_location(img, file$a, 107, 36, 4394);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -42744,24 +42866,24 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2$8.name,
+    		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(96:32) <Button on:click={() => deleteElOfPanier(service.id)} color=\\\"danger\\\">",
+    		source: "(107:32) <Button on:click={() => deleteElOfPanier(service.id)} color=\\\"danger\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (91:20) {#each commandeEnCours.panier.filter(prod => prod.type==="Service") as service, i (service.id)}
-    function create_each_block$3(key_1, ctx) {
+    // (102:20) {#each commandeEnCours.panier.filter(prod => prod.type==="Service") as service, i (service.id)}
+    function create_each_block_1$1(key_1, ctx) {
     	let tr;
     	let th0;
-    	let t0_value = /*i*/ ctx[15] + 1 + "";
+    	let t0_value = /*i*/ ctx[16] + 1 + "";
     	let t0;
     	let t1;
     	let th1;
-    	let t2_value = /*service*/ ctx[13].nom + "";
+    	let t2_value = /*service*/ ctx[17].nom + "";
     	let t2;
     	let t3;
     	let th2;
@@ -42770,13 +42892,13 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	let current;
 
     	function click_handler_1() {
-    		return /*click_handler_1*/ ctx[10](/*service*/ ctx[13]);
+    		return /*click_handler_1*/ ctx[10](/*service*/ ctx[17]);
     	}
 
     	button = new Button({
     			props: {
     				color: "danger",
-    				$$slots: { default: [create_default_slot_2$8] },
+    				$$slots: { default: [create_default_slot_4$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -42799,13 +42921,13 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			create_component(button.$$.fragment);
     			t4 = space();
     			attr_dev(th0, "class", "svelte-e5o6by");
-    			add_location(th0, file$a, 92, 28, 3806);
+    			add_location(th0, file$a, 103, 28, 4157);
     			attr_dev(th1, "class", "svelte-e5o6by");
-    			add_location(th1, file$a, 93, 28, 3849);
+    			add_location(th1, file$a, 104, 28, 4200);
     			attr_dev(th2, "class", "svelte-e5o6by");
-    			add_location(th2, file$a, 94, 28, 3900);
+    			add_location(th2, file$a, 105, 28, 4251);
     			attr_dev(tr, "class", "align-items-center svelte-e5o6by");
-    			add_location(tr, file$a, 91, 24, 3746);
+    			add_location(tr, file$a, 102, 24, 4097);
     			this.first = tr;
     		},
     		m: function mount(target, anchor) {
@@ -42823,11 +42945,11 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty & /*commandeEnCours*/ 1) && t0_value !== (t0_value = /*i*/ ctx[15] + 1 + "")) set_data_dev(t0, t0_value);
-    			if ((!current || dirty & /*commandeEnCours*/ 1) && t2_value !== (t2_value = /*service*/ ctx[13].nom + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t0_value !== (t0_value = /*i*/ ctx[16] + 1 + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t2_value !== (t2_value = /*service*/ ctx[17].nom + "")) set_data_dev(t2, t2_value);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 262144) {
+    			if (dirty & /*$$scope*/ 1048576) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -42850,17 +42972,17 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block$3.name,
+    		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(91:20) {#each commandeEnCours.panier.filter(prod => prod.type===\\\"Service\\\") as service, i (service.id)}",
+    		source: "(102:20) {#each commandeEnCours.panier.filter(prod => prod.type===\\\"Service\\\") as service, i (service.id)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (82:12) <Table responsive centered size="sm" class="w-100">
-    function create_default_slot_1$8(ctx) {
+    // (93:12) <Table responsive centered size="sm" class="w-100">
+    function create_default_slot_3$6(ctx) {
     	let thead;
     	let tr;
     	let th0;
@@ -42873,15 +42995,15 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	let each_blocks = [];
     	let each_1_lookup = new Map();
     	let current;
-    	let each_value = /*commandeEnCours*/ ctx[0].panier.filter(func_1$1);
-    	validate_each_argument(each_value);
-    	const get_key = ctx => /*service*/ ctx[13].id;
-    	validate_each_keys(ctx, each_value, get_each_context$3, get_key);
+    	let each_value_1 = /*commandeEnCours*/ ctx[0].panier.filter(func_1$1);
+    	validate_each_argument(each_value_1);
+    	const get_key = ctx => /*service*/ ctx[17].id;
+    	validate_each_keys(ctx, each_value_1, get_each_context_1$1, get_key);
 
-    	for (let i = 0; i < each_value.length; i += 1) {
-    		let child_ctx = get_each_context$3(ctx, each_value, i);
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		let child_ctx = get_each_context_1$1(ctx, each_value_1, i);
     		let key = get_key(child_ctx);
-    		each_1_lookup.set(key, each_blocks[i] = create_each_block$3(key, child_ctx));
+    		each_1_lookup.set(key, each_blocks[i] = create_each_block_1$1(key, child_ctx));
     	}
 
     	const block = {
@@ -42904,15 +43026,15 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			}
 
     			attr_dev(th0, "class", "svelte-e5o6by");
-    			add_location(th0, file$a, 84, 24, 3427);
+    			add_location(th0, file$a, 95, 24, 3778);
     			attr_dev(th1, "class", "svelte-e5o6by");
-    			add_location(th1, file$a, 85, 24, 3462);
+    			add_location(th1, file$a, 96, 24, 3813);
     			attr_dev(th2, "class", "w-25 svelte-e5o6by");
-    			add_location(th2, file$a, 86, 24, 3499);
+    			add_location(th2, file$a, 97, 24, 3850);
     			attr_dev(tr, "class", "svelte-e5o6by");
-    			add_location(tr, file$a, 83, 20, 3398);
-    			add_location(thead, file$a, 82, 16, 3370);
-    			add_location(tbody, file$a, 89, 16, 3598);
+    			add_location(tr, file$a, 94, 20, 3749);
+    			add_location(thead, file$a, 93, 16, 3721);
+    			add_location(tbody, file$a, 100, 16, 3949);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -42933,18 +43055,18 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*deleteElOfPanier, commandeEnCours*/ 9) {
-    				each_value = /*commandeEnCours*/ ctx[0].panier.filter(func_1$1);
-    				validate_each_argument(each_value);
+    				each_value_1 = /*commandeEnCours*/ ctx[0].panier.filter(func_1$1);
+    				validate_each_argument(each_value_1);
     				group_outros();
-    				validate_each_keys(ctx, each_value, get_each_context$3, get_key);
-    				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, tbody, outro_and_destroy_block, create_each_block$3, null, get_each_context$3);
+    				validate_each_keys(ctx, each_value_1, get_each_context_1$1, get_key);
+    				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value_1, each_1_lookup, tbody, outro_and_destroy_block, create_each_block_1$1, null, get_each_context_1$1);
     				check_outros();
     			}
     		},
     		i: function intro(local) {
     			if (current) return;
 
-    			for (let i = 0; i < each_value.length; i += 1) {
+    			for (let i = 0; i < each_value_1.length; i += 1) {
     				transition_in(each_blocks[i]);
     			}
 
@@ -42970,16 +43092,319 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1$8.name,
+    		id: create_default_slot_3$6.name,
     		type: "slot",
-    		source: "(82:12) <Table responsive centered size=\\\"sm\\\" class=\\\"w-100\\\">",
+    		source: "(93:12) <Table responsive centered size=\\\"sm\\\" class=\\\"w-100\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (107:4) <Button class="ms-auto me-2 mb-2 colored" on:click={commander} disabled={commandeEnCours.panier.length ==0}>
+    // (136:32) <Button on:click={() => deleteElOfPanier(produit.id)} color="danger">
+    function create_default_slot_2$8(ctx) {
+    	let img;
+    	let img_src_value;
+
+    	const block = {
+    		c: function create() {
+    			img = element("img");
+    			if (!src_url_equal(img.src, img_src_value = 'images/icons/poubelle.png')) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "validate");
+    			attr_dev(img, "width", "20");
+    			attr_dev(img, "height", "20");
+    			add_location(img, file$a, 136, 32, 5726);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, img, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(img);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_2$8.name,
+    		type: "slot",
+    		source: "(136:32) <Button on:click={() => deleteElOfPanier(produit.id)} color=\\\"danger\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (129:20) {#each commandeEnCours.panier.filter(prod => prod.type==="Goodies") as produit, i (produit.id)}
+    function create_each_block$3(key_1, ctx) {
+    	let tr;
+    	let th0;
+    	let t0_value = /*i*/ ctx[16] + 1 + "";
+    	let t0;
+    	let t1;
+    	let th1;
+    	let t2_value = /*produit*/ ctx[14].nom + "";
+    	let t2;
+    	let t3;
+    	let th2;
+    	let t4_value = /*produit*/ ctx[14].quantite + "";
+    	let t4;
+    	let t5;
+    	let th3;
+    	let t6_value = (/*produit*/ ctx[14].prix * /*produit*/ ctx[14].quantite).toFixed(2) + "";
+    	let t6;
+    	let t7;
+    	let th4;
+    	let button;
+    	let t8;
+    	let current;
+
+    	function click_handler_2() {
+    		return /*click_handler_2*/ ctx[11](/*produit*/ ctx[14]);
+    	}
+
+    	button = new Button({
+    			props: {
+    				color: "danger",
+    				$$slots: { default: [create_default_slot_2$8] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", click_handler_2);
+
+    	const block = {
+    		key: key_1,
+    		first: null,
+    		c: function create() {
+    			tr = element("tr");
+    			th0 = element("th");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			th1 = element("th");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			th2 = element("th");
+    			t4 = text(t4_value);
+    			t5 = space();
+    			th3 = element("th");
+    			t6 = text(t6_value);
+    			t7 = space();
+    			th4 = element("th");
+    			create_component(button.$$.fragment);
+    			t8 = space();
+    			attr_dev(th0, "class", "svelte-e5o6by");
+    			add_location(th0, file$a, 130, 28, 5355);
+    			attr_dev(th1, "class", "svelte-e5o6by");
+    			add_location(th1, file$a, 131, 28, 5398);
+    			attr_dev(th2, "class", "svelte-e5o6by");
+    			add_location(th2, file$a, 132, 28, 5449);
+    			attr_dev(th3, "class", "svelte-e5o6by");
+    			add_location(th3, file$a, 133, 28, 5505);
+    			attr_dev(th4, "class", "svelte-e5o6by");
+    			add_location(th4, file$a, 134, 28, 5587);
+    			attr_dev(tr, "class", "align-items-center svelte-e5o6by");
+    			add_location(tr, file$a, 129, 24, 5294);
+    			this.first = tr;
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, tr, anchor);
+    			append_dev(tr, th0);
+    			append_dev(th0, t0);
+    			append_dev(tr, t1);
+    			append_dev(tr, th1);
+    			append_dev(th1, t2);
+    			append_dev(tr, t3);
+    			append_dev(tr, th2);
+    			append_dev(th2, t4);
+    			append_dev(tr, t5);
+    			append_dev(tr, th3);
+    			append_dev(th3, t6);
+    			append_dev(tr, t7);
+    			append_dev(tr, th4);
+    			mount_component(button, th4, null);
+    			append_dev(tr, t8);
+    			current = true;
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t0_value !== (t0_value = /*i*/ ctx[16] + 1 + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t2_value !== (t2_value = /*produit*/ ctx[14].nom + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t4_value !== (t4_value = /*produit*/ ctx[14].quantite + "")) set_data_dev(t4, t4_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 1) && t6_value !== (t6_value = (/*produit*/ ctx[14].prix * /*produit*/ ctx[14].quantite).toFixed(2) + "")) set_data_dev(t6, t6_value);
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1048576) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(tr);
+    			destroy_component(button);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$3.name,
+    		type: "each",
+    		source: "(129:20) {#each commandeEnCours.panier.filter(prod => prod.type===\\\"Goodies\\\") as produit, i (produit.id)}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (118:12) <Table responsive centered size="sm" class="w-100">
+    function create_default_slot_1$8(ctx) {
+    	let thead;
+    	let tr;
+    	let th0;
+    	let t1;
+    	let th1;
+    	let t3;
+    	let th2;
+    	let t5;
+    	let th3;
+    	let t7;
+    	let th4;
+    	let t9;
+    	let tbody;
+    	let each_blocks = [];
+    	let each_1_lookup = new Map();
+    	let current;
+    	let each_value = /*commandeEnCours*/ ctx[0].panier.filter(func_2$1);
+    	validate_each_argument(each_value);
+    	const get_key = ctx => /*produit*/ ctx[14].id;
+    	validate_each_keys(ctx, each_value, get_each_context$3, get_key);
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		let child_ctx = get_each_context$3(ctx, each_value, i);
+    		let key = get_key(child_ctx);
+    		each_1_lookup.set(key, each_blocks[i] = create_each_block$3(key, child_ctx));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			thead = element("thead");
+    			tr = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "#";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Nom";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "quantite";
+    			t5 = space();
+    			th3 = element("th");
+    			th3.textContent = "prix (€)";
+    			t7 = space();
+    			th4 = element("th");
+    			th4.textContent = "supprimer";
+    			t9 = space();
+    			tbody = element("tbody");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(th0, "class", "svelte-e5o6by");
+    			add_location(th0, file$a, 120, 24, 4871);
+    			attr_dev(th1, "class", "svelte-e5o6by");
+    			add_location(th1, file$a, 121, 24, 4906);
+    			attr_dev(th2, "class", "svelte-e5o6by");
+    			add_location(th2, file$a, 122, 24, 4943);
+    			attr_dev(th3, "class", "text-nowrap svelte-e5o6by");
+    			add_location(th3, file$a, 123, 24, 4985);
+    			attr_dev(th4, "class", "w-25 svelte-e5o6by");
+    			add_location(th4, file$a, 124, 24, 5047);
+    			attr_dev(tr, "class", " svelte-e5o6by");
+    			add_location(tr, file$a, 119, 20, 4833);
+    			add_location(thead, file$a, 118, 16, 4805);
+    			add_location(tbody, file$a, 127, 16, 5146);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, thead, anchor);
+    			append_dev(thead, tr);
+    			append_dev(tr, th0);
+    			append_dev(tr, t1);
+    			append_dev(tr, th1);
+    			append_dev(tr, t3);
+    			append_dev(tr, th2);
+    			append_dev(tr, t5);
+    			append_dev(tr, th3);
+    			append_dev(tr, t7);
+    			append_dev(tr, th4);
+    			insert_dev(target, t9, anchor);
+    			insert_dev(target, tbody, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(tbody, null);
+    			}
+
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*deleteElOfPanier, commandeEnCours*/ 9) {
+    				each_value = /*commandeEnCours*/ ctx[0].panier.filter(func_2$1);
+    				validate_each_argument(each_value);
+    				group_outros();
+    				validate_each_keys(ctx, each_value, get_each_context$3, get_key);
+    				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, tbody, outro_and_destroy_block, create_each_block$3, null, get_each_context$3);
+    				check_outros();
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(thead);
+    			if (detaching) detach_dev(t9);
+    			if (detaching) detach_dev(tbody);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].d();
+    			}
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_1$8.name,
+    		type: "slot",
+    		source: "(118:12) <Table responsive centered size=\\\"sm\\\" class=\\\"w-100\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (147:4) <Button class="ms-auto me-2 mb-2 colored" on:click={commander} disabled={commandeEnCours.panier.length ==0}>
     function create_default_slot$a(ctx) {
     	let t;
 
@@ -42999,7 +43424,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot$a.name,
     		type: "slot",
-    		source: "(107:4) <Button class=\\\"ms-auto me-2 mb-2 colored\\\" on:click={commander} disabled={commandeEnCours.panier.length ==0}>",
+    		source: "(147:4) <Button class=\\\"ms-auto me-2 mb-2 colored\\\" on:click={commander} disabled={commandeEnCours.panier.length ==0}>",
     		ctx
     	});
 
@@ -43011,12 +43436,12 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	let t0;
     	let modalconfirmed;
     	let t1;
-    	let div3;
+    	let div4;
     	let h1;
     	let t3;
     	let hr0;
     	let t4;
-    	let div2;
+    	let div3;
     	let div0;
     	let h20;
     	let t6;
@@ -43027,8 +43452,13 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	let t9;
     	let table1;
     	let t10;
+    	let div2;
+    	let h22;
+    	let t12;
+    	let table2;
+    	let t13;
     	let hr1;
-    	let t11;
+    	let t14;
     	let button;
     	let current;
 
@@ -43056,13 +43486,25 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     				centered: true,
     				size: "sm",
     				class: "w-100",
-    				$$slots: { default: [create_default_slot_3$5] },
+    				$$slots: { default: [create_default_slot_5$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
     	table1 = new Table({
+    			props: {
+    				responsive: true,
+    				centered: true,
+    				size: "sm",
+    				class: "w-100",
+    				$$slots: { default: [create_default_slot_3$6] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	table2 = new Table({
     			props: {
     				responsive: true,
     				centered: true,
@@ -43092,13 +43534,13 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			t0 = space();
     			create_component(modalconfirmed.$$.fragment);
     			t1 = space();
-    			div3 = element("div");
+    			div4 = element("div");
     			h1 = element("h1");
     			h1.textContent = "Panier";
     			t3 = space();
     			hr0 = element("hr");
     			t4 = space();
-    			div2 = element("div");
+    			div3 = element("div");
     			div0 = element("div");
     			h20 = element("h2");
     			h20.textContent = "Plats :";
@@ -43111,25 +43553,34 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			t9 = space();
     			create_component(table1.$$.fragment);
     			t10 = space();
+    			div2 = element("div");
+    			h22 = element("h2");
+    			h22.textContent = "Goodies :";
+    			t12 = space();
+    			create_component(table2.$$.fragment);
+    			t13 = space();
     			hr1 = element("hr");
-    			t11 = space();
+    			t14 = space();
     			create_component(button.$$.fragment);
     			attr_dev(h1, "class", "text-center");
-    			add_location(h1, file$a, 47, 4, 1831);
-    			add_location(hr0, file$a, 48, 4, 1871);
+    			add_location(h1, file$a, 58, 4, 2182);
+    			add_location(hr0, file$a, 59, 4, 2222);
     			attr_dev(h20, "class", "svelte-e5o6by");
-    			add_location(h20, file$a, 51, 12, 1952);
-    			add_location(div0, file$a, 50, 8, 1934);
+    			add_location(h20, file$a, 62, 12, 2303);
+    			add_location(div0, file$a, 61, 8, 2285);
     			attr_dev(h21, "class", "svelte-e5o6by");
-    			add_location(h21, file$a, 80, 12, 3270);
-    			add_location(div1, file$a, 79, 8, 3252);
-    			attr_dev(div2, "class", "d-flex flex-column h-100 gap-5");
-    			add_location(div2, file$a, 49, 4, 1881);
+    			add_location(h21, file$a, 91, 12, 3621);
+    			add_location(div1, file$a, 90, 8, 3603);
+    			attr_dev(h22, "class", "svelte-e5o6by");
+    			add_location(h22, file$a, 116, 12, 4706);
+    			add_location(div2, file$a, 115, 8, 4688);
+    			attr_dev(div3, "class", "d-flex flex-column h-100 gap-5");
+    			add_location(div3, file$a, 60, 4, 2232);
     			attr_dev(hr1, "class", "mt-auto");
-    			add_location(hr1, file$a, 105, 4, 4344);
-    			attr_dev(div3, "id", "panier");
-    			attr_dev(div3, "class", "d-flex justify-content-start flex-column me-2 svelte-e5o6by");
-    			add_location(div3, file$a, 46, 0, 1755);
+    			add_location(hr1, file$a, 145, 4, 6011);
+    			attr_dev(div4, "id", "panier");
+    			attr_dev(div4, "class", "d-flex justify-content-start flex-column me-2 svelte-e5o6by");
+    			add_location(div4, file$a, 57, 0, 2106);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -43139,25 +43590,30 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			insert_dev(target, t0, anchor);
     			mount_component(modalconfirmed, target, anchor);
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, div3, anchor);
-    			append_dev(div3, h1);
-    			append_dev(div3, t3);
-    			append_dev(div3, hr0);
-    			append_dev(div3, t4);
-    			append_dev(div3, div2);
-    			append_dev(div2, div0);
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, h1);
+    			append_dev(div4, t3);
+    			append_dev(div4, hr0);
+    			append_dev(div4, t4);
+    			append_dev(div4, div3);
+    			append_dev(div3, div0);
     			append_dev(div0, h20);
     			append_dev(div0, t6);
     			mount_component(table0, div0, null);
-    			append_dev(div2, t7);
-    			append_dev(div2, div1);
+    			append_dev(div3, t7);
+    			append_dev(div3, div1);
     			append_dev(div1, h21);
     			append_dev(div1, t9);
     			mount_component(table1, div1, null);
     			append_dev(div3, t10);
-    			append_dev(div3, hr1);
-    			append_dev(div3, t11);
-    			mount_component(button, div3, null);
+    			append_dev(div3, div2);
+    			append_dev(div2, h22);
+    			append_dev(div2, t12);
+    			mount_component(table2, div2, null);
+    			append_dev(div4, t13);
+    			append_dev(div4, hr1);
+    			append_dev(div4, t14);
+    			mount_component(button, div4, null);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -43171,22 +43627,29 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			modalconfirmed.$set(modalconfirmed_changes);
     			const table0_changes = {};
 
-    			if (dirty & /*$$scope, commandeEnCours*/ 262145) {
+    			if (dirty & /*$$scope, commandeEnCours*/ 1048577) {
     				table0_changes.$$scope = { dirty, ctx };
     			}
 
     			table0.$set(table0_changes);
     			const table1_changes = {};
 
-    			if (dirty & /*$$scope, commandeEnCours*/ 262145) {
+    			if (dirty & /*$$scope, commandeEnCours*/ 1048577) {
     				table1_changes.$$scope = { dirty, ctx };
     			}
 
     			table1.$set(table1_changes);
+    			const table2_changes = {};
+
+    			if (dirty & /*$$scope, commandeEnCours*/ 1048577) {
+    				table2_changes.$$scope = { dirty, ctx };
+    			}
+
+    			table2.$set(table2_changes);
     			const button_changes = {};
     			if (dirty & /*commandeEnCours*/ 1) button_changes.disabled = /*commandeEnCours*/ ctx[0].panier.length == 0;
 
-    			if (dirty & /*$$scope*/ 262144) {
+    			if (dirty & /*$$scope*/ 1048576) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -43198,6 +43661,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			transition_in(modalconfirmed.$$.fragment, local);
     			transition_in(table0.$$.fragment, local);
     			transition_in(table1.$$.fragment, local);
+    			transition_in(table2.$$.fragment, local);
     			transition_in(button.$$.fragment, local);
     			current = true;
     		},
@@ -43206,6 +43670,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			transition_out(modalconfirmed.$$.fragment, local);
     			transition_out(table0.$$.fragment, local);
     			transition_out(table1.$$.fragment, local);
+    			transition_out(table2.$$.fragment, local);
     			transition_out(button.$$.fragment, local);
     			current = false;
     		},
@@ -43214,9 +43679,10 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			if (detaching) detach_dev(t0);
     			destroy_component(modalconfirmed, detaching);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(div3);
+    			if (detaching) detach_dev(div4);
     			destroy_component(table0);
     			destroy_component(table1);
+    			destroy_component(table2);
     			destroy_component(button);
     		}
     	};
@@ -43234,6 +43700,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     const func$1 = prod => prod.type !== "Service";
     const func_1$1 = prod => prod.type === "Service";
+    const func_2$1 = prod => prod.type === "Goodies";
 
     function instance$b($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
@@ -43250,14 +43717,26 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	async function commander() {
     		panierCheck = checkPanier_1(commandeEnCours.panier);
     		timeCheck = await checkTime$1();
+    		let onlyGoodies = true;
 
-    		if (typeof panierCheck !== "boolean") {
-    			addToast(panierCheck, "warn", 4000);
-    		} else if (typeof timeCheck !== "boolean") {
-    			addToast(timeCheck, "warn", 4000);
-    		} else if (panierCheck && timeCheck) {
-    			$$invalidate(1, openFirstModal = false); // si ça reste "true", on refait passer à false puis re true pour que ça update bien le component ModalConfirm
+    		commandeEnCours.panier.forEach(prod => {
+    			if (prod.type !== "Goodies") {
+    				onlyGoodies = false;
+    			}
+    		});
+
+    		if (onlyGoodies) {
+    			$$invalidate(1, openFirstModal = false);
     			$$invalidate(1, openFirstModal = true);
+    		} else {
+    			if (typeof panierCheck !== "boolean") {
+    				addToast(panierCheck, "warn", 4000);
+    			} else if (typeof timeCheck !== "boolean") {
+    				addToast(timeCheck, "warn", 4000);
+    			} else if (panierCheck && timeCheck) {
+    				$$invalidate(1, openFirstModal = false); // si ça reste "true", on refait passer à false puis re true pour que ça update bien le component ModalConfirm
+    				$$invalidate(1, openFirstModal = true);
+    			}
     		}
 
     		panierCheck = false;
@@ -43287,6 +43766,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	const click_handler = produit => deleteElOfPanier(produit.id);
     	const click_handler_1 = service => deleteElOfPanier(service.id);
+    	const click_handler_2 = produit => deleteElOfPanier(produit.id);
 
     	$$self.$$set = $$props => {
     		if ('updatePanier' in $$props) $$invalidate(7, updatePanier = $$props.updatePanier);
@@ -43340,7 +43820,8 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		updatePanier,
     		resetCommande,
     		click_handler,
-    		click_handler_1
+    		click_handler_1,
+    		click_handler_2
     	];
     }
 
@@ -43402,15 +43883,6 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	}
     }
 
-    const getProduits = async () => {
-        try {
-          const response = await API.get("produits");
-          return response;
-        } catch (error) {
-          return {error:error.response.data}
-        }
-    };
-
     /* src/frontend/components/main/sos/menus/plat/modal_plat_info.svelte generated by Svelte v3.46.1 */
     const file$9 = "src/frontend/components/main/sos/menus/plat/modal_plat_info.svelte";
 
@@ -43421,7 +43893,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     }
 
     // (10:4) <ModalHeader toggle={toggle}>
-    function create_default_slot_3$4(ctx) {
+    function create_default_slot_3$5(ctx) {
     	let t_value = /*produit*/ ctx[1].nom + "";
     	let t;
 
@@ -43442,7 +43914,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3$4.name,
+    		id: create_default_slot_3$5.name,
     		type: "slot",
     		source: "(10:4) <ModalHeader toggle={toggle}>",
     		ctx
@@ -43493,7 +43965,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     }
 
     // (16:8) {#if produit.ingredients !== null}
-    function create_if_block$4(ctx) {
+    function create_if_block$3(ctx) {
     	let h3;
     	let t1;
     	let ul;
@@ -43563,7 +44035,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$4.name,
+    		id: create_if_block$3.name,
     		type: "if",
     		source: "(16:8) {#if produit.ingredients !== null}",
     		ctx
@@ -43612,7 +44084,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	let t;
     	let if_block1_anchor;
     	let if_block0 = /*produit*/ ctx[1].description !== null && create_if_block_1$2(ctx);
-    	let if_block1 = /*produit*/ ctx[1].ingredients !== null && create_if_block$4(ctx);
+    	let if_block1 = /*produit*/ ctx[1].ingredients !== null && create_if_block$3(ctx);
 
     	const block = {
     		c: function create() {
@@ -43645,7 +44117,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
     				} else {
-    					if_block1 = create_if_block$4(ctx);
+    					if_block1 = create_if_block$3(ctx);
     					if_block1.c();
     					if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
     				}
@@ -43724,7 +44196,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	modalheader = new ModalHeader({
     			props: {
     				toggle: /*toggle*/ ctx[2],
-    				$$slots: { default: [create_default_slot_3$4] },
+    				$$slots: { default: [create_default_slot_3$5] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -44188,7 +44660,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     }
 
     // (59:12) <Tooltip  target={`info${produit.id}`} placement="bottom">
-    function create_default_slot_3$3(ctx) {
+    function create_default_slot_3$4(ctx) {
     	let t;
 
     	const block = {
@@ -44205,7 +44677,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3$3.name,
+    		id: create_default_slot_3$4.name,
     		type: "slot",
     		source: "(59:12) <Tooltip  target={`info${produit.id}`} placement=\\\"bottom\\\">",
     		ctx
@@ -44377,7 +44849,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     }
 
     // (79:8) {#if produit.quantiteStockMax<=0}
-    function create_if_block$3(ctx) {
+    function create_if_block$2(ctx) {
     	let p;
 
     	const block = {
@@ -44399,7 +44871,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$3.name,
+    		id: create_if_block$2.name,
     		type: "if",
     		source: "(79:8) {#if produit.quantiteStockMax<=0}",
     		ctx
@@ -44502,7 +44974,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			props: {
     				target: `info${/*produit*/ ctx[0].id}`,
     				placement: "bottom",
-    				$$slots: { default: [create_default_slot_3$3] },
+    				$$slots: { default: [create_default_slot_3$4] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -44531,7 +45003,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		});
 
     	button1.$on("click", /*click_handler_1*/ ctx[8]);
-    	const if_block_creators = [create_if_block$3, create_else_block$2];
+    	const if_block_creators = [create_if_block$2, create_else_block$2];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -44971,7 +45443,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     const file$7 = "src/frontend/components/main/sos/menus/service/modal_service_info.svelte";
 
     // (10:4) <ModalHeader toggle={toggle}>
-    function create_default_slot_3$2(ctx) {
+    function create_default_slot_3$3(ctx) {
     	let t_value = /*produit*/ ctx[1].nom + "";
     	let t;
 
@@ -44992,7 +45464,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3$2.name,
+    		id: create_default_slot_3$3.name,
     		type: "slot",
     		source: "(10:4) <ModalHeader toggle={toggle}>",
     		ctx
@@ -45101,7 +45573,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	modalheader = new ModalHeader({
     			props: {
     				toggle: /*toggle*/ ctx[2],
-    				$$slots: { default: [create_default_slot_3$2] },
+    				$$slots: { default: [create_default_slot_3$3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -45750,7 +46222,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     }
 
     // (56:8) {#if produit.quantiteStockMax<=0}
-    function create_if_block$2(ctx) {
+    function create_if_block$1(ctx) {
     	let p;
 
     	const block = {
@@ -45772,7 +46244,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$2.name,
+    		id: create_if_block$1.name,
     		type: "if",
     		source: "(56:8) {#if produit.quantiteStockMax<=0}",
     		ctx
@@ -45870,7 +46342,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		});
 
     	button1.$on("click", /*click_handler_1*/ ctx[6]);
-    	const if_block_creators = [create_if_block$2, create_else_block$1];
+    	const if_block_creators = [create_if_block$1, create_else_block$1];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -46180,37 +46652,43 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[6] = list[i];
+    	child_ctx[4] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[9] = list[i];
+    	child_ctx[7] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[9] = list[i];
+    	child_ctx[10] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[9] = list[i];
+    	child_ctx[10] = list[i];
     	return child_ctx;
     }
 
-    // (39:16) {#if plat_du_jour!==undefined}
-    function create_if_block$1(ctx) {
+    function get_each_context_4(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[10] = list[i];
+    	return child_ctx;
+    }
+
+    // (36:16) {#each produits.filter(prod => (prod.type==="Plat" && prod.plat_du_jour) || prod.type==="Accompagnement") as produit}
+    function create_each_block_4(ctx) {
     	let produit;
     	let current;
 
     	produit = new Plat({
     			props: {
-    				produit: /*plat_du_jour*/ ctx[1],
-    				addInPanier: /*addInPanier*/ ctx[2]
+    				produit: /*produit*/ ctx[10],
+    				addInPanier: /*addInPanier*/ ctx[1]
     			},
     			$$inline: true
     		});
@@ -46225,7 +46703,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		},
     		p: function update(ctx, dirty) {
     			const produit_changes = {};
-    			if (dirty & /*plat_du_jour*/ 2) produit_changes.produit = /*plat_du_jour*/ ctx[1];
+    			if (dirty & /*produits*/ 1) produit_changes.produit = /*produit*/ ctx[10];
     			produit.$set(produit_changes);
     		},
     		i: function intro(local) {
@@ -46244,24 +46722,24 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
-    		type: "if",
-    		source: "(39:16) {#if plat_du_jour!==undefined}",
+    		id: create_each_block_4.name,
+    		type: "each",
+    		source: "(36:16) {#each produits.filter(prod => (prod.type===\\\"Plat\\\" && prod.plat_du_jour) || prod.type===\\\"Accompagnement\\\") as produit}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (42:16) {#each produits.filter(prod => prod.type==="Accompagnement") as produit}
+    // (41:16) {#each produits.filter(prod => prod.type==="Dessert") as produit}
     function create_each_block_3(ctx) {
     	let produit;
     	let current;
 
     	produit = new Plat({
     			props: {
-    				produit: /*produit*/ ctx[9],
-    				addInPanier: /*addInPanier*/ ctx[2]
+    				produit: /*produit*/ ctx[10],
+    				addInPanier: /*addInPanier*/ ctx[1]
     			},
     			$$inline: true
     		});
@@ -46276,7 +46754,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		},
     		p: function update(ctx, dirty) {
     			const produit_changes = {};
-    			if (dirty & /*produits*/ 1) produit_changes.produit = /*produit*/ ctx[9];
+    			if (dirty & /*produits*/ 1) produit_changes.produit = /*produit*/ ctx[10];
     			produit.$set(produit_changes);
     		},
     		i: function intro(local) {
@@ -46297,73 +46775,22 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(42:16) {#each produits.filter(prod => prod.type===\\\"Accompagnement\\\") as produit}",
+    		source: "(41:16) {#each produits.filter(prod => prod.type===\\\"Dessert\\\") as produit}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (47:16) {#each produits.filter(prod => prod.type==="Dessert") as produit}
+    // (45:16) {#each produits.filter(prod => prod.type==="Boisson") as produit}
     function create_each_block_2(ctx) {
-    	let produit;
-    	let current;
-
-    	produit = new Plat({
-    			props: {
-    				produit: /*produit*/ ctx[9],
-    				addInPanier: /*addInPanier*/ ctx[2]
-    			},
-    			$$inline: true
-    		});
-
-    	const block = {
-    		c: function create() {
-    			create_component(produit.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(produit, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const produit_changes = {};
-    			if (dirty & /*produits*/ 1) produit_changes.produit = /*produit*/ ctx[9];
-    			produit.$set(produit_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(produit.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(produit.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(produit, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_each_block_2.name,
-    		type: "each",
-    		source: "(47:16) {#each produits.filter(prod => prod.type===\\\"Dessert\\\") as produit}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (51:16) {#each produits.filter(prod => prod.type==="Boisson") as produit}
-    function create_each_block_1(ctx) {
     	let boisson;
     	let current;
 
     	boisson = new Boisson({
     			props: {
-    				produit: /*produit*/ ctx[9],
-    				addInPanier: /*addInPanier*/ ctx[2]
+    				produit: /*produit*/ ctx[10],
+    				addInPanier: /*addInPanier*/ ctx[1]
     			},
     			$$inline: true
     		});
@@ -46378,7 +46805,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		},
     		p: function update(ctx, dirty) {
     			const boisson_changes = {};
-    			if (dirty & /*produits*/ 1) boisson_changes.produit = /*produit*/ ctx[9];
+    			if (dirty & /*produits*/ 1) boisson_changes.produit = /*produit*/ ctx[10];
     			boisson.$set(boisson_changes);
     		},
     		i: function intro(local) {
@@ -46397,57 +46824,55 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block_1.name,
+    		id: create_each_block_2.name,
     		type: "each",
-    		source: "(51:16) {#each produits.filter(prod => prod.type===\\\"Boisson\\\") as produit}",
+    		source: "(45:16) {#each produits.filter(prod => prod.type===\\\"Boisson\\\") as produit}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (37:8) <TabPane tabId="Plats" tab="Plats" active>
-    function create_default_slot_2$3(ctx) {
+    // (34:8) <TabPane tabId="Plats" tab="Plats" active>
+    function create_default_slot_3$2(ctx) {
     	let div;
     	let t0;
-    	let t1;
     	let hr0;
+    	let t1;
     	let t2;
-    	let t3;
     	let hr1;
-    	let t4;
+    	let t3;
     	let current;
-    	let if_block = /*plat_du_jour*/ ctx[1] !== undefined && create_if_block$1(ctx);
-    	let each_value_3 = /*produits*/ ctx[0].filter(func);
-    	validate_each_argument(each_value_3);
+    	let each_value_4 = /*produits*/ ctx[0].filter(func);
+    	validate_each_argument(each_value_4);
     	let each_blocks_2 = [];
 
-    	for (let i = 0; i < each_value_3.length; i += 1) {
-    		each_blocks_2[i] = create_each_block_3(get_each_context_3(ctx, each_value_3, i));
+    	for (let i = 0; i < each_value_4.length; i += 1) {
+    		each_blocks_2[i] = create_each_block_4(get_each_context_4(ctx, each_value_4, i));
     	}
 
     	const out = i => transition_out(each_blocks_2[i], 1, 1, () => {
     		each_blocks_2[i] = null;
     	});
 
-    	let each_value_2 = /*produits*/ ctx[0].filter(func_1);
-    	validate_each_argument(each_value_2);
+    	let each_value_3 = /*produits*/ ctx[0].filter(func_1);
+    	validate_each_argument(each_value_3);
     	let each_blocks_1 = [];
 
-    	for (let i = 0; i < each_value_2.length; i += 1) {
-    		each_blocks_1[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
+    	for (let i = 0; i < each_value_3.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_3(get_each_context_3(ctx, each_value_3, i));
     	}
 
     	const out_1 = i => transition_out(each_blocks_1[i], 1, 1, () => {
     		each_blocks_1[i] = null;
     	});
 
-    	let each_value_1 = /*produits*/ ctx[0].filter(func_2);
-    	validate_each_argument(each_value_1);
+    	let each_value_2 = /*produits*/ ctx[0].filter(func_2);
+    	validate_each_argument(each_value_2);
     	let each_blocks = [];
 
-    	for (let i = 0; i < each_value_1.length; i += 1) {
-    		each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+    	for (let i = 0; i < each_value_2.length; i += 1) {
+    		each_blocks[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
     	}
 
     	const out_2 = i => transition_out(each_blocks[i], 1, 1, () => {
@@ -46457,56 +46882,52 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	const block = {
     		c: function create() {
     			div = element("div");
-    			if (if_block) if_block.c();
-    			t0 = space();
 
     			for (let i = 0; i < each_blocks_2.length; i += 1) {
     				each_blocks_2[i].c();
     			}
 
-    			t1 = space();
+    			t0 = space();
     			hr0 = element("hr");
-    			t2 = space();
+    			t1 = space();
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].c();
     			}
 
-    			t3 = space();
+    			t2 = space();
     			hr1 = element("hr");
-    			t4 = space();
+    			t3 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
     			attr_dev(hr0, "class", "w-100");
-    			add_location(hr0, file$4, 45, 16, 1630);
+    			add_location(hr0, file$4, 39, 16, 1332);
     			attr_dev(hr1, "class", "w-100");
-    			add_location(hr1, file$4, 49, 16, 1835);
+    			add_location(hr1, file$4, 43, 16, 1537);
     			attr_dev(div, "class", "d-flex flex-wrap justify-content-around");
-    			add_location(div, file$4, 37, 12, 1230);
+    			add_location(div, file$4, 34, 12, 1040);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			if (if_block) if_block.m(div, null);
-    			append_dev(div, t0);
 
     			for (let i = 0; i < each_blocks_2.length; i += 1) {
     				each_blocks_2[i].m(div, null);
     			}
 
-    			append_dev(div, t1);
+    			append_dev(div, t0);
     			append_dev(div, hr0);
-    			append_dev(div, t2);
+    			append_dev(div, t1);
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].m(div, null);
     			}
 
-    			append_dev(div, t3);
+    			append_dev(div, t2);
     			append_dev(div, hr1);
-    			append_dev(div, t4);
+    			append_dev(div, t3);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(div, null);
@@ -46515,98 +46936,75 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (/*plat_du_jour*/ ctx[1] !== undefined) {
-    				if (if_block) {
-    					if_block.p(ctx, dirty);
-
-    					if (dirty & /*plat_du_jour*/ 2) {
-    						transition_in(if_block, 1);
-    					}
-    				} else {
-    					if_block = create_if_block$1(ctx);
-    					if_block.c();
-    					transition_in(if_block, 1);
-    					if_block.m(div, t0);
-    				}
-    			} else if (if_block) {
-    				group_outros();
-
-    				transition_out(if_block, 1, 1, () => {
-    					if_block = null;
-    				});
-
-    				check_outros();
-    			}
-
-    			if (dirty & /*produits, addInPanier*/ 5) {
-    				each_value_3 = /*produits*/ ctx[0].filter(func);
-    				validate_each_argument(each_value_3);
+    			if (dirty & /*produits, addInPanier*/ 3) {
+    				each_value_4 = /*produits*/ ctx[0].filter(func);
+    				validate_each_argument(each_value_4);
     				let i;
 
-    				for (i = 0; i < each_value_3.length; i += 1) {
-    					const child_ctx = get_each_context_3(ctx, each_value_3, i);
+    				for (i = 0; i < each_value_4.length; i += 1) {
+    					const child_ctx = get_each_context_4(ctx, each_value_4, i);
 
     					if (each_blocks_2[i]) {
     						each_blocks_2[i].p(child_ctx, dirty);
     						transition_in(each_blocks_2[i], 1);
     					} else {
-    						each_blocks_2[i] = create_each_block_3(child_ctx);
+    						each_blocks_2[i] = create_each_block_4(child_ctx);
     						each_blocks_2[i].c();
     						transition_in(each_blocks_2[i], 1);
-    						each_blocks_2[i].m(div, t1);
+    						each_blocks_2[i].m(div, t0);
     					}
     				}
 
     				group_outros();
 
-    				for (i = each_value_3.length; i < each_blocks_2.length; i += 1) {
+    				for (i = each_value_4.length; i < each_blocks_2.length; i += 1) {
     					out(i);
     				}
 
     				check_outros();
     			}
 
-    			if (dirty & /*produits, addInPanier*/ 5) {
-    				each_value_2 = /*produits*/ ctx[0].filter(func_1);
-    				validate_each_argument(each_value_2);
+    			if (dirty & /*produits, addInPanier*/ 3) {
+    				each_value_3 = /*produits*/ ctx[0].filter(func_1);
+    				validate_each_argument(each_value_3);
     				let i;
 
-    				for (i = 0; i < each_value_2.length; i += 1) {
-    					const child_ctx = get_each_context_2(ctx, each_value_2, i);
+    				for (i = 0; i < each_value_3.length; i += 1) {
+    					const child_ctx = get_each_context_3(ctx, each_value_3, i);
 
     					if (each_blocks_1[i]) {
     						each_blocks_1[i].p(child_ctx, dirty);
     						transition_in(each_blocks_1[i], 1);
     					} else {
-    						each_blocks_1[i] = create_each_block_2(child_ctx);
+    						each_blocks_1[i] = create_each_block_3(child_ctx);
     						each_blocks_1[i].c();
     						transition_in(each_blocks_1[i], 1);
-    						each_blocks_1[i].m(div, t3);
+    						each_blocks_1[i].m(div, t2);
     					}
     				}
 
     				group_outros();
 
-    				for (i = each_value_2.length; i < each_blocks_1.length; i += 1) {
+    				for (i = each_value_3.length; i < each_blocks_1.length; i += 1) {
     					out_1(i);
     				}
 
     				check_outros();
     			}
 
-    			if (dirty & /*produits, addInPanier*/ 5) {
-    				each_value_1 = /*produits*/ ctx[0].filter(func_2);
-    				validate_each_argument(each_value_1);
+    			if (dirty & /*produits, addInPanier*/ 3) {
+    				each_value_2 = /*produits*/ ctx[0].filter(func_2);
+    				validate_each_argument(each_value_2);
     				let i;
 
-    				for (i = 0; i < each_value_1.length; i += 1) {
-    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+    				for (i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2(ctx, each_value_2, i);
 
     					if (each_blocks[i]) {
     						each_blocks[i].p(child_ctx, dirty);
     						transition_in(each_blocks[i], 1);
     					} else {
-    						each_blocks[i] = create_each_block_1(child_ctx);
+    						each_blocks[i] = create_each_block_2(child_ctx);
     						each_blocks[i].c();
     						transition_in(each_blocks[i], 1);
     						each_blocks[i].m(div, null);
@@ -46615,7 +47013,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     				group_outros();
 
-    				for (i = each_value_1.length; i < each_blocks.length; i += 1) {
+    				for (i = each_value_2.length; i < each_blocks.length; i += 1) {
     					out_2(i);
     				}
 
@@ -46624,24 +47022,22 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(if_block);
 
-    			for (let i = 0; i < each_value_3.length; i += 1) {
+    			for (let i = 0; i < each_value_4.length; i += 1) {
     				transition_in(each_blocks_2[i]);
     			}
 
-    			for (let i = 0; i < each_value_2.length; i += 1) {
+    			for (let i = 0; i < each_value_3.length; i += 1) {
     				transition_in(each_blocks_1[i]);
     			}
 
-    			for (let i = 0; i < each_value_1.length; i += 1) {
+    			for (let i = 0; i < each_value_2.length; i += 1) {
     				transition_in(each_blocks[i]);
     			}
 
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(if_block);
     			each_blocks_2 = each_blocks_2.filter(Boolean);
 
     			for (let i = 0; i < each_blocks_2.length; i += 1) {
@@ -46664,7 +47060,6 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
-    			if (if_block) if_block.d();
     			destroy_each(each_blocks_2, detaching);
     			destroy_each(each_blocks_1, detaching);
     			destroy_each(each_blocks, detaching);
@@ -46673,24 +47068,24 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2$3.name,
+    		id: create_default_slot_3$2.name,
     		type: "slot",
-    		source: "(37:8) <TabPane tabId=\\\"Plats\\\" tab=\\\"Plats\\\" active>",
+    		source: "(34:8) <TabPane tabId=\\\"Plats\\\" tab=\\\"Plats\\\" active>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (58:16) {#each produits.filter(prod => prod.type==="Service") as service}
-    function create_each_block$1(ctx) {
+    // (52:16) {#each produits.filter(prod => prod.type==="Service") as service}
+    function create_each_block_1(ctx) {
     	let service;
     	let current;
 
     	service = new Service({
     			props: {
-    				service: /*service*/ ctx[6],
-    				addInPanier: /*addInPanier*/ ctx[2]
+    				service: /*service*/ ctx[7],
+    				addInPanier: /*addInPanier*/ ctx[1]
     			},
     			$$inline: true
     		});
@@ -46705,7 +47100,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		},
     		p: function update(ctx, dirty) {
     			const service_changes = {};
-    			if (dirty & /*produits*/ 1) service_changes.service = /*service*/ ctx[6];
+    			if (dirty & /*produits*/ 1) service_changes.service = /*service*/ ctx[7];
     			service.$set(service_changes);
     		},
     		i: function intro(local) {
@@ -46724,25 +47119,25 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block$1.name,
+    		id: create_each_block_1.name,
     		type: "each",
-    		source: "(58:16) {#each produits.filter(prod => prod.type===\\\"Service\\\") as service}",
+    		source: "(52:16) {#each produits.filter(prod => prod.type===\\\"Service\\\") as service}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (56:8) <TabPane tabId="Service" tab="Services">
-    function create_default_slot_1$3(ctx) {
+    // (50:8) <TabPane tabId="Service" tab="Services">
+    function create_default_slot_2$3(ctx) {
     	let div;
     	let current;
-    	let each_value = /*produits*/ ctx[0].filter(func_3);
-    	validate_each_argument(each_value);
+    	let each_value_1 = /*produits*/ ctx[0].filter(func_3);
+    	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
-    	for (let i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
     	}
 
     	const out = i => transition_out(each_blocks[i], 1, 1, () => {
@@ -46758,7 +47153,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			}
 
     			attr_dev(div, "class", "d-flex flex-wrap justify-content-around");
-    			add_location(div, file$4, 56, 12, 2123);
+    			add_location(div, file$4, 50, 12, 1825);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -46770,8 +47165,162 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*produits, addInPanier*/ 5) {
-    				each_value = /*produits*/ ctx[0].filter(func_3);
+    			if (dirty & /*produits, addInPanier*/ 3) {
+    				each_value_1 = /*produits*/ ctx[0].filter(func_3);
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block_1(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div, null);
+    					}
+    				}
+
+    				group_outros();
+
+    				for (i = each_value_1.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+
+    				check_outros();
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			for (let i = 0; i < each_value_1.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_2$3.name,
+    		type: "slot",
+    		source: "(50:8) <TabPane tabId=\\\"Service\\\" tab=\\\"Services\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (60:16) {#each produits.filter(prod => prod.type==="Goodies") as goodies}
+    function create_each_block$1(ctx) {
+    	let produit;
+    	let current;
+
+    	produit = new Plat({
+    			props: {
+    				goodies: /*goodies*/ ctx[4],
+    				addInPanier: /*addInPanier*/ ctx[1]
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(produit.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(produit, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const produit_changes = {};
+    			if (dirty & /*produits*/ 1) produit_changes.goodies = /*goodies*/ ctx[4];
+    			produit.$set(produit_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(produit.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(produit.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(produit, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$1.name,
+    		type: "each",
+    		source: "(60:16) {#each produits.filter(prod => prod.type===\\\"Goodies\\\") as goodies}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (57:8) <TabPane tabId="Goodies" tab="Goodies">
+    function create_default_slot_1$3(ctx) {
+    	let div;
+    	let t;
+    	let current;
+    	let each_value = /*produits*/ ctx[0].filter(func_4);
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			t = text("ça arrive très vite !!\n                ");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(div, "class", "d-flex flex-wrap justify-content-around");
+    			add_location(div, file$4, 57, 12, 2146);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, t);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div, null);
+    			}
+
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*produits, addInPanier*/ 3) {
+    				each_value = /*produits*/ ctx[0].filter(func_4);
     				validate_each_argument(each_value);
     				let i;
 
@@ -46826,18 +47375,20 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_1$3.name,
     		type: "slot",
-    		source: "(56:8) <TabPane tabId=\\\"Service\\\" tab=\\\"Services\\\">",
+    		source: "(57:8) <TabPane tabId=\\\"Goodies\\\" tab=\\\"Goodies\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (36:4) <TabContent pills>
+    // (33:4) <TabContent pills>
     function create_default_slot$4(ctx) {
     	let tabpane0;
-    	let t;
+    	let t0;
     	let tabpane1;
+    	let t1;
+    	let tabpane2;
     	let current;
 
     	tabpane0 = new TabPane({
@@ -46845,7 +47396,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     				tabId: "Plats",
     				tab: "Plats",
     				active: true,
-    				$$slots: { default: [create_default_slot_2$3] },
+    				$$slots: { default: [create_default_slot_3$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -46855,6 +47406,16 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			props: {
     				tabId: "Service",
     				tab: "Services",
+    				$$slots: { default: [create_default_slot_2$3] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	tabpane2 = new TabPane({
+    			props: {
+    				tabId: "Goodies",
+    				tab: "Goodies",
     				$$slots: { default: [create_default_slot_1$3] },
     				$$scope: { ctx }
     			},
@@ -46864,46 +47425,61 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	const block = {
     		c: function create() {
     			create_component(tabpane0.$$.fragment);
-    			t = space();
+    			t0 = space();
     			create_component(tabpane1.$$.fragment);
+    			t1 = space();
+    			create_component(tabpane2.$$.fragment);
     		},
     		m: function mount(target, anchor) {
     			mount_component(tabpane0, target, anchor);
-    			insert_dev(target, t, anchor);
+    			insert_dev(target, t0, anchor);
     			mount_component(tabpane1, target, anchor);
+    			insert_dev(target, t1, anchor);
+    			mount_component(tabpane2, target, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
     			const tabpane0_changes = {};
 
-    			if (dirty & /*$$scope, produits, plat_du_jour*/ 65539) {
+    			if (dirty & /*$$scope, produits*/ 131073) {
     				tabpane0_changes.$$scope = { dirty, ctx };
     			}
 
     			tabpane0.$set(tabpane0_changes);
     			const tabpane1_changes = {};
 
-    			if (dirty & /*$$scope, produits*/ 65537) {
+    			if (dirty & /*$$scope, produits*/ 131073) {
     				tabpane1_changes.$$scope = { dirty, ctx };
     			}
 
     			tabpane1.$set(tabpane1_changes);
+    			const tabpane2_changes = {};
+
+    			if (dirty & /*$$scope, produits*/ 131073) {
+    				tabpane2_changes.$$scope = { dirty, ctx };
+    			}
+
+    			tabpane2.$set(tabpane2_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(tabpane0.$$.fragment, local);
     			transition_in(tabpane1.$$.fragment, local);
+    			transition_in(tabpane2.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(tabpane0.$$.fragment, local);
     			transition_out(tabpane1.$$.fragment, local);
+    			transition_out(tabpane2.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			destroy_component(tabpane0, detaching);
-    			if (detaching) detach_dev(t);
+    			if (detaching) detach_dev(t0);
     			destroy_component(tabpane1, detaching);
+    			if (detaching) detach_dev(t1);
+    			destroy_component(tabpane2, detaching);
     		}
     	};
 
@@ -46911,7 +47487,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot$4.name,
     		type: "slot",
-    		source: "(36:4) <TabContent pills>",
+    		source: "(33:4) <TabContent pills>",
     		ctx
     	});
 
@@ -46936,8 +47512,8 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		c: function create() {
     			div = element("div");
     			create_component(tabcontent.$$.fragment);
-    			attr_dev(div, "class", "produits svelte-1dchpt7");
-    			add_location(div, file$4, 34, 0, 1121);
+    			attr_dev(div, "class", "produits svelte-19jxxgj");
+    			add_location(div, file$4, 31, 0, 931);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -46950,7 +47526,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		p: function update(ctx, [dirty]) {
     			const tabcontent_changes = {};
 
-    			if (dirty & /*$$scope, produits, plat_du_jour*/ 65539) {
+    			if (dirty & /*$$scope, produits*/ 131073) {
     				tabcontent_changes.$$scope = { dirty, ctx };
     			}
 
@@ -46982,22 +47558,20 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	return block;
     }
 
-    const func = prod => prod.type === "Accompagnement";
+    const func = prod => prod.type === "Plat" && prod.plat_du_jour || prod.type === "Accompagnement";
     const func_1 = prod => prod.type === "Dessert";
     const func_2 = prod => prod.type === "Boisson";
     const func_3 = prod => prod.type === "Service";
+    const func_4 = prod => prod.type === "Goodies";
 
     function instance$5($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Tab_commande', slots, []);
     	let produits = [];
-    	let today = new Date().toISOString().slice(0, 10);
-    	let plat_du_jour;
 
     	onMount(async () => {
     		const res = await getProduits();
     		$$invalidate(0, produits = res);
-    		$$invalidate(1, plat_du_jour = produits.filter(prod => prod.plat_du_jour !== null).find(prod => prod.plat_du_jour === today));
     	});
 
     	let { updatePanier } = $$props;
@@ -47028,8 +47602,8 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	});
 
     	$$self.$$set = $$props => {
-    		if ('updatePanier' in $$props) $$invalidate(3, updatePanier = $$props.updatePanier);
-    		if ('commandeEnCours' in $$props) $$invalidate(4, commandeEnCours = $$props.commandeEnCours);
+    		if ('updatePanier' in $$props) $$invalidate(2, updatePanier = $$props.updatePanier);
+    		if ('commandeEnCours' in $$props) $$invalidate(3, commandeEnCours = $$props.commandeEnCours);
     	};
 
     	$$self.$capture_state = () => ({
@@ -47041,8 +47615,6 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		TabContent,
     		TabPane,
     		produits,
-    		today,
-    		plat_du_jour,
     		updatePanier,
     		commandeEnCours,
     		addInPanier
@@ -47050,23 +47622,21 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	$$self.$inject_state = $$props => {
     		if ('produits' in $$props) $$invalidate(0, produits = $$props.produits);
-    		if ('today' in $$props) today = $$props.today;
-    		if ('plat_du_jour' in $$props) $$invalidate(1, plat_du_jour = $$props.plat_du_jour);
-    		if ('updatePanier' in $$props) $$invalidate(3, updatePanier = $$props.updatePanier);
-    		if ('commandeEnCours' in $$props) $$invalidate(4, commandeEnCours = $$props.commandeEnCours);
+    		if ('updatePanier' in $$props) $$invalidate(2, updatePanier = $$props.updatePanier);
+    		if ('commandeEnCours' in $$props) $$invalidate(3, commandeEnCours = $$props.commandeEnCours);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [produits, plat_du_jour, addInPanier, updatePanier, commandeEnCours];
+    	return [produits, addInPanier, updatePanier, commandeEnCours];
     }
 
     class Tab_commande extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { updatePanier: 3, commandeEnCours: 4 });
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { updatePanier: 2, commandeEnCours: 3 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -47078,11 +47648,11 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*updatePanier*/ ctx[3] === undefined && !('updatePanier' in props)) {
+    		if (/*updatePanier*/ ctx[2] === undefined && !('updatePanier' in props)) {
     			console.warn("<Tab_commande> was created without expected prop 'updatePanier'");
     		}
 
-    		if (/*commandeEnCours*/ ctx[4] === undefined && !('commandeEnCours' in props)) {
+    		if (/*commandeEnCours*/ ctx[3] === undefined && !('commandeEnCours' in props)) {
     			console.warn("<Tab_commande> was created without expected prop 'commandeEnCours'");
     		}
     	}
@@ -48493,15 +49063,15 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			t0 = text(t0_value);
     			t1 = space();
     			img = element("img");
-    			attr_dev(p, "class", "parimag_font svelte-2pxenl");
+    			attr_dev(p, "class", "parimag_font svelte-1o7vmtp");
     			add_location(p, file$1, 80, 2, 3068);
     			if (!src_url_equal(img.src, img_src_value = 'images/icons/cross.svg')) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "validate");
     			attr_dev(img, "width", "30");
     			attr_dev(img, "height", "30");
-    			attr_dev(img, "class", "svelte-2pxenl");
+    			attr_dev(img, "class", "svelte-1o7vmtp");
     			add_location(img, file$1, 81, 2, 3119);
-    			attr_dev(div, "class", "w-100 ps-2 svelte-2pxenl");
+    			attr_dev(div, "class", "w-100 ps-2 svelte-1o7vmtp");
     			attr_dev(div, "id", "banderole");
     			add_location(div, file$1, 79, 1, 3025);
     		},
@@ -48546,10 +49116,10 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			div = element("div");
     			p = element("p");
     			p.textContent = "Chargement";
-    			attr_dev(p, "class", "svelte-2pxenl");
+    			attr_dev(p, "class", "svelte-1o7vmtp");
     			add_location(p, file$1, 76, 23, 2929);
     			attr_dev(div, "id", "banderole");
-    			attr_dev(div, "class", "svelte-2pxenl");
+    			attr_dev(div, "class", "svelte-1o7vmtp");
     			add_location(div, file$1, 76, 3, 2909);
     		},
     		m: function mount(target, anchor) {

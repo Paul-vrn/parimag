@@ -6,6 +6,7 @@
     onMount(async () => {
         const res = await getBlogs();
         blogs = res;
+        console.log(blogs)
     });
 </script>
 

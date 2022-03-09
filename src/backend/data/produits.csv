@@ -15,11 +15,9 @@ Coca cola,,Boisson,,0.50,,,10,,,coca_cola.png
 Redbull,,Boisson,,0.50,,,10,,,red_bull.png
 Ice Tea,,Boisson,,0.50,,,10,,,ice_tea.png
 Oasis,,Boisson,,0.50,,,10,,,oasis.png
-"Corvées ménagères (vaisselle, ménage, …)
-",,Service,,0,,,,,"Vous prévoyez une grosse soirée mais vous avez la flemme de faire le ménage et la vaisselle. Aucun soucis, faites appel aux services de Par'Imag !
-Nous pouvons même vous assister durant votre soirée en faisant appel à notre équipe de serveur.",menage.png
-déménagement,,Service,,0,,,,,"Vous déménagez ? Besoin de gros bras pour vous aider à transporter des meubles ? Pas de problème, Par'Imag est là pour vous aider.
-Commandez l'aide de deux déménageurs dès maintenant.",demenagement.jpg
+"Corvées ménagères
+",,Service,,0,,,,,"On vient faire votre vaiselle, passer le ménage ou encore faire le serveur durant vos soirées !",menage.png
+déménagement,,Service,,0,,,,,"Aide au déménagement, on peut aussi vous débarasser de ce que vous n'utilisez plus",demenagement.jpg
 SOS Choré,,Service,,0,,,,,On vient vous apprendre notre superbe choré !,chore.png
 SOS Calin,,Service,,0,,,,,Ne pas abuser !,calin.jpg
 Coach sportif,,Service,,0,,,,,,coach.png

@@ -26,14 +26,16 @@
       </div>
     {/each}
   </div>
-  <div class="content">
-      <img alt="Photo de {poleSelected.photo}" src={`images/liste/${poleSelected.photo}.jpg`} class="photo_pole"/>
+  {#each liste as pole}
+    <div class={`content ${(pole.nom===poleSelected.nom)?'':'d-none'}`}>
+      <img alt="Photo de {pole.photo}" src={`images/liste/${pole.photo}.jpg`} class="photo_pole"/>
     <hr class="w-75 mx-auto"/>
-    {#each poleSelected.membres as membre,i}
+    {#each pole.membres as membre,i}
       <Membre membre={membre} sens={i%2==0}/>
       <hr class="w-50 mx-auto"/>
     {/each}
-  </div>
+    </div>
+  {/each}
 </main>
 
 <style>

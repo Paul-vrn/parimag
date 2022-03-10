@@ -7,12 +7,10 @@ import { Toasts, addToast } from 'as-toast';
 import {timeParse} from '../../../services/timeParse'
 	onMount(async () => {
         const res = await getCommandes();
-		console.log(res)
         commandes = res.filter(co => co.etat !== "LV" && co.trajets !== '{}')
 		commandes.forEach(co => {
 				co.trajets = JSON.parse(co.trajets)
 			});
-		console.log(commandes)
     });
 	async function reload() {
 		const res = await getCommandes()

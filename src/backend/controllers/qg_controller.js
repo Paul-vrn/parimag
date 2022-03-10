@@ -44,7 +44,7 @@ module.exports = {
                 } 
                 const token = jwt.sign({
                     id: result.nom
-                 }, SECRET, { expiresIn: '3 hours' })
+                 }, SECRET, { expiresIn: '12 hours' })
                  return res.cookie("access_token", token).json({ access_token: token })        
             })
             .catch(err => {

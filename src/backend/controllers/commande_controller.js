@@ -3,6 +3,7 @@ const Commande = db.Commande
 
 module.exports = {
     create:(req, res) => {
+        
         const commande = {
             personne:req.body.personne,
             adresse:req.body.adresse,

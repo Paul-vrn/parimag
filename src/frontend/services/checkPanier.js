@@ -1,10 +1,4 @@
 module.exports.checkPanier = (panier) => {
-    //poix max = 3 plats, 3 desserts, 3 entrées, 3 boissons
-    //max 10 boissons
-    //max 3 plats du jour
-    //max 6 croc monsieur
-    //max 3 desserts
-    //max 10 crêpes
     let poidsPlat = 0;
     let poidsDessert = 0;
     let poidsBoisson = 0;

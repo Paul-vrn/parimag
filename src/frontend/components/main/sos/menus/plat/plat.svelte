@@ -4,7 +4,7 @@
     import ModalInfo from './modal_plat_info.svelte'
     import {Button, Tooltip} from 'sveltestrap'
     import { Toasts, addToast } from 'as-toast';
-
+    console.log(produit)
     produit.quantite = 0;
     let quantiteSelect = 0;
     produit.quantiteStockMax = 0;

@@ -9,6 +9,7 @@
     onMount(async () => {
         const res = await getProduits();
         produits = res;
+        console.log(produits)
     });
 
     export let updatePanier;
@@ -56,9 +57,8 @@
         </TabPane>
         <TabPane tabId="Goodies" tab="Goodies">
             <div class="d-flex flex-wrap justify-content-around">
-                ça arrive très vite !!
                 {#each produits.filter(prod => prod.type==="Goodies") as goodies}
-                    <Produit goodies={goodies} {addInPanier}/>
+                    <Produit produit={goodies} {addInPanier}/>
                 {/each}
             </div>
         </TabPane>

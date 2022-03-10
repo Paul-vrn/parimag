@@ -17,13 +17,24 @@
     async function commander(){
         panierCheck = checkPanier(commandeEnCours.panier)
         timeCheck = await checkTime()
-        if (typeof panierCheck !== "boolean"){
-            addToast(panierCheck, "warn", 4000)
-        } else if (typeof timeCheck !== "boolean"){
-            addToast(timeCheck, "warn", 4000)
-        } else if (panierCheck && timeCheck){
-            openFirstModal = false; // si ça reste "true", on refait passer à false puis re true pour que ça update bien le component ModalConfirm
+        let onlyGoodies = true;
+        commandeEnCours.panier.forEach(prod => {
+            if (prod.type !== "Goodies"){
+                onlyGoodies = false
+            }            
+        });
+        if (onlyGoodies){
+            openFirstModal = false
             openFirstModal = true
+        } else {
+            if (typeof panierCheck !== "boolean"){
+                addToast(panierCheck, "warn", 4000)
+            } else if (typeof timeCheck !== "boolean"){
+                addToast(timeCheck, "warn", 4000)
+            } else if (panierCheck && timeCheck){
+                openFirstModal = false; // si ça reste "true", on refait passer à false puis re true pour que ça update bien le component ModalConfirm
+                openFirstModal = true
+            }
         }
         panierCheck = false;
         timeCheck = false;
@@ -101,6 +112,35 @@
                     {/each}
                 </tbody>
             </Table>        
+        </div>
+        <div>
+            <h2>Goodies :</h2>
+            <Table responsive centered size="sm" class="w-100">
+                <thead>
+                    <tr class="">
+                        <th>#</th>
+                        <th>Nom</th>
+                        <th>quantite</th>
+                        <th class="text-nowrap">prix (€)</th>
+                        <th class="w-25">supprimer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {#each commandeEnCours.panier.filter(prod => prod.type==="Goodies") as produit, i (produit.id)}
+                        <tr class=" align-items-center">
+                            <th>{i+1}</th>
+                            <th>{produit.nom}</th>
+                            <th>{produit.quantite}</th>
+                            <th>{(produit.prix*produit.quantite).toFixed(2)}</th>
+                            <th>
+                                <Button on:click={() => deleteElOfPanier(produit.id)} color="danger">
+                                <img src={'images/icons/poubelle.png'} alt="validate" width="20" height="20"/>
+                            </Button>
+                            </th>
+                        </tr>
+                    {/each}
+                </tbody>
+            </Table>
         </div>
     </div>
     <hr class="mt-auto"/>

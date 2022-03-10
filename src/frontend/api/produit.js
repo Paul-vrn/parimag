@@ -8,3 +8,12 @@ export const getProduits = async () => {
       return {error:error.response.data}
     }
 };
+
+export const updateProduit = async (id, body) => {
+  try {
+    const response = await Api.patch(`produits/${id}`, body)
+    return response;
+  } catch (error) {
+    return {error:error.response.data}
+  }
+}

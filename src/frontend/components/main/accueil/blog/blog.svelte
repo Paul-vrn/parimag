@@ -46,7 +46,7 @@ div.blog h1 {
 @media (max-width: 640px) {
 	div.blog {
         width: 80%;
-        height: 20em;
+        height: 40vh;
     }
 }
 

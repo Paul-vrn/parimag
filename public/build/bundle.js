@@ -2133,7 +2133,7 @@
     });
 
     // (40:0) {#if $activeRoute !== null && $activeRoute.route === route}
-    function create_if_block$u(ctx) {
+    function create_if_block$v(ctx) {
     	let current_block_type_index;
     	let if_block;
     	let if_block_anchor;
@@ -2203,7 +2203,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$u.name,
+    		id: create_if_block$v.name,
     		type: "if",
     		source: "(40:0) {#if $activeRoute !== null && $activeRoute.route === route}",
     		ctx
@@ -2376,7 +2376,7 @@
     function create_fragment$1b(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*$activeRoute*/ ctx[1] !== null && /*$activeRoute*/ ctx[1].route === /*route*/ ctx[7] && create_if_block$u(ctx);
+    	let if_block = /*$activeRoute*/ ctx[1] !== null && /*$activeRoute*/ ctx[1].route === /*route*/ ctx[7] && create_if_block$v(ctx);
 
     	const block = {
     		c: function create() {
@@ -2400,7 +2400,7 @@
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$u(ctx);
+    					if_block = create_if_block$v(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -3170,7 +3170,7 @@
     const file$15 = "node_modules/sveltestrap/src/Collapse.svelte";
 
     // (57:0) {#if isOpen}
-    function create_if_block$t(ctx) {
+    function create_if_block$u(ctx) {
     	let div;
     	let div_style_value;
     	let div_intro;
@@ -3319,7 +3319,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$t.name,
+    		id: create_if_block$u.name,
     		type: "if",
     		source: "(57:0) {#if isOpen}",
     		ctx
@@ -3334,7 +3334,7 @@
     	let mounted;
     	let dispose;
     	add_render_callback(/*onwindowresize*/ ctx[20]);
-    	let if_block = /*isOpen*/ ctx[0] && create_if_block$t(ctx);
+    	let if_block = /*isOpen*/ ctx[0] && create_if_block$u(ctx);
 
     	const block = {
     		c: function create() {
@@ -3363,7 +3363,7 @@
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$t(ctx);
+    					if_block = create_if_block$u(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -4112,7 +4112,7 @@
     const get_heading_slot_context = ctx => ({});
 
     // (26:0) {#if isOpen}
-    function create_if_block$s(ctx) {
+    function create_if_block$t(ctx) {
     	let div;
     	let t0;
     	let t1;
@@ -4260,7 +4260,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$s.name,
+    		id: create_if_block$t.name,
     		type: "if",
     		source: "(26:0) {#if isOpen}",
     		ctx
@@ -4493,7 +4493,7 @@
     function create_fragment$16(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*isOpen*/ ctx[0] && create_if_block$s(ctx);
+    	let if_block = /*isOpen*/ ctx[0] && create_if_block$t(ctx);
 
     	const block = {
     		c: function create() {
@@ -4517,7 +4517,7 @@
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$s(ctx);
+    					if_block = create_if_block$t(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -4912,7 +4912,7 @@
     }
 
     // (37:0) {#if href}
-    function create_if_block$r(ctx) {
+    function create_if_block$s(ctx) {
     	let a;
     	let current_block_type_index;
     	let if_block;
@@ -5022,7 +5022,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block: block_1,
-    		id: create_if_block$r.name,
+    		id: create_if_block$s.name,
     		type: "if",
     		source: "(37:0) {#if href}",
     		ctx
@@ -5296,7 +5296,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$r, create_else_block_1$1];
+    	const if_block_creators = [create_if_block$s, create_else_block_1$1];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -7598,7 +7598,7 @@
     }
 
     // (118:0) {#if nav}
-    function create_if_block$q(ctx) {
+    function create_if_block$r(ctx) {
     	let li;
     	let current;
     	const default_slot_template = /*#slots*/ ctx[18].default;
@@ -7666,7 +7666,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$q.name,
+    		id: create_if_block$r.name,
     		type: "if",
     		source: "(118:0) {#if nav}",
     		ctx
@@ -7680,7 +7680,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$q, create_else_block$l];
+    	const if_block_creators = [create_if_block$r, create_else_block$l];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -8596,7 +8596,7 @@
     }
 
     // (37:0) {#if header}
-    function create_if_block$p(ctx) {
+    function create_if_block$q(ctx) {
     	let h6;
     	let current;
     	let mounted;
@@ -8675,7 +8675,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$p.name,
+    		id: create_if_block$q.name,
     		type: "if",
     		source: "(37:0) {#if header}",
     		ctx
@@ -8689,7 +8689,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$p, create_if_block_1$d, create_if_block_2$8, create_else_block$k];
+    	const if_block_creators = [create_if_block$q, create_if_block_1$d, create_if_block_2$8, create_else_block$k];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -9533,7 +9533,7 @@
     }
 
     // (51:0) {#if nav}
-    function create_if_block$o(ctx) {
+    function create_if_block$p(ctx) {
     	let a;
     	let a_aria_expanded_value;
     	let current;
@@ -9632,7 +9632,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block: block_1,
-    		id: create_if_block$o.name,
+    		id: create_if_block$p.name,
     		type: "if",
     		source: "(51:0) {#if nav}",
     		ctx
@@ -9786,7 +9786,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$o, create_if_block_1$c, create_if_block_2$7, create_else_block$j];
+    	const if_block_creators = [create_if_block$p, create_if_block_1$c, create_if_block_2$7, create_else_block$j];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -10443,7 +10443,7 @@
     }
 
     // (83:2) {#if label}
-    function create_if_block$n(ctx) {
+    function create_if_block$o(ctx) {
     	let label_1;
     	let current;
     	const label_slot_template = /*#slots*/ ctx[19].label;
@@ -10508,7 +10508,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$n.name,
+    		id: create_if_block$o.name,
     		type: "if",
     		source: "(83:2) {#if label}",
     		ctx
@@ -10560,7 +10560,7 @@
 
     	let current_block_type = select_block_type(ctx);
     	let if_block0 = current_block_type(ctx);
-    	let if_block1 = /*label*/ ctx[4] && create_if_block$n(ctx);
+    	let if_block1 = /*label*/ ctx[4] && create_if_block$o(ctx);
 
     	const block = {
     		c: function create() {
@@ -10602,7 +10602,7 @@
     						transition_in(if_block1, 1);
     					}
     				} else {
-    					if_block1 = create_if_block$n(ctx);
+    					if_block1 = create_if_block$o(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
     					if_block1.m(div, null);
@@ -13508,7 +13508,7 @@
     }
 
     // (523:0) {#if feedback}
-    function create_if_block$m(ctx) {
+    function create_if_block$n(ctx) {
     	let show_if;
     	let current_block_type_index;
     	let if_block;
@@ -13581,7 +13581,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$m.name,
+    		id: create_if_block$n.name,
     		type: "if",
     		source: "(523:0) {#if feedback}",
     		ctx
@@ -13881,7 +13881,7 @@
     		if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
     	}
 
-    	let if_block1 = /*feedback*/ ctx[9] && create_if_block$m(ctx);
+    	let if_block1 = /*feedback*/ ctx[9] && create_if_block$n(ctx);
 
     	const block = {
     		c: function create() {
@@ -13947,7 +13947,7 @@
     						transition_in(if_block1, 1);
     					}
     				} else {
-    					if_block1 = create_if_block$m(ctx);
+    					if_block1 = create_if_block$n(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
     					if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
@@ -15413,7 +15413,7 @@
     const file$T = "node_modules/sveltestrap/src/ModalBackdrop.svelte";
 
     // (20:0) {#if isOpen && loaded}
-    function create_if_block$l(ctx) {
+    function create_if_block$m(ctx) {
     	let div;
     	let div_intro;
     	let div_outro;
@@ -15477,7 +15477,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$l.name,
+    		id: create_if_block$m.name,
     		type: "if",
     		source: "(20:0) {#if isOpen && loaded}",
     		ctx
@@ -15489,7 +15489,7 @@
     function create_fragment$W(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*isOpen*/ ctx[0] && /*loaded*/ ctx[2] && create_if_block$l(ctx);
+    	let if_block = /*isOpen*/ ctx[0] && /*loaded*/ ctx[2] && create_if_block$m(ctx);
 
     	const block = {
     		c: function create() {
@@ -15513,7 +15513,7 @@
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$l(ctx);
+    					if_block = create_if_block$m(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -15886,7 +15886,7 @@
     }
 
     // (23:4) {#if typeof toggle === 'function'}
-    function create_if_block$k(ctx) {
+    function create_if_block$l(ctx) {
     	let button;
     	let mounted;
     	let dispose;
@@ -15933,7 +15933,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$k.name,
+    		id: create_if_block$l.name,
     		type: "if",
     		source: "(23:4) {#if typeof toggle === 'function'}",
     		ctx
@@ -15945,7 +15945,7 @@
     // (22:21)      
     function fallback_block$1(ctx) {
     	let if_block_anchor;
-    	let if_block = typeof /*toggle*/ ctx[0] === 'function' && create_if_block$k(ctx);
+    	let if_block = typeof /*toggle*/ ctx[0] === 'function' && create_if_block$l(ctx);
 
     	const block = {
     		c: function create() {
@@ -15961,7 +15961,7 @@
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
-    					if_block = create_if_block$k(ctx);
+    					if_block = create_if_block$l(ctx);
     					if_block.c();
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
     				}
@@ -17050,7 +17050,7 @@
     }
 
     // (265:0) {#if backdrop && !staticModal}
-    function create_if_block$j(ctx) {
+    function create_if_block$k(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -17131,7 +17131,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$j.name,
+    		id: create_if_block$k.name,
     		type: "if",
     		source: "(265:0) {#if backdrop && !staticModal}",
     		ctx
@@ -17197,7 +17197,7 @@
     	let if_block1_anchor;
     	let current;
     	let if_block0 = /*_isMounted*/ ctx[11] && create_if_block_1$8(ctx);
-    	let if_block1 = /*backdrop*/ ctx[6] && !/*staticModal*/ ctx[0] && create_if_block$j(ctx);
+    	let if_block1 = /*backdrop*/ ctx[6] && !/*staticModal*/ ctx[0] && create_if_block$k(ctx);
 
     	const block = {
     		c: function create() {
@@ -17248,7 +17248,7 @@
     						transition_in(if_block1, 1);
     					}
     				} else {
-    					if_block1 = create_if_block$j(ctx);
+    					if_block1 = create_if_block$k(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
     					if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
@@ -18363,7 +18363,7 @@
     }
 
     // (35:2) {#if container}
-    function create_if_block$i(ctx) {
+    function create_if_block$j(ctx) {
     	let container_1;
     	let current;
 
@@ -18410,7 +18410,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$i.name,
+    		id: create_if_block$j.name,
     		type: "if",
     		source: "(35:2) {#if container}",
     		ctx
@@ -18482,7 +18482,7 @@
     	let current_block_type_index;
     	let if_block;
     	let current;
-    	const if_block_creators = [create_if_block$i, create_else_block$e];
+    	const if_block_creators = [create_if_block$j, create_else_block$e];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -19690,7 +19690,7 @@
     }
 
     // (13:0) {#if responsive}
-    function create_if_block$h(ctx) {
+    function create_if_block$i(ctx) {
     	let div;
     	let current;
     	const default_slot_template = /*#slots*/ ctx[3].default;
@@ -19749,7 +19749,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$h.name,
+    		id: create_if_block$i.name,
     		type: "if",
     		source: "(13:0) {#if responsive}",
     		ctx
@@ -19763,7 +19763,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$h, create_else_block$d];
+    	const if_block_creators = [create_if_block$i, create_else_block$d];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -20207,7 +20207,7 @@
     }
 
     // (33:4) {#if rows}
-    function create_if_block$g(ctx) {
+    function create_if_block$h(ctx) {
     	let colgroup;
     	let t0;
     	let tableheader;
@@ -20374,7 +20374,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$g.name,
+    		id: create_if_block$h.name,
     		type: "if",
     		source: "(33:4) {#if rows}",
     		ctx
@@ -20630,7 +20630,7 @@
     	let current_block_type_index;
     	let if_block;
     	let current;
-    	const if_block_creators = [create_if_block$g, create_else_block$c];
+    	const if_block_creators = [create_if_block$h, create_else_block$c];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -21476,7 +21476,7 @@
     }
 
     // (28:0) {#if tabs}
-    function create_if_block$f(ctx) {
+    function create_if_block$g(ctx) {
     	let navitem;
     	let current;
 
@@ -21521,7 +21521,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$f.name,
+    		id: create_if_block$g.name,
     		type: "if",
     		source: "(28:0) {#if tabs}",
     		ctx
@@ -21706,7 +21706,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$f, create_else_block$b];
+    	const if_block_creators = [create_if_block$g, create_else_block$b];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -21921,7 +21921,7 @@
     const file$A = "node_modules/sveltestrap/src/Tooltip.svelte";
 
     // (107:0) {#if isOpen}
-    function create_if_block$e(ctx) {
+    function create_if_block$f(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -22002,7 +22002,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$e.name,
+    		id: create_if_block$f.name,
     		type: "if",
     		source: "(107:0) {#if isOpen}",
     		ctx
@@ -22228,7 +22228,7 @@
     function create_fragment$C(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*isOpen*/ ctx[0] && create_if_block$e(ctx);
+    	let if_block = /*isOpen*/ ctx[0] && create_if_block$f(ctx);
 
     	const block = {
     		c: function create() {
@@ -22252,7 +22252,7 @@
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$e(ctx);
+    					if_block = create_if_block$f(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -24537,7 +24537,7 @@
     }
 
     // (9:0) {#if $toasts.length}
-    function create_if_block$d(ctx) {
+    function create_if_block$e(ctx) {
     	let ul;
     	let each_blocks = [];
     	let each_1_lookup = new Map();
@@ -24612,7 +24612,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$d.name,
+    		id: create_if_block$e.name,
     		type: "if",
     		source: "(9:0) {#if $toasts.length}",
     		ctx
@@ -24735,7 +24735,7 @@
     function create_fragment$z(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*$toasts*/ ctx[2].length && create_if_block$d(ctx);
+    	let if_block = /*$toasts*/ ctx[2].length && create_if_block$e(ctx);
 
     	const block = {
     		c: function create() {
@@ -24759,7 +24759,7 @@
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$d(ctx);
+    					if_block = create_if_block$e(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -24911,7 +24911,7 @@
     	return child_ctx;
     }
 
-    // (56:16) <Button on:click={reload} size="sm">
+    // (51:16) <Button on:click={reload} size="sm">
     function create_default_slot_2$d(ctx) {
     	let img;
     	let img_src_value;
@@ -24923,7 +24923,7 @@
     			attr_dev(img, "alt", "reload");
     			attr_dev(img, "width", "20");
     			attr_dev(img, "height", "20");
-    			add_location(img, file$w, 55, 52, 1825);
+    			add_location(img, file$w, 50, 52, 1681);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -24937,14 +24937,14 @@
     		block,
     		id: create_default_slot_2$d.name,
     		type: "slot",
-    		source: "(56:16) <Button on:click={reload} size=\\\"sm\\\">",
+    		source: "(51:16) <Button on:click={reload} size=\\\"sm\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (58:12) {#each qgs as qg}
+    // (53:12) {#each qgs as qg}
     function create_each_block_2$4(ctx) {
     	let th;
     	let t_value = /*qg*/ ctx[12].nom + "";
@@ -24954,7 +24954,7 @@
     		c: function create() {
     			th = element("th");
     			t = text(t_value);
-    			add_location(th, file$w, 58, 16, 1973);
+    			add_location(th, file$w, 53, 16, 1829);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, th, anchor);
@@ -24972,14 +24972,14 @@
     		block,
     		id: create_each_block_2$4.name,
     		type: "each",
-    		source: "(58:12) {#each qgs as qg}",
+    		source: "(53:12) {#each qgs as qg}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (68:16) {#each produit.stocks as stock}
+    // (63:16) {#each produit.stocks as stock}
     function create_each_block_1$5(ctx) {
     	let th;
     	let input;
@@ -24999,7 +24999,7 @@
     		c: function create() {
     			th = element("th");
     			create_component(input.$$.fragment);
-    			add_location(th, file$w, 68, 20, 2247);
+    			add_location(th, file$w, 63, 20, 2141);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, th, anchor);
@@ -25031,14 +25031,79 @@
     		block,
     		id: create_each_block_1$5.name,
     		type: "each",
-    		source: "(68:16) {#each produit.stocks as stock}",
+    		source: "(63:16) {#each produit.stocks as stock}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (72:20) <Button on:click={updatePlatDuJour(produit)}>
+    // (66:16) {#if produit.type==="Plat"}
+    function create_if_block$d(ctx) {
+    	let th;
+    	let button;
+    	let current;
+
+    	button = new Button({
+    			props: {
+    				$$slots: { default: [create_default_slot_1$e] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", function () {
+    		if (is_function(/*updatePlatDuJour*/ ctx[4](/*produit*/ ctx[6]))) /*updatePlatDuJour*/ ctx[4](/*produit*/ ctx[6]).apply(this, arguments);
+    	});
+
+    	const block = {
+    		c: function create() {
+    			th = element("th");
+    			create_component(button.$$.fragment);
+    			add_location(th, file$w, 66, 16, 2300);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, th, anchor);
+    			mount_component(button, th, null);
+    			current = true;
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 32768) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(th);
+    			destroy_component(button);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$d.name,
+    		type: "if",
+    		source: "(66:16) {#if produit.type===\\\"Plat\\\"}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (68:20) <Button on:click={updatePlatDuJour(produit)}>
     function create_default_slot_1$e(ctx) {
     	let t;
 
@@ -25058,23 +25123,21 @@
     		block,
     		id: create_default_slot_1$e.name,
     		type: "slot",
-    		source: "(72:20) <Button on:click={updatePlatDuJour(produit)}>",
+    		source: "(68:20) <Button on:click={updatePlatDuJour(produit)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (65:8) {#each produits as produit, i}
+    // (60:8) {#each produits.filter(prod => prod.type!=="Service") as produit, i}
     function create_each_block$e(ctx) {
     	let tr;
-    	let th0;
+    	let th;
     	let t0_value = /*produit*/ ctx[6].nom + "";
     	let t0;
     	let t1;
     	let t2;
-    	let th1;
-    	let button;
     	let t3;
     	let current;
     	let each_value_1 = /*produit*/ ctx[6].stocks;
@@ -25089,22 +25152,12 @@
     		each_blocks[i] = null;
     	});
 
-    	button = new Button({
-    			props: {
-    				$$slots: { default: [create_default_slot_1$e] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	button.$on("click", function () {
-    		if (is_function(/*updatePlatDuJour*/ ctx[4](/*produit*/ ctx[6]))) /*updatePlatDuJour*/ ctx[4](/*produit*/ ctx[6]).apply(this, arguments);
-    	});
+    	let if_block = /*produit*/ ctx[6].type === "Plat" && create_if_block$d(ctx);
 
     	const block = {
     		c: function create() {
     			tr = element("tr");
-    			th0 = element("th");
+    			th = element("th");
     			t0 = text(t0_value);
     			t1 = space();
 
@@ -25113,17 +25166,15 @@
     			}
 
     			t2 = space();
-    			th1 = element("th");
-    			create_component(button.$$.fragment);
+    			if (if_block) if_block.c();
     			t3 = space();
-    			add_location(th0, file$w, 66, 16, 2156);
-    			add_location(th1, file$w, 70, 16, 2362);
-    			add_location(tr, file$w, 65, 12, 2135);
+    			add_location(th, file$w, 61, 16, 2050);
+    			add_location(tr, file$w, 60, 12, 2029);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
-    			append_dev(tr, th0);
-    			append_dev(th0, t0);
+    			append_dev(tr, th);
+    			append_dev(th, t0);
     			append_dev(tr, t1);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -25131,13 +25182,11 @@
     			}
 
     			append_dev(tr, t2);
-    			append_dev(tr, th1);
-    			mount_component(button, th1, null);
+    			if (if_block) if_block.m(tr, null);
     			append_dev(tr, t3);
     			current = true;
     		},
-    		p: function update(new_ctx, dirty) {
-    			ctx = new_ctx;
+    		p: function update(ctx, dirty) {
     			if ((!current || dirty & /*produits*/ 2) && t0_value !== (t0_value = /*produit*/ ctx[6].nom + "")) set_data_dev(t0, t0_value);
 
     			if (dirty & /*produits, submit*/ 10) {
@@ -25168,13 +25217,28 @@
     				check_outros();
     			}
 
-    			const button_changes = {};
+    			if (/*produit*/ ctx[6].type === "Plat") {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
 
-    			if (dirty & /*$$scope*/ 32768) {
-    				button_changes.$$scope = { dirty, ctx };
+    					if (dirty & /*produits*/ 2) {
+    						transition_in(if_block, 1);
+    					}
+    				} else {
+    					if_block = create_if_block$d(ctx);
+    					if_block.c();
+    					transition_in(if_block, 1);
+    					if_block.m(tr, t3);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+
+    				transition_out(if_block, 1, 1, () => {
+    					if_block = null;
+    				});
+
+    				check_outros();
     			}
-
-    			button.$set(button_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -25183,7 +25247,7 @@
     				transition_in(each_blocks[i]);
     			}
 
-    			transition_in(button.$$.fragment, local);
+    			transition_in(if_block);
     			current = true;
     		},
     		o: function outro(local) {
@@ -25193,13 +25257,13 @@
     				transition_out(each_blocks[i]);
     			}
 
-    			transition_out(button.$$.fragment, local);
+    			transition_out(if_block);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
     			destroy_each(each_blocks, detaching);
-    			destroy_component(button);
+    			if (if_block) if_block.d();
     		}
     	};
 
@@ -25207,14 +25271,14 @@
     		block,
     		id: create_each_block$e.name,
     		type: "each",
-    		source: "(65:8) {#each produits as produit, i}",
+    		source: "(60:8) {#each produits.filter(prod => prod.type!==\\\"Service\\\") as produit, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:0) <Table bordered id="tableStock">
+    // (47:0) <Table bordered id="tableStock">
     function create_default_slot$g(ctx) {
     	let thead;
     	let tr;
@@ -25245,7 +25309,7 @@
     		each_blocks_1[i] = create_each_block_2$4(get_each_context_2$4(ctx, each_value_2, i));
     	}
 
-    	let each_value = /*produits*/ ctx[1];
+    	let each_value = /*produits*/ ctx[1].filter(func$3);
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -25279,11 +25343,11 @@
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$w, 54, 12, 1768);
-    			add_location(th1, file$w, 60, 12, 2023);
-    			add_location(tr, file$w, 53, 8, 1751);
-    			add_location(thead, file$w, 52, 4, 1735);
-    			add_location(tbody, file$w, 63, 4, 2076);
+    			add_location(th0, file$w, 49, 12, 1624);
+    			add_location(th1, file$w, 55, 12, 1879);
+    			add_location(tr, file$w, 48, 8, 1607);
+    			add_location(thead, file$w, 47, 4, 1591);
+    			add_location(tbody, file$w, 58, 4, 1932);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -25341,7 +25405,7 @@
     			}
 
     			if (dirty & /*updatePlatDuJour, produits, submit*/ 26) {
-    				each_value = /*produits*/ ctx[1];
+    				each_value = /*produits*/ ctx[1].filter(func$3);
     				validate_each_argument(each_value);
     				let i;
 
@@ -25402,7 +25466,7 @@
     		block,
     		id: create_default_slot$g.name,
     		type: "slot",
-    		source: "(52:0) <Table bordered id=\\\"tableStock\\\">",
+    		source: "(47:0) <Table bordered id=\\\"tableStock\\\">",
     		ctx
     	});
 
@@ -25468,18 +25532,14 @@
     	return block;
     }
 
+    const func$3 = prod => prod.type !== "Service";
+
     function instance$y($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Stock', slots, []);
 
     	async function reload() {
-    		const res = await getStocks();
-    		let j = 0;
-
-    		for (let i = 0; i < res.length; i += 3) {
-    			rows[j] = [res[i], res[i + 1], res[i + 2]];
-    			j++;
-    		}
+    		$$invalidate(1, produits = await getProduits());
     	}
 
     	let qgs = [];
@@ -25569,15 +25629,6 @@
     		});
     	}
     }
-
-    const createCommande = async(commande) => {
-        try {
-          const response = await API.post("commandes", commande);
-          return response;
-        } catch (error) {
-          return {error:error.response.data}
-        }
-    };
 
     const getCommandes = async() => {
       try {
@@ -25806,7 +25857,7 @@
     	return child_ctx;
     }
 
-    // (184:16) <Button id={`but-del`} color="danger" on:click={deleteCommandes} size="sm">
+    // (191:16) <Button id={`but-del`} color="danger" on:click={deleteCommandes} size="sm">
     function create_default_slot_11$1(ctx) {
     	let t;
 
@@ -25826,14 +25877,14 @@
     		block,
     		id: create_default_slot_11$1.name,
     		type: "slot",
-    		source: "(184:16) <Button id={`but-del`} color=\\\"danger\\\" on:click={deleteCommandes} size=\\\"sm\\\">",
+    		source: "(191:16) <Button id={`but-del`} color=\\\"danger\\\" on:click={deleteCommandes} size=\\\"sm\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (185:16) <Tooltip  target={`but-del`} class="position-absolute" placement="top">
+    // (192:16) <Tooltip  target={`but-del`} class="position-absolute" placement="top">
     function create_default_slot_10$1(ctx) {
     	let t;
 
@@ -25853,14 +25904,14 @@
     		block,
     		id: create_default_slot_10$1.name,
     		type: "slot",
-    		source: "(185:16) <Tooltip  target={`but-del`} class=\\\"position-absolute\\\" placement=\\\"top\\\">",
+    		source: "(192:16) <Tooltip  target={`but-del`} class=\\\"position-absolute\\\" placement=\\\"top\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (203:24) {#each commande.detail_commandes as detail}
+    // (210:24) {#each commande.detail_commandes as detail}
     function create_each_block_4$1(ctx) {
     	let p;
     	let t0_value = /*detail*/ ctx[29].produit.nom + "";
@@ -25881,7 +25932,7 @@
     			t3 = text("€ x");
     			t4 = text(t4_value);
     			attr_dev(p, "class", "m-0 p-0");
-    			add_location(p, file$v, 203, 28, 7987);
+    			add_location(p, file$v, 210, 28, 8383);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -25905,14 +25956,14 @@
     		block,
     		id: create_each_block_4$1.name,
     		type: "each",
-    		source: "(203:24) {#each commande.detail_commandes as detail}",
+    		source: "(210:24) {#each commande.detail_commandes as detail}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (210:24) {#if commande.couverts}
+    // (217:24) {#if commande.couverts}
     function create_if_block$c(ctx) {
     	let t;
 
@@ -25932,14 +25983,14 @@
     		block,
     		id: create_if_block$c.name,
     		type: "if",
-    		source: "(210:24) {#if commande.couverts}",
+    		source: "(217:24) {#if commande.couverts}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (201:20) <Tooltip  target={`info-${commande.id}`} placement="bottom">
+    // (208:20) <Tooltip  target={`info-${commande.id}`} placement="bottom">
     function create_default_slot_9$1(ctx) {
     	let h50;
     	let t1;
@@ -25989,11 +26040,11 @@
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
     			attr_dev(h50, "class", "m-0 p-0");
-    			add_location(h50, file$v, 201, 24, 7857);
-    			add_location(hr0, file$v, 205, 24, 8131);
-    			add_location(h51, file$v, 206, 24, 8161);
-    			add_location(p, file$v, 207, 24, 8208);
-    			add_location(hr1, file$v, 208, 24, 8262);
+    			add_location(h50, file$v, 208, 24, 8253);
+    			add_location(hr0, file$v, 212, 24, 8527);
+    			add_location(h51, file$v, 213, 24, 8557);
+    			add_location(p, file$v, 214, 24, 8604);
+    			add_location(hr1, file$v, 215, 24, 8658);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h50, anchor);
@@ -26076,14 +26127,14 @@
     		block,
     		id: create_default_slot_9$1.name,
     		type: "slot",
-    		source: "(201:20) <Tooltip  target={`info-${commande.id}`} placement=\\\"bottom\\\">",
+    		source: "(208:20) <Tooltip  target={`info-${commande.id}`} placement=\\\"bottom\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (217:24) <Button on:click={validate(commande)} color="primary" size="sm">
+    // (224:24) <Button on:click={validate(commande)} color="primary" size="sm">
     function create_default_slot_8$2(ctx) {
     	let img;
     	let img_src_value;
@@ -26095,7 +26146,7 @@
     			attr_dev(img, "alt", "validate");
     			attr_dev(img, "width", "20");
     			attr_dev(img, "height", "20");
-    			add_location(img, file$v, 217, 28, 8684);
+    			add_location(img, file$v, 224, 28, 9080);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -26109,14 +26160,14 @@
     		block,
     		id: create_default_slot_8$2.name,
     		type: "slot",
-    		source: "(217:24) <Button on:click={validate(commande)} color=\\\"primary\\\" size=\\\"sm\\\">",
+    		source: "(224:24) <Button on:click={validate(commande)} color=\\\"primary\\\" size=\\\"sm\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (225:24) <Button on:click={assigneLivreur(commande)} color="primary" disabled={['','-'].includes(livreursSelected[commande.id])} size="sm">
+    // (232:24) <Button on:click={assigneLivreur(commande)} color="primary" disabled={['','-'].includes(livreursSelected[commande.id])} size="sm">
     function create_default_slot_7$2(ctx) {
     	let img;
     	let img_src_value;
@@ -26128,7 +26179,7 @@
     			attr_dev(img, "alt", "validate");
     			attr_dev(img, "width", "20");
     			attr_dev(img, "height", "20");
-    			add_location(img, file$v, 225, 28, 9158);
+    			add_location(img, file$v, 232, 28, 9554);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -26142,14 +26193,14 @@
     		block,
     		id: create_default_slot_7$2.name,
     		type: "slot",
-    		source: "(225:24) <Button on:click={assigneLivreur(commande)} color=\\\"primary\\\" disabled={['','-'].includes(livreursSelected[commande.id])} size=\\\"sm\\\">",
+    		source: "(232:24) <Button on:click={assigneLivreur(commande)} color=\\\"primary\\\" disabled={['','-'].includes(livreursSelected[commande.id])} size=\\\"sm\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (229:24) {#each livreurs.filter(liv => liv.disponible) as livreur}
+    // (236:24) {#each livreurs.filter(liv => liv.disponible) as livreur}
     function create_each_block_3$1(ctx) {
     	let option;
     	let t_value = /*livreur*/ ctx[24].nom + "";
@@ -26164,7 +26215,7 @@
     			option.__value = option_value_value = /*livreur*/ ctx[24];
     			option.value = option.__value;
     			option.disabled = option_disabled_value = /*livreur*/ ctx[24].id === /*commande*/ ctx[17].livreurId;
-    			add_location(option, file$v, 229, 28, 9510);
+    			add_location(option, file$v, 236, 28, 9906);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -26191,14 +26242,14 @@
     		block,
     		id: create_each_block_3$1.name,
     		type: "each",
-    		source: "(229:24) {#each livreurs.filter(liv => liv.disponible) as livreur}",
+    		source: "(236:24) {#each livreurs.filter(liv => liv.disponible) as livreur}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (233:24) {#each livreurs.filter(liv => !liv.disponible) as livreur}
+    // (240:24) {#each livreurs.filter(liv => !liv.disponible) as livreur}
     function create_each_block_2$3(ctx) {
     	let option;
     	let t_value = /*livreur*/ ctx[24].nom + "";
@@ -26213,7 +26264,7 @@
     			option.__value = option_value_value = /*livreur*/ ctx[24];
     			option.value = option.__value;
     			option.disabled = option_disabled_value = /*livreur*/ ctx[24].id === /*commande*/ ctx[17].livreurId;
-    			add_location(option, file$v, 233, 28, 9773);
+    			add_location(option, file$v, 240, 28, 10169);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -26240,14 +26291,14 @@
     		block,
     		id: create_each_block_2$3.name,
     		type: "each",
-    		source: "(233:24) {#each livreurs.filter(liv => !liv.disponible) as livreur}",
+    		source: "(240:24) {#each livreurs.filter(liv => !liv.disponible) as livreur}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (228:24) <Input id="livreurSelect" type="select" bind:value={livreursSelected[commande.id]}>
+    // (235:24) <Input id="livreurSelect" type="select" bind:value={livreursSelected[commande.id]}>
     function create_default_slot_6$3(ctx) {
     	let t0;
     	let hr;
@@ -26284,7 +26335,7 @@
     			}
 
     			each1_anchor = empty();
-    			add_location(hr, file$v, 231, 24, 9656);
+    			add_location(hr, file$v, 238, 24, 10052);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
@@ -26364,14 +26415,14 @@
     		block,
     		id: create_default_slot_6$3.name,
     		type: "slot",
-    		source: "(228:24) <Input id=\\\"livreurSelect\\\" type=\\\"select\\\" bind:value={livreursSelected[commande.id]}>",
+    		source: "(235:24) <Input id=\\\"livreurSelect\\\" type=\\\"select\\\" bind:value={livreursSelected[commande.id]}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (240:20) <Button on:click={livred(commande)} color="secondary" size="sm">
+    // (247:20) <Button on:click={livred(commande)} color="secondary" size="sm">
     function create_default_slot_5$5(ctx) {
     	let img;
     	let img_src_value;
@@ -26383,7 +26434,7 @@
     			attr_dev(img, "alt", "validate");
     			attr_dev(img, "width", "20");
     			attr_dev(img, "height", "20");
-    			add_location(img, file$v, 240, 24, 10107);
+    			add_location(img, file$v, 247, 24, 10503);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -26397,14 +26448,14 @@
     		block,
     		id: create_default_slot_5$5.name,
     		type: "slot",
-    		source: "(240:20) <Button on:click={livred(commande)} color=\\\"secondary\\\" size=\\\"sm\\\">",
+    		source: "(247:20) <Button on:click={livred(commande)} color=\\\"secondary\\\" size=\\\"sm\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (248:28) {#each qgs as qg}
+    // (255:28) {#each qgs as qg}
     function create_each_block_1$4(ctx) {
     	let option;
     	let t0_value = /*qg*/ ctx[21].nom + "";
@@ -26424,7 +26475,7 @@
     			option.disabled = option_disabled_value = /*commande*/ ctx[17].QGNom === /*qg*/ ctx[21].nom;
     			option.__value = option_value_value = "" + (/*qg*/ ctx[21].nom + " : " + timeParse_1(/*commande*/ ctx[17].trajets[/*qg*/ ctx[21].nom]));
     			option.value = option.__value;
-    			add_location(option, file$v, 248, 32, 10566);
+    			add_location(option, file$v, 255, 32, 10962);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -26454,14 +26505,14 @@
     		block,
     		id: create_each_block_1$4.name,
     		type: "each",
-    		source: "(248:28) {#each qgs as qg}",
+    		source: "(255:28) {#each qgs as qg}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (247:24) <Input type="select" name="select" id="QGs select" bind:value={qgDelegued}>
+    // (254:24) <Input type="select" name="select" id="QGs select" bind:value={qgDelegued}>
     function create_default_slot_4$5(ctx) {
     	let each_1_anchor;
     	let each_value_1 = /*qgs*/ ctx[2];
@@ -26522,14 +26573,14 @@
     		block,
     		id: create_default_slot_4$5.name,
     		type: "slot",
-    		source: "(247:24) <Input type=\\\"select\\\" name=\\\"select\\\" id=\\\"QGs select\\\" bind:value={qgDelegued}>",
+    		source: "(254:24) <Input type=\\\"select\\\" name=\\\"select\\\" id=\\\"QGs select\\\" bind:value={qgDelegued}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (252:24) <Button on:click={changeQg(commande)} color="secondary" size="sm" >
+    // (259:24) <Button on:click={changeQg(commande)} color="secondary" size="sm" >
     function create_default_slot_3$9(ctx) {
     	let img;
     	let img_src_value;
@@ -26541,7 +26592,7 @@
     			attr_dev(img, "alt", "validate");
     			attr_dev(img, "width", "20");
     			attr_dev(img, "height", "20");
-    			add_location(img, file$v, 252, 28, 10856);
+    			add_location(img, file$v, 259, 28, 11252);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -26555,14 +26606,14 @@
     		block,
     		id: create_default_slot_3$9.name,
     		type: "slot",
-    		source: "(252:24) <Button on:click={changeQg(commande)} color=\\\"secondary\\\" size=\\\"sm\\\" >",
+    		source: "(259:24) <Button on:click={changeQg(commande)} color=\\\"secondary\\\" size=\\\"sm\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (259:24) <Button on:click={copy} color="primary" size="sm">
+    // (266:24) <Button on:click={copy} color="primary" size="sm">
     function create_default_slot_2$c(ctx) {
     	let t;
 
@@ -26582,14 +26633,14 @@
     		block,
     		id: create_default_slot_2$c.name,
     		type: "slot",
-    		source: "(259:24) <Button on:click={copy} color=\\\"primary\\\" size=\\\"sm\\\">",
+    		source: "(266:24) <Button on:click={copy} color=\\\"primary\\\" size=\\\"sm\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (258:20) <CopyToClipboard text={getText(commande)} let:copy>
+    // (265:20) <CopyToClipboard text={getText(commande)} let:copy>
     function create_default_slot_1$d(ctx) {
     	let button;
     	let current;
@@ -26644,14 +26695,14 @@
     		block,
     		id: create_default_slot_1$d.name,
     		type: "slot",
-    		source: "(258:20) <CopyToClipboard text={getText(commande)} let:copy>",
+    		source: "(265:20) <CopyToClipboard text={getText(commande)} let:copy>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (190:8) {#each commandes as commande,i (commande.id)}
+    // (197:8) {#each commandes as commande,i (commande.id)}
     function create_each_block$d(key_1, ctx) {
     	let tr;
     	let th0;
@@ -26910,42 +26961,42 @@
     			create_component(input2.$$.fragment);
     			t24 = space();
     			attr_dev(th0, "class", "svelte-fvvgbp");
-    			add_location(th0, file$v, 191, 16, 7358);
+    			add_location(th0, file$v, 198, 16, 7754);
     			attr_dev(th1, "class", "svelte-fvvgbp");
-    			add_location(th1, file$v, 192, 16, 7397);
+    			add_location(th1, file$v, 199, 16, 7793);
     			attr_dev(th2, "class", "svelte-fvvgbp");
-    			add_location(th2, file$v, 195, 16, 7482);
+    			add_location(th2, file$v, 202, 16, 7878);
     			attr_dev(th3, "class", "svelte-fvvgbp");
-    			add_location(th3, file$v, 196, 16, 7527);
+    			add_location(th3, file$v, 203, 16, 7923);
     			attr_dev(th4, "class", "svelte-fvvgbp");
-    			add_location(th4, file$v, 197, 16, 7585);
+    			add_location(th4, file$v, 204, 16, 7981);
     			attr_dev(img, "id", img_id_value = `info-${/*commande*/ ctx[17].id}`);
     			if (!src_url_equal(img.src, img_src_value = 'images/icons/info.png')) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "validate");
     			attr_dev(img, "width", "20");
     			attr_dev(img, "height", "20");
-    			add_location(img, file$v, 199, 20, 7650);
+    			add_location(img, file$v, 206, 20, 8046);
     			attr_dev(th5, "class", "svelte-fvvgbp");
-    			add_location(th5, file$v, 198, 16, 7625);
+    			add_location(th5, file$v, 205, 16, 8021);
     			attr_dev(div0, "class", "d-flex gap-1 align-items-center justify-content-around");
-    			add_location(div0, file$v, 215, 20, 8498);
+    			add_location(div0, file$v, 222, 20, 8894);
     			attr_dev(th6, "class", "svelte-fvvgbp");
-    			add_location(th6, file$v, 214, 16, 8473);
+    			add_location(th6, file$v, 221, 16, 8869);
     			attr_dev(div1, "class", "d-flex gap-1 align-items-center");
-    			add_location(div1, file$v, 223, 20, 8929);
+    			add_location(div1, file$v, 230, 20, 9325);
     			attr_dev(th7, "class", "svelte-fvvgbp");
-    			add_location(th7, file$v, 222, 16, 8904);
+    			add_location(th7, file$v, 229, 16, 9300);
     			attr_dev(th8, "class", "svelte-fvvgbp");
-    			add_location(th8, file$v, 238, 16, 9993);
+    			add_location(th8, file$v, 245, 16, 10389);
     			attr_dev(div2, "class", "d-flex gap-1 align-items-center");
-    			add_location(div2, file$v, 245, 20, 10342);
+    			add_location(div2, file$v, 252, 20, 10738);
     			attr_dev(th9, "class", "svelte-fvvgbp");
-    			add_location(th9, file$v, 243, 16, 10251);
+    			add_location(th9, file$v, 250, 16, 10647);
     			attr_dev(th10, "class", "svelte-fvvgbp");
-    			add_location(th10, file$v, 256, 16, 11031);
+    			add_location(th10, file$v, 263, 16, 11427);
     			attr_dev(th11, "class", "svelte-fvvgbp");
-    			add_location(th11, file$v, 261, 16, 11273);
-    			add_location(tr, file$v, 190, 12, 7337);
+    			add_location(th11, file$v, 268, 16, 11669);
+    			add_location(tr, file$v, 197, 12, 7733);
     			this.first = tr;
     		},
     		m: function mount(target, anchor) {
@@ -27140,14 +27191,14 @@
     		block,
     		id: create_each_block$d.name,
     		type: "each",
-    		source: "(190:8) {#each commandes as commande,i (commande.id)}",
+    		source: "(197:8) {#each commandes as commande,i (commande.id)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (169:0) <Table bordered class="w-100" size="sm">
+    // (176:0) <Table bordered class="w-100" size="sm">
     function create_default_slot$f(ctx) {
     	let thead;
     	let tr;
@@ -27267,35 +27318,35 @@
     			}
 
     			attr_dev(th0, "class", "svelte-fvvgbp");
-    			add_location(th0, file$v, 171, 12, 6613);
+    			add_location(th0, file$v, 178, 12, 7009);
     			attr_dev(th1, "class", "svelte-fvvgbp");
-    			add_location(th1, file$v, 172, 12, 6636);
+    			add_location(th1, file$v, 179, 12, 7032);
     			attr_dev(th2, "class", "svelte-fvvgbp");
-    			add_location(th2, file$v, 173, 12, 6662);
+    			add_location(th2, file$v, 180, 12, 7058);
     			attr_dev(th3, "class", "svelte-fvvgbp");
-    			add_location(th3, file$v, 174, 12, 6692);
+    			add_location(th3, file$v, 181, 12, 7088);
     			attr_dev(th4, "class", "svelte-fvvgbp");
-    			add_location(th4, file$v, 175, 12, 6721);
+    			add_location(th4, file$v, 182, 12, 7117);
     			attr_dev(th5, "class", "svelte-fvvgbp");
-    			add_location(th5, file$v, 176, 12, 6746);
+    			add_location(th5, file$v, 183, 12, 7142);
     			attr_dev(th6, "class", "svelte-fvvgbp");
-    			add_location(th6, file$v, 177, 12, 6774);
+    			add_location(th6, file$v, 184, 12, 7170);
     			attr_dev(th7, "class", "svelte-fvvgbp");
-    			add_location(th7, file$v, 178, 12, 6815);
+    			add_location(th7, file$v, 185, 12, 7211);
     			attr_dev(th8, "class", "svelte-fvvgbp");
-    			add_location(th8, file$v, 179, 12, 6856);
+    			add_location(th8, file$v, 186, 12, 7252);
     			attr_dev(th9, "class", "svelte-fvvgbp");
-    			add_location(th9, file$v, 180, 12, 6898);
+    			add_location(th9, file$v, 187, 12, 7294);
     			attr_dev(th10, "class", "svelte-fvvgbp");
-    			add_location(th10, file$v, 181, 12, 6928);
+    			add_location(th10, file$v, 188, 12, 7324);
     			attr_dev(th11, "id", `but-del`);
     			attr_dev(th11, "class", "svelte-fvvgbp");
-    			add_location(th11, file$v, 182, 12, 6961);
-    			add_location(tr, file$v, 170, 8, 6596);
+    			add_location(th11, file$v, 189, 12, 7357);
+    			add_location(tr, file$v, 177, 8, 6992);
     			attr_dev(thead, "class", "svelte-fvvgbp");
-    			add_location(thead, file$v, 169, 4, 6580);
+    			add_location(thead, file$v, 176, 4, 6976);
     			attr_dev(tbody, "class", "svelte-fvvgbp");
-    			add_location(tbody, file$v, 188, 4, 7263);
+    			add_location(tbody, file$v, 195, 4, 7659);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -27398,7 +27449,7 @@
     		block,
     		id: create_default_slot$f.name,
     		type: "slot",
-    		source: "(169:0) <Table bordered class=\\\"w-100\\\" size=\\\"sm\\\">",
+    		source: "(176:0) <Table bordered class=\\\"w-100\\\" size=\\\"sm\\\">",
     		ctx
     	});
 
@@ -27658,6 +27709,16 @@
     	async function deleteCommandes() {
     		commandes.forEach(async commande => {
     			if (commande.supp) {
+    				let stocks = await getStocks();
+
+    				await commande.detail_commandes.forEach(detail => {
+    					let stock = stocks.find(sto => sto.produitId === detail.produitId && sto.QGNom === commande.QGNom);
+
+    					updateStock(stock.id, {
+    						quantite: stock.quantite + detail.quantite
+    					});
+    				});
+
     				let res = await deleteCommande(commande.id);
 
     				if (res.error !== undefined) {
@@ -27733,6 +27794,8 @@
     		deleteCommande,
     		timeParse: timeParse_1,
     		addToast,
+    		getStocks,
+    		updateStock,
     		commandes,
     		livreurs,
     		qgs,
@@ -32258,9 +32321,9 @@
         return prix.toFixed(2)
     };
 
-    const createDetailCommande = async(detailcommande) => {
+    const commander = async(commande) => {
         try {
-          const response = await API.post("detailCommandes", detailcommande);
+          const response = await API.post("commander", commande);
           return response;
         } catch (error) {
           return {error:error.response.data}
@@ -32290,32 +32353,10 @@
         qgs.sort((qg1, qg2) => (qg1.time > qg2.time) ? 1 : -1); // trie les qgs dans l'ordre du plus proche au moins proche
         commandeEnCours.qg = qgs[0];
         commandeEnCours.trajets = JSON.stringify(trajets);    
-        
-        return createCommande({
-            adresse:commandeEnCours.adresse.description,
-            tel:commandeEnCours.tel,
-            personne:commandeEnCours.personne,
-            etat:"EAP",
-            trajets:commandeEnCours.trajets,
-            QGNom:commandeEnCours.qg.nom,
-            commentaire:commandeEnCours.commentaire,
-            couverts:commandeEnCours.couverts
-        })
-            .then(res => {
-                for (let produit of commandeEnCours.panier){
-                    createDetailCommande({
-                        commandeId:res.id,
-                        produitId:produit.id,
-                        quantite:produit.quantite
-                    });
-                    if (produit.type!=="Service"){
-                        let st = produit.stocks.find(stock => stock.QGNom === commandeEnCours.qg.nom);
-                        updateStock(st.id, {quantite:st.quantite-produit.quantite});
-                    }
-                }   
-                return res.id;
-            })
+        console.log(commandeEnCours);
 
+        const response = await commander(commandeEnCours);
+        return response.id
     }
 
     /**
@@ -40422,6 +40463,8 @@
     }
 
     /* src/frontend/components/main/sos/menus/modal/modal_confirm.svelte generated by Svelte v3.46.1 */
+
+    const { console: console_1$2 } = globals;
     const file$c = "src/frontend/components/main/sos/menus/modal/modal_confirm.svelte";
 
     function get_each_context$4(ctx, list, i) {
@@ -40430,7 +40473,7 @@
     	return child_ctx;
     }
 
-    // (48:4) <ModalHeader toggle={toggle}>
+    // (49:4) <ModalHeader toggle={toggle}>
     function create_default_slot_8$1(ctx) {
     	let t;
 
@@ -40450,14 +40493,14 @@
     		block,
     		id: create_default_slot_8$1.name,
     		type: "slot",
-    		source: "(48:4) <ModalHeader toggle={toggle}>",
+    		source: "(49:4) <ModalHeader toggle={toggle}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (66:20) {:else}
+    // (67:20) {:else}
     function create_else_block$4(ctx) {
     	let tr;
     	let th0;
@@ -40480,10 +40523,10 @@
     			th2 = element("th");
     			th2.textContent = "gratuit";
     			t4 = space();
-    			add_location(th0, file$c, 67, 24, 2553);
-    			add_location(th1, file$c, 68, 24, 2597);
-    			add_location(th2, file$c, 69, 24, 2631);
-    			add_location(tr, file$c, 66, 20, 2524);
+    			add_location(th0, file$c, 68, 24, 2590);
+    			add_location(th1, file$c, 69, 24, 2634);
+    			add_location(th2, file$c, 70, 24, 2668);
+    			add_location(tr, file$c, 67, 20, 2561);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -40507,14 +40550,14 @@
     		block,
     		id: create_else_block$4.name,
     		type: "else",
-    		source: "(66:20) {:else}",
+    		source: "(67:20) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (60:20) {#if prod.type!=="Service"}
+    // (61:20) {#if prod.type!=="Service"}
     function create_if_block$5(ctx) {
     	let tr;
     	let th0;
@@ -40544,10 +40587,10 @@
     			t4 = text(t4_value);
     			t5 = text("€");
     			t6 = space();
-    			add_location(th0, file$c, 61, 24, 2335);
-    			add_location(th1, file$c, 62, 24, 2379);
-    			add_location(th2, file$c, 63, 24, 2428);
-    			add_location(tr, file$c, 60, 20, 2306);
+    			add_location(th0, file$c, 62, 24, 2372);
+    			add_location(th1, file$c, 63, 24, 2416);
+    			add_location(th2, file$c, 64, 24, 2465);
+    			add_location(tr, file$c, 61, 20, 2343);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -40576,14 +40619,14 @@
     		block,
     		id: create_if_block$5.name,
     		type: "if",
-    		source: "(60:20) {#if prod.type!==\\\"Service\\\"}",
+    		source: "(61:20) {#if prod.type!==\\\"Service\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (59:16) {#each commandeEnCours.panier as prod}
+    // (60:16) {#each commandeEnCours.panier as prod}
     function create_each_block$4(ctx) {
     	let if_block_anchor;
 
@@ -40627,14 +40670,14 @@
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(59:16) {#each commandeEnCours.panier as prod}",
+    		source: "(60:16) {#each commandeEnCours.panier as prod}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (50:8) <Table bordered class="w-100">
+    // (51:8) <Table bordered class="w-100">
     function create_default_slot_7$1(ctx) {
     	let thead;
     	let tr;
@@ -40672,12 +40715,12 @@
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$c, 52, 20, 2025);
-    			add_location(th1, file$c, 53, 20, 2062);
-    			add_location(th2, file$c, 54, 20, 2100);
-    			add_location(tr, file$c, 51, 16, 2000);
-    			add_location(thead, file$c, 50, 12, 1976);
-    			add_location(tbody, file$c, 57, 12, 2175);
+    			add_location(th0, file$c, 53, 20, 2062);
+    			add_location(th1, file$c, 54, 20, 2099);
+    			add_location(th2, file$c, 55, 20, 2137);
+    			add_location(tr, file$c, 52, 16, 2037);
+    			add_location(thead, file$c, 51, 12, 2013);
+    			add_location(tbody, file$c, 58, 12, 2212);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -40731,14 +40774,14 @@
     		block,
     		id: create_default_slot_7$1.name,
     		type: "slot",
-    		source: "(50:8) <Table bordered class=\\\"w-100\\\">",
+    		source: "(51:8) <Table bordered class=\\\"w-100\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (77:8) <Table borderless class="w-100">
+    // (78:8) <Table borderless class="w-100">
     function create_default_slot_6$2(ctx) {
     	let tbody;
     	let tr0;
@@ -40850,19 +40893,19 @@
     			t7 = space();
     			th5 = element("th");
     			create_component(svelecte.$$.fragment);
-    			add_location(h50, file$c, 79, 24, 2963);
-    			add_location(th0, file$c, 79, 20, 2959);
-    			add_location(th1, file$c, 80, 20, 3008);
-    			add_location(tr0, file$c, 78, 16, 2934);
-    			add_location(h51, file$c, 84, 24, 3221);
-    			add_location(th2, file$c, 84, 20, 3217);
-    			add_location(th3, file$c, 85, 20, 3267);
-    			add_location(tr1, file$c, 83, 16, 3192);
-    			add_location(h52, file$c, 88, 24, 3450);
-    			add_location(th4, file$c, 88, 20, 3446);
-    			add_location(th5, file$c, 89, 20, 3494);
-    			add_location(tr2, file$c, 87, 16, 3421);
-    			add_location(tbody, file$c, 77, 12, 2910);
+    			add_location(h50, file$c, 80, 24, 3000);
+    			add_location(th0, file$c, 80, 20, 2996);
+    			add_location(th1, file$c, 81, 20, 3045);
+    			add_location(tr0, file$c, 79, 16, 2971);
+    			add_location(h51, file$c, 85, 24, 3258);
+    			add_location(th2, file$c, 85, 20, 3254);
+    			add_location(th3, file$c, 86, 20, 3304);
+    			add_location(tr1, file$c, 84, 16, 3229);
+    			add_location(h52, file$c, 89, 24, 3487);
+    			add_location(th4, file$c, 89, 20, 3483);
+    			add_location(th5, file$c, 90, 20, 3531);
+    			add_location(tr2, file$c, 88, 16, 3458);
+    			add_location(tbody, file$c, 78, 12, 2947);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tbody, anchor);
@@ -40942,14 +40985,14 @@
     		block,
     		id: create_default_slot_6$2.name,
     		type: "slot",
-    		source: "(77:8) <Table borderless class=\\\"w-100\\\">",
+    		source: "(78:8) <Table borderless class=\\\"w-100\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (106:8) <Alert color="danger" class="mt-2 mb-0">
+    // (107:8) <Alert color="danger" class="mt-2 mb-0">
     function create_default_slot_5$4(ctx) {
     	let h4;
     	let t1;
@@ -40963,8 +41006,8 @@
     			t1 = text("\n            Si aucune proposition ne s'affiche, c'est que l'API de googlemaps est bloqué par une extension.");
     			br = element("br");
     			t2 = text("\n            Pensez à désactiver Adblock, Ublock, Brave Shields up avant de passer commande.");
-    			add_location(h4, file$c, 106, 12, 4107);
-    			add_location(br, file$c, 107, 107, 4235);
+    			add_location(h4, file$c, 107, 12, 4144);
+    			add_location(br, file$c, 108, 107, 4272);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h4, anchor);
@@ -40984,14 +41027,14 @@
     		block,
     		id: create_default_slot_5$4.name,
     		type: "slot",
-    		source: "(106:8) <Alert color=\\\"danger\\\" class=\\\"mt-2 mb-0\\\">",
+    		source: "(107:8) <Alert color=\\\"danger\\\" class=\\\"mt-2 mb-0\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (49:4) <ModalBody>
+    // (50:4) <ModalBody>
     function create_default_slot_4$4(ctx) {
     	let table0;
     	let t0;
@@ -41127,9 +41170,9 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			create_component(input1.$$.fragment);
     			t10 = space();
     			create_component(input2.$$.fragment);
-    			add_location(h3, file$c, 75, 8, 2798);
-    			add_location(br0, file$c, 110, 8, 4372);
-    			add_location(br1, file$c, 114, 8, 4652);
+    			add_location(h3, file$c, 76, 8, 2835);
+    			add_location(br0, file$c, 111, 8, 4409);
+    			add_location(br1, file$c, 115, 8, 4689);
     		},
     		m: function mount(target, anchor) {
     			mount_component(table0, target, anchor);
@@ -41249,14 +41292,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_4$4.name,
     		type: "slot",
-    		source: "(49:4) <ModalBody>",
+    		source: "(50:4) <ModalBody>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (120:6) <Button color="primary" on:click={commander} disabled={!attested}>
+    // (121:6) <Button color="primary" on:click={commander} disabled={!attested}>
     function create_default_slot_3$8(ctx) {
     	let t;
 
@@ -41276,14 +41319,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_3$8.name,
     		type: "slot",
-    		source: "(120:6) <Button color=\\\"primary\\\" on:click={commander} disabled={!attested}>",
+    		source: "(121:6) <Button color=\\\"primary\\\" on:click={commander} disabled={!attested}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (121:6) <Button color="secondary" on:click={toggle}>
+    // (122:6) <Button color="secondary" on:click={toggle}>
     function create_default_slot_2$a(ctx) {
     	let t;
 
@@ -41303,14 +41346,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_2$a.name,
     		type: "slot",
-    		source: "(121:6) <Button color=\\\"secondary\\\" on:click={toggle}>",
+    		source: "(122:6) <Button color=\\\"secondary\\\" on:click={toggle}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (119:4) <ModalFooter>
+    // (120:4) <ModalFooter>
     function create_default_slot_1$a(ctx) {
     	let button0;
     	let t;
@@ -41391,14 +41434,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_1$a.name,
     		type: "slot",
-    		source: "(119:4) <ModalFooter>",
+    		source: "(120:4) <ModalFooter>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (47:0) <Modal isOpen={open} toggle={toggle} centered size="lg">
+    // (48:0) <Modal isOpen={open} toggle={toggle} centered size="lg">
     function create_default_slot$c(ctx) {
     	let modalheader;
     	let t0;
@@ -41497,7 +41540,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot$c.name,
     		type: "slot",
-    		source: "(47:0) <Modal isOpen={open} toggle={toggle} centered size=\\\"lg\\\">",
+    		source: "(48:0) <Modal isOpen={open} toggle={toggle} centered size=\\\"lg\\\">",
     		ctx
     	});
 
@@ -41532,7 +41575,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			script.defer = true;
     			script.async = true;
     			if (!src_url_equal(script.src, script_src_value = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBVuuSdHqLFHATJRR29glB6hZHGENj7O8o&libraries=places&callback=placeCallback")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$c, 41, 1, 1589);
+    			add_location(script, file$c, 42, 1, 1626);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -41616,6 +41659,8 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			commandeEnCours
     		);
 
+    		console.log(commandeEnCours);
+
     		commande(commandeEnCours, serviceGoogleDistance).then(id => {
     			$$invalidate(1, commandeEnCours.id = id, commandeEnCours);
     			$$invalidate(2, attested = false);
@@ -41629,7 +41674,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	const writable_props = ['open', 'nextModal', 'commandeEnCours'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Modal_confirm> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$2.warn(`<Modal_confirm> was created with unknown prop '${key}'`);
     	});
 
     	function input0_value_binding(value) {
@@ -41754,15 +41799,15 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		const props = options.props || {};
 
     		if (/*open*/ ctx[0] === undefined && !('open' in props)) {
-    			console.warn("<Modal_confirm> was created without expected prop 'open'");
+    			console_1$2.warn("<Modal_confirm> was created without expected prop 'open'");
     		}
 
     		if (/*nextModal*/ ctx[6] === undefined && !('nextModal' in props)) {
-    			console.warn("<Modal_confirm> was created without expected prop 'nextModal'");
+    			console_1$2.warn("<Modal_confirm> was created without expected prop 'nextModal'");
     		}
 
     		if (/*commandeEnCours*/ ctx[1] === undefined && !('commandeEnCours' in props)) {
-    			console.warn("<Modal_confirm> was created without expected prop 'commandeEnCours'");
+    			console_1$2.warn("<Modal_confirm> was created without expected prop 'commandeEnCours'");
     		}
     	}
 
@@ -41793,7 +41838,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     /* src/frontend/components/main/sos/menus/modal/modal_confirmed.svelte generated by Svelte v3.46.1 */
 
-    const { console: console_1$2 } = globals;
+    const { console: console_1$1 } = globals;
     const file$b = "src/frontend/components/main/sos/menus/modal/modal_confirmed.svelte";
 
     // (12:4) <ModalHeader>
@@ -41839,15 +41884,17 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     function create_else_block$3(ctx) {
     	let p;
     	let t0;
-    	let t1_value = prixTotal(/*commandeEnCours*/ ctx[1].panier) + "";
+    	let br0;
     	let t1;
+    	let t2_value = prixTotal(/*commandeEnCours*/ ctx[1].panier) + "";
     	let t2;
-    	let br;
     	let t3;
-    	let t4_value = /*commandeEnCours*/ ctx[1].id + "";
+    	let br1;
     	let t4;
+    	let t5_value = /*commandeEnCours*/ ctx[1].id + "";
     	let t5;
     	let t6;
+    	let t7;
     	let div;
     	let button;
     	let current;
@@ -41867,38 +41914,43 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	const block = {
     		c: function create() {
     			p = element("p");
-    			t0 = text("Montant : ");
-    			t1 = text(t1_value);
-    			t2 = text("€");
-    			br = element("br");
-    			t3 = text("\n        Description : ");
-    			t4 = text(t4_value);
-    			t5 = text(" (votre numéro de commande).");
-    			t6 = space();
+    			t0 = text("Pour que votre commande soit prise en charge, vous devez nous faire un payement lydia :");
+    			br0 = element("br");
+    			t1 = text("\n        Montant : ");
+    			t2 = text(t2_value);
+    			t3 = text("€");
+    			br1 = element("br");
+    			t4 = text("\n        Description : ");
+    			t5 = text(t5_value);
+    			t6 = text(" (votre numéro de commande).");
+    			t7 = space();
     			div = element("div");
     			create_component(button.$$.fragment);
-    			add_location(br, file$b, 22, 54, 795);
+    			add_location(br0, file$b, 22, 95, 836);
+    			add_location(br1, file$b, 23, 54, 896);
     			add_location(p, file$b, 21, 4, 737);
     			attr_dev(div, "class", "w-100 d-flex justify-content-center");
-    			add_location(div, file$b, 25, 4, 884);
+    			add_location(div, file$b, 26, 4, 985);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
     			append_dev(p, t0);
+    			append_dev(p, br0);
     			append_dev(p, t1);
     			append_dev(p, t2);
-    			append_dev(p, br);
     			append_dev(p, t3);
+    			append_dev(p, br1);
     			append_dev(p, t4);
     			append_dev(p, t5);
-    			insert_dev(target, t6, anchor);
+    			append_dev(p, t6);
+    			insert_dev(target, t7, anchor);
     			insert_dev(target, div, anchor);
     			mount_component(button, div, null);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if ((!current || dirty & /*commandeEnCours*/ 2) && t1_value !== (t1_value = prixTotal(/*commandeEnCours*/ ctx[1].panier) + "")) set_data_dev(t1, t1_value);
-    			if ((!current || dirty & /*commandeEnCours*/ 2) && t4_value !== (t4_value = /*commandeEnCours*/ ctx[1].id + "")) set_data_dev(t4, t4_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 2) && t2_value !== (t2_value = prixTotal(/*commandeEnCours*/ ctx[1].panier) + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*commandeEnCours*/ 2) && t5_value !== (t5_value = /*commandeEnCours*/ ctx[1].id + "")) set_data_dev(t5, t5_value);
     			const button_changes = {};
 
     			if (dirty & /*$$scope*/ 8) {
@@ -41918,7 +41970,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
-    			if (detaching) detach_dev(t6);
+    			if (detaching) detach_dev(t7);
     			if (detaching) detach_dev(div);
     			destroy_component(button);
     		}
@@ -41967,7 +42019,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	return block;
     }
 
-    // (27:8) <Button class="w-75 mx-auto" id="but_lydia" target="_blank" href="https://lydia-app.com/form/payment/phoneform?vendor_token=6212183a37389062855264">
+    // (28:8) <Button class="w-75 mx-auto" id="but_lydia" target="_blank" href="https://lydia-app.com/form/payment/phoneform?vendor_token=6212183a37389062855264">
     function create_default_slot_4$3(ctx) {
     	let t;
 
@@ -41987,7 +42039,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_4$3.name,
     		type: "slot",
-    		source: "(27:8) <Button class=\\\"w-75 mx-auto\\\" id=\\\"but_lydia\\\" target=\\\"_blank\\\" href=\\\"https://lydia-app.com/form/payment/phoneform?vendor_token=6212183a37389062855264\\\">",
+    		source: "(28:8) <Button class=\\\"w-75 mx-auto\\\" id=\\\"but_lydia\\\" target=\\\"_blank\\\" href=\\\"https://lydia-app.com/form/payment/phoneform?vendor_token=6212183a37389062855264\\\">",
     		ctx
     	});
 
@@ -42087,7 +42139,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	return block;
     }
 
-    // (34:6) <Button class="colored" on:click={endCommande}>
+    // (35:6) <Button class="colored" on:click={endCommande}>
     function create_default_slot_2$9(ctx) {
     	let t;
 
@@ -42107,14 +42159,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_2$9.name,
     		type: "slot",
-    		source: "(34:6) <Button class=\\\"colored\\\" on:click={endCommande}>",
+    		source: "(35:6) <Button class=\\\"colored\\\" on:click={endCommande}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (33:4) <ModalFooter>
+    // (34:4) <ModalFooter>
     function create_default_slot_1$9(ctx) {
     	let button;
     	let current;
@@ -42168,7 +42220,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_1$9.name,
     		type: "slot",
-    		source: "(33:4) <ModalFooter>",
+    		source: "(34:4) <ModalFooter>",
     		ctx
     	});
 
@@ -42352,7 +42404,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	const writable_props = ['open', 'commandeEnCours', 'endCommande'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$2.warn(`<Modal_confirmed> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1.warn(`<Modal_confirmed> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -42407,15 +42459,15 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		const props = options.props || {};
 
     		if (/*open*/ ctx[0] === undefined && !('open' in props)) {
-    			console_1$2.warn("<Modal_confirmed> was created without expected prop 'open'");
+    			console_1$1.warn("<Modal_confirmed> was created without expected prop 'open'");
     		}
 
     		if (/*commandeEnCours*/ ctx[1] === undefined && !('commandeEnCours' in props)) {
-    			console_1$2.warn("<Modal_confirmed> was created without expected prop 'commandeEnCours'");
+    			console_1$1.warn("<Modal_confirmed> was created without expected prop 'commandeEnCours'");
     		}
 
     		if (/*endCommande*/ ctx[2] === undefined && !('endCommande' in props)) {
-    			console_1$2.warn("<Modal_confirmed> was created without expected prop 'endCommande'");
+    			console_1$1.warn("<Modal_confirmed> was created without expected prop 'endCommande'");
     		}
     	}
 
@@ -42467,52 +42519,15 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
         if (poidsBoisson>10){
             return "Vous ne pouvez pas prendre plus de 10 boissons au total"
         }          
-        panierfilter(prod => prod.type==="Goodies").forEach(prod => {poidsGoodies+=prod.quantite;});
+        panier.filter(prod => prod.type==="Goodies").forEach(prod => {poidsGoodies+=prod.quantite;});
         if (poidsGoodies>5){
             return "Désolé vous avez commandé trop de Goodies"
         }
         return true  
     };
 
-    const getPeriodes = async () => {
-        try {
-          const response = await API.get("periodes");
-          return response;
-        } catch (error) {
-          return {error:error.response.data}
-        }
-    };
-
     async function checkTime$1() {
-        const today = new Date();
-        const periodes = await getPeriodes();
-        let nextPeriode = null;
-        let inPeriode = false;
-        periodes.forEach(periode => {
-            periode.start = new Date(periode.start);
-            periode.end = new Date(periode.end);   
-            if (periode.start < today && today < periode.end){
-                inPeriode = true;        
-            }
-            if (nextPeriode === null && periode.start > today){
-                nextPeriode = periode;
-            }
-        });
-        if (inPeriode){
-            return inPeriode
-        }
-        if (nextPeriode === null){
-            return "Désolé, les SOS sont terminés pour nous !"
-        } else {
-            let d = nextPeriode.start;
-            let hours = d.getHours(),minutes = d.getMinutes(),secondes = d.getSeconds(),day = d.getDate(),month = (d.getMonth()+1),year = d.getFullYear();
-            if (hours <10){hours = '0'+hours;}
-            if (minutes <10){minutes = '0'+minutes;}
-            if (secondes <10){secondes = '0'+secondes;}
-            if (day <10){day = '0'+day;}
-            if (month <10){month = '0'+month;}
-            return `Vous ne pouvez pas commander maintenant, nous réouvrons à ${hours}:${minutes}:${secondes} le ${day}-${month}-${year}`
-        }
+        return true
     }
 
     /* src/frontend/components/main/sos/menus/panier.svelte generated by Svelte v3.46.1 */
@@ -47814,8 +47829,6 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     }
 
     /* src/frontend/components/main/sos/suivi_commande.svelte generated by Svelte v3.46.1 */
-
-    const { console: console_1$1 } = globals;
     const file$2 = "src/frontend/components/main/sos/suivi_commande.svelte";
 
     function get_each_context(ctx, list, i) {
@@ -47824,7 +47837,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	return child_ctx;
     }
 
-    // (39:8) <Button class="colored" on:click={reload}>
+    // (37:8) <Button class="colored" on:click={reload}>
     function create_default_slot_2$2(ctx) {
     	let img;
     	let img_src_value;
@@ -47836,7 +47849,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			attr_dev(img, "alt", "reload");
     			attr_dev(img, "width", "20");
     			attr_dev(img, "height", "20");
-    			add_location(img, file$2, 39, 5, 1073);
+    			add_location(img, file$2, 37, 5, 1027);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -47850,14 +47863,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(39:8) <Button class=\\\"colored\\\" on:click={reload}>",
+    		source: "(37:8) <Button class=\\\"colored\\\" on:click={reload}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (44:4) <Tooltip target={`TempsTrajet`}>
+    // (42:4) <Tooltip target={`TempsTrajet`}>
     function create_default_slot_1$2(ctx) {
     	let p;
     	let t0;
@@ -47870,8 +47883,8 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			t0 = text("Le temps de trajet est calculé entre le lieu que vous avez donné et le QG le plus proche. (en utilisant l'API de Google Maps)");
     			br = element("br");
     			t1 = text("\r\n\t\t\t\t\tCe temps ne comptabilise pas le temps de cuisine qui dépend du nombre de commandes en cours.");
-    			add_location(br, file$2, 44, 133, 1414);
-    			add_location(p, file$2, 44, 5, 1286);
+    			add_location(br, file$2, 42, 133, 1368);
+    			add_location(p, file$2, 42, 5, 1240);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -47888,14 +47901,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(44:4) <Tooltip target={`TempsTrajet`}>",
+    		source: "(42:4) <Tooltip target={`TempsTrajet`}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:3) {#each commandes as commande}
+    // (50:3) {#each commandes as commande}
     function create_each_block(ctx) {
     	let tr;
     	let th0;
@@ -47924,12 +47937,12 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			t4 = text(t4_value);
     			t5 = space();
     			attr_dev(th0, "class", "svelte-1kvueg3");
-    			add_location(th0, file$2, 53, 5, 1629);
+    			add_location(th0, file$2, 51, 5, 1583);
     			attr_dev(th1, "class", "svelte-1kvueg3");
-    			add_location(th1, file$2, 54, 5, 1658);
+    			add_location(th1, file$2, 52, 5, 1612);
     			attr_dev(th2, "class", "svelte-1kvueg3");
-    			add_location(th2, file$2, 55, 5, 1695);
-    			add_location(tr, file$2, 52, 4, 1618);
+    			add_location(th2, file$2, 53, 5, 1649);
+    			add_location(tr, file$2, 50, 4, 1572);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -47957,14 +47970,14 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(52:3) {#each commandes as commande}",
+    		source: "(50:3) {#each commandes as commande}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (36:1) <Table responsive>
+    // (34:1) <Table responsive>
     function create_default_slot$3(ctx) {
     	let thead;
     	let tr;
@@ -48030,17 +48043,17 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			}
 
     			attr_dev(th0, "class", "svelte-1kvueg3");
-    			add_location(th0, file$2, 38, 4, 1020);
+    			add_location(th0, file$2, 36, 4, 974);
     			attr_dev(th1, "class", "svelte-1kvueg3");
-    			add_location(th1, file$2, 41, 4, 1173);
+    			add_location(th1, file$2, 39, 4, 1127);
     			attr_dev(th2, "id", "TempsTrajet");
     			attr_dev(th2, "class", "svelte-1kvueg3");
-    			add_location(th2, file$2, 42, 4, 1192);
-    			add_location(tr, file$2, 37, 3, 1010);
+    			add_location(th2, file$2, 40, 4, 1146);
+    			add_location(tr, file$2, 35, 3, 964);
     			attr_dev(thead, "class", "svelte-1kvueg3");
-    			add_location(thead, file$2, 36, 2, 998);
+    			add_location(thead, file$2, 34, 2, 952);
     			attr_dev(tbody, "class", "svelte-1kvueg3");
-    			add_location(tbody, file$2, 50, 2, 1571);
+    			add_location(tbody, file$2, 48, 2, 1525);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -48127,7 +48140,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(36:1) <Table responsive>",
+    		source: "(34:1) <Table responsive>",
     		ctx
     	});
 
@@ -48159,7 +48172,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     			create_component(table.$$.fragment);
     			attr_dev(main, "id", "suivi");
     			attr_dev(main, "class", "svelte-1kvueg3");
-    			add_location(main, file$2, 34, 0, 956);
+    			add_location(main, file$2, 32, 0, 910);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -48217,14 +48230,11 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
 
     	onMount(async () => {
     		const res = await getCommandes();
-    		console.log(res);
     		$$invalidate(0, commandes = res.filter(co => co.etat !== "LV" && co.trajets !== '{}'));
 
     		commandes.forEach(co => {
     			co.trajets = JSON.parse(co.trajets);
     		});
-
-    		console.log(commandes);
     	});
 
     	async function reload() {
@@ -48247,7 +48257,7 @@ Précisez ici la garniture que vous souhaitez dans vos crêpes (par défaut au s
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1.warn(`<Suivi_commande> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Suivi_commande> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$capture_state = () => ({

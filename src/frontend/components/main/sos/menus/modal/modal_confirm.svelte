@@ -24,6 +24,7 @@
     /* --  -- */
     function commander(){
         commandeEnCours.couverts = (commandeEnCours.couverts === undefined) ? false : commandeEnCours.couverts;
+        console.log(commandeEnCours)
         commande(commandeEnCours, serviceGoogleDistance)
         .then((id) => {
             commandeEnCours.id = id

@@ -2,6 +2,7 @@ import {getPeriodes} from '../api/periode'
 import { timeParse } from './timeParse';
 
 export async function checkTime() {
+    return true
     const today = new Date()
     const periodes = await getPeriodes();
     let nextPeriode = null

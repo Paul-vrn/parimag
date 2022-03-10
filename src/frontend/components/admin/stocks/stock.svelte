@@ -7,12 +7,7 @@
     import { getProduits, updateProduit } from '../../../api/produit'
 
     async function reload() {
-        const res = await getStocks();
-        let j = 0
-        for (let i = 0; i < res.length; i += 3) {
-            rows[j] = [res[i], res[i+1], res[i+2]]
-            j++
-        }
+        produits = await getProduits();
     }
     let qgs = []
     let rows = []
@@ -62,15 +57,17 @@
         </tr>
     </thead>
     <tbody>
-        {#each produits as produit, i}
+        {#each produits.filter(prod => prod.type!=="Service") as produit, i}
             <tr>
                 <th>{produit.nom}</th>
                 {#each produit.stocks as stock}
                     <th><Input value={stock.quantite} id={stock.id} on:keydown={submit}/></th>
                 {/each}
+                {#if produit.type==="Plat"}
                 <th>
                     <Button on:click={updatePlatDuJour(produit)}>update</Button>
-                </th>
+                </th>                    
+                {/if}
             </tr>
         {/each}
     </tbody>

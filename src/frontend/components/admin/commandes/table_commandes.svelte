@@ -6,6 +6,7 @@
     import {updateCommande, deleteCommande} from '../../../api/commande'
     import {timeParse} from '../../../services/timeParse'
     import {addToast } from 'as-toast';
+import { getStocks, updateStock } from "../../../api/stock";
     export let commandes;
     export let livreurs;
     export let qgs;
@@ -146,6 +147,12 @@
     async function deleteCommandes(){
         commandes.forEach(async commande => {
             if (commande.supp){
+                let stocks = await getStocks()
+                await commande.detail_commandes.forEach(detail => {
+                    let stock = stocks.find(sto => sto.produitId===detail.produitId && sto.QGNom===commande.QGNom)
+                    updateStock(stock.id, {quantite:stock.quantite+detail.quantite})
+                })
+
                 let res = await deleteCommande(commande.id)
                 if (res.error!==undefined){addToast(res.error.message, "warn", 2000);return}
             }

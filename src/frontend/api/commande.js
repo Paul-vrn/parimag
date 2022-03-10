@@ -18,6 +18,15 @@ export const getCommandes = async() => {
   }
 }
 
+export const getCommandesSuivi = async() => {
+  try {
+    const response = await Api.get('commandes/suivi');
+    return response;
+  } catch (error) {
+    return {error:error.response.data}
+  }
+}
+
 export const updateCommande = async (id, commande) => {
   try {
     const response = await Api.patch(`commandes/${id}`, commande)

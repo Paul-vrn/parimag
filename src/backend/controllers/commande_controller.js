@@ -26,6 +26,20 @@ module.exports = {
                 })
             })
     },
+    findAllSuivi: (req, res) => {
+        console.log("aaaaaaaaaaaaaaaaaaaaaaaa")
+        Commande.findAll({
+            attributes:['id', "etat", "trajets", "QGNom"]
+        })
+        .then(data => {
+            res.send(data)
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: err.message || "Error findAllSuivi"
+            })
+        })
+    },
     findAll: (req, res) => {
         Commande.findAll({
             include: [
@@ -48,6 +62,7 @@ module.exports = {
             })
     },
     findOne: (req, res) => {
+        console.log("find one")
         const id = req.params.id;
         Commande.findByPk(id)
             .then(data => {

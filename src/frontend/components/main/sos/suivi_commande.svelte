@@ -2,18 +2,18 @@
 import { Table, Button, Tooltip } from 'sveltestrap';
 let commandes = []
 import { onMount } from 'svelte';
-import {getCommandes} from '../../../api/commande'
+import {getCommandesSuivi} from '../../../api/commande'
 import { Toasts, addToast } from 'as-toast';
 import {timeParse} from '../../../services/timeParse'
 	onMount(async () => {
-        const res = await getCommandes();
+        const res = await getCommandesSuivi();
         commandes = res.filter(co => co.etat !== "LV" && co.trajets !== '{}')
 		commandes.forEach(co => {
 				co.trajets = JSON.parse(co.trajets)
 			});
     });
 	async function reload() {
-		const res = await getCommandes()
+		const res = await getCommandesSuivi()
 		commandes = res.filter(co => co.etat !== "LV"  && co.trajets !== '{}')
 		commandes.forEach(co => {
 				co.trajets = JSON.parse(co.trajets)

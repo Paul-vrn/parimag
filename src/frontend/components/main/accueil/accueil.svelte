@@ -95,7 +95,7 @@ footer div {
   main#accueil > div h1 {
     font-style: normal;
     font-weight: normal;
-    font-size: 3em;
+    font-size: 3rem;
     color: #ffffff;
   }
   main#accueil > div text {
@@ -114,12 +114,16 @@ footer div {
       background-size: cover;
     }
     main#accueil h1 {
+      font-size: 2.5rem !important;
       width: 80%;
       margin-right: auto;
       margin-left: auto;
     }
     main#accueil > div text {
       font-size: 5rem;
+    }
+    main#accueil > div p {
+      width: 90% !important;
     }
   }
 </style>

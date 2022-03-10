@@ -9,7 +9,7 @@ router
   res.status(200).json(require('../data/produits.json'))
 })
   .get('/blogs', (req, res) => {
-    res.status(200).json(require('../data/blog.json'))
+    res.status(200).json(require('../data/blogs.json'))
   })
 
 module.exports = router;

@@ -21,7 +21,7 @@
 <style>
 	main#menus {
 		width: 100%;
-		min-height: 80%;
+		min-height: calc(100% - 120px);
 		display: flex;
 		flex-wrap: nowrap;
 		flex-direction: row;

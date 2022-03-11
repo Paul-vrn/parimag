@@ -10,6 +10,7 @@ const runMiddleware = require('run-middleware');
 runMiddleware(app)
 app.use(cookieParser())
 
+
 app.use(express.json())
 app.use(cors());
 const db = require("./src/backend/models/index");

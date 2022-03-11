@@ -11,6 +11,7 @@ var livreurRoute = require('./livreur')
 var banderoleRoute = require('./banderole')
 var periodeRoute = require('./periode')
 var commanderController = require('../controllers/commander_controller')
+const rateLimiter = require('./middleware').rateLimiter
 router
 .get('/', (req, res) => {
     res.status(200).send("Vide")
@@ -24,7 +25,7 @@ router
 .use('/banderoles', banderoleRoute)
 .use('/livreurs', livreurRoute)
 .use('/periodes', periodeRoute)
-.post('/commander', commanderController.create)
+.post('/commander', rateLimiter, commanderController.create)
 .get('/benzimag', (req, res) => {
     res.status(200).send({
         message:"Bien joué vous avez trouvé un nouveau esteregg ! Ajoutez le code ci-dessous en commentaire de ta commande pour obtenir une belle surprise :D",

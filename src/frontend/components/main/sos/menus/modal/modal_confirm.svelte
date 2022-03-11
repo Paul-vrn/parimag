@@ -62,7 +62,7 @@
                     <tr>
                         <th>{prod.nom}</th>
                         <th>{prod.quantite}</th>
-                        <th>{prod.prix}€</th>
+                        <th>{prod.prix}</th>
                     </tr>
                     {:else}
                     <tr>
@@ -74,7 +74,7 @@
                 {/each}
             </tbody>
         </Table>
-        <h3>Prix total : {prixTotal(commandeEnCours.panier)}€</h3>
+        <h3>Prix total : {prixTotal(commandeEnCours.panier)}</h3>
         <Table borderless class="w-100">
             <tbody>
                 <tr>

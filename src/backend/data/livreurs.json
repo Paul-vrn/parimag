@@ -77,7 +77,7 @@
     {
         "nom":"Maissa",
         "disponible":true,
-        "QGNom":"PPM"
+        "QGNom":"CAN"
     },
     {
         "nom":"Adam",
@@ -124,5 +124,10 @@
         "nom":"Hajar",
         "disponible":true,
         "QGNom":"CAN"
+    },
+    {
+        "nom":"Théo",
+        "disponible":true,
+        "QGNom":"PPM"
     }
 ]

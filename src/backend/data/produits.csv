@@ -1,8 +1,8 @@
 nom,sous_titre,type,plat_du_jour,prix,vege,halal,quantiteMax,ingredients,description,photo
-Rougail saucisse,Ce plat peut être servi sans viande. (à préciser en commentaire de la commande),Plat,FALSE,2.5,TRUE,FALSE,3,"saucisse fumée, oignons, tomates, thym, laurier, ail, curcuma, riz","Plat de la délégation française. Le rougail saucisse est un plat traditionnel réunionnais, à base de saucisses de porc fumées préparées à la créole, mijotées avec des tomates, oignons et herbes de provences. Servi avec du riz.",rougail-saucisses.jpg
+"Rougail saucisse, servi avec riz",Ce plat peut être servi sans viande. (à préciser en commentaire de la commande),Plat,FALSE,2.5,TRUE,FALSE,3,"saucisse fumée, oignons, tomates, thym, laurier, ail, curcuma, riz","Plat de la délégation française. Le rougail saucisse est un plat traditionnel réunionnais, à base de saucisses de porc fumées préparées à la créole, mijotées avec des tomates, oignons et herbes de provences. Servi avec du riz.",rougail-saucisses.jpg
 Nouilles sautées,Ce plat peut être servi sans viande. (à préciser en commentaire de la commande),Plat,FALSE,2.5,TRUE,FAUX,3,"nouilles, boeuf, oignons, poivron, sauce bulldog","Plat de la délégation chinoise. Nouilles sautées au wok, avec du boeuf, des oignons, des poivrons et de la sauce bulldog.",nouilles-chinoises.jpg
 Currywurst,Ce plat peut être servi sans viande. (à préciser en commentaire de la commande),Plat,FALSE,1.5,TRUE,FAUX,3,"saucisse fumée, coulis de tomate, ketchup, vinaigre de vin rouge, oignon, curry, frites","Plat de la délégation allemande. Symbole de la street-food berlinoise, une saucisse recouverte de sauce tomate type ketchup au curry, avec des petits oignons. Servi avec des frites.",currywurst.jpg
-Poulet aigre doux,Ce plat peut être servi sans viande ou avec du poulet halal.(à préciser en commentaire de la commande),Plat,FALSE,2.00,TRUE,TRUE,3,"poulet (halal), sauce soja, maizena, ketchup, sucre, citron, farine, huile à frire, tomate, poivron, oignon, ananas","Plat de la délégation chinoise. Délicieux poulet frit, ensuite mijoté dans une sauce aigre-douce, avec des poivrons, des oignons, de l'ananas et des tomates. Servi avec du riz.",poulet-aigre-doux.jpg
+"Poulet aigre doux, servi avec riz ",Ce plat peut être servi sans viande ou avec du poulet halal.(à préciser en commentaire de la commande),Plat,TRUE,2.00,TRUE,TRUE,3,"poulet (halal), sauce soja, maizena, ketchup, sucre, citron, farine, huile à frire, tomate, poivron, oignon, ananas","Plat de la délégation chinoise. Délicieux poulet frit, ensuite mijoté dans une sauce aigre-douce, avec des poivrons, des oignons, de l'ananas et des tomates. Servi avec du riz.",poulet-aigre-doux.jpg
 Croque Monsieur Pesto fromage,,Accompagnement,,0.5,TRUE,TRUE,6,"pain de mie, pesto, fromage râpé",Pourquoi faire compliqué ? Un croque-monsieur tout simple avec du pesto vert et du fromage râpé.,croque.jpg
 Riz,,Accompagnement,,0.50,TRUE,TRUE,6,,"Du riz blanc, tout simplement !",riz.jpg
 Crêpes,"Précisez en commentaire de la commande, ce que vous voulez mettre sur vos crêpes entre sucre et nutella",Dessert,,0,TRUE,TRUE,10,"farine, sucre, oeufs, lait, sel","Que serait des SOS sans crêpes ? Faites avec de la farine de blé, du sucre, du lait 
@@ -16,9 +16,9 @@ Redbull,,Boisson,,0.50,,,10,,,red_bull.png
 Ice Tea,,Boisson,,0.50,,,10,,,ice_tea.png
 Oasis,,Boisson,,0.50,,,10,,,oasis.png
 "Corvées ménagères
-",,Service,,0,,,,,"On vient faire votre vaiselle, passer le ménage ou encore faire le serveur durant vos soirées !",menage.png
+",,Service,,0,,,,,"On vient faire votre vaiselle, faire le ménage ou encore faire le serveur durant vos soirées ! Le matériel n'est pas fourni.",menage.png
 déménagement,,Service,,0,,,,,"Aide au déménagement, on peut aussi vous débarasser de ce que vous n'utilisez plus",demenagement.jpg
 SOS Choré,,Service,,0,,,,,On vient vous apprendre notre superbe choré !,chore.png
-SOS Calin,,Service,,0,,,,,Ne pas abuser !,calin.jpg
-Coach sportif,,Service,,0,,,,,,coach.png
-Goodies supporter de la liste,Sac officiel de la liste avec la serviette un eco cup et des stickers,Goodies,,22.5,,,2,,,sac_serviette.jpg
+SOS Calin,,Service,,0,,,,,Ne pas en abuser svp :D,calin.jpg
+Coach sportif,,Service,,0,,,,,On vous envoie un coach pour une séance de 5 -10 min de sport !,coach.png
+Goodies supporter de la liste,"Sac officiel de la liste avec serviette 100% coton 70x140 cm, et écocups et stickers.",Goodies,,15,,,2,,,sac_serviette.jpg

@@ -55,8 +55,10 @@
             <img id={`halal${produit.id}`} src={'images/icons/halal.png'} alt="info" width="40" height="40"/>        
             <Tooltip  target={`halal${produit.id}`} placement="bottom">Plat sans viande ou viande halal</Tooltip>
             {/if}
+            {#if produit.type!=="Goodies"}
             <img id={`info${produit.id}`} src={'images/icons/info.png'} alt="info" width="40" height="40" on:click={showInfo} style="cursor:pointer;"/>   
-            <Tooltip  target={`info${produit.id}`} placement="bottom">Plus d'infos sur le produit en cliquant ici</Tooltip>
+            <Tooltip  target={`info${produit.id}`} placement="bottom">Plus d'infos sur le produit en cliquant ici</Tooltip>                
+            {/if}
         </div>
     </div>
      {#if produit.sous_titre !== ""}

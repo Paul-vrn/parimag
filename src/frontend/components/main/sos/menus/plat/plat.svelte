@@ -42,7 +42,7 @@
     <div class="d-flex justify-content-start align-items-center flex-wrap">
         <h2>{produit.nom}</h2>
         <div class="d-flex justify-content-between align-items-center flex-nowrap w-100">
-            <h4 class="m-0">{produit.prix}€/unité</h4>
+            <h4 class="m-0">{produit.prix}/unité</h4>
             {#if produit.vege}
                 <img id={`vege${produit.id}`} src={'images/icons/vegetarien.png'} alt="vege" width="40" height="40"/>
                 <Tooltip  target={`vege${produit.id}`} placement="bottom">

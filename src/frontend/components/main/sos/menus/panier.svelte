@@ -67,7 +67,7 @@
                         <th>#</th>
                         <th>Nom</th>
                         <th>quantite</th>
-                        <th class="text-nowrap">prix (€)</th>
+                        <th class="text-nowrap">prix (PAF)</th>
                         <th class="w-25">supprimer</th>
                     </tr>
                 </thead>
@@ -113,35 +113,6 @@
                 </tbody>
             </Table>        
         </div>
-        <div>
-            <h2>Goodies :</h2>
-            <Table responsive centered size="sm" class="w-100">
-                <thead>
-                    <tr class="">
-                        <th>#</th>
-                        <th>Nom</th>
-                        <th>quantite</th>
-                        <th class="text-nowrap">prix (€)</th>
-                        <th class="w-25">supprimer</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {#each commandeEnCours.panier.filter(prod => prod.type==="Goodies") as produit, i (produit.id)}
-                        <tr class=" align-items-center">
-                            <th>{i+1}</th>
-                            <th>{produit.nom}</th>
-                            <th>{produit.quantite}</th>
-                            <th>{(produit.prix*produit.quantite).toFixed(2)}</th>
-                            <th>
-                                <Button on:click={() => deleteElOfPanier(produit.id)} color="danger">
-                                <img src={'images/icons/poubelle.png'} alt="validate" width="20" height="20"/>
-                            </Button>
-                            </th>
-                        </tr>
-                    {/each}
-                </tbody>
-            </Table>
-        </div>
     </div>
     <hr class="mt-auto"/>
     <Button class="ms-auto me-2 mb-2 colored" on:click={commander} disabled={commandeEnCours.panier.length ==0}>Commander</Button>
@@ -161,6 +132,7 @@ div#panier {
     position: fixed;
     right:0;
     margin-bottom: 1em;
+    overflow: auto;
 }
 div#panier h2 {
     margin-left: 0.25em;

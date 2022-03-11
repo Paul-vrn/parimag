@@ -57,6 +57,7 @@
         </TabPane>
         <TabPane tabId="Goodies" tab="Goodies">
             <div class="d-flex flex-wrap justify-content-around">
+                <h3>Vous pouvez le commander n'importe quand !</h3>
                 {#each produits.filter(prod => prod.type==="Goodies") as goodies}
                     <Produit produit={goodies} {addInPanier}/>
                 {/each}

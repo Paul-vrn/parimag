@@ -37,7 +37,7 @@ import { addToast } from "as-toast";
   <TabContent id="TabPanneau" on:tab={(ev) => $viewAdmin = ev.detail}>
     {#each qgs as qg}
       <TabPane tabId={qg.nom} tab={qg.nom} active={$viewAdmin===qg.nom}>
-        <TableCommandes commandes={commandes.filter(co => co.QGNom === qg.nom)} livreurs={livreurs.filter(liv => liv.QGNom === qg.nom)} qgs={qgs} updateCommandes={updateCommandes}/>
+        <TableCommandes commandes={commandes.filter(co => co.QGNom === qg.nom)} livreurs={livreurs} qgs={qgs} updateCommandes={updateCommandes}/>
       </TabPane>   
     {/each}
   </TabContent>  

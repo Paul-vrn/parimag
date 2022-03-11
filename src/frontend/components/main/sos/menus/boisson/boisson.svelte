@@ -38,7 +38,7 @@
     <div class="haut d-flex justify-content-between align-items-center flex-wrap">
         <div class=" d-flex flex-column">
             <h2>{produit.nom}</h2>
-            <h4 class="m-0">{produit.prix}/unité</h4>    
+            <h4 class="m-0">{produit.prix} PAF/unité</h4>    
         </div>
         <img src={`images/menu/${produit.photo}`} alt="${produit.photo}"/>
     </div>

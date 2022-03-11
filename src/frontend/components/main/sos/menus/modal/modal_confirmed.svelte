@@ -21,7 +21,7 @@
     {:else}
     <p>
         Pour que votre commande soit prise en charge, vous devez nous faire un payement lydia :<br/>
-        Montant : {prixTotal(commandeEnCours.panier)}<br>
+        Montant : {prixTotal(commandeEnCours.panier)} PAF<br>
         Description : {commandeEnCours.id} (votre numéro de commande).
     </p>
     <div class="w-100 d-flex justify-content-center">

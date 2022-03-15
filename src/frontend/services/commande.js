@@ -21,7 +21,8 @@ export async function commande(commandeEnCours, serviceGoogleDistance) {
                 trajets[qg.nom] = qg.time
             })
             .catch(err => {
-                    return err
+                    console.log(err)
+                    //maintenant qu'on a enlevé les place_id, on aura toujours des erreurs mais pas grave.
                 })
     }
     qgs.sort((qg1, qg2) => (qg1.time > qg2.time) ? 1 : -1) // trie les qgs dans l'ordre du plus proche au moins proche

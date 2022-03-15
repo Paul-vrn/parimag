@@ -31,11 +31,14 @@ module.exports = {
             nom:req.body.nom,
             type:req.body.type,
             prix:(req.body.prix==="") ? null : req.body.prix,
-            ingredients:(req.body.ingredients==="") ? null : req.body.ingredients,
-            vege:(req.body.vege=="VRAI") ? true : false,
-            halal:(req.body.halal==="VRAI") ? true : false,
-            quantiteMax:(data.quantiteMax==="") ? null : data.quantiteMax,
-            description:(req.body.description==="") ? null : req.body.ingredients
+            ingredients:req.body.ingredients,
+            vege:req.body.vege,
+            halal:req.body.halal,
+            quantiteMax:req.body.quantiteMax,
+            description:req.body.description,
+	    plat_du_jour:req.body.plat_du_jour,
+            photo:req.body.photo,
+            sous_titre:req.body.sous_titre
         }
         Produit.create(produit)
             .then(data => {

@@ -28,6 +28,19 @@
             })
         }
     }
+    function submitMax(event){
+        if (event.key === "Enter"){
+            updateProduit(event.target.id, {quantiteMax:event.target.value})
+            .then(res => {
+                if (res.error !== undefined){
+                    addToast(res.error.message, "warn", 2000)
+                } else {
+                    addToast("quantiteMax update", "info", 2000)
+                }
+            })
+        }
+    }
+
     function updatePlatDuJour(produit){
         updateProduit(produit.id, {plat_du_jour:!produit.plat_du_jour})
         .then(res => {
@@ -54,7 +67,8 @@
                 <th>{qg.nom}</th>
             {/each}
             <th>Plat du jour</th>
-        </tr>
+            <th>QuantiteMax</th>    
+       </tr>
     </thead>
     <tbody>
         {#each produits.filter(prod => prod.type!=="Service") as produit, i}
@@ -66,8 +80,13 @@
                 {#if produit.type==="Plat"}
                 <th>
                     <Button on:click={updatePlatDuJour(produit)}>update</Button>
-                </th>                    
+                </th>
+		{:else}
+		<th></th>                    
                 {/if}
+		<th>
+                    <Input value={produit.quantiteMax} id={produit.id} on:keydown={submitMax}/>
+                </th>
             </tr>
         {/each}
     </tbody>

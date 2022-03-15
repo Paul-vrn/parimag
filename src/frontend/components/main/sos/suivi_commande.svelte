@@ -5,6 +5,8 @@ import { onMount } from 'svelte';
 import {getCommandesSuivi} from '../../../api/commande'
 import { Toasts, addToast } from 'as-toast';
 import {timeParse} from '../../../services/timeParse'
+import {getDate} from '../../../services/getDate'
+
 	onMount(async () => {
         const res = await getCommandesSuivi();
         commandes = res.filter(co => co.etat !== "LV" && co.trajets !== '{}')
@@ -31,6 +33,9 @@ import {timeParse} from '../../../services/timeParse'
 
 <Toasts/>
 <main id="suivi">
+	<p>Le lien pour payer via Lydia, au cas où vous auriez oublié de le faire en finalisant votre commande : 
+		<a target="_blank" href="https://lydia-app.com/form/payment/phoneform?vendor_token=6212183a37389062855264">Payer</a>
+	</p>
 	<Table responsive>
 		<thead>
 			<tr>
@@ -44,6 +49,7 @@ import {timeParse} from '../../../services/timeParse'
 					Ce temps ne comptabilise pas le temps de cuisine qui dépend du nombre de commandes en cours.	
 					</p>
 				</Tooltip>
+				<th>Date de création</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -52,6 +58,7 @@ import {timeParse} from '../../../services/timeParse'
 					<th>{commande.id}</th>
 					<th>{etat[commande.etat]}</th>
 					<th>{timeParse(commande.trajets[commande.QGNom])}</th>
+					<th>{getDate(new Date(commande.createdAt))}</th>
 				</tr>
 			{/each}
 		</tbody>

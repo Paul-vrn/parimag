@@ -10,11 +10,11 @@ module.exports.checkPanier = (panier) => {
     let poidsBoisson = 0;
     let poidsGoodies = 0;
     panier.filter(prod => prod.type === "Plat").forEach(prod => {poidsPlat+=prod.quantite});
-    if (poidsPlat>3) {
+    if (poidsPlat>5) {
         return false
     }
     panier.filter(prod => prod.type==="Dessert" && prod.nom!=="Crêpes").forEach(prod => poidsDessert+=prod.quantite);
-    if (poidsDessert>3){
+    if (poidsDessert>15){
         return false
     }
     panier.filter(prod => prod.type==="Boisson").forEach(prod => poidsBoisson+=prod.quantite);

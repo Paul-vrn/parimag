@@ -25,7 +25,7 @@ router
 .use('/banderoles', banderoleRoute)
 .use('/livreurs', livreurRoute)
 .use('/periodes', periodeRoute)
-.post('/commander', rateLimiter, commanderController.create)
+.post('/commander', commanderController.create)
 .get('/benzimag', (req, res) => {
     res.status(200).send({
         message:"Bien joué vous avez trouvé un nouveau esteregg ! Ajoutez le code ci-dessous en commentaire de ta commande pour obtenir une belle surprise :D",

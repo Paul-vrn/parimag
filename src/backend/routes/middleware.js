@@ -4,16 +4,16 @@ const SECRET = require('../config').SECRET
 const rateLimit = require('express-rate-limit')
 const rateLimiter =  rateLimit({
    windowMs:60 * 60 * 1000,
-   max: 5,
+   max: 10,
    standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
 	legacyHeaders: false,
+    message:"Arrête de spam."
 })
 /* Récupération du header bearer */
 const extractBearerToken = headerValue => {
     if (typeof headerValue !== 'string') {
         return false
     }
-
     const matches = headerValue.match(/(bearer)\s+(\S+)/i)
     return matches && matches[2]
 }

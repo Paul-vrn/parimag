@@ -1,10 +1,9 @@
 <script>
-    import {Modal, ModalBody, ModalFooter, ModalHeader, Button} from 'sveltestrap'
+    import {Modal, ModalBody, ModalFooter, ModalHeader, Button, Alert} from 'sveltestrap'
     import { prixTotal } from '../../../../../services/prix_total'
     export let open;
     export let commandeEnCours;
     export let endCommande;
-    console.log(commandeEnCours)
 </script>
 
 
@@ -19,11 +18,13 @@
         Pas de payement pour votre commande, il ne vous reste plus qu'à attendre !
     </p>
     {:else}
-    <p>
-        Pour que votre commande soit prise en charge, vous devez nous faire un payement lydia :<br/>
-        Montant : {prixTotal(commandeEnCours.panier)}<br>
-        Description : {commandeEnCours.id} (votre numéro de commande).
-    </p>
+        <Alert color="danger" class="mt-2 mb-0">
+            <h4>Attention !</h4>
+            Pour valider votre commande, vous devez :<br>
+            Payer {prixTotal(commandeEnCours.panier)} PAF<br>
+            Mettre en description votre <b>numéro de commande</b> OU commander avec le même <b>prénom NOM</b> que celui renseigner dans le formulaire précédent<br><br>
+            Si vous ne le faites pas, nous ne garantirons pas la livraison et le remboursement de votre commande !
+        </Alert> 
     <div class="w-100 d-flex justify-content-center">
         <Button class="w-75 mx-auto" id="but_lydia" target="_blank" href="https://lydia-app.com/form/payment/phoneform?vendor_token=6212183a37389062855264">
             Payer avec Lydia

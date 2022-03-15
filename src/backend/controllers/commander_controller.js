@@ -4,12 +4,27 @@ const DetailCommande = db.DetailCommande
 const Stock = db.Stock
 const Periode = db.Periode
 const checkPanier = require('../services/checkPanier').checkPanier
+
 module.exports = {
     create : async (req, res) => {
         
         //checkPanier
         //checkTemps
         const panier = req.body.panier
+        if (panier.length <= 0 || req.body.etat!==undefined){
+            res.status(400).send({message:"Pas bon"})
+            return
+        }
+	onlyGoodies = true;
+	panier.forEach(prod => {
+		if (prod.type!=="Goodies"){
+			onlyGoodies = false;
+		}
+	})
+	if (!onlyGoodies){
+		res.status(400).send({message:"Nos SOS sont terminés !"})
+	}
+
         const commande = {
             trajets:req.body.trajets,
             tel:req.body.tel,
@@ -38,6 +53,7 @@ module.exports = {
                 inPeriode = true;        
             }
         })
+	inPeriode = true;
         if (!onlyGoodies){
             if (!inPeriode){
                 res.status(400).send({message:"No no no, tu ne peux commander à cette période"})

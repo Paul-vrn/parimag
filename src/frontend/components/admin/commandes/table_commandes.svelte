@@ -1,23 +1,36 @@
 <script>
-	import { getContext, onMount } from "svelte";
+    import { getContext, onMount } from "svelte";
     import {Table, Button, Input, Tooltip} from 'sveltestrap'
     import CopyToClipboard from "svelte-copy-to-clipboard";
     import {updateLivreur, getLivreurs} from '../../../api/livreur'
     import {updateCommande, deleteCommande} from '../../../api/commande'
     import {timeParse} from '../../../services/timeParse'
     import {addToast } from 'as-toast';
-import { getStocks, updateStock } from "../../../api/stock";
+    import { getStocks, updateStock } from "../../../api/stock";
+    import {getDate} from '../../../services/getDate'
     export let commandes;
     export let livreurs;
     export let qgs;
     export let updateCommandes;
     let qgDelegued = "";
     let livreursSelected = []
+    let yesterday = new Date(new Date().getTime() - 6*3600*1000)
     commandes.forEach(commande => {
         if (commande.livreurId!==undefined){
             livreursSelected[commande.id] = livreurs.find(liv => liv.id===commande.livreurId)
         }
     })
+    let totalLivreurs = {}
+	console.log(livreursSelected)
+    livreursSelected.forEach(liv => {
+	if (liv===undefined){return}
+	if (totalLivreurs[liv.nom]!== undefined){
+		totalLivreurs[liv.nom] = totalLivreurs[liv.nom]+1	
+	} else {
+		totalLivreurs[liv.nom] = 0
+	}
+})
+    console.log(totalLivreurs)
     let qgsDeleged = []
     const etat = {
 		"LV":"Livrée",
@@ -135,6 +148,9 @@ import { getStocks, updateStock } from "../../../api/stock";
         commande.detail_commandes.forEach(detail => {
             texte += `- ${detail.produit.nom} x${detail.quantite}\n`
         })
+        if (commande.commentaire!==undefined && commande.commentaire!==""){
+            texte += `commentaire : ${commande.commentaire}`
+        }
         return texte
     }
     function getPrix(commande){
@@ -194,7 +210,8 @@ import { getStocks, updateStock } from "../../../api/stock";
         </tr>
     </thead>
     <tbody>
-        {#each commandes as commande,i (commande.id)}
+	{#each commandes as commande, i (commande.id)}
+<!--        {#each commandes.filter(co => new Date(co.createdAt) > yesterday) as commande,i (commande.id)}-->
             <tr>
                 <th>{commande.id}</th>
                 <th>
@@ -215,8 +232,9 @@ import { getStocks, updateStock } from "../../../api/stock";
                         <p>{commande.commentaire}</p>
                         <hr/>
                         {#if commande.couverts}
-                            à délivrer avec des couverts.
+                            à délivrer avec des couverts.<br>
                         {/if}
+			<p>{getDate(new Date(commande.createdAt))}</p>			
                     </Tooltip>
                 </th>
                 <th>

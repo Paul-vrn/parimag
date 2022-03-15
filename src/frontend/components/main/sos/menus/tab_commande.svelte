@@ -9,7 +9,6 @@
     onMount(async () => {
         const res = await getProduits();
         produits = res;
-        console.log(produits)
     });
 
     export let updatePanier;
@@ -32,7 +31,7 @@
 
 <div class="produits">
     <TabContent pills>
-        <TabPane tabId="Plats" tab="Plats" active>
+        <TabPane tabId="Plats" tab="Plats" >
             <div class="d-flex flex-wrap justify-content-around">
                 {#each produits.filter(prod => (prod.type==="Plat" && prod.plat_du_jour) || prod.type==="Accompagnement") as produit}
                     <Produit produit={produit} {addInPanier}/>
@@ -55,8 +54,9 @@
                 {/each}
             </div>
         </TabPane>
-        <TabPane tabId="Goodies" tab="Goodies">
+        <TabPane tabId="Goodies" tab="Goodies" active>
             <div class="d-flex flex-wrap justify-content-around">
+                <h3>Vous pouvez le commander n'importe quand !</h3>
                 {#each produits.filter(prod => prod.type==="Goodies") as goodies}
                     <Produit produit={goodies} {addInPanier}/>
                 {/each}

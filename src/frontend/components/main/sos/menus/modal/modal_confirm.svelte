@@ -53,7 +53,7 @@
                 <tr>
                     <th>Produit</th>
                     <th>Quantite</th>
-                    <th>Prix/unité</th>
+                    <th>PAF/unité</th>
                 </tr>
             </thead>
             <tbody>
@@ -62,7 +62,7 @@
                     <tr>
                         <th>{prod.nom}</th>
                         <th>{prod.quantite}</th>
-                        <th>{prod.prix}</th>
+                        <th>{prod.prix} PAF</th>
                     </tr>
                     {:else}
                     <tr>
@@ -74,7 +74,7 @@
                 {/each}
             </tbody>
         </Table>
-        <h3>Prix total : {prixTotal(commandeEnCours.panier)}</h3>
+        <h3>Prix total : {prixTotal(commandeEnCours.panier)} PAF</h3>
         <Table borderless class="w-100">
             <tbody>
                 <tr>
@@ -107,7 +107,7 @@
         <Alert color="danger" class="mt-2 mb-0">
             <h4>Attention !</h4>
             Si aucune proposition ne s'affiche, c'est que l'API de googlemaps est bloqué par une extension.<br/>
-            Pensez à désactiver Adblock, Ublock, Brave Shields up avant de passer commande.
+            Pensez à désactiver Adblock, Ublock, Brave Shields up avant de passer commande.<br/><br/>
         </Alert>              
         <br/> 
         <Input type="textarea" name="text" id="exampleText" bind:value={commandeEnCours.commentaire} rows="4"

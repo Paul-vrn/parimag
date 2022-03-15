@@ -27,6 +27,8 @@
             openFirstModal = false
             openFirstModal = true
         } else {
+	    addToast("Désolé, c'est la fin de nos SOS mais vous pouvez toujours commander nos goodies !", "warn", 6000);
+	    return
             if (typeof panierCheck !== "boolean"){
                 addToast(panierCheck, "warn", 4000)
             } else if (typeof timeCheck !== "boolean"){
@@ -67,7 +69,7 @@
                         <th>#</th>
                         <th>Nom</th>
                         <th>quantite</th>
-                        <th class="text-nowrap">prix</th>
+                        <th class="text-nowrap">prix (PAF)</th>
                         <th class="w-25">supprimer</th>
                     </tr>
                 </thead>

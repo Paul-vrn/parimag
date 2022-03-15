@@ -27,9 +27,8 @@ module.exports = {
             })
     },
     findAllSuivi: (req, res) => {
-        console.log("aaaaaaaaaaaaaaaaaaaaaaaa")
         Commande.findAll({
-            attributes:['id', "etat", "trajets", "QGNom"]
+            attributes:['id', "etat", "trajets", "QGNom", "createdAt"]
         })
         .then(data => {
             res.send(data)

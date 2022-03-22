@@ -1,0 +1,12 @@
+[
+    {
+        "nom":"QG1",
+        "password":"QG1",
+        "place_id":"id_google_map_adresse_user"
+    },
+    {
+        "nom":"QG2",
+        "password":"QG2",
+        "place_id":"id_google_map_adresse_user"
+    },
+]

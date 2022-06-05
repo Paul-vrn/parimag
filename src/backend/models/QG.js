@@ -7,15 +7,15 @@ module.exports = (sequelize, DataTypes) => {
         },
         adresse:{
             type: DataTypes.STRING,
-            allowNull:false
+            //allowNull:false
         },
         place_id:{
             type: DataTypes.STRING,
-            allowNull:false
+            //allowNull:false
         },
         password:{
             type: DataTypes.STRING,
-            allowNull:false
+            //allowNull:false
         }
     }, {timestamps: false});
     return Qg

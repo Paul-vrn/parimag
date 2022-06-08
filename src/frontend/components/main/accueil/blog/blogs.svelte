@@ -2,11 +2,16 @@
     import { onMount } from "svelte";
     import { getBlogs } from '../../../../api/getBlogs'
     import Blog from './blog.svelte'
+    /* version api
     let blogs = [];
     onMount(async () => {
         const res = await getBlogs();
         blogs = res;
     });
+    */
+    import * as jsonblogs from '../../../../json/blogs.json';
+    let blogs = jsonblogs.default;
+   console.log(jsonblogs);
 </script>
 
 

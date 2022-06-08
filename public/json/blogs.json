@@ -1,0 +1,28 @@
+[
+    {
+        "titre":"Film",
+        "video":"https://youtube.com/embed/izdvMbOMLy8"
+    },
+    {
+        "titre":"Choré",
+        "video":"https://www.youtube.com/embed/Dy6fwJTWxnk"
+    },
+    {
+        "titre":"Teaser",
+        "video":"https://www.youtube.com/embed/EpWs6_Ow-4Q"
+    },
+    {
+        "titre":"Benzimag",
+        "video":"https://www.youtube.com/embed/iZu-Iizg9bo"
+    },
+    {
+        "titre":"Parimag à Turin",
+        "photo":"turin.jpg",
+        "description":""
+    },
+    {
+        "titre":"Randonnée",
+        "photo":"rando.jpg",
+        "description":""
+    }
+]

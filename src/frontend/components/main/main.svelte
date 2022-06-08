@@ -72,7 +72,7 @@ import {
 			</Nav>
 		</Collapse>
 	  </Navbar>
-
+<!--
 {#await getBanderole(1)}
 	  <div id="banderole"><p>Chargement</p></div>
 {:then banderole} 
@@ -82,7 +82,7 @@ import {
 		<img src={'images/icons/cross.svg'} alt="validate" on:click={() => banderoleHide=true} width="30" height="30"/>
 	</div>
 {/if}	
-{/await} 
+{/await} -->
 </header>
 {#if $viewMain.includes('accueil')}
 <Accueil/>
@@ -99,6 +99,7 @@ import {
 {/if}
 
 <style>
+/*
 div#banderole {
 	background-color: #D7C378;
 	border-width: 0.1em;
@@ -115,7 +116,7 @@ div#banderole p {
 div#banderole img {
 	cursor: pointer;
 	margin-right: 5px;
-}
+}*/
 :global(.navbar-toggler:active, .navbar-toggler:focus) {
 	background-color: #D7C378 !important;
 	color: #D7C378 !important;

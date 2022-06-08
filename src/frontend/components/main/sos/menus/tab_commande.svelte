@@ -6,10 +6,15 @@
     import Boisson from './boisson/boisson.svelte'
     import {TabContent, TabPane} from 'sveltestrap'
     let produits = []
+    /* avec api
     onMount(async () => {
         const res = await getProduits();
         produits = res;
     });
+    */
+    import * as jsonproduits from "../../../../json/produits.json";
+    produits = jsonproduits.default;
+    produits.forEach(prod => prod.stock = 50);
 
     export let updatePanier;
     export let commandeEnCours;

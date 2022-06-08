@@ -6,11 +6,17 @@
   let poleSelected = {
     membres:[]
   };
+  /* version api
   onMount(async () => {
     const res = await getListe();
     liste = res;
     poleSelected = liste[0]
-  });
+  });*/
+  
+  import * as jsonliste from "../../../json/liste.json";
+  liste = jsonliste.default;
+  poleSelected = liste[0];
+
   function changePole(val){
     poleSelected = val
     window.scrollTo(0,0); 

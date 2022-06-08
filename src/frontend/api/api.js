@@ -4,9 +4,9 @@ import { getAuth } from "../services/cookie";
 
 // Create a instance of axios to use the same base url.
 const axiosAPI = axios.create({
-   //baseURL : "https://parimag-2024.fr/api/"
+   baseURL : "https://parimag-2024.fr/api/"
    //baseURL:"http://localhost:5050/api/"
-   baseURL:"https://benzimag.pages.dev/api/"
+   //baseURL:"https://benzimag.pages.dev/api/"
 });
 
 // implement a method to execute all the request from here.

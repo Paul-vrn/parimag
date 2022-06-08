@@ -1,0 +1,268 @@
+[
+    {
+        "nom":"Prez",
+        "photo":"pole_prez",
+        "membres":[
+            {
+                "nom":"Adrien",
+                "surnom":"Turn up",
+                "role":"Président",
+                "photo":"adrien"
+            },
+            {
+                "nom":"Etienne",
+                "surnom":"On time",
+                "role":"Vice-Prés",
+                "photo":"etienne"
+            },
+            {
+                "nom":"Arthur A",
+                "surnom":"Palpatine",
+                "role":"Vice-Prés",
+                "photo":"arthura"
+            }
+        ]
+    },
+    {
+        "nom":"Bureau",
+        "photo":"pole_bureau",
+        "membres":[
+            {
+                "nom":"Cédric",
+                "surnom":"Tqt le boss",
+                "role":"Sécretaire Générale",
+                "photo":"cedric"
+            },
+            {
+                "nom":"Tim",
+                "surnom":"DidingTim",
+                "role":"Respo Com",
+                "photo":"tim"
+            },
+            {
+                "nom":"Axel",
+                "surnom":"Steve Jobs",
+                "role":"Trésorier",
+                "photo":"axel"
+            },
+            {
+                "nom":"Quentin",
+                "surnom":"Ski engineer",
+                "role":"Vice-Trés",
+                "photo":"quentin"
+            }
+        ]
+    },
+    {
+        "nom":"Choré",
+        "photo":"pole_chore",
+        "membres":[
+            {
+                "nom":"Maissa",
+                "surnom":"Bro",
+                "role":"Respo Choré",
+                "photo":"maissa"
+            },
+            {
+                "nom":"Marine",
+                "surnom":"Maz",
+                "role":"Choré",
+                "photo":"marine"
+            },
+            {
+                "nom":"Cédric",
+                "surnom":"Tqt le boss",
+                "role":"Choré",
+                "photo":"cedric"
+            },
+            {
+                "nom":"Hajar",
+                "surnom":"",
+                "role":"Choré",
+                "photo":"hajar"
+            }
+        ]
+    },
+    {
+        "nom":"Goodies",
+        "photo":"pole_goodies",
+        "membres":[
+            {
+                "nom":"Arthur LB",
+                "surnom":"ASAP Arthuro",
+                "role":"Respo Goodies",
+                "photo":"arthurl"
+            },
+            {
+                "nom":"Marc",
+                "surnom":"Lil Marco",
+                "role":"Goodies",
+                "photo":"marc"
+            },
+            {
+                "nom":"Tee Wei",
+                "surnom":"",
+                "role":"Goodies",
+                "photo":"tee_wei"
+            }
+        ]
+    },
+    {
+        "nom":"SOS/Ptit déj",
+        "photo":"pole_sos",
+        "membres":[
+            {
+                "nom":"Camille",
+                "surnom":"Camille",
+                "role":"SOS",
+                "photo":"camille"
+            },
+            {
+                "nom":"Paul",
+                "surnom":"-900",
+                "role":"Orga",
+                "photo":"paul"
+            },
+            {
+                "nom":"Tee Wei",
+                "surnom":"Le Baby Chef",
+                "role":"Chef cuisinier",
+                "photo":"tee_wei"
+            },
+            {
+                "nom":"Arthur R",
+                "surnom":"",
+                "role":"SOS",
+                "photo":"arthurr"
+            },
+            {
+                "nom":"Hajar",
+                "surnom":"",
+                "role":"SOS",
+                "photo":"hajar"
+            }
+
+        ]
+    },
+    {
+        "nom":"Activité",
+        "photo":"pole_activite",
+        "membres":[
+            {
+                "nom":"Quentin",
+                "surnom":"Ski engineer",
+                "role":"Respo Aprèm sport",
+                "photo":"quentin"
+            },
+            {
+                "nom":"Marine",
+                "surnom":"Maz",
+                "role":"Aprèm sport",
+                "photo":"marine"
+            },
+            {
+                "nom":"Akram",
+                "surnom":"SCRAPPYZ",
+                "role":"Aprèm sport",
+                "photo":"akram"
+            },
+            {
+                "nom":"Nabil",
+                "surnom":"",
+                "role":"Aprèm sport",
+                "photo":"nabil"
+            }
+        ]
+    },
+    {
+        "nom":"Rap",
+        "photo":"pole_rap",
+        "membres":[
+            {
+                "nom":"Marc",
+                "surnom":"Lil Marco",
+                "role":"Respo Rap",
+                "photo":"marc"
+            },
+            {
+                "nom":"Arthur LB",
+                "surnom":"ASAP Arthuro",
+                "role":"Rap",
+                "photo":"arthurl"
+            },
+            {
+                "nom":"William",
+                "surnom":"Willy on the mix",
+                "role":"Rap",
+                "photo":"willy"
+            }
+
+        ]
+    },
+    {
+        "nom":"Film",
+        "photo":"pole_film",
+        "membres":[
+            {
+                "nom":"Simo",
+                "surnom":"Simo",
+                "role":"Respo Film",
+                "photo":"simo"
+            },
+            {
+                "nom":"Neil",
+                "surnom":"Tryhard",
+                "role":"Respo Film",
+                "photo":"neil"
+            }
+        ]
+    },
+    {
+        "nom":"Financement",
+        "photo":"pole_finance",
+        "membres":[
+            {
+                "nom":"Antonin",
+                "surnom":"Sanglier",
+                "role":"Respo Paris",
+                "photo":"antonin"
+            },
+            {
+                "nom":"Hippolyte",
+                "surnom":"La fraude",
+                "role":"Respo Paris",
+                "photo":"hippolyte"
+            }
+        ]
+    },
+    {
+        "nom":"Site",
+        "photo":"pole_site",
+        "membres":[
+            {
+                "nom":"Paul",
+                "surnom":"-900",
+                "role":"Respo Site",
+                "photo":"paul"
+            },
+            {
+                "nom":"Nabil",
+                "surnom":"",
+                "role":"Design & Dev",
+                "photo":"nabil"
+            },
+            {
+                "nom":"Tim",
+                "surnom":"DidingTim",
+                "role":"Design",
+                "photo":"tim"
+            },
+            {
+                "nom":"Théo",
+                "surnom":"",
+                "role":"CyberSécu",
+                "photo":"theo"
+            }
+        ]
+    }
+]

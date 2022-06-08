@@ -6,7 +6,8 @@
     produit.quantite = 0;
     let quantiteSelect = 0;
     produit.quantiteStockMax = 0;
-    produit.stocks.forEach(stock => produit.quantiteStockMax+=stock.quantite);
+    // avec api : produit.stocks.forEach(stock => produit.quantiteStockMax+=stock.quantite);
+    produit.quantiteStockMax = 10;
 
     let open = false;
     function changeQuantite(val){

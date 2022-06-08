@@ -2,6 +2,9 @@ import {getPeriodes} from '../api/periode'
 import { timeParse } from './timeParse';
 import { getDate } from './getDate';
 export async function checkTime() {
+    // sans api :
+    return true;
+    // avec api :
     const today = new Date()
     const periodes = await getPeriodes();
     let nextPeriode = null

@@ -36,7 +36,7 @@
 
 <div class="produits">
     <TabContent pills>
-        <TabPane tabId="Plats" tab="Plats" >
+        <TabPane tabId="Plats" tab="Plats" active>
             <div class="d-flex flex-wrap justify-content-around">
                 {#each produits.filter(prod => (prod.type==="Plat" && prod.plat_du_jour) || prod.type==="Accompagnement") as produit}
                     <Produit produit={produit} {addInPanier}/>
@@ -59,7 +59,7 @@
                 {/each}
             </div>
         </TabPane>
-        <TabPane tabId="Goodies" tab="Goodies" active>
+        <TabPane tabId="Goodies" tab="Goodies">
             <div class="d-flex flex-wrap justify-content-around">
                 <h3>Vous pouvez le commander n'importe quand !</h3>
                 {#each produits.filter(prod => prod.type==="Goodies") as goodies}

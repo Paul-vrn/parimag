@@ -17,26 +17,15 @@
     async function commander(){
         panierCheck = checkPanier(commandeEnCours.panier)
         timeCheck = await checkTime()
-        let onlyGoodies = true;
-        commandeEnCours.panier.forEach(prod => {
-            if (prod.type !== "Goodies"){
-                onlyGoodies = false
-            }            
-        });
-        if (onlyGoodies){
-            openFirstModal = false
+      
+    
+        if (typeof panierCheck !== "boolean"){
+            addToast(panierCheck, "warn", 4000)
+        } else if (typeof timeCheck !== "boolean"){
+            addToast(timeCheck, "warn", 4000)
+        } else if (panierCheck && timeCheck){
+            openFirstModal = false; // si ça reste "true", on refait passer à false puis re true pour que ça update bien le component ModalConfirm
             openFirstModal = true
-        } else {
-	    addToast("Désolé, c'est la fin de nos SOS mais vous pouvez toujours commander nos goodies !", "warn", 6000);
-	    return
-            if (typeof panierCheck !== "boolean"){
-                addToast(panierCheck, "warn", 4000)
-            } else if (typeof timeCheck !== "boolean"){
-                addToast(timeCheck, "warn", 4000)
-            } else if (panierCheck && timeCheck){
-                openFirstModal = false; // si ça reste "true", on refait passer à false puis re true pour que ça update bien le component ModalConfirm
-                openFirstModal = true
-            }
         }
         panierCheck = false;
         timeCheck = false;

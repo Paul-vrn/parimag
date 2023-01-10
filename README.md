@@ -1,6 +1,6 @@
 # Benzimag website
 
-- Conception et modélisation réalisé par Paul Vernin, Cédric Lassale et Arthue Auger.
+- Conception et modélisation réalisé par Paul Vernin, Cédric Lassalle et Arthue Auger.
 - Développement réalisé par Paul Vernin.
 - Web design et maquettes réalisés par Tim et Nabil.
 
